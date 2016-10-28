@@ -134,13 +134,17 @@ class ItemCB(BaseEstimator):
         numerator_matrix = norm_ICM.dot(norm_ICM.transpose())
 
         # Check for square matrix
-        if (dot_prod.values.shape[0] != dot_prod.value.shape[1]):
+        if (numerator_matrix.values.shape[0] != numerator_matrix.value.shape[1]):
             logger.error('The resulting similarity matrix is not square!')
 
         norm2_values = pd.DataFrame.from_dict(LA.norm(norm_ICM.values, 2, axis=0))
 
         # 1 / (|vi|2 |vj|2 + shrink)
         denominator_matrix = norm2_values.dot(norm2_values.transpose()).applymap(lambda x: 1/(x + self.sh))
+
+        # Check for square matrix
+        if (denominator_matrix.values.shape[0] != denominator_matrix.value.shape[1]):
+            logger.error('The resulting similarity matrix is not square!')
 
         return numerator_matrix.dot(denominator_matrix.transpose())
 
