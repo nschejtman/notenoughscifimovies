@@ -2,8 +2,15 @@ import re
 import pandas as pd
 import numpy as np
 import scipy.sparse as sps
+import logging
 from sklearn.base import BaseEstimator
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
+from numpy import linalg as LA
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s: %(name)s: %(levelname)s: %(message)s")
 
 
 def read_items():
@@ -27,7 +34,7 @@ def cross_validate(items_df, URM):
     i_feat_min = params[col_feat].index(scores[col_feat][i_min])
     f_min = f.axes[i_feat_min]
     f_min.plot(scores[x_feat][i_min], y_min, 'o', color='r')
-    plt.figtext(0, 0, "COMMENT\nMinimum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_min],                                                                 
+    plt.figtext(0, 0, "COMMENT\nMinimum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_min],
                                                                                          scores[x_feat][i_min],
                                                                                          y_min,
                                                                                          scores['Std'][i_min]))
@@ -37,7 +44,7 @@ def cross_validate(items_df, URM):
     return scores
 
 
-    
+
 
 class ItemCB(BaseEstimator):
 
@@ -45,6 +52,7 @@ class ItemCB(BaseEstimator):
         self.k = 5
         self.sh = 2
         self.generate_attrs(items_df)
+        self.compute_similarity_matrix(self.attr_df)
 
 
     #Train recommender
@@ -59,15 +67,24 @@ class ItemCB(BaseEstimator):
         print "pred"
 
 
-
     def generate_attrs(self, items_df):
+        ''' Generates normalized vectors from the item-content matrix, using
+        TF-IDF. Normalization is computed among the values corresponding to the
+        same attribute in the original item-content matrix.
+
+        Arguments:
+        items_df -- item-content matrix
+        '''
+
         self.item_ids = items_df.id.values
         self.attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at'], axis=1)
 
         to_dummies = ['career_level','country', 'region','employment']
         to_tfidf = ['title', 'tags', 'discipline_id', 'industry_id']
 
+        # Generate binary matrix
         self.attr_df = pd.get_dummies(self.attr_df, columns=to_dummies)
+
         self.attr_mat = {}
         #TODO: aggregate in one line
         self.attr_mat['title'] = self.generate_tfidf(self.attr_df['title'].dropna().values) #NAs!!
@@ -76,8 +93,8 @@ class ItemCB(BaseEstimator):
         self.attr_mat['industry_id'] = self.generate_tfidf(self.attr_df['industry_id'].dropna().astype(int).map(str).values)
 
         self.attr_df = self.attr_df.drop(to_tfidf, axis=1)
-        
-        print self.attr_df.columns
+
+        logger.info(self.attr_df.columns)
 
 
 
@@ -86,9 +103,9 @@ class ItemCB(BaseEstimator):
         trans = TfidfTransformer()
         tf = vectorizer.fit_transform(data)
         return (trans.fit_transform(tf), vectorizer.vocabulary_)
-    
 
 
+    # Is this still necessary?
     def get_indices(self, aux_df, col_name):
         start, end = 0, 0
         cols = aux_df.columns.values
@@ -102,7 +119,42 @@ class ItemCB(BaseEstimator):
 
         return (start, end)
 
-    
+    def compute_similarity_matrix(self, norm_ICM) :
+        ''' Computes the item-similarity matrix taking as input the normalized
+        item-content matrix. Similarity computed as cosine similarity.
+
+        Arguments:
+        norm_ICM -- normalized item-content matrix data frame
+
+        Returns:
+        similarity matrix m of shape |I| x |I| where I is the set of items
+        and m[i, j] is the cosine similarity between item i and j.'''
+
+        # vi . vj
+        numerator_matrix = norm_ICM.dot(norm_ICM.transpose())
+
+        # Check for square matrix
+        if (dot_prod.values.shape[0] != dot_prod.value.shape[1]):
+            logger.error('The resulting similarity matrix is not square!')
+
+        norm2_values = pd.DataFrame.from_dict(LA.norm(norm_ICM.values, 2, axis=0))
+
+        # 1 / (|vi|2 |vj|2 + shrink)
+        denominator_matrix = norm2_values.dot(norm2_values.transpose()).applymap(lambda x: 1/(x + self.sh))
+
+        return numerator_matrix.dot(denominator_matrix.transpose())
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #TODO: missing values
