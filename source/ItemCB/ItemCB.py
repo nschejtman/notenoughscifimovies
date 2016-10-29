@@ -2,7 +2,9 @@ import re
 import pandas as pd
 import numpy as np
 import scipy.sparse as sps
+import scipy.sparse.linalg as linalg
 import logging
+import heapq
 from sklearn.base import BaseEstimator
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from numpy import linalg as LA
@@ -52,7 +54,7 @@ class ItemCB(BaseEstimator):
         self.k = 5
         self.sh = 2
         self.generate_attrs(items_df)
-        self.compute_similarity_matrix(self.attr_df)
+        self.calculate_knn()
 
 
     #Train recommender
@@ -82,15 +84,14 @@ class ItemCB(BaseEstimator):
         to_dummies = ['career_level','country', 'region','employment']
         to_tfidf = ['title', 'tags', 'discipline_id', 'industry_id']
 
+        self.attr_df['career_level'] = self.attr_df['career_level'].fillna(0)
+        self.attr_df['title'] = self.attr_df['title'].fillna('NULL').values
+        self.attr_df['tags'] = self.attr_df['title'].fillna('NULL').values
+
         # Generate binary matrix
         self.attr_df = pd.get_dummies(self.attr_df, columns=to_dummies)
 
-        self.attr_mat = {}
-        #TODO: aggregate in one line
-        self.attr_mat['title'] = self.generate_tfidf(self.attr_df['title'].dropna().values) #NAs!!
-        self.attr_mat['tags'] = self.generate_tfidf(self.attr_df['tags'].dropna().values)
-        self.attr_mat['discipline_id'] = self.generate_tfidf(self.attr_df['discipline_id'].dropna().astype(int).map(str).values)
-        self.attr_mat['industry_id'] = self.generate_tfidf(self.attr_df['industry_id'].dropna().astype(int).map(str).values)
+        self.attr_mat = {_:self.generate_tfidf(self.attr_df[_].map(str).values) for _ in to_tfidf}
 
         self.attr_df = self.attr_df.drop(to_tfidf, axis=1)
 
@@ -102,7 +103,7 @@ class ItemCB(BaseEstimator):
         vectorizer = CountVectorizer(token_pattern='\w+')
         trans = TfidfTransformer()
         tf = vectorizer.fit_transform(data)
-        return (trans.fit_transform(tf), vectorizer.vocabulary_)
+        return trans.fit_transform(tf)#, vectorizer.vocabulary_)
 
 
     # Is this still necessary?
@@ -148,6 +149,39 @@ class ItemCB(BaseEstimator):
 
         return numerator_matrix.dot(denominator_matrix.transpose())
 
+
+    def sim(self, i, j):
+        res = 0
+        #num_atts = self.attr_df.shape[1] + reduce(lambda _, mat:_+mat.shape[1], self.attr_mat.itervalues(), 0)
+        v_i, v_j = sps.lil_matrix(self.attr_df.iloc[[i]].values), sps.lil_matrix(self.attr_df.iloc[[j]].values)
+
+        for _, v in self.attr_mat.items():
+            v_i = sps.hstack([v_i, v[i]])
+            v_j = sps.hstack([v_j, v[j]])
+
+        return (v_i.dot(v_j.transpose())/(linalg.norm(v_i)*linalg.norm(v_j) + self.sh))[0,0]
+
+
+    def calculate_knn(self):
+        self.neig_list = [[] for _ in range(self.attr_df.shape[0])]
+        for i in range(self.attr_df.shape[0]):
+            print i
+            self.neig_list[i] = []
+            for j in range(i, self.attr_df.shape[0]):
+                if j %1000 == 0:
+                    print j
+                aux = self.sim(i, j)
+                if len(self.neig_list[i]) < self.k:
+                    heapq.heappush(self.neig_list[i], (aux, j))
+                else:
+                    if self.neig_list[i][0][0] < aux:
+                        heapq.heappushpop(self.neig_list[i], (aux, j))
+                        
+                if len(self.neig_list[j]) < self.k:
+                    heapq.heappush(self.neig_list[j], (aux, i))
+                else:
+                    if self.neig_list[j][0][0] < aux:
+                        heapq.heappushpop(self.neig_list[j], (aux, i))
 
 
 
