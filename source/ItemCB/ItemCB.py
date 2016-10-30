@@ -25,7 +25,7 @@ def read_items():
 def cross_validate(items_df, URM, items_ids, n):
     params = {'k':[1, 2, 5, 10, 20, 50], 'sh':[1, 2, 3, 5, 10]}
     rec = GridSearchCV(ItemCB(items_df), params, scoring=map5_scorer, cv=3, fit_params={'item_ids':items_ids, 'n':n})
-    reg.fit(URM, URM)
+    reg.fit(URM, pos_items)
     scores = pd.DataFrame(data=[[_.mean_validation_score,np.std(_.cv_validation_scores)]+ _.parameters.values() for _ in reg.grid_scores_],
                           columns=["MAP5", "Std"] + _.parameters.keys())
     cols, col_feat, x_feat = 3, 'sh', 'k'
@@ -82,6 +82,8 @@ class ItemCB(BaseEstimator):
                     else:
                         if rating > Y[u][0]:
                             heapq.heappushpop(Y[u], (rating, i))
+
+                    #TODO: SORT RECOMMENDATIONS
 
         recs = [[self.item_ids[i[1]] for i in row] for row in Y]
 
