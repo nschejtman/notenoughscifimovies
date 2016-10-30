@@ -22,10 +22,10 @@ def read_items():
 
 
 
-def cross_validate(items_df, URM):
+def cross_validate(items_df, URM, items_ids, n):
     params = {'k':[1, 2, 5, 10, 20, 50], 'sh':[1, 2, 3, 5, 10]}
-    rec = GridSearchCV(ItemCB(items_df), params, scoring=map5_scorer, cv=5)
-    reg.fit(X, Y)
+    rec = GridSearchCV(ItemCB(items_df), params, scoring=map5_scorer, cv=3, fit_params={'item_ids':items_ids, 'n':n})
+    reg.fit(URM, URM)
     scores = pd.DataFrame(data=[[_.mean_validation_score,np.std(_.cv_validation_scores)]+ _.parameters.values() for _ in reg.grid_scores_],
                           columns=["MAP5", "Std"] + _.parameters.keys())
     cols, col_feat, x_feat = 3, 'sh', 'k'
@@ -54,20 +54,38 @@ class ItemCB(BaseEstimator):
         self.k = 5
         self.sh = 2
         self.generate_attrs(items_df)
-        self.calculate_knn()
 
 
     #Train recommender
-    def fit(self, URM):
-        print "fit"
+    def fit(self, URM, URM1, n):
+        #self.URM_item_ids = list(item_ids)
+        self.n = n
+        #self.id_to_idx = {self.ICM_item_ids[i]:(i,item_ids.index(self.ICM_item_ids[i])) for i in range(URM.shape[1])}
 
 
     #Make predictions on trained recommender
     #Returns preidctions matrix
-    def predict(self, users, n):
-        #TODO: Consider only active ones
-        print "pred"
+    def predict(self, URM):
+        Y = [[] for _ in range(URM.shape[0])]
+        for u in range(URM.shape[0]):
+            rated = sps.nonzero(URM[u])
+            rating = 0
+            for i in range(URM.shape[1]):
+                if self.actives[i] != 0 and URM[u,i] == 0:
+                    closest = generate_knn(i, rated)
+                    for j in closest:
+                        rating += URM[u,j[1]]*j[0]
+                        den += j[0]
+                    rating /= den
+                    if len(Y[u]) < self.n:
+                        heapq.heappush(Y[u], (rating, i))
+                    else:
+                        if rating > Y[u][0]:
+                            heapq.heappushpop(Y[u], (rating, i))
 
+        recs = [[self.item_ids[i[1]] for i in row] for row in Y]
+
+        return recs
 
     def generate_attrs(self, items_df):
         ''' Generates normalized vectors from the item-content matrix, using
@@ -79,7 +97,8 @@ class ItemCB(BaseEstimator):
         '''
 
         self.item_ids = items_df.id.values
-        self.attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at'], axis=1)
+        self.actives = items_df.active_during_test.values
+        self.attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test'], axis=1)
 
         to_dummies = ['career_level','country', 'region','employment']
         to_tfidf = ['title', 'tags', 'discipline_id', 'industry_id']
@@ -162,30 +181,32 @@ class ItemCB(BaseEstimator):
         return (v_i.dot(v_j.transpose())/(linalg.norm(v_i)*linalg.norm(v_j) + self.sh))[0,0]
 
 
-    def calculate_knn(self):
-        self.neig_list = [[] for _ in range(self.attr_df.shape[0])]
-        for i in range(self.attr_df.shape[0]):
-            print i
-            self.neig_list[i] = []
-            for j in range(i, self.attr_df.shape[0]):
-                if j %1000 == 0:
-                    print j
-                aux = self.sim(i, j)
-                if len(self.neig_list[i]) < self.k:
-                    heapq.heappush(self.neig_list[i], (aux, j))
-                else:
-                    if self.neig_list[i][0][0] < aux:
-                        heapq.heappushpop(self.neig_list[i], (aux, j))
-                        
-                if len(self.neig_list[j]) < self.k:
-                    heapq.heappush(self.neig_list[j], (aux, i))
-                else:
-                    if self.neig_list[j][0][0] < aux:
-                        heapq.heappushpop(self.neig_list[j], (aux, i))
-
-
-
-
+    def calculate_knn(self, item, item_list):
+        heap = []
+        for it in item_list:
+            aux = self.sim(item, it)
+            if len(heap) < self.k:
+                heapq.heappush(heap, (aux, it))
+            else:
+                if heap[0][0] < aux:
+                    heapq.heappushpop(heap, (aux, it))
+        return heap
+        
+##        self.neig_list = [[] for _ in range(self.attr_df.shape[0])]
+##        for i in range(self.attr_df.shape[0]):
+##            print i
+##            self.neig_list[i] = []
+##            for j in range(i, self.attr_df.shape[0]):
+##                if j %1000 == 0:
+##                    print j
+##                aux = self.sim(i, j)
+##                
+##                        
+##                if len(self.neig_list[j]) <= self.k:
+##                    heapq.heappush(self.neig_list[j], (aux, i))
+##                else:
+##                    if self.neig_list[j][0][0] < aux:
+##                        heapq.heappushpop(self.neig_list[j], (aux, i))
 
 
 
