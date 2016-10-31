@@ -1,12 +1,12 @@
-##def map_scorer(rec, URM, items_ids):
-##    score = 0
-##    rec_list = est.predict(URM)
-##    for u in URM.shape[0]:
-##        is_relevant = np.in1d(rec_list[u], item_ids[u], assume_unique=True)
-##        p_at_k = is_relevant * np.cumsum(is_relevant, dtype=np.float32) / (1 + np.arange(is_relevant.shape[0]))
-##        score += np.sum(p_at_k) / np.min([len(item_ids), len(rec_list)])
-##    return score / URM.shape[0]
-##
+# def map_scorer(rec, URM, items_ids):
+#    score = 0
+#    rec_list = est.predict(URM)
+#    for u in URM.shape[0]:
+#        is_relevant = np.in1d(rec_list[u], item_ids[u], assume_unique=True)
+#        p_at_k = is_relevant * np.cumsum(is_relevant, dtype=np.float32) / (1 + np.arange(is_relevant.shape[0]))
+#        score += np.sum(p_at_k) / np.min([len(item_ids), len(rec_list)])
+#    return score / URM.shape[0]
+
 
 import pandas as pd
 import numpy as np

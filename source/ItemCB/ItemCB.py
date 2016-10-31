@@ -5,9 +5,18 @@ import scipy.sparse as sps
 import scipy.sparse.linalg as linalg
 import logging
 import heapq
+import time
+import math
+import seaborn as sns
+import matplotlib
+import matplotlib.pyplot as plt
+import pickle
+from sklearn.model_selection import GridSearchCV
 from sklearn.base import BaseEstimator
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from numpy import linalg as LA
+
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -20,47 +29,88 @@ def read_items():
     #items_df.career_level = items_df.career_level.fillna(0).astype('int64')
     return items_df
 
+def read_interactions():
+    ints = pd.read_csv('../../inputs/interactions_idx.csv', sep='\t')
+    return sps.csr_matrix((ints['interaction_type'].values, (ints['user_idx'].values, ints['item_idx'].values)))
 
+def cross_validate(items_df, URM, n):
+   """
+   Arguments:
+   items_df -- ICM DataFrame
+   URM
+   n -- number of recommendations
+   """
 
-def cross_validate(items_df, URM, items_ids, n):
-    params = {'k':[1, 2, 5, 10, 20, 50], 'sh':[1, 2, 3, 5, 10]}
-    rec = GridSearchCV(ItemCB(items_df), params, scoring=map5_scorer, cv=3, fit_params={'item_ids':items_ids, 'n':n})
-    reg.fit(URM, pos_items)
-    scores = pd.DataFrame(data=[[_.mean_validation_score,np.std(_.cv_validation_scores)]+ _.parameters.values() for _ in reg.grid_scores_],
+   params = {'k':[1, 2], 'sh':[0, 1]}
+   rec = GridSearchCV(ItemCB(), params, scoring=map_scorer, cv=2, fit_params={'n':n, 'items_df': items_df})
+
+   #  id_dic = {item_df.loc[i]['id']:i for i in range(item_df.shape[0])}
+   tup = URM.nonzero()
+   item_ids = map(lambda x: items_df.loc[x], tup[1])
+   n_users = URM.shape[0]
+   pos_items = [[] for _ in range(n_users)]
+   for i in range(n_users) :
+      pos_items[i].append(item_ids[i])
+
+   rec.fit(URM, pos_items)
+   scores = pd.DataFrame(data=[[_.mean_validation_score,np.std(_.cv_validation_scores)]+ _.parameters.values() for _ in rec.grid_scores_],
                           columns=["MAP5", "Std"] + _.parameters.keys())
-    cols, col_feat, x_feat = 3, 'sh', 'k'
-    f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
-    f.map(plt.plot, x_feat, 'MAP5')
-    f.fig.suptitle("ItemCB CV MAP5 values")
-    i_min, y_min = scores.MAP5.argmin(), scores.MAP5.min()
-    i_feat_min = params[col_feat].index(scores[col_feat][i_min])
-    f_min = f.axes[i_feat_min]
-    f_min.plot(scores[x_feat][i_min], y_min, 'o', color='r')
-    plt.figtext(0, 0, "COMMENT\nMinimum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_min],
-                                                                                         scores[x_feat][i_min],
-                                                                                         y_min,
-                                                                                         scores['Std'][i_min]))
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.9, bottom=0.15)
-    f.savefig('ItemCB CV MAP5 values.png', bbox_inches='tight')
-    return scores
+   cols, col_feat, x_feat = 3, 'sh', 'k'
+   f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
+   f.map(plt.plot, x_feat, 'MAP5')
+   f.fig.suptitle("ItemCB CV MAP5 values")
+   i_max, y_max = scores.MAP5.argmax(), scores.MAP5.max()
+   i_feat_max = params[col_feat].index(scores[col_feat][i_max])
+   f_max = f.axes[i_feat_max]
+   f_max.plot(scores[x_feat][i_max], y_max, 'o', color='r')
+   plt.figtext(0, 0, "COMMENT\nmaximum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_max],
+                                                                                         scores[x_feat][i_max],
+                                                                                         y_max,
+                                                                                         scores['Std'][i_max]))
+   plt.tight_layout()
+   plt.subplots_adjust(top=0.9, bottom=0.15)
+   f.savefig('ItemCB CV MAP5 values.png', bbox_inches='tight')
+   return scores
 
 
-
+def map_scorer(rec, URM, items_ids):
+   score = 0
+   rec_list = rec.predict(URM)
+   i = 0
+   for u in range(URM.shape[0]):
+      if len(items_ids[u]) > 0 :
+         is_relevant = np.in1d(rec_list[u], items_ids[u], assume_unique=True)
+         p_at_k = is_relevant * np.cumsum(is_relevant, dtype=np.float32) / (1 + np.arange(is_relevant.shape[0]))
+         score += np.sum(p_at_k) / np.min([len(items_ids), len(rec_list)])
+         i += 1
+   return score / i
 
 class ItemCB(BaseEstimator):
 
-    def __init__(self, items_df):
-        self.k = 5
-        self.sh = 2
-        self.generate_attrs(items_df)
-
+    def __init__(self, k=5, sh=2):
+        self.k = k
+        self.sh = sh
+        self.toppop = [1053452, 2778525, 1244196, 1386412, 657183]
 
     #Train recommender
-    def fit(self, URM, URM1, n):
-        #self.URM_item_ids = list(item_ids)
+    def fit(self, URM, pos_items, n, items_df):
+        """
+        Arguments:
+        n -- number of recommendations
+        pos_items -- list of item indices rated by users (used by GridSeahCV)
+        URM -- user rating matrix
+        """
+
+        st = time.time()
         self.n = n
-        #self.id_to_idx = {self.ICM_item_ids[i]:(i,item_ids.index(self.ICM_item_ids[i])) for i in range(URM.shape[1])}
+        self.generate_attrs(items_df)
+        item_pop = URM.sum(axis=0)
+        item_pop = np.asarray(item_pop).squeeze()
+        self.pop = np.argsort(item_pop)[::-1]
+        mask = [True if self.actives[i]==1 else False for i in self.pop]
+        self.pop = self.pop[mask][:500]
+        et = time.time()
+      #   print "Fit time: ", et - st
 
 
     #Make predictions on trained recommender
@@ -68,26 +118,32 @@ class ItemCB(BaseEstimator):
     def predict(self, URM):
         Y = [[] for _ in range(URM.shape[0])]
         for u in range(URM.shape[0]):
-            rated = sps.nonzero(URM[u])
-            rating = 0
-            for i in range(URM.shape[1]):
-                if self.actives[i] != 0 and URM[u,i] == 0:
-                    closest = generate_knn(i, rated)
-                    for j in closest:
-                        rating += URM[u,j[1]]*j[0]
-                        den += j[0]
-                    rating /= den
-                    if len(Y[u]) < self.n:
-                        heapq.heappush(Y[u], (rating, i))
-                    else:
-                        if rating > Y[u][0]:
-                            heapq.heappushpop(Y[u], (rating, i))
+            st = time.time()
+            rated = URM[u].nonzero()[1]
+            # print "User", u, len(rated)
+            if len(rated) == 0 :
+               Y[u] = self.pop[:self.n]
+            else :
+               for i in self.pop:
+                   if URM[u,i] == 0:
+                       closest = self.calculate_knn(i, rated)
+                       den = 0
+                       rating = 0
+                       for j in closest:
+                           rating += URM[u,j[1]]*j[0]
+                           den += j[0]
+                       rating /= 1 if den == 0 else den
 
-                    #TODO: SORT RECOMMENDATIONS
-
-        recs = [[self.item_ids[i[1]] for i in row] for row in Y]
-
-        return recs
+                       if len(Y[u]) < self.n:
+                           heapq.heappush(Y[u], (rating, i))
+                       else:
+                           if rating > Y[u][0][0]:
+                               heapq.heappushpop(Y[u], (rating, i))
+               Y[u].sort()
+               Y[u] = [self.item_ids[i[1]] for i in Y[u]]
+            et = time.time()
+            # print "User rec time", et-st
+        return Y
 
     def generate_attrs(self, items_df):
         ''' Generates normalized vectors from the item-content matrix, using
@@ -100,14 +156,14 @@ class ItemCB(BaseEstimator):
 
         self.item_ids = items_df.id.values
         self.actives = items_df.active_during_test.values
-        self.attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test'], axis=1)
+        self.attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test', 'title', 'tags'], axis=1)
 
         to_dummies = ['career_level','country', 'region','employment']
-        to_tfidf = ['title', 'tags', 'discipline_id', 'industry_id']
+        to_tfidf = ['discipline_id', 'industry_id']
 
         self.attr_df['career_level'] = self.attr_df['career_level'].fillna(0)
-        self.attr_df['title'] = self.attr_df['title'].fillna('NULL').values
-        self.attr_df['tags'] = self.attr_df['title'].fillna('NULL').values
+      #   self.attr_df['title'] = self.attr_df['title'].fillna('NULL').values
+      #   self.attr_df['tags'] = self.attr_df['tags'].fillna('NULL').values
 
         # Generate binary matrix
         self.attr_df = pd.get_dummies(self.attr_df, columns=to_dummies)
@@ -125,21 +181,6 @@ class ItemCB(BaseEstimator):
         trans = TfidfTransformer()
         tf = vectorizer.fit_transform(data)
         return trans.fit_transform(tf)#, vectorizer.vocabulary_)
-
-
-    # Is this still necessary?
-    def get_indices(self, aux_df, col_name):
-        start, end = 0, 0
-        cols = aux_df.columns.values
-        for j in range(len(cols)):
-            if col_name.match(cols[j]):
-                start = j
-                break
-        for k in range(i, len(cols)):
-            if col_name.match(cols[j]):
-                end = k
-
-        return (start, end)
 
     def compute_similarity_matrix(self, norm_ICM) :
         ''' Computes the item-similarity matrix taking as input the normalized
@@ -172,16 +213,72 @@ class ItemCB(BaseEstimator):
 
 
     def sim(self, i, j):
-        res = 0
-        #num_atts = self.attr_df.shape[1] + reduce(lambda _, mat:_+mat.shape[1], self.attr_mat.itervalues(), 0)
-        v_i, v_j = sps.lil_matrix(self.attr_df.iloc[[i]].values), sps.lil_matrix(self.attr_df.iloc[[j]].values)
+      res = 0
+      # num_atts = self.attr_df.shape[1] + reduce(lambda _, mat:_+mat.shape[1], self.attr_mat.itervalues(), 0)
+      # m_start_time = time.time()
+      v_i, v_j = sps.csr_matrix(self.attr_df.iloc[[i]].values), sps.csr_matrix(self.attr_df.iloc[[j]].values)
+      # print num_atts
 
-        for _, v in self.attr_mat.items():
-            v_i = sps.hstack([v_i, v[i]])
-            v_j = sps.hstack([v_j, v[j]])
+      for _, v in self.attr_mat.items():
+         v_i = sps.hstack([v_i, v[i]])
+         v_j = sps.hstack([v_j, v[j]])
+         # print _, v.shape[1]
+      # m_end_time = time.time()
+      # print "matrix creation", m_end_time - m_start_time
 
-        return (v_i.dot(v_j.transpose())/(linalg.norm(v_i)*linalg.norm(v_j) + self.sh))[0,0]
+      # d_start_time = time.time()
+      aux = (v_i.dot(v_j.transpose())/(linalg.norm(v_i)*linalg.norm(v_j) + self.sh))[0,0]
+      # d_end_time = time.time()
 
+      # print "dot prod", d_end_time - d_start_time
+      # print "total time", d_end_time - d_start_time + m_end_time - m_start_time
+
+      # st = time.time()
+      # num = 0.0
+      # sqr_sum_i = 0.0
+      # sqr_sum_j = 0.0
+      # v_i, v_j = sps.csr_matrix(self.attr_df.iloc[[i]].values), sps.csr_matrix(self.attr_df.iloc[[j]].values)
+      # for _, v in self.attr_mat.items():
+      #    v_j_t = v[j].transpose()
+      #    num += v[i].dot(v_j_t)
+      #    sqr_sum_i += v[i].dot(v[i].transpose())
+      #    sqr_sum_j += v[j].dot(v_j_t)
+      #
+      # v_j_t = v_j.transpose()
+      # num += v_i.dot(v_j_t)
+      # sqr_sum_i += v_i.dot(v_i.transpose())
+      # sqr_sum_j += v_j.dot(v_j_t)
+      #
+      #
+      #
+      # aux2 = num[0,0] / (math.sqrt(sqr_sum_i[0,0] * sqr_sum_j[0,0]) + self.sh)
+      # et = time.time()
+      # print "Alt total time", et - st
+
+      # stttt = time.time()
+      # num = 0.0
+      # sqr_sum_i = 0.0
+      # sqr_sum_j = 0.0
+      # for k in range(self.attr_df.shape[1]):
+      #    aik = self.attr_df.iloc[[i], [k]].values[0][0]
+      #    ajk = self.attr_df.iloc[[j], [k]].values[0][0]
+      #    num += aik * ajk
+      #    sqr_sum_i += aik * aik
+      #    sqr_sum_j += ajk * ajk
+      #
+      #    for _, v in self.attr_mat.items():
+      #
+      #       for k in range(v.shape[1]):
+      #
+      #          aik = v[i,k]
+      #          ajk = v[j,k]
+      #          num += aik * ajk
+      #          sqr_sum_i += aik * aik
+      #          sqr_sum_j += ajk * ajk
+      # etttt = time.time()
+      # time3 = etttt - stttt
+      # print "Alt 2 total time", time3
+      return aux
 
     def calculate_knn(self, item, item_list):
         heap = []
@@ -193,7 +290,7 @@ class ItemCB(BaseEstimator):
                 if heap[0][0] < aux:
                     heapq.heappushpop(heap, (aux, it))
         return heap
-        
+
 ##        self.neig_list = [[] for _ in range(self.attr_df.shape[0])]
 ##        for i in range(self.attr_df.shape[0]):
 ##            print i
@@ -202,8 +299,8 @@ class ItemCB(BaseEstimator):
 ##                if j %1000 == 0:
 ##                    print j
 ##                aux = self.sim(i, j)
-##                
-##                        
+##
+##
 ##                if len(self.neig_list[j]) <= self.k:
 ##                    heapq.heappush(self.neig_list[j], (aux, i))
 ##                else:
@@ -218,6 +315,13 @@ class ItemCB(BaseEstimator):
 
 
 
+
+
 #TODO: missing values
 items_df = read_items()
-x = ItemCB(items_df)
+urm = read_interactions()
+urm = urm[0:5, :]
+st = time.time()
+cross_validate(items_df, urm, 5)
+et = time.time()
+print "CV", et-st
