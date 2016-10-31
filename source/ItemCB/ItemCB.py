@@ -33,6 +33,12 @@ def read_interactions():
     ints = pd.read_csv('../../inputs/interactions_idx.csv', sep='\t')
     return sps.csr_matrix((ints['interaction_type'].values, (ints['user_idx'].values, ints['item_idx'].values)))
 
+def read_top_pops():
+   aux = pd.read_csv('../../inputs/top_pop_ids.csv', sep='\t')['0'].values
+   # print aux
+   return aux
+
+
 def cross_validate(items_df, URM, n):
    """
    Arguments:
@@ -41,16 +47,18 @@ def cross_validate(items_df, URM, n):
    n -- number of recommendations
    """
 
-   params = {'k':[1, 2], 'sh':[0, 1]}
+   params = {'k':[15,20,35,50], 'sh':[5,10,20]}
+   # params = {'k':[1], 'sh':[0]}
    rec = GridSearchCV(ItemCB(), params, scoring=map_scorer, cv=2, fit_params={'n':n, 'items_df': items_df})
 
    #  id_dic = {item_df.loc[i]['id']:i for i in range(item_df.shape[0])}
    tup = URM.nonzero()
-   item_ids = map(lambda x: items_df.loc[x], tup[1])
-   n_users = URM.shape[0]
-   pos_items = [[] for _ in range(n_users)]
+   item_ids = map(lambda x: items_df.loc[x]['id'], tup[1])
+   # print item_ids
+   n_users = len(item_ids)
+   pos_items = [[] for _ in range(URM.shape[0])]
    for i in range(n_users) :
-      pos_items[i].append(item_ids[i])
+      pos_items[tup[0][i]].append(item_ids[i])
 
    rec.fit(URM, pos_items)
    scores = pd.DataFrame(data=[[_.mean_validation_score,np.std(_.cv_validation_scores)]+ _.parameters.values() for _ in rec.grid_scores_],
@@ -81,7 +89,9 @@ def map_scorer(rec, URM, items_ids):
       if len(items_ids[u]) > 0 :
          is_relevant = np.in1d(rec_list[u], items_ids[u], assume_unique=True)
          p_at_k = is_relevant * np.cumsum(is_relevant, dtype=np.float32) / (1 + np.arange(is_relevant.shape[0]))
-         score += np.sum(p_at_k) / np.min([len(items_ids), len(rec_list)])
+         # print u, rec_list[u], len(rec_list[u]), len(rec_list), URM.shape
+         # assert len(rec_list[u]) > 0
+         score += np.sum(p_at_k) / np.min([len(items_ids[u]), len(rec_list[u])])
          i += 1
    return score / i
 
@@ -104,11 +114,16 @@ class ItemCB(BaseEstimator):
         st = time.time()
         self.n = n
         self.generate_attrs(items_df)
-        item_pop = URM.sum(axis=0)
-        item_pop = np.asarray(item_pop).squeeze()
-        self.pop = np.argsort(item_pop)[::-1]
-        mask = [True if self.actives[i]==1 else False for i in self.pop]
-        self.pop = self.pop[mask][:500]
+        self.pop = read_top_pops()
+      #   item_pop = URM.sum(axis=0)
+      #   item_pop = np.asarray(item_pop).squeeze()
+      #   self.pop = np.argsort(item_pop)[::-1]
+      #   mask = np.array([True if self.actives[i]==1 else False for i in self.pop])
+      #   self.pop = self.pop[mask][:500]
+      #   pd.DataFrame(self.pop).to_csv('../../inputs/top_pop_ids.csv', sep='\t', index=False)
+
+
+
         et = time.time()
       #   print "Fit time: ", et - st
 
@@ -122,10 +137,10 @@ class ItemCB(BaseEstimator):
             rated = URM[u].nonzero()[1]
             # print "User", u, len(rated)
             if len(rated) == 0 :
-               Y[u] = self.pop[:self.n]
+               Y[u] = list(self.pop[:self.n])
             else :
                for i in self.pop:
-                   if URM[u,i] == 0:
+                   if URM[u,i] == 0 or True:
                        closest = self.calculate_knn(i, rated)
                        den = 0
                        rating = 0
@@ -139,8 +154,12 @@ class ItemCB(BaseEstimator):
                        else:
                            if rating > Y[u][0][0]:
                                heapq.heappushpop(Y[u], (rating, i))
+               # print Y[u], u, len(rated)
                Y[u].sort()
+               # print Y[u], u, len(rated)
                Y[u] = [self.item_ids[i[1]] for i in Y[u]]
+            # print Y[u], u, len(rated)
+            assert len(Y[u]) > 0
             et = time.time()
             # print "User rec time", et-st
         return Y
@@ -320,7 +339,9 @@ class ItemCB(BaseEstimator):
 #TODO: missing values
 items_df = read_items()
 urm = read_interactions()
-urm = urm[0:5, :]
+urm = urm[0:100, :]
+# a = ItemCB()
+# a.fit(urm, None, 5, items_df)
 st = time.time()
 cross_validate(items_df, urm, 5)
 et = time.time()
