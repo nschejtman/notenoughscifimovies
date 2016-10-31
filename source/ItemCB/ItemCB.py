@@ -47,7 +47,7 @@ def cross_validate(items_df, URM, n):
    n -- number of recommendations
    """
 
-   params = {'k':[15,20,35,50], 'sh':[5,10,20]}
+   params = {'k':[1,5,10], 'sh':[0,2]}
    # params = {'k':[1], 'sh':[0]}
    rec = GridSearchCV(ItemCB(), params, scoring=map_scorer, cv=2, fit_params={'n':n, 'items_df': items_df})
 
@@ -114,7 +114,7 @@ class ItemCB(BaseEstimator):
         st = time.time()
         self.n = n
         self.generate_attrs(items_df)
-        self.pop = read_top_pops()
+        self.pop = read_top_pops()[:62]
       #   item_pop = URM.sum(axis=0)
       #   item_pop = np.asarray(item_pop).squeeze()
       #   self.pop = np.argsort(item_pop)[::-1]
@@ -137,7 +137,7 @@ class ItemCB(BaseEstimator):
             rated = URM[u].nonzero()[1]
             # print "User", u, len(rated)
             if len(rated) == 0 :
-               Y[u] = list(self.pop[:self.n])
+               Y[u] = [self.item_ids[i] for i in self.pop[:self.n]]
             else :
                for i in self.pop:
                    if URM[u,i] == 0 or True:
@@ -161,7 +161,7 @@ class ItemCB(BaseEstimator):
             # print Y[u], u, len(rated)
             assert len(Y[u]) > 0
             et = time.time()
-            # print "User rec time", et-st
+            print "User rec time", et-st
         return Y
 
     def generate_attrs(self, items_df):
@@ -336,13 +336,24 @@ class ItemCB(BaseEstimator):
 
 
 
-#TODO: missing values
 items_df = read_items()
 urm = read_interactions()
-urm = urm[0:100, :]
-# a = ItemCB()
-# a.fit(urm, None, 5, items_df)
+test_users = pd.read_csv('../../inputs/target_users_idx.csv')['user_id'].values[5000:]
+urm = urm[test_users,:]
+a = ItemCB()
+a.fit(urm, None, 5, items_df)
+recs = a.predict(urm)
+user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
+out_file = open('../../output/ItemCB Nico.csv', 'wb')
+out_file.write('user_id,recommended_items\n')
+for i in range(len(recs)):
+##    aux = ''
+##    for _ in recs[i]:
+##        aux += _ + ' '
+    out_file.write(str(user_df.loc[test_users[i]]['user_id']) + ',' + reduce(lambda acc, x: acc+str(x) + ' ', recs[i], '') + '\n')
+out_file.close()
+##pd.DataFrame(recs, index=[user_df.loc[i]['user_id'] for i in test_users[:len(test_users)/2]]).to_csv('../../output/ItemCB2.csv', sep=' ', index=True, header=False)
 st = time.time()
-cross_validate(items_df, urm, 5)
+#cross_validate(items_df, urm, 5)
 et = time.time()
 print "CV", et-st
