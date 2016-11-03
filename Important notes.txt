@@ -1,0 +1,1 @@
+- Be aware when assigning variables directly from another (specially with objects), check that it is actually copying the object and not the reference. At least sparse matrices have this issue
