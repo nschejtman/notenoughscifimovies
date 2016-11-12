@@ -48,7 +48,7 @@ def compute_similarity_matrix(matrix, k, sh, row_wise=True, partition_size=1000)
             partitioned_matrix = matrix[start:end, ]
             similarity_matrix = partitioned_matrix.dot(matrix.T).toarray().astype(np.float32)
             if sh > 0:
-                similarity_matrix = apply_shrinkage(partitioned_matrix, matrix, similarity_matrix)
+                similarity_matrix = apply_shrinkage(partitioned_matrix, matrix, similarity_matrix,sh)
 
             idx_sorted = np.argsort(similarity_matrix, axis=1)
             not_top_k = idx_sorted[:, :-k]
@@ -278,7 +278,7 @@ class ItemCB(BaseEstimator):
             scores[:, ignore_mask] = 0.0
 
             partition_ranking = scores.argsort()[::-1]
-            partition_ranking = partition_ranking[, :n]  # leave only the top n
+            partition_ranking = partition_ranking[:,:n]  # leave only the top n
 
             if i == 0:
                 ranking = partition_ranking.copy()
