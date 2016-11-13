@@ -10,9 +10,9 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.model_selection import KFold, ParameterGrid
 
 
-def map_scorer(rec, urm_test, hidden_ratings, n):
+def map_scorer(rec, urm_test, hidden_ratings, n, ignore_mask, urm_partition_size=1000):
     score = 0
-    rec_list = rec.predict(urm_test, n)
+    rec_list = rec.predict(urm_test, n, ignore_mask, urm_partition_size)
     i = 0
     for u in range(urm_test.shape[0]):
         if len(hidden_ratings[u]) > 0:
@@ -47,6 +47,7 @@ def compute_similarity_matrix(matrix, k, sh, row_wise=True, partition_size=1000)
             end = start + partition_size if i < n_iterations - 1 else matrix.shape[0]
             partitioned_matrix = matrix[start:end, ]
             similarity_matrix = partitioned_matrix.dot(matrix.T).toarray().astype(np.float32)
+            np.fill_diagonal(similarity_matrix, 0.0)
             if sh > 0:
                 similarity_matrix = apply_shrinkage(partitioned_matrix, matrix, similarity_matrix,sh)
 
@@ -59,10 +60,12 @@ def compute_similarity_matrix(matrix, k, sh, row_wise=True, partition_size=1000)
 
             if i == 0:
                 sim = similarity_matrix.copy()
+                top_k_idx = idx_sorted[:,-k:]
             else:
                 sim = sps.vstack([sim, similarity_matrix])
+                top_k_idx = np.vstack((top_k_idx,idx_sorted[:,-k:]))
 
-    return sim
+    return sim, top_k_idx
 
 
 def apply_shrinkage(partitioned_matrix, matrix, dist, sh, row_wise=True):
@@ -81,30 +84,40 @@ def apply_shrinkage(partitioned_matrix, matrix, dist, sh, row_wise=True):
 
 
 # ICM in rec constructor?
-def cv_search(rec, urm, icm, actives, sample_size=None):
+def cv_search(rec, urm, icm, ignore_mask, sample_size=None, sim_partition_size=1000, urm_partition_size=1000):
     np.random.seed(1)
     urm_sample = urm[np.random.permutation(urm.shape[0])[:sample_size],]
-    params = {'k': [1, 2, 5, 10], 'sh': [0.5, 2, 5]}
+    params = {'k': [1, 2, 5, 10, 20, 50], 'a_sh': [0.1, 0.5, 1, 2, 5, 10]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds, shuffle=True)  # Shuffle UCM if necessary too, to keep indices correspondence
-    splits = kfold.split(urm_sample)
-    result = namedtuple('result', ['mean_score', 'std_dev', 'parameters'])
-    results = []
+    splits = [(train, test) for train,test in kfold.split(urm_sample)]
     pred_ratings_perc = 0.75
     n = 5
-    total = reduce(lambda acc, x: acc * len(x), params.itervalues(), 1) * folds
-    prog = 1
+    result = namedtuple('result', ['mean_score', 'std_dev', 'parameters'])
+    results = []
+    total = float(reduce(lambda acc, x: acc * len(x), params.itervalues(), 1) * folds)
+    prog = 1.0
+    prev_pars = None
+    max_k = np.max(params['k'])
 
     for pars in grid:
         rec = rec.set_params(**pars)
         maps = []
+        print pars
+        if prev_pars is None or prev_pars['a_sh'] != pars['a_sh']:
+            sim_matrix_max_k, top_k_idx = compute_similarity_matrix(icm, max_k, rec.sh, partition_size=sim_partition_size)
+            prev_pars = dict(pars)
 
-        sim_matrix = compute_similarity_matrix(icm, rec.k, rec.sh)
+        #sim_matrix = sim_matrix_max_k[np.arange(sim_matrix_max_k.shape[0]),top_k_idx[:,-rec.k:].T]
+        if rec.k != max_k:
+            sim_matrix = sim_matrix_max_k.copy()
+            sim_matrix[np.arange(sim_matrix_max_k.shape[0]),top_k_idx[:,-max_k:-rec.k].T] = 0.0
+        else:
+            sim_matrix = sim_matrix_max_k
 
         for row_train, row_test in splits:
             rec.fit(icm, sim=sim_matrix)
-
             urm_test = urm_sample[row_test,]
             hidden_ratings = []
             for u in range(urm_test.shape[0]):
@@ -115,12 +128,13 @@ def cv_search(rec, urm, icm, actives, sample_size=None):
                     hidden_ratings.append(relevant_u[int(len(relevant_u) * pred_ratings_perc):])
                 else:
                     hidden_ratings.append([])
-            maps.append(map_scorer(rec, urm_test, hidden_ratings, n))  # Assume rec to predict indices of items, NOT ids
-            print "Progress: ", (prog * 100) / total, "%"
+            maps.append(map_scorer(rec, urm_test, hidden_ratings, n, ignore_mask=ignore_mask, urm_partition_size=urm_partition_size))  # Assume rec to predict indices of items, NOT ids
+            print "Progress: {:.2f}%".format((prog * 100) / total)
+            prog += 1
         results.append(result(np.mean(maps), np.std(maps), pars))
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP5", "Std"] + _.parameters.keys())
-    cols, col_feat, x_feat = 3, 'sh', 'k'
+    cols, col_feat, x_feat = 3, 'a_sh', 'k'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP5')
     f.fig.suptitle("ItemCB CV MAP5 values")
@@ -128,13 +142,14 @@ def cv_search(rec, urm, icm, actives, sample_size=None):
     i_feat_max = params[col_feat].index(scores[col_feat][i_max])
     f_max = f.axes[i_feat_max]
     f_max.plot(scores[x_feat][i_max], y_max, 'o', color='r')
-    plt.figtext(0, 0, "COMMENT\nmaximum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_max],
+    plt.figtext(0, 0, "With TF-IDF\nmaximum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_max],
                                                                                          scores[x_feat][i_max],
                                                                                          y_max,
                                                                                          scores['Std'][i_max]))
     plt.tight_layout()
     plt.subplots_adjust(top=0.9, bottom=0.15)
     f.savefig('ItemCB CV MAP5 values.png', bbox_inches='tight')
+    print scores
     return scores
 
 
@@ -237,16 +252,16 @@ def read_top_pops():
 
 
 class ItemCB(BaseEstimator):
-    def __init__(self, k=5, sh=2):  # k_rated??
+    def __init__(self, k=5, a_sh=2):  # k_rated??
         self.k = k
-        self.sh = sh
+        self.sh = a_sh
         self.sim_mat = None
 
-    def fit(self, icm, sim=None):
+    def fit(self, icm, sim=None, partition_size=1000):
         if sim is None:
-            self.sim_mat = compute_similarity_matrix(icm, self.k, self.sh, partition_size=1000)
+            self.sim_mat, _ = compute_similarity_matrix(icm, self.k, self.sh, partition_size=partition_size)
         else:
-            self.sim_mat = sim.copy()
+            self.sim_mat = sim
 
     def predict(self, urm, n, ignore_mask, partition_size=1000):
         print "Started prediction"
@@ -296,11 +311,11 @@ def generate_attrs(items_df):
     Arguments:
     items_df -- item-content matrix
     """
-    attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test', 'title', 'tags'],
+    attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test'],
                             axis=1)
     attr_mats = {}
     to_dummies = ['career_level', 'country', 'region', 'employment']
-    to_tfidf = ['discipline_id', 'industry_id']
+    to_tfidf = ['discipline_id', 'industry_id', 'title', 'tags']
 
     attr_df['career_level'] = attr_df['career_level'].fillna(0)
     trans = CountVectorizer(token_pattern='\w+')
@@ -323,7 +338,8 @@ actives = np.array(items_dataframe.active_during_test.values)
 ignore_mask = actives == 0
 
 item_ids = items_dataframe.id.values
-ICM = generate_attrs(items_dataframe)
+ICM = generate_attrs(items_dataframe).tocsr()
 recommender = ItemCB()
-recommender.fit(ICM)
-recs = recommender.predict(URM[:1000], 5, ignore_mask)
+# recommender.fit(ICM)
+# recs = recommender.predict(URM[:1000], 5, ignore_mask)
+cv_search(recommender, URM, ICM, ignore_mask, sample_size=10000, sim_partition_size=5000, urm_partition_size=2500)
