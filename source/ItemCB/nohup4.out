@@ -1,0 +1,77 @@
+100000 samples, title and tags, > 2 in CV
+(25294, 64045) (64045, 50904)
+{'a_sh': 500.0, 'k': 10000}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 0.32%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 0.65%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 0.97%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.30%
+Result:  result(mean_score=4.8530227398779804e-05, std_dev=8.4056819557557815e-05, parameters={'a_sh': 500.0, 'k': 10000})
+{'a_sh': 500.0, 'k': 5000}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.95%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 2.27%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 2.60%
+Result:  result(mean_score=2.4745179929390012e-05, std_dev=3.3902455392317451e-05, parameters={'a_sh': 500.0, 'k': 5000})
+{'a_sh': 500.0, 'k': 2000}
+/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py:730: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  SparseEfficiencyWarning)
+Traceback (most recent call last):
+  File "ItemCB_test.py", line 357, in <module>
+    cv_search(recommender, URM, ICM, ignore_mask, sample_size=100000, sim_partition_size=5000, urm_partition_size=2500)
+  File "ItemCB_test.py", line 126, in cv_search
+    sim_matrix[np.arange(sim_matrix.shape[0]),top_k_idx[:,-max_k:-rec.k].T] = 0.0
+  File "/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py", line 652, in __setitem__
+    self._set_many(i, j, x.ravel())
+  File "/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py", line 740, in _set_many
+    self._insert_many(i, j, x[mask])
+  File "/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py", line 790, in _insert_many
+    ui, ui_indptr = np.unique(i, return_index=True)
+  File "/usr/local/lib/python2.7/dist-packages/numpy/lib/arraysetops.py", line 195, in unique
+    perm = ar.argsort(kind='mergesort' if return_index else 'quicksort')
+MemoryError

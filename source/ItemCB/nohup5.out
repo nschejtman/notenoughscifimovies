@@ -1,0 +1,1766 @@
+100000 samples, no title and tags, > 1 in CV
+(25294, 64045) (64045, 81)
+{'a_sh': 500.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3471793 160112500
+Iteration:  2 / 3
+3326415 160112500
+Iteration:  3 / 3
+1811265 84795580
+Progress: 0.38%
+Started prediction
+Iteration:  1 / 3
+3356131 160112500
+Iteration:  2 / 3
+3518974 160112500
+Iteration:  3 / 3
+1819035 84795580
+Progress: 0.76%
+Started prediction
+Iteration:  1 / 3
+3323274 160112500
+Iteration:  2 / 3
+3472785 160112500
+Iteration:  3 / 3
+1735137 84731535
+Progress: 1.14%
+Started prediction
+Iteration:  1 / 3
+3402756 160112500
+Iteration:  2 / 3
+3330252 160112500
+Iteration:  3 / 3
+1876048 84731535
+Progress: 1.52%
+Result:  result(mean_score=2.2004231399870461e-05, std_dev=3.2783405334991165e-05, parameters={'a_sh': 500.0, 'k': 500})
+{'a_sh': 500.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1425290 160112500
+Iteration:  2 / 3
+1350900 160112500
+Iteration:  3 / 3
+736317 84795580
+Progress: 1.89%
+Started prediction
+Iteration:  1 / 3
+1344610 160112500
+Iteration:  2 / 3
+1434474 160112500
+Iteration:  3 / 3
+751015 84795580
+Progress: 2.27%
+Started prediction
+Iteration:  1 / 3
+1369941 160112500
+Iteration:  2 / 3
+1414203 160112500
+Iteration:  3 / 3
+694188 84731535
+Progress: 2.65%
+Started prediction
+Iteration:  1 / 3
+1382247 160112500
+Iteration:  2 / 3
+1343280 160112500
+Iteration:  3 / 3
+769349 84731535
+Progress: 3.03%
+Result:  result(mean_score=5.6707142300882704e-05, std_dev=9.4336142920722701e-06, parameters={'a_sh': 500.0, 'k': 200})
+{'a_sh': 500.0, 'k': 100}
+/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py:730: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  SparseEfficiencyWarning)
+Started prediction
+Iteration:  1 / 3
+714691 160112500
+Iteration:  2 / 3
+676295 160112500
+Iteration:  3 / 3
+377658 84795580
+Progress: 3.41%
+Started prediction
+Iteration:  1 / 3
+683669 160112500
+Iteration:  2 / 3
+725810 160112500
+Iteration:  3 / 3
+381933 84795580
+Progress: 3.79%
+Started prediction
+Iteration:  1 / 3
+692779 160112500
+Iteration:  2 / 3
+713062 160112500
+Iteration:  3 / 3
+353848 84731535
+Progress: 4.17%
+Started prediction
+Iteration:  1 / 3
+693440 160112500
+Iteration:  2 / 3
+675861 160112500
+Iteration:  3 / 3
+387823 84731535
+Progress: 4.55%
+Result:  result(mean_score=1.5063870812243914e-05, std_dev=2.6091389605460312e-05, parameters={'a_sh': 500.0, 'k': 100})
+{'a_sh': 500.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+354816 160112500
+Iteration:  2 / 3
+339990 160112500
+Iteration:  3 / 3
+186163 84795580
+Progress: 4.92%
+Started prediction
+Iteration:  1 / 3
+337986 160112500
+Iteration:  2 / 3
+365760 160112500
+Iteration:  3 / 3
+188327 84795580
+Progress: 5.30%
+Started prediction
+Iteration:  1 / 3
+342135 160112500
+Iteration:  2 / 3
+353691 160112500
+Iteration:  3 / 3
+178294 84731535
+Progress: 5.68%
+Started prediction
+Iteration:  1 / 3
+349548 160112500
+Iteration:  2 / 3
+344047 160112500
+Iteration:  3 / 3
+192968 84731535
+Progress: 6.06%
+Result:  result(mean_score=5.8846263947745854e-05, std_dev=6.8900690285655643e-05, parameters={'a_sh': 500.0, 'k': 50})
+{'a_sh': 500.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+147981 160112500
+Iteration:  2 / 3
+139041 160112500
+Iteration:  3 / 3
+75899 84795580
+Progress: 6.44%
+Started prediction
+Iteration:  1 / 3
+137370 160112500
+Iteration:  2 / 3
+148432 160112500
+Iteration:  3 / 3
+79848 84795580
+Progress: 6.82%
+Started prediction
+Iteration:  1 / 3
+133929 160112500
+Iteration:  2 / 3
+147314 160112500
+Iteration:  3 / 3
+74229 84731535
+Progress: 7.20%
+Started prediction
+Iteration:  1 / 3
+142642 160112500
+Iteration:  2 / 3
+140489 160112500
+Iteration:  3 / 3
+80510 84731535
+Progress: 7.58%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 500.0, 'k': 20})
+{'a_sh': 500.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+73957 160112500
+Iteration:  2 / 3
+67485 160112500
+Iteration:  3 / 3
+37975 84795580
+Progress: 7.95%
+Started prediction
+Iteration:  1 / 3
+66754 160112500
+Iteration:  2 / 3
+72709 160112500
+Iteration:  3 / 3
+35041 84795580
+Progress: 8.33%
+Started prediction
+Iteration:  1 / 3
+68110 160112500
+Iteration:  2 / 3
+68981 160112500
+Iteration:  3 / 3
+37612 84731535
+Progress: 8.71%
+Started prediction
+Iteration:  1 / 3
+69969 160112500
+Iteration:  2 / 3
+65336 160112500
+Iteration:  3 / 3
+37600 84731535
+Progress: 9.09%
+Result:  result(mean_score=4.1515787106624349e-05, std_dev=4.4530166616452002e-05, parameters={'a_sh': 500.0, 'k': 10})
+{'a_sh': 200.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3495389 160112500
+Iteration:  2 / 3
+3333923 160112500
+Iteration:  3 / 3
+1818114 84795580
+Progress: 9.47%
+Started prediction
+Iteration:  1 / 3
+3340839 160112500
+Iteration:  2 / 3
+3517683 160112500
+Iteration:  3 / 3
+1831250 84795580
+Progress: 9.85%
+Started prediction
+Iteration:  1 / 3
+3345266 160112500
+Iteration:  2 / 3
+3476798 160112500
+Iteration:  3 / 3
+1737364 84731535
+Progress: 10.23%
+Started prediction
+Iteration:  1 / 3
+3420569 160112500
+Iteration:  2 / 3
+3289444 160112500
+Iteration:  3 / 3
+1869209 84731535
+Progress: 10.61%
+Result:  result(mean_score=4.3942448055225856e-05, std_dev=4.880705371341907e-05, parameters={'a_sh': 200.0, 'k': 500})
+{'a_sh': 200.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1420587 160112500
+Iteration:  2 / 3
+1347893 160112500
+Iteration:  3 / 3
+738749 84795580
+Progress: 10.98%
+Started prediction
+Iteration:  1 / 3
+1357071 160112500
+Iteration:  2 / 3
+1434120 160112500
+Iteration:  3 / 3
+740512 84795580
+Progress: 11.36%
+Started prediction
+Iteration:  1 / 3
+1362294 160112500
+Iteration:  2 / 3
+1409022 160112500
+Iteration:  3 / 3
+700380 84731535
+Progress: 11.74%
+Started prediction
+Iteration:  1 / 3
+1367311 160112500
+Iteration:  2 / 3
+1347247 160112500
+Iteration:  3 / 3
+767152 84731535
+Progress: 12.12%
+Result:  result(mean_score=5.705404237505917e-05, std_dev=6.2097975284477268e-05, parameters={'a_sh': 200.0, 'k': 200})
+{'a_sh': 200.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+718564 160112500
+Iteration:  2 / 3
+685047 160112500
+Iteration:  3 / 3
+377386 84795580
+Progress: 12.50%
+Started prediction
+Iteration:  1 / 3
+679059 160112500
+Iteration:  2 / 3
+728941 160112500
+Iteration:  3 / 3
+380277 84795580
+Progress: 12.88%
+Started prediction
+Iteration:  1 / 3
+690371 160112500
+Iteration:  2 / 3
+706195 160112500
+Iteration:  3 / 3
+357194 84731535
+Progress: 13.26%
+Started prediction
+Iteration:  1 / 3
+700581 160112500
+Iteration:  2 / 3
+682436 160112500
+Iteration:  3 / 3
+382534 84731535
+Progress: 13.64%
+Result:  result(mean_score=2.0942074433217345e-05, std_dev=2.4643933230391237e-05, parameters={'a_sh': 200.0, 'k': 100})
+{'a_sh': 200.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+359514 160112500
+Iteration:  2 / 3
+337403 160112500
+Iteration:  3 / 3
+183303 84795580
+Progress: 14.02%
+Started prediction
+Iteration:  1 / 3
+340682 160112500
+Iteration:  2 / 3
+363372 160112500
+Iteration:  3 / 3
+192041 84795580
+Progress: 14.39%
+Started prediction
+Iteration:  1 / 3
+341231 160112500
+Iteration:  2 / 3
+356628 160112500
+Iteration:  3 / 3
+178382 84731535
+Progress: 14.77%
+Started prediction
+Iteration:  1 / 3
+352307 160112500
+Iteration:  2 / 3
+343826 160112500
+Iteration:  3 / 3
+193672 84731535
+Progress: 15.15%
+Result:  result(mean_score=7.3702830188679246e-06, std_dev=1.2765704654841373e-05, parameters={'a_sh': 200.0, 'k': 50})
+{'a_sh': 200.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+147674 160112500
+Iteration:  2 / 3
+139087 160112500
+Iteration:  3 / 3
+75917 84795580
+Progress: 15.53%
+Started prediction
+Iteration:  1 / 3
+134064 160112500
+Iteration:  2 / 3
+145669 160112500
+Iteration:  3 / 3
+77488 84795580
+Progress: 15.91%
+Started prediction
+Iteration:  1 / 3
+134448 160112500
+Iteration:  2 / 3
+140526 160112500
+Iteration:  3 / 3
+73128 84731535
+Progress: 16.29%
+Started prediction
+Iteration:  1 / 3
+142154 160112500
+Iteration:  2 / 3
+139649 160112500
+Iteration:  3 / 3
+82311 84731535
+Progress: 16.67%
+Result:  result(mean_score=9.8270440251572339e-06, std_dev=1.7020939539788498e-05, parameters={'a_sh': 200.0, 'k': 20})
+{'a_sh': 200.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+72903 160112500
+Iteration:  2 / 3
+67356 160112500
+Iteration:  3 / 3
+38095 84795580
+Progress: 17.05%
+Started prediction
+Iteration:  1 / 3
+65899 160112500
+Iteration:  2 / 3
+67915 160112500
+Iteration:  3 / 3
+36250 84795580
+Progress: 17.42%
+Started prediction
+Iteration:  1 / 3
+67793 160112500
+Iteration:  2 / 3
+70592 160112500
+Iteration:  3 / 3
+38090 84731535
+Progress: 17.80%
+Started prediction
+Iteration:  1 / 3
+71247 160112500
+Iteration:  2 / 3
+66665 160112500
+Iteration:  3 / 3
+37856 84731535
+Progress: 18.18%
+Result:  result(mean_score=2.9759379864677492e-05, std_dev=2.9763939099224639e-05, parameters={'a_sh': 200.0, 'k': 10})
+{'a_sh': 100.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3492505 160112500
+Iteration:  2 / 3
+3322800 160112500
+Iteration:  3 / 3
+1806264 84795580
+Progress: 18.56%
+Started prediction
+Iteration:  1 / 3
+3369305 160112500
+Iteration:  2 / 3
+3517346 160112500
+Iteration:  3 / 3
+1826964 84795580
+Progress: 18.94%
+Started prediction
+Iteration:  1 / 3
+3334373 160112500
+Iteration:  2 / 3
+3456827 160112500
+Iteration:  3 / 3
+1717526 84731535
+Progress: 19.32%
+Started prediction
+Iteration:  1 / 3
+3430222 160112500
+Iteration:  2 / 3
+3300642 160112500
+Iteration:  3 / 3
+1864305 84731535
+Progress: 19.70%
+Result:  result(mean_score=4.7189415290354058e-05, std_dev=4.6366441056182309e-05, parameters={'a_sh': 100.0, 'k': 500})
+{'a_sh': 100.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1425414 160112500
+Iteration:  2 / 3
+1348899 160112500
+Iteration:  3 / 3
+736525 84795580
+Progress: 20.08%
+Started prediction
+Iteration:  1 / 3
+1360937 160112500
+Iteration:  2 / 3
+1424002 160112500
+Iteration:  3 / 3
+746995 84795580
+Progress: 20.45%
+Started prediction
+Iteration:  1 / 3
+1364669 160112500
+Iteration:  2 / 3
+1416318 160112500
+Iteration:  3 / 3
+690424 84731535
+Progress: 20.83%
+Started prediction
+Iteration:  1 / 3
+1376061 160112500
+Iteration:  2 / 3
+1338605 160112500
+Iteration:  3 / 3
+759779 84731535
+Progress: 21.21%
+Result:  result(mean_score=2.0591735467527916e-05, std_dev=2.4059807136139034e-05, parameters={'a_sh': 100.0, 'k': 200})
+{'a_sh': 100.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+718836 160112500
+Iteration:  2 / 3
+674845 160112500
+Iteration:  3 / 3
+376185 84795580
+Progress: 21.59%
+Started prediction
+Iteration:  1 / 3
+685829 160112500
+Iteration:  2 / 3
+717494 160112500
+Iteration:  3 / 3
+377381 84795580
+Progress: 21.97%
+Started prediction
+Iteration:  1 / 3
+683868 160112500
+Iteration:  2 / 3
+711465 160112500
+Iteration:  3 / 3
+354444 84731535
+Progress: 22.35%
+Started prediction
+Iteration:  1 / 3
+694828 160112500
+Iteration:  2 / 3
+680612 160112500
+Iteration:  3 / 3
+389816 84731535
+Progress: 22.73%
+Result:  result(mean_score=2.3890187640764515e-05, std_dev=2.2581371682373857e-05, parameters={'a_sh': 100.0, 'k': 100})
+{'a_sh': 100.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+362326 160112500
+Iteration:  2 / 3
+343791 160112500
+Iteration:  3 / 3
+184918 84795580
+Progress: 23.11%
+Started prediction
+Iteration:  1 / 3
+342691 160112500
+Iteration:  2 / 3
+360425 160112500
+Iteration:  3 / 3
+191199 84795580
+Progress: 23.48%
+Started prediction
+Iteration:  1 / 3
+339982 160112500
+Iteration:  2 / 3
+358539 160112500
+Iteration:  3 / 3
+180863 84731535
+Progress: 23.86%
+Started prediction
+Iteration:  1 / 3
+349261 160112500
+Iteration:  2 / 3
+340086 160112500
+Iteration:  3 / 3
+192262 84731535
+Progress: 24.24%
+Result:  result(mean_score=2.1089419137141479e-05, std_dev=3.6527945447644427e-05, parameters={'a_sh': 100.0, 'k': 50})
+{'a_sh': 100.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+146909 160112500
+Iteration:  2 / 3
+132762 160112500
+Iteration:  3 / 3
+74726 84795580
+Progress: 24.62%
+Started prediction
+Iteration:  1 / 3
+134733 160112500
+Iteration:  2 / 3
+145086 160112500
+Iteration:  3 / 3
+78603 84795580
+Progress: 25.00%
+Started prediction
+Iteration:  1 / 3
+135728 160112500
+Iteration:  2 / 3
+145451 160112500
+Iteration:  3 / 3
+75032 84731535
+Progress: 25.38%
+Started prediction
+Iteration:  1 / 3
+141300 160112500
+Iteration:  2 / 3
+136001 160112500
+Iteration:  3 / 3
+80097 84731535
+Progress: 25.76%
+Result:  result(mean_score=2.0636792452830187e-05, std_dev=3.5743973033555835e-05, parameters={'a_sh': 100.0, 'k': 20})
+{'a_sh': 100.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+74804 160112500
+Iteration:  2 / 3
+66873 160112500
+Iteration:  3 / 3
+36791 84795580
+Progress: 26.14%
+Started prediction
+Iteration:  1 / 3
+66913 160112500
+Iteration:  2 / 3
+67451 160112500
+Iteration:  3 / 3
+36905 84795580
+Progress: 26.52%
+Started prediction
+Iteration:  1 / 3
+67587 160112500
+Iteration:  2 / 3
+71768 160112500
+Iteration:  3 / 3
+36920 84731535
+Progress: 26.89%
+Started prediction
+Iteration:  1 / 3
+72170 160112500
+Iteration:  2 / 3
+66219 160112500
+Iteration:  3 / 3
+36799 84731535
+Progress: 27.27%
+Result:  result(mean_score=2.9759379864677492e-05, std_dev=2.9763939099224639e-05, parameters={'a_sh': 100.0, 'k': 10})
+{'a_sh': 50.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3499257 160112500
+Iteration:  2 / 3
+3332835 160112500
+Iteration:  3 / 3
+1816035 84795580
+Progress: 27.65%
+Started prediction
+Iteration:  1 / 3
+3333763 160112500
+Iteration:  2 / 3
+3531891 160112500
+Iteration:  3 / 3
+1809514 84795580
+Progress: 28.03%
+Started prediction
+Iteration:  1 / 3
+3329914 160112500
+Iteration:  2 / 3
+3468686 160112500
+Iteration:  3 / 3
+1731778 84731535
+Progress: 28.41%
+Started prediction
+Iteration:  1 / 3
+3405659 160112500
+Iteration:  2 / 3
+3305878 160112500
+Iteration:  3 / 3
+1875588 84731535
+Progress: 28.79%
+Result:  result(mean_score=1.7474090142202942e-05, std_dev=3.0266011942333964e-05, parameters={'a_sh': 50.0, 'k': 500})
+{'a_sh': 50.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1424889 160112500
+Iteration:  2 / 3
+1357138 160112500
+Iteration:  3 / 3
+736828 84795580
+Progress: 29.17%
+Started prediction
+Iteration:  1 / 3
+1351353 160112500
+Iteration:  2 / 3
+1438230 160112500
+Iteration:  3 / 3
+750279 84795580
+Progress: 29.55%
+Started prediction
+Iteration:  1 / 3
+1358659 160112500
+Iteration:  2 / 3
+1401567 160112500
+Iteration:  3 / 3
+705021 84731535
+Progress: 29.92%
+Started prediction
+Iteration:  1 / 3
+1384566 160112500
+Iteration:  2 / 3
+1343490 160112500
+Iteration:  3 / 3
+759106 84731535
+Progress: 30.30%
+Result:  result(mean_score=3.9308176100628929e-06, std_dev=6.8083758159153978e-06, parameters={'a_sh': 50.0, 'k': 200})
+{'a_sh': 50.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+708003 160112500
+Iteration:  2 / 3
+674390 160112500
+Iteration:  3 / 3
+376938 84795580
+Progress: 30.68%
+Started prediction
+Iteration:  1 / 3
+680961 160112500
+Iteration:  2 / 3
+718995 160112500
+Iteration:  3 / 3
+376532 84795580
+Progress: 31.06%
+Started prediction
+Iteration:  1 / 3
+684510 160112500
+Iteration:  2 / 3
+709961 160112500
+Iteration:  3 / 3
+358772 84731535
+Progress: 31.44%
+Started prediction
+Iteration:  1 / 3
+703093 160112500
+Iteration:  2 / 3
+681576 160112500
+Iteration:  3 / 3
+386992 84731535
+Progress: 31.82%
+Result:  result(mean_score=1.4695509052433577e-05, std_dev=2.5453368321903323e-05, parameters={'a_sh': 50.0, 'k': 100})
+{'a_sh': 50.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+357907 160112500
+Iteration:  2 / 3
+342861 160112500
+Iteration:  3 / 3
+184745 84795580
+Progress: 32.20%
+Started prediction
+Iteration:  1 / 3
+340524 160112500
+Iteration:  2 / 3
+364068 160112500
+Iteration:  3 / 3
+189443 84795580
+Progress: 32.58%
+Started prediction
+Iteration:  1 / 3
+340170 160112500
+Iteration:  2 / 3
+361159 160112500
+Iteration:  3 / 3
+181102 84731535
+Progress: 32.95%
+Started prediction
+Iteration:  1 / 3
+348948 160112500
+Iteration:  2 / 3
+340916 160112500
+Iteration:  3 / 3
+193487 84731535
+Progress: 33.33%
+Result:  result(mean_score=2.9481132075471701e-06, std_dev=5.106281861936549e-06, parameters={'a_sh': 50.0, 'k': 50})
+{'a_sh': 50.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+146499 160112500
+Iteration:  2 / 3
+138749 160112500
+Iteration:  3 / 3
+77992 84795580
+Progress: 33.71%
+Started prediction
+Iteration:  1 / 3
+132917 160112500
+Iteration:  2 / 3
+144637 160112500
+Iteration:  3 / 3
+78124 84795580
+Progress: 34.09%
+Started prediction
+Iteration:  1 / 3
+137319 160112500
+Iteration:  2 / 3
+143362 160112500
+Iteration:  3 / 3
+74286 84731535
+Progress: 34.47%
+Started prediction
+Iteration:  1 / 3
+140740 160112500
+Iteration:  2 / 3
+142252 160112500
+Iteration:  3 / 3
+79255 84731535
+Progress: 34.85%
+Result:  result(mean_score=1.4740566037735849e-05, std_dev=2.5531409309682746e-05, parameters={'a_sh': 50.0, 'k': 20})
+{'a_sh': 50.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+71763 160112500
+Iteration:  2 / 3
+68566 160112500
+Iteration:  3 / 3
+38362 84795580
+Progress: 35.23%
+Started prediction
+Iteration:  1 / 3
+66431 160112500
+Iteration:  2 / 3
+69431 160112500
+Iteration:  3 / 3
+36712 84795580
+Progress: 35.61%
+Started prediction
+Iteration:  1 / 3
+65580 160112500
+Iteration:  2 / 3
+71267 160112500
+Iteration:  3 / 3
+37745 84731535
+Progress: 35.98%
+Started prediction
+Iteration:  1 / 3
+70031 160112500
+Iteration:  2 / 3
+65281 160112500
+Iteration:  3 / 3
+37476 84731535
+Progress: 36.36%
+Result:  result(mean_score=4.1582505899201019e-05, std_dev=2.4526581512480494e-05, parameters={'a_sh': 50.0, 'k': 10})
+{'a_sh': 20.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3488668 160112500
+Iteration:  2 / 3
+3310640 160112500
+Iteration:  3 / 3
+1824561 84795580
+Progress: 36.74%
+Started prediction
+Iteration:  1 / 3
+3355369 160112500
+Iteration:  2 / 3
+3528862 160112500
+Iteration:  3 / 3
+1822915 84795580
+Progress: 37.12%
+Started prediction
+Iteration:  1 / 3
+3327986 160112500
+Iteration:  2 / 3
+3460143 160112500
+Iteration:  3 / 3
+1714190 84731535
+Progress: 37.50%
+Started prediction
+Iteration:  1 / 3
+3401219 160112500
+Iteration:  2 / 3
+3293179 160112500
+Iteration:  3 / 3
+1880255 84731535
+Progress: 37.88%
+Result:  result(mean_score=7.3087223474368851e-06, std_dev=8.1117528174290402e-06, parameters={'a_sh': 20.0, 'k': 500})
+{'a_sh': 20.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1421725 160112500
+Iteration:  2 / 3
+1355019 160112500
+Iteration:  3 / 3
+739934 84795580
+Progress: 38.26%
+Started prediction
+Iteration:  1 / 3
+1362809 160112500
+Iteration:  2 / 3
+1435329 160112500
+Iteration:  3 / 3
+742443 84795580
+Progress: 38.64%
+Started prediction
+Iteration:  1 / 3
+1361184 160112500
+Iteration:  2 / 3
+1404369 160112500
+Iteration:  3 / 3
+700483 84731535
+Progress: 39.02%
+Started prediction
+Iteration:  1 / 3
+1379587 160112500
+Iteration:  2 / 3
+1347094 160112500
+Iteration:  3 / 3
+763828 84731535
+Progress: 39.39%
+Result:  result(mean_score=3.6617710019584758e-05, std_dev=2.66851420914759e-05, parameters={'a_sh': 20.0, 'k': 200})
+{'a_sh': 20.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+714272 160112500
+Iteration:  2 / 3
+674554 160112500
+Iteration:  3 / 3
+379865 84795580
+Progress: 39.77%
+Started prediction
+Iteration:  1 / 3
+681937 160112500
+Iteration:  2 / 3
+722479 160112500
+Iteration:  3 / 3
+374911 84795580
+Progress: 40.15%
+Started prediction
+Iteration:  1 / 3
+684955 160112500
+Iteration:  2 / 3
+710104 160112500
+Iteration:  3 / 3
+355740 84731535
+Progress: 40.53%
+Started prediction
+Iteration:  1 / 3
+700674 160112500
+Iteration:  2 / 3
+679192 160112500
+Iteration:  3 / 3
+390526 84731535
+Progress: 40.91%
+Result:  result(mean_score=2.9759379864677492e-05, std_dev=2.9763939099224639e-05, parameters={'a_sh': 20.0, 'k': 100})
+{'a_sh': 20.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+362508 160112500
+Iteration:  2 / 3
+346504 160112500
+Iteration:  3 / 3
+185404 84795580
+Progress: 41.29%
+Started prediction
+Iteration:  1 / 3
+338914 160112500
+Iteration:  2 / 3
+359967 160112500
+Iteration:  3 / 3
+192865 84795580
+Progress: 41.67%
+Started prediction
+Iteration:  1 / 3
+341110 160112500
+Iteration:  2 / 3
+356796 160112500
+Iteration:  3 / 3
+184246 84731535
+Progress: 42.05%
+Started prediction
+Iteration:  1 / 3
+348646 160112500
+Iteration:  2 / 3
+342675 160112500
+Iteration:  3 / 3
+196046 84731535
+Progress: 42.42%
+Result:  result(mean_score=2.6516144032391992e-05, std_dev=1.6895175225176061e-05, parameters={'a_sh': 20.0, 'k': 50})
+{'a_sh': 20.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+148424 160112500
+Iteration:  2 / 3
+136332 160112500
+Iteration:  3 / 3
+75158 84795580
+Progress: 42.80%
+Started prediction
+Iteration:  1 / 3
+136673 160112500
+Iteration:  2 / 3
+145149 160112500
+Iteration:  3 / 3
+77801 84795580
+Progress: 43.18%
+Started prediction
+Iteration:  1 / 3
+136051 160112500
+Iteration:  2 / 3
+143954 160112500
+Iteration:  3 / 3
+75250 84731535
+Progress: 43.56%
+Started prediction
+Iteration:  1 / 3
+141120 160112500
+Iteration:  2 / 3
+138622 160112500
+Iteration:  3 / 3
+81669 84731535
+Progress: 43.94%
+Result:  result(mean_score=1.8994688422306806e-05, std_dev=2.4671601801782196e-05, parameters={'a_sh': 20.0, 'k': 20})
+{'a_sh': 20.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+74516 160112500
+Iteration:  2 / 3
+67150 160112500
+Iteration:  3 / 3
+37460 84795580
+Progress: 44.32%
+Started prediction
+Iteration:  1 / 3
+67028 160112500
+Iteration:  2 / 3
+69179 160112500
+Iteration:  3 / 3
+37176 84795580
+Progress: 44.70%
+Started prediction
+Iteration:  1 / 3
+67304 160112500
+Iteration:  2 / 3
+72038 160112500
+Iteration:  3 / 3
+36401 84731535
+Progress: 45.08%
+Started prediction
+Iteration:  1 / 3
+72347 160112500
+Iteration:  2 / 3
+66758 160112500
+Iteration:  3 / 3
+39119 84731535
+Progress: 45.45%
+Result:  result(mean_score=2.9436075090169428e-05, std_dev=2.9436144057568782e-05, parameters={'a_sh': 20.0, 'k': 10})
+{'a_sh': 10.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3496166 160112500
+Iteration:  2 / 3
+3320606 160112500
+Iteration:  3 / 3
+1823461 84795580
+Progress: 45.83%
+Started prediction
+Iteration:  1 / 3
+3332277 160112500
+Iteration:  2 / 3
+3505940 160112500
+Iteration:  3 / 3
+1835123 84795580
+Progress: 46.21%
+Started prediction
+Iteration:  1 / 3
+3358842 160112500
+Iteration:  2 / 3
+3479190 160112500
+Iteration:  3 / 3
+1737030 84731535
+Progress: 46.59%
+Started prediction
+Iteration:  1 / 3
+3415936 160112500
+Iteration:  2 / 3
+3287901 160112500
+Iteration:  3 / 3
+1882035 84731535
+Progress: 46.97%
+Result:  result(mean_score=4.8117683139413114e-05, std_dev=4.5685844163013682e-05, parameters={'a_sh': 10.0, 'k': 500})
+{'a_sh': 10.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1421587 160112500
+Iteration:  2 / 3
+1355447 160112500
+Iteration:  3 / 3
+748224 84795580
+Progress: 47.35%
+Started prediction
+Iteration:  1 / 3
+1356677 160112500
+Iteration:  2 / 3
+1429626 160112500
+Iteration:  3 / 3
+741725 84795580
+Progress: 47.73%
+Started prediction
+Iteration:  1 / 3
+1364518 160112500
+Iteration:  2 / 3
+1412675 160112500
+Iteration:  3 / 3
+692584 84731535
+Progress: 48.11%
+Started prediction
+Iteration:  1 / 3
+1380605 160112500
+Iteration:  2 / 3
+1338580 160112500
+Iteration:  3 / 3
+765006 84731535
+Progress: 48.48%
+Result:  result(mean_score=3.3726243062982205e-05, std_dev=2.8171963996273355e-05, parameters={'a_sh': 10.0, 'k': 200})
+{'a_sh': 10.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+708724 160112500
+Iteration:  2 / 3
+681289 160112500
+Iteration:  3 / 3
+380003 84795580
+Progress: 48.86%
+Started prediction
+Iteration:  1 / 3
+685254 160112500
+Iteration:  2 / 3
+720203 160112500
+Iteration:  3 / 3
+375647 84795580
+Progress: 49.24%
+Started prediction
+Iteration:  1 / 3
+688480 160112500
+Iteration:  2 / 3
+706681 160112500
+Iteration:  3 / 3
+356459 84731535
+Progress: 49.62%
+Started prediction
+Iteration:  1 / 3
+702325 160112500
+Iteration:  2 / 3
+680534 160112500
+Iteration:  3 / 3
+388575 84731535
+Progress: 50.00%
+Result:  result(mean_score=2.9481132075471701e-06, std_dev=5.106281861936549e-06, parameters={'a_sh': 10.0, 'k': 100})
+{'a_sh': 10.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+354258 160112500
+Iteration:  2 / 3
+343326 160112500
+Iteration:  3 / 3
+188566 84795580
+Progress: 50.38%
+Started prediction
+Iteration:  1 / 3
+333421 160112500
+Iteration:  2 / 3
+366505 160112500
+Iteration:  3 / 3
+188652 84795580
+Progress: 50.76%
+Started prediction
+Iteration:  1 / 3
+340968 160112500
+Iteration:  2 / 3
+352318 160112500
+Iteration:  3 / 3
+178671 84731535
+Progress: 51.14%
+Started prediction
+Iteration:  1 / 3
+351255 160112500
+Iteration:  2 / 3
+339525 160112500
+Iteration:  3 / 3
+196752 84731535
+Progress: 51.52%
+Result:  result(mean_score=2.7075493076407138e-05, std_dev=3.2208433296719956e-05, parameters={'a_sh': 10.0, 'k': 50})
+{'a_sh': 10.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+145191 160112500
+Iteration:  2 / 3
+138196 160112500
+Iteration:  3 / 3
+74454 84795580
+Progress: 51.89%
+Started prediction
+Iteration:  1 / 3
+135138 160112500
+Iteration:  2 / 3
+146952 160112500
+Iteration:  3 / 3
+77093 84795580
+Progress: 52.27%
+Started prediction
+Iteration:  1 / 3
+135888 160112500
+Iteration:  2 / 3
+144390 160112500
+Iteration:  3 / 3
+73821 84731535
+Progress: 52.65%
+Started prediction
+Iteration:  1 / 3
+142857 160112500
+Iteration:  2 / 3
+137836 160112500
+Iteration:  3 / 3
+83175 84731535
+Progress: 53.03%
+Result:  result(mean_score=4.4214982633323838e-05, std_dev=2.5527805175990587e-05, parameters={'a_sh': 10.0, 'k': 20})
+{'a_sh': 10.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+76196 160112500
+Iteration:  2 / 3
+67833 160112500
+Iteration:  3 / 3
+35702 84795580
+Progress: 53.41%
+Started prediction
+Iteration:  1 / 3
+67235 160112500
+Iteration:  2 / 3
+70853 160112500
+Iteration:  3 / 3
+36119 84795580
+Progress: 53.79%
+Started prediction
+Iteration:  1 / 3
+66852 160112500
+Iteration:  2 / 3
+71315 160112500
+Iteration:  3 / 3
+37184 84731535
+Progress: 54.17%
+Started prediction
+Iteration:  1 / 3
+69528 160112500
+Iteration:  2 / 3
+67558 160112500
+Iteration:  3 / 3
+38358 84731535
+Progress: 54.55%
+Result:  result(mean_score=4.1560844091926626e-05, std_dev=2.4543158866858866e-05, parameters={'a_sh': 10.0, 'k': 10})
+{'a_sh': 5.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3477123 160112500
+Iteration:  2 / 3
+3321045 160112500
+Iteration:  3 / 3
+1813549 84795580
+Progress: 54.92%
+Started prediction
+Iteration:  1 / 3
+3327652 160112500
+Iteration:  2 / 3
+3528117 160112500
+Iteration:  3 / 3
+1805966 84795580
+Progress: 55.30%
+Started prediction
+Iteration:  1 / 3
+3309205 160112500
+Iteration:  2 / 3
+3470018 160112500
+Iteration:  3 / 3
+1728471 84731535
+Progress: 55.68%
+Started prediction
+Iteration:  1 / 3
+3419914 160112500
+Iteration:  2 / 3
+3303924 160112500
+Iteration:  3 / 3
+1874810 84731535
+Progress: 56.06%
+Result:  result(mean_score=1.4695509052433577e-05, std_dev=2.5453368321903323e-05, parameters={'a_sh': 5.0, 'k': 500})
+{'a_sh': 5.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1413441 160112500
+Iteration:  2 / 3
+1351177 160112500
+Iteration:  3 / 3
+746707 84795580
+Progress: 56.44%
+Started prediction
+Iteration:  1 / 3
+1348388 160112500
+Iteration:  2 / 3
+1428707 160112500
+Iteration:  3 / 3
+747156 84795580
+Progress: 56.82%
+Started prediction
+Iteration:  1 / 3
+1360352 160112500
+Iteration:  2 / 3
+1408876 160112500
+Iteration:  3 / 3
+698612 84731535
+Progress: 57.20%
+Started prediction
+Iteration:  1 / 3
+1383479 160112500
+Iteration:  2 / 3
+1343621 160112500
+Iteration:  3 / 3
+761172 84731535
+Progress: 57.58%
+Result:  result(mean_score=3.8699898479846021e-05, std_dev=3.201538997143106e-05, parameters={'a_sh': 5.0, 'k': 200})
+{'a_sh': 5.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+728233 160112500
+Iteration:  2 / 3
+683007 160112500
+Iteration:  3 / 3
+377908 84795580
+Progress: 57.95%
+Started prediction
+Iteration:  1 / 3
+693818 160112500
+Iteration:  2 / 3
+729682 160112500
+Iteration:  3 / 3
+375224 84795580
+Progress: 58.33%
+Started prediction
+Iteration:  1 / 3
+686172 160112500
+Iteration:  2 / 3
+710142 160112500
+Iteration:  3 / 3
+354906 84731535
+Progress: 58.71%
+Started prediction
+Iteration:  1 / 3
+698765 160112500
+Iteration:  2 / 3
+685251 160112500
+Iteration:  3 / 3
+384061 84731535
+Progress: 59.09%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 5.0, 'k': 100})
+{'a_sh': 5.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+360664 160112500
+Iteration:  2 / 3
+343638 160112500
+Iteration:  3 / 3
+187539 84795580
+Progress: 59.47%
+Started prediction
+Iteration:  1 / 3
+334942 160112500
+Iteration:  2 / 3
+360815 160112500
+Iteration:  3 / 3
+190765 84795580
+Progress: 59.85%
+Started prediction
+Iteration:  1 / 3
+335811 160112500
+Iteration:  2 / 3
+358070 160112500
+Iteration:  3 / 3
+182185 84731535
+Progress: 60.23%
+Started prediction
+Iteration:  1 / 3
+351679 160112500
+Iteration:  2 / 3
+341555 160112500
+Iteration:  3 / 3
+193174 84731535
+Progress: 60.61%
+Result:  result(mean_score=2.9759379864677492e-05, std_dev=2.9763939099224639e-05, parameters={'a_sh': 5.0, 'k': 50})
+{'a_sh': 5.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+145223 160112500
+Iteration:  2 / 3
+135410 160112500
+Iteration:  3 / 3
+74946 84795580
+Progress: 60.98%
+Started prediction
+Iteration:  1 / 3
+136156 160112500
+Iteration:  2 / 3
+147179 160112500
+Iteration:  3 / 3
+78161 84795580
+Progress: 61.36%
+Started prediction
+Iteration:  1 / 3
+136097 160112500
+Iteration:  2 / 3
+145437 160112500
+Iteration:  3 / 3
+73526 84731535
+Progress: 61.74%
+Started prediction
+Iteration:  1 / 3
+138842 160112500
+Iteration:  2 / 3
+137575 160112500
+Iteration:  3 / 3
+81576 84731535
+Progress: 62.12%
+Result:  result(mean_score=4.3363549822645872e-05, std_dev=3.8367734199214236e-05, parameters={'a_sh': 5.0, 'k': 20})
+{'a_sh': 5.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+74002 160112500
+Iteration:  2 / 3
+68721 160112500
+Iteration:  3 / 3
+37672 84795580
+Progress: 62.50%
+Started prediction
+Iteration:  1 / 3
+63632 160112500
+Iteration:  2 / 3
+71089 160112500
+Iteration:  3 / 3
+37233 84795580
+Progress: 62.88%
+Started prediction
+Iteration:  1 / 3
+65976 160112500
+Iteration:  2 / 3
+69516 160112500
+Iteration:  3 / 3
+38684 84731535
+Progress: 63.26%
+Started prediction
+Iteration:  1 / 3
+68241 160112500
+Iteration:  2 / 3
+64748 160112500
+Iteration:  3 / 3
+37073 84731535
+Progress: 63.64%
+Result:  result(mean_score=2.6563692072259377e-05, std_dev=2.6882199479479031e-05, parameters={'a_sh': 5.0, 'k': 10})
+{'a_sh': 2.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3487150 160112500
+Iteration:  2 / 3
+3317291 160112500
+Iteration:  3 / 3
+1807844 84795580
+Progress: 64.02%
+Started prediction
+Iteration:  1 / 3
+3353157 160112500
+Iteration:  2 / 3
+3540924 160112500
+Iteration:  3 / 3
+1818370 84795580
+Progress: 64.39%
+Started prediction
+Iteration:  1 / 3
+3339017 160112500
+Iteration:  2 / 3
+3456656 160112500
+Iteration:  3 / 3
+1733746 84731535
+Progress: 64.77%
+Started prediction
+Iteration:  1 / 3
+3420433 160112500
+Iteration:  2 / 3
+3305463 160112500
+Iteration:  3 / 3
+1898060 84731535
+Progress: 65.15%
+Result:  result(mean_score=4.8095443541887564e-05, std_dev=5.0491061286030573e-05, parameters={'a_sh': 2.0, 'k': 500})
+{'a_sh': 2.0, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+1436051 160112500
+Iteration:  2 / 3
+1343599 160112500
+Iteration:  3 / 3
+737860 84795580
+Progress: 65.53%
+Started prediction
+Iteration:  1 / 3
+1357887 160112500
+Iteration:  2 / 3
+1435111 160112500
+Iteration:  3 / 3
+748966 84795580
+Progress: 65.91%
+Started prediction
+Iteration:  1 / 3
+1360726 160112500
+Iteration:  2 / 3
+1405334 160112500
+Iteration:  3 / 3
+696506 84731535
+Progress: 66.29%
+Started prediction
+Iteration:  1 / 3
+1380772 160112500
+Iteration:  2 / 3
+1338254 160112500
+Iteration:  3 / 3
+758565 84731535
+Progress: 66.67%
+Result:  result(mean_score=8.4337431698190679e-05, std_dev=5.0356073074565669e-05, parameters={'a_sh': 2.0, 'k': 200})
+{'a_sh': 2.0, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+717955 160112500
+Iteration:  2 / 3
+676494 160112500
+Iteration:  3 / 3
+379286 84795580
+Progress: 67.05%
+Started prediction
+Iteration:  1 / 3
+676365 160112500
+Iteration:  2 / 3
+724993 160112500
+Iteration:  3 / 3
+379403 84795580
+Progress: 67.42%
+Started prediction
+Iteration:  1 / 3
+683262 160112500
+Iteration:  2 / 3
+714056 160112500
+Iteration:  3 / 3
+359334 84731535
+Progress: 67.80%
+Started prediction
+Iteration:  1 / 3
+699816 160112500
+Iteration:  2 / 3
+678229 160112500
+Iteration:  3 / 3
+392592 84731535
+Progress: 68.18%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 2.0, 'k': 100})
+{'a_sh': 2.0, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+358236 160112500
+Iteration:  2 / 3
+341050 160112500
+Iteration:  3 / 3
+186322 84795580
+Progress: 68.56%
+Started prediction
+Iteration:  1 / 3
+339532 160112500
+Iteration:  2 / 3
+363114 160112500
+Iteration:  3 / 3
+193238 84795580
+Progress: 68.94%
+Started prediction
+Iteration:  1 / 3
+340597 160112500
+Iteration:  2 / 3
+360975 160112500
+Iteration:  3 / 3
+179026 84731535
+Progress: 69.32%
+Started prediction
+Iteration:  1 / 3
+350782 160112500
+Iteration:  2 / 3
+345041 160112500
+Iteration:  3 / 3
+195546 84731535
+Progress: 69.70%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 2.0, 'k': 50})
+{'a_sh': 2.0, 'k': 20}
+Started prediction
+Iteration:  1 / 3
+144475 160112500
+Iteration:  2 / 3
+138417 160112500
+Iteration:  3 / 3
+76109 84795580
+Progress: 70.08%
+Started prediction
+Iteration:  1 / 3
+134967 160112500
+Iteration:  2 / 3
+147679 160112500
+Iteration:  3 / 3
+77270 84795580
+Progress: 70.45%
+Started prediction
+Iteration:  1 / 3
+135159 160112500
+Iteration:  2 / 3
+142549 160112500
+Iteration:  3 / 3
+72594 84731535
+Progress: 70.83%
+Started prediction
+Iteration:  1 / 3
+140890 160112500
+Iteration:  2 / 3
+141734 160112500
+Iteration:  3 / 3
+81036 84731535
+Progress: 71.21%
+Result:  result(mean_score=3.3450291190953152e-05, std_dev=3.3900217126295991e-05, parameters={'a_sh': 2.0, 'k': 20})
+{'a_sh': 2.0, 'k': 10}
+Started prediction
+Iteration:  1 / 3
+74605 160112500
+Iteration:  2 / 3
+68270 160112500
+Iteration:  3 / 3
+36257 84795580
+Progress: 71.59%
+Started prediction
+Iteration:  1 / 3
+67621 160112500
+Iteration:  2 / 3
+70653 160112500
+Iteration:  3 / 3
+36100 84795580
+Progress: 71.97%
+Started prediction
+Iteration:  1 / 3
+66794 160112500
+Iteration:  2 / 3
+69412 160112500
+Iteration:  3 / 3
+37563 84731535
+Progress: 72.35%
+Started prediction
+Iteration:  1 / 3
+70842 160112500
+Iteration:  2 / 3
+65293 160112500
+Iteration:  3 / 3
+37463 84731535
+Progress: 72.73%
+Result:  result(mean_score=2.649697327968271e-05, std_dev=2.6830952283159634e-05, parameters={'a_sh': 2.0, 'k': 10})
+{'a_sh': 1.0, 'k': 500}
+Computing similarity matrix
+Iteration:  1 / 13
+Iteration:  2 / 13
+Iteration:  3 / 13
+Iteration:  4 / 13
+Iteration:  5 / 13
+Iteration:  6 / 13
+Iteration:  7 / 13
+Iteration:  8 / 13
+Iteration:  9 / 13
+Iteration:  10 / 13
+Iteration:  11 / 13
+Iteration:  12 / 13
+Iteration:  13 / 13
+Started prediction
+Iteration:  1 / 3
+3488156 160112500
