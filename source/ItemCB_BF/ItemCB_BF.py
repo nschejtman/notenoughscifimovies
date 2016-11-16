@@ -11,18 +11,23 @@ from sklearn.model_selection import KFold, ParameterGrid
 import sys
 sys.path.append('./../')
 import utils.utils as ut
+import itertools as itls
+from openpyxl import load_workbook
 
 
+'''
+Perform CV search on parameters. If sample_from_urm is True then sample_sie specifices number of rows from the urm to be kept;
+otherwise it specifices number of interactions to be kept. When sample_size is None, we just get a randomization of data
+'''
 def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm=True):
     np.random.seed(1)
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=icm, ucm=None,
-                                                                                non_active_items_mask=non_active_items_mask,
-                                                                                sample_size=sample_size,
-                                                                                sample_from_urm=sample_from_urm)
-    params = {'k': np.array([1, 2, 5, 10, 20, 50])[::-1], 'a_sh': [0.1, 0.5, 1, 2, 5, 10, 20, 50]}
+                                                                                 non_active_items_mask=non_active_items_mask,
+                                                                                 sample_size=sample_size, sample_from_urm=sample_from_urm)
+    params = {'sh': [0.1, 0.5, 1, 2, 5, 10, 20, 50]}
     grid = list(ParameterGrid(params))
     folds = 2
-    kfold = KFold(n_splits=folds)  # Shuffle UCM if necessary too, to keep indices correspondence
+    kfold = KFold(n_splits=folds)
     splits = [(train, test) for train,test in kfold.split(urm_sample)]
     retained_ratings_perc = 0.75
     n = 5
@@ -30,34 +35,24 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     results = []
     total = float(reduce(lambda acc, x: acc * len(x), params.itervalues(), 1) * folds)
     prog = 1.0
-    prev_pars = None
-    max_k = np.max(params['k'])
 
     for pars in grid:
         rec = rec.set_params(**pars)
         maps = []
-        print pars
-        if prev_pars is None or prev_pars['a_sh'] != pars['a_sh']:
-            sim_matrix, top_k_idx = ut.compute_similarity_matrix_knn(icm_sample, max_k, rec.sh, partition_size=rec.sim_partition_size)
-            prev_pars = dict(pars)
-
-        if rec.k != max_k:
-            sim_matrix[np.arange(sim_matrix.shape[0]),top_k_idx[:,-max_k:-rec.k].T] = 0.0
-            sim_matrix.eliminate_zeros()
 
         for row_train, row_test in splits:
-            rec.fit(icm, sim=sim_matrix)
+            rec.fit(icm_sample)
             urm_test = urm_sample[row_test,]
             hidden_ratings = []
             for u in range(urm_test.shape[0]):
                 relevant_u = urm_test[u,].nonzero()[1]  # Indices of rated items for test user u
-                if len(relevant_u) > 2:
+                if len(relevant_u) > 2:#1 or 2
                     np.random.shuffle(relevant_u)
                     urm_test[u, relevant_u[int(len(relevant_u) * retained_ratings_perc):]] = 0
                     hidden_ratings.append(relevant_u[int(len(relevant_u) * retained_ratings_perc):])
                 else:
                     hidden_ratings.append([])
-            maps.append(ut.map_scorer(rec, urm_test, hidden_ratings, n, non_active_items_mask=non_active_items_mask_sample))  # Assume rec to predict indices of items, NOT ids
+            maps.append(ut.map_scorer(rec, urm_test, hidden_ratings, n, non_active_items_mask_sample))  # Assume rec to predict indices of items, NOT ids
             print "Progress: {:.2f}%".format((prog * 100) / total)
             prog += 1
         results.append(result(np.mean(maps), np.std(maps), pars))
@@ -65,22 +60,15 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP5", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    cols, col_feat, x_feat = 3, 'a_sh', 'k'
-    f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
-    f.map(plt.plot, x_feat, 'MAP5')
-    f.fig.suptitle("ItemCB CV MAP5 values")
-    i_max, y_max = scores.MAP5.argmax(), scores.MAP5.max()
-    i_feat_max = params[col_feat].index(scores[col_feat][i_max])
-    f_max = f.axes[i_feat_max]
-    f_max.plot(scores[x_feat][i_max], y_max, 'o', color='r')
-    plt.figtext(0, 0, "Normalized ratings, no title/tags\nMaximum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_max],
-                                                                                         scores[x_feat][i_max],
-                                                                                         y_max,
-                                                                                         scores['Std'][i_max]))
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.9, bottom=0.15)
-    f.savefig('ItemCB CV MAP5 values 1.png', bbox_inches='tight')
-    scores.to_csv('ItemCB CV MAP values 1.csv', sep='\t', index=False)
+    f = scores['MAP5'].plot(title="ItemCB_BF CV MAP values").get_figure()
+    x_max, y_max = scores['MAP5'].argmax(), scores['MAP5'].max()
+    plt.plot(x_max, y_max, 'o', color='r')
+    plt.figtext(0, 0,"Normalized ratings, No title/tags\nMaximumm at (sh={:.5f},{:.5f}+/-{:.5f})".format(x_max,
+                                                                                                          y_max,
+                                                                                                          scores['Std'][x_max]))
+    f.savefig('ItemCB_BF CV MAP values 1.png', bbox_inches='tight')
+    plt.close(f)
+    scores.to_csv('ItemCB_BF CV MAP values 1.csv', sep='\t', index=False)
 
 
 def holdout_search(rec, urm, icm, actives, sample_size=None):
@@ -147,79 +135,78 @@ def holdout_search(rec, urm, icm, actives, sample_size=None):
     f.savefig('ItemCB Holdout MAP5 values.png', bbox_inches='tight')
     return scores
 
-#TODO: Recommend top-pop for users with no ratings
-class ItemCB(BaseEstimator):
-    def __init__(self, k=5, a_sh=2, sim_partition_size=1000, pred_partition_size=1000):  # k_rated??
-        self.k = k
-        self.sh = a_sh
-        self.sim_mat = None
-        self.sim_partition_size = sim_partition_size
-        self.pred_partition_size = pred_partition_size
 
-    def fit(self, icm, sim):
-        if sim is None:
-            self.sim_mat, _ = ut.compute_similarity_matrix_knn(icm, self.k, self.sh, row_wise=True, partition_size=self.sim_partition_size)
-        else:
-            self.sim_mat = sim
+class ItemCB_BF(BaseEstimator):
+    def __init__(self, sh=2, pred_batch_size=1000):
+        self.sh = sh
+        self.pred_batch_size = pred_batch_size
+        self.icm = None
+
+    def fit(self, icm):
+        self.icm = icm
 
     def predict(self, urm, n, non_active_items_mask, normalize=True):
         print "Started prediction"
         user_profile = urm
-        n_iterations = user_profile.shape[0] / self.pred_partition_size + (user_profile.shape[0] % self.pred_partition_size != 0)
-
+        n_iterations = user_profile.shape[0] / self.pred_batch_size + (user_profile.shape[0] % self.pred_batch_size != 0)
         ranking = None
+
         for i in range(n_iterations):
             print "Iteration: ", i + 1, "/", n_iterations
 
-            start = i * self.pred_partition_size
-            end = start + self.pred_partition_size if i < n_iterations - 1 else user_profile.shape[0]
+            start = i * self.pred_batch_size
+            end = start + self.pred_batch_size if i < n_iterations - 1 else user_profile.shape[0]
 
-            partitioned_profiles = user_profile[start:end, ]
-            scores = partitioned_profiles.dot(self.sim_mat.T).toarray().astype(np.float32)
+            batch_profiles = user_profile[start:end, :]
+            rated_items_batch = np.diff(batch_profiles.tocsc().indptr) != 0
+            #print "Similarity batch size: ", np.extract(rated_items_batch == True, rated_items_batch).shape[0]
+            #break
+            batch_sim_mat = ut.compute_similarity_matrix_batch(self.icm, self.sh, rated_items_batch)
+            batch_scores = batch_profiles.dot(batch_sim_mat).toarray().astype(np.float32)
 
             # normalization
             if normalize:
-                rated = partitioned_profiles.copy()
-                rated.data = np.ones_like(partitioned_profiles.data)
-                den = rated.dot(self.sim_mat.T).toarray().astype(np.float32)
+                rated_ind = batch_profiles.copy()
+                rated_ind.data = np.ones_like(batch_profiles.data)
+                den = rated_ind.dot(batch_sim_mat).toarray().astype(np.float32)
                 den[np.abs(den) < 1e-6] = 1.0  # to avoid NaNs
-                scores /= den
+                batch_scores /= den
+
+            del batch_sim_mat
+
             # remove the ones that are already rated
-            nonzero_indices = user_profile.nonzero()
-            scores[nonzero_indices[0], nonzero_indices[1]] = 0.0
+            nonzero_indices = batch_profiles.nonzero()
+            batch_scores[nonzero_indices[0], nonzero_indices[1]] = 0.0
 
-            # remove the ignored ones
-            scores[:, non_active_items_mask] = 0.0
-
-            partition_ranking = scores.argsort()[:,:-1]
-            partition_ranking = partition_ranking[:,:n]  # leave only the top n
+            # remove the inactives items
+            batch_scores[:, non_active_items_mask] = 0.0
+            batch_ranking = batch_scores.argsort()[:,::-1]
+            batch_ranking = batch_ranking[:,:n]  # leave only the top n
 
             if i == 0:
-                ranking = partition_ranking.copy()
+                ranking = batch_ranking.copy()
             else:
-                ranking = np.vstack((ranking, partition_ranking))
+                ranking = np.vstack((ranking, batch_ranking))
 
         return ranking
 
 
+
 # Read items
 items_dataframe = ut.read_items()
-URM = ut.read_interactions()
-
+urm = ut.read_interactions()
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
-
 item_ids = items_dataframe.id.values
-ICM = ut.generate_icm(items_dataframe, include_title=False, include_tags=False)
-recommender = ItemCB(k=5, a_sh=20, sim_partition_size=2500, pred_partition_size=1000)
-# recommender.fit(ICM)
-# recs = recommender.predict(URM[:1000], 5, ignore_mask)
-cv_search(recommender, URM, ICM, non_active_items_mask, sample_size=100, sample_from_urm=False)
+icm = ut.generate_icm(items_dataframe, include_tags=False, include_title=False).tocsr()
+recommender = ItemCB_BF(sh=5, pred_batch_size=200)
+
+cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
 
 '''
 test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
 urm = urm[test_users_idx, :]
-recommender.fit(ICM)
+recommender.fit(icm)
 recs = recommender.predict(urm, 5, non_active_items_mask)
 ut.write_recommendations("File name", recs, test_users_idx, item_ids)
 '''

@@ -1,0 +1,904 @@
+(25294, 64045) (64045, 81)
+{'a_sh': 50.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 6.25%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 12.50%
+Result:  result(mean_score=0.25857712660781484, std_dev=0.0028261700343910345, parameters={'a_sh': 50.0})
+{'a_sh': 20.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 18.75%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 25.00%
+Result:  result(mean_score=0.2599635990796122, std_dev=0.0032070795209364344, parameters={'a_sh': 20.0})
+{'a_sh': 10.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 31.25%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 37.50%
+Result:  result(mean_score=0.2619257980406019, std_dev=0.0022231716428904591, parameters={'a_sh': 10.0})
+{'a_sh': 5.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 43.75%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 50.00%
+Result:  result(mean_score=0.26306749954233516, std_dev=0.0010310661681384725, parameters={'a_sh': 5.0})
+{'a_sh': 2.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 56.25%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 62.50%
+Result:  result(mean_score=0.2590855891201016, std_dev=0.0031969974190725337, parameters={'a_sh': 2.0})
+{'a_sh': 1.0}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 68.75%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 75.00%
+Result:  result(mean_score=0.26046900574044413, std_dev=0.0043471680050158334, parameters={'a_sh': 1.0})
+{'a_sh': 0.5}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 81.25%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 87.50%
+Result:  result(mean_score=0.26284319266356615, std_dev=0.0022670197002318537, parameters={'a_sh': 0.5})
+{'a_sh': 0.10000000000000001}
+Started prediction
+Iteration:  1 / 13
+4147
+Computing similarity matrix
+64044686
+Iteration:  2 / 13
+3585
+Computing similarity matrix
+64044667
+Iteration:  3 / 13
+3703
+Computing similarity matrix
+64044652
+Iteration:  4 / 13
+3515
+Computing similarity matrix
+64044653
+Iteration:  5 / 13
+4014
+Computing similarity matrix
+64044665
+Iteration:  6 / 13
+3803
+Computing similarity matrix
+64044665
+Iteration:  7 / 13
+3798
+Computing similarity matrix
+64044666
+Iteration:  8 / 13
+3846
+Computing similarity matrix
+64044691
+Iteration:  9 / 13
+3785
+Computing similarity matrix
+64044682
+Iteration:  10 / 13
+3640
+Computing similarity matrix
+64044669
+Iteration:  11 / 13
+3957
+Computing similarity matrix
+64044673
+Iteration:  12 / 13
+3795
+Computing similarity matrix
+64044691
+Iteration:  13 / 13
+2353
+Computing similarity matrix
+41436901
+Progress: 93.75%
+Started prediction
+Iteration:  1 / 13
+3929
+Computing similarity matrix
+64044689
+Iteration:  2 / 13
+3850
+Computing similarity matrix
+64044686
+Iteration:  3 / 13
+3579
+Computing similarity matrix
+64044663
+Iteration:  4 / 13
+3717
+Computing similarity matrix
+64044644
+Iteration:  5 / 13
+3859
+Computing similarity matrix
+64044668
+Iteration:  6 / 13
+3643
+Computing similarity matrix
+64044650
+Iteration:  7 / 13
+3669
+Computing similarity matrix
+64044658
+Iteration:  8 / 13
+3926
+Computing similarity matrix
+64044654
+Iteration:  9 / 13
+3658
+Computing similarity matrix
+64044658
+Iteration:  10 / 13
+3924
+Computing similarity matrix
+64044684
+Iteration:  11 / 13
+3876
+Computing similarity matrix
+64044669
+Iteration:  12 / 13
+3654
+Computing similarity matrix
+64044642
+Iteration:  13 / 13
+2486
+Computing similarity matrix
+41436881
+Progress: 100.00%
+Result:  result(mean_score=0.2591342909835429, std_dev=0.0026997094611980188, parameters={'a_sh': 0.10000000000000001})
+Total scores:         MAP5       Std  a_sh
+0  0.258577  0.002826  50.0
+1  0.259964  0.003207  20.0
+2  0.261926  0.002223  10.0
+3  0.263067  0.001031   5.0
+4  0.259086  0.003197   2.0
+5  0.260469  0.004347   1.0
+6  0.262843  0.002267   0.5
+7  0.259134  0.002700   0.1
+Traceback (most recent call last):
+  File "ItemCB_test.py", line 456, in <module>
+    #recs = recommender.predict2(URM, 5, ignore_mask, partition_size=200)
+  File "ItemCB_test.py", line 201, in cv_search
+    f.map(plt.plot, x_feat, 'MAP5')
+  File "/usr/local/lib/python2.7/dist-packages/seaborn/axisgrid.py", line 717, in map
+    plot_data = data_ijk[list(args)]
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/frame.py", line 2053, in __getitem__
+    return self._getitem_array(key)
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/frame.py", line 2097, in _getitem_array
+    indexer = self.ix._convert_to_indexer(key, axis=1)
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/indexing.py", line 1229, in _convert_to_indexer
+    raise KeyError('%s not in index' % objarr[mask])
+KeyError: "['k'] not in index"
