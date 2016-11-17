@@ -92,7 +92,7 @@ def check_matrix(x, format='csc', dtype=np.float32):
 
 
 def read_top_pops():
-    aux = pd.read_csv('../../inputs/top_pop_ids.csv', sep='\t')['0'].values
+    aux = pd.read_csv('../../inputs/top_pop_idx.csv', sep='\t')['0'].values
     return aux
 
 

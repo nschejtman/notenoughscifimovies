@@ -36,7 +36,7 @@ class SLIM_recommender(BaseEstimator):
             self.l1_penalty, self.l2_penalty, self.positive_only
         )
 
-    def fit(self, URM):
+    def fit(self, URM, top_pops=None):
         print time.time(), ": ", "Started fit"
         self.dataset = URM
         URM = ut.check_matrix(URM, 'csc', dtype=np.float32)
@@ -54,7 +54,7 @@ class SLIM_recommender(BaseEstimator):
         values, rows, cols = [], [], []
 
         # fit each item's factors sequentially (not in parallel)
-        for j in range(n_items):
+        for j in (range(n_items) if top_pops is None else top_pops):
             print time.time(), ": ", "Started fit > Iteration ", j, "/", n_items
             # get the target column
             y = URM[:, j].toarray()
@@ -85,14 +85,15 @@ class SLIM_recommender(BaseEstimator):
         # compute the scores using the dot product
         user_profile = URM
         print time.time(), ": ", "Started predict > Started dot product"
-        scores = user_profile.dot(self.W_sparse).toarray().ravel()
-
+        scores = user_profile.dot(self.W_sparse).toarray()
+        print np.extract(scores != 0, scores).shape
         # exclude seen and non active
         non_zero_indices = user_profile.nonzero()
         scores[non_zero_indices[0], non_zero_indices[1]] = 0.0
         scores[:, non_active_items_mask] = 0.0
 
         # rank items
+        print time.time(), ": Started predict > Started argsort"
         ranking = scores.argsort()[:, ::-1]
         ranking = ranking[:, :n_of_recommendations]
 
@@ -100,8 +101,9 @@ class SLIM_recommender(BaseEstimator):
 
 
 urm = ut.read_interactions()
-recommender = SLIM_recommender()
-recommender.fit(urm)
+recommender = SLIM_recommender(l1_penalty=0.000001, l2_penalty=1000)
+top_pops = ut.read_top_pops()
+recommender.fit(urm, top_pops=top_pops)
 
 items_dataframe = ut.read_items()
 actives = np.array(items_dataframe.active_during_test.values)
@@ -112,4 +114,4 @@ urm = urm[test_users_idx, :]
 item_ids = items_dataframe.id.values
 ranking = recommender.predict(urm, non_active_items_mask=non_active_items_mask)
 
-ut.write_recommendations("File name", ranking, test_users_idx, item_ids)
+ut.write_recommendations("SLIM_shady", ranking, test_users_idx, item_ids)
