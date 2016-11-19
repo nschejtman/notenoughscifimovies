@@ -1,0 +1,2620 @@
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422428.39 :  Started fit
+1479422430.32 :  Started predict
+1479422430.32 :  Started predict > Started dot product
+(0,)
+1479422434.72 : Started predict > Started argsort
+Progress: 0.10%
+1479422452.6 :  Started fit
+1479422454.51 :  Started predict
+1479422454.51 :  Started predict > Started dot product
+(0,)
+1479422458.9 : Started predict > Started argsort
+Progress: 0.20%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422476.79 :  Started fit
+1479422478.9 :  Started predict
+1479422478.9 :  Started predict > Started dot product
+(4693,)
+1479422483.51 : Started predict > Started argsort
+Progress: 0.30%
+1479422501.39 :  Started fit
+1479422503.48 :  Started predict
+1479422503.48 :  Started predict > Started dot product
+(3355,)
+1479422508.11 : Started predict > Started argsort
+Progress: 0.40%
+[0.0015599399235390495, 0.0028024828608486188]
+Result:  result(mean_score=0.002181211392193834, std_dev=0.00062127146865478464, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422526.0 :  Started fit
+1479422528.31 :  Started predict
+1479422528.31 :  Started predict > Started dot product
+(48602,)
+1479422533.07 : Started predict > Started argsort
+Progress: 0.50%
+1479422551.0 :  Started fit
+1479422553.28 :  Started predict
+1479422553.28 :  Started predict > Started dot product
+(45577,)
+1479422558.01 : Started predict > Started argsort
+Progress: 0.60%
+[0.0044443685903270795, 0.0057085726638255816]
+Result:  result(mean_score=0.0050764706270763306, std_dev=0.00063210203674925105, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422575.93 :  Started fit
+1479422578.23 :  Started predict
+1479422578.23 :  Started predict > Started dot product
+(49500,)
+1479422582.97 : Started predict > Started argsort
+Progress: 0.69%
+1479422600.89 :  Started fit
+1479422603.18 :  Started predict
+1479422603.18 :  Started predict > Started dot product
+(45073,)
+1479422607.9 : Started predict > Started argsort
+Progress: 0.79%
+[0.0037147278354269049, 0.0058838243468593669]
+Result:  result(mean_score=0.0047992760911431363, std_dev=0.001084548255716231, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422625.83 :  Started fit
+1479422628.14 :  Started predict
+1479422628.14 :  Started predict > Started dot product
+(48504,)
+1479422632.87 : Started predict > Started argsort
+Progress: 0.89%
+1479422650.79 :  Started fit
+1479422653.08 :  Started predict
+1479422653.08 :  Started predict > Started dot product
+(44999,)
+1479422657.81 : Started predict > Started argsort
+Progress: 0.99%
+[0.004084744219916254, 0.007454758816626517]
+Result:  result(mean_score=0.0057697515182713859, std_dev=0.0016850072983551315, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422675.74 :  Started fit
+1479422678.05 :  Started predict
+1479422678.05 :  Started predict > Started dot product
+(47928,)
+1479422682.78 : Started predict > Started argsort
+Progress: 1.09%
+1479422700.7 :  Started fit
+1479422702.98 :  Started predict
+1479422702.98 :  Started predict > Started dot product
+(45757,)
+1479422707.71 : Started predict > Started argsort
+Progress: 1.19%
+[0.0052520632319922296, 0.0057146717312086936]
+Result:  result(mean_score=0.005483367481600462, std_dev=0.00023130424960823197, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422725.63 :  Started fit
+1479422727.95 :  Started predict
+1479422727.95 :  Started predict > Started dot product
+(48429,)
+1479422732.68 : Started predict > Started argsort
+Progress: 1.29%
+1479422750.6 :  Started fit
+1479422752.89 :  Started predict
+1479422752.89 :  Started predict > Started dot product
+(45426,)
+1479422757.62 : Started predict > Started argsort
+Progress: 1.39%
+[0.0045726379027853604, 0.0055645883515533312]
+Result:  result(mean_score=0.0050686131271693458, std_dev=0.00049597522438398541, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422775.53 :  Started fit
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:479: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Fitting data with very small alpha may cause precision problems.
+  ConvergenceWarning)
+1479422823.15 :  Started predict
+1479422823.15 :  Started predict > Started dot product
+(48485,)
+1479422827.88 : Started predict > Started argsort
+Progress: 1.49%
+1479422845.8 :  Started fit
+1479422880.74 :  Started predict
+1479422880.74 :  Started predict > Started dot product
+(45593,)
+1479422885.47 : Started predict > Started argsort
+Progress: 1.59%
+[0.0043602463741731854, 0.0053736643814464823]
+Result:  result(mean_score=0.0048669553778098338, std_dev=0.00050670900363664843, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479422903.38 :  Started fit
+1479422996.15 :  Started predict
+1479422996.15 :  Started predict > Started dot product
+(48553,)
+1479423000.88 : Started predict > Started argsort
+Progress: 1.69%
+1479423018.8 :  Started fit
+1479423118.87 :  Started predict
+1479423118.87 :  Started predict > Started dot product
+(45574,)
+1479423123.6 : Started predict > Started argsort
+Progress: 1.79%
+[0.0040181443048728661, 0.0058712401951701541]
+Result:  result(mean_score=0.0049446922500215101, std_dev=0.00092654794514864403, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423141.53 :  Started fit
+1479423143.44 :  Started predict
+1479423143.44 :  Started predict > Started dot product
+(0,)
+1479423147.83 : Started predict > Started argsort
+Progress: 1.88%
+1479423165.72 :  Started fit
+1479423167.61 :  Started predict
+1479423167.61 :  Started predict > Started dot product
+(0,)
+1479423172.0 : Started predict > Started argsort
+Progress: 1.98%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423189.88 :  Started fit
+1479423191.79 :  Started predict
+1479423191.79 :  Started predict > Started dot product
+(0,)
+1479423196.18 : Started predict > Started argsort
+Progress: 2.08%
+1479423214.06 :  Started fit
+1479423215.95 :  Started predict
+1479423215.95 :  Started predict > Started dot product
+(0,)
+1479423220.35 : Started predict > Started argsort
+Progress: 2.18%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423238.23 :  Started fit
+1479423240.32 :  Started predict
+1479423240.32 :  Started predict > Started dot product
+(4459,)
+1479423244.94 : Started predict > Started argsort
+Progress: 2.28%
+1479423262.82 :  Started fit
+1479423264.9 :  Started predict
+1479423264.9 :  Started predict > Started dot product
+(3508,)
+1479423269.53 : Started predict > Started argsort
+Progress: 2.38%
+[0.0015372595424479642, 0.0026849021061083316]
+Result:  result(mean_score=0.0021110808242781479, std_dev=0.00057382128183018372, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423287.42 :  Started fit
+1479423289.73 :  Started predict
+1479423289.73 :  Started predict > Started dot product
+(49212,)
+1479423294.49 : Started predict > Started argsort
+Progress: 2.48%
+1479423312.41 :  Started fit
+1479423314.7 :  Started predict
+1479423314.7 :  Started predict > Started dot product
+(45670,)
+1479423319.45 : Started predict > Started argsort
+Progress: 2.58%
+[0.0041684871654833399, 0.0048161015378914204]
+Result:  result(mean_score=0.0044922943516873797, std_dev=0.00032380718620404021, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423337.38 :  Started fit
+1479423339.68 :  Started predict
+1479423339.68 :  Started predict > Started dot product
+(49252,)
+1479423344.44 : Started predict > Started argsort
+Progress: 2.68%
+1479423362.37 :  Started fit
+1479423364.65 :  Started predict
+1479423364.65 :  Started predict > Started dot product
+(45310,)
+1479423369.41 : Started predict > Started argsort
+Progress: 2.78%
+[0.0057963165240609259, 0.0057636186770427976]
+Result:  result(mean_score=0.0057799676005518622, std_dev=1.6348923509064157e-05, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423387.33 :  Started fit
+1479423389.64 :  Started predict
+1479423389.64 :  Started predict > Started dot product
+(48366,)
+1479423394.4 : Started predict > Started argsort
+Progress: 2.88%
+1479423412.33 :  Started fit
+1479423414.62 :  Started predict
+1479423414.62 :  Started predict > Started dot product
+(46015,)
+1479423419.35 : Started predict > Started argsort
+Progress: 2.98%
+[0.0049095818921051021, 0.0062165709344697657]
+Result:  result(mean_score=0.0055630764132874339, std_dev=0.00065349452118233179, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423437.27 :  Started fit
+1479423439.56 :  Started predict
+1479423439.56 :  Started predict > Started dot product
+(48586,)
+1479423444.3 : Started predict > Started argsort
+Progress: 3.08%
+1479423462.22 :  Started fit
+1479423464.5 :  Started predict
+1479423464.5 :  Started predict > Started dot product
+(45456,)
+1479423469.23 : Started predict > Started argsort
+Progress: 3.17%
+[0.0049170155956065279, 0.0055756284355506129]
+Result:  result(mean_score=0.0052463220155785709, std_dev=0.00032930641997204252, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423487.15 :  Started fit
+1479423489.47 :  Started predict
+1479423489.47 :  Started predict > Started dot product
+(49200,)
+1479423494.2 : Started predict > Started argsort
+Progress: 3.27%
+1479423512.12 :  Started fit
+1479423514.4 :  Started predict
+1479423514.4 :  Started predict > Started dot product
+(45612,)
+1479423519.12 : Started predict > Started argsort
+Progress: 3.37%
+[0.0045670246981006106, 0.0049605490704712468]
+Result:  result(mean_score=0.0047637868842859282, std_dev=0.0001967621861853181, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479423537.05 :  Started fit
+1479423539.37 :  Started predict
+1479423539.37 :  Started predict > Started dot product
+(48363,)
+1479423544.12 : Started predict > Started argsort
+Progress: 3.47%
+1479423562.05 :  Started fit
+1479423564.35 :  Started predict
+1479423564.35 :  Started predict > Started dot product
+(45771,)
+1479423569.1 : Started predict > Started argsort
+Progress: 3.57%
+[0.0047273803022028016, 0.0064011642270397117]
+Result:  result(mean_score=0.0055642722646212566, std_dev=0.00083689196241845502, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423587.02 :  Started fit
+1479423588.93 :  Started predict
+1479423588.93 :  Started predict > Started dot product
+(0,)
+1479423593.35 : Started predict > Started argsort
+Progress: 3.67%
+1479423611.24 :  Started fit
+1479423613.14 :  Started predict
+1479423613.14 :  Started predict > Started dot product
+(0,)
+1479423617.55 : Started predict > Started argsort
+Progress: 3.77%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423635.45 :  Started fit
+1479423637.35 :  Started predict
+1479423637.35 :  Started predict > Started dot product
+(0,)
+1479423641.74 : Started predict > Started argsort
+Progress: 3.87%
+1479423659.63 :  Started fit
+1479423661.51 :  Started predict
+1479423661.51 :  Started predict > Started dot product
+(0,)
+1479423665.9 : Started predict > Started argsort
+Progress: 3.97%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423683.8 :  Started fit
+1479423685.73 :  Started predict
+1479423685.73 :  Started predict > Started dot product
+(0,)
+1479423690.14 : Started predict > Started argsort
+Progress: 4.07%
+1479423708.04 :  Started fit
+1479423709.94 :  Started predict
+1479423709.94 :  Started predict > Started dot product
+(0,)
+1479423714.35 : Started predict > Started argsort
+Progress: 4.17%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423732.24 :  Started fit
+1479423734.35 :  Started predict
+1479423734.35 :  Started predict > Started dot product
+(4548,)
+1479423738.98 : Started predict > Started argsort
+Progress: 4.27%
+1479423756.89 :  Started fit
+1479423758.97 :  Started predict
+1479423758.97 :  Started predict > Started dot product
+(3508,)
+1479423763.6 : Started predict > Started argsort
+Progress: 4.37%
+[0.0024875599247527148, 0.0028725063306775365]
+Result:  result(mean_score=0.0026800331277151259, std_dev=0.00019247320296241085, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423781.5 :  Started fit
+1479423783.79 :  Started predict
+1479423783.79 :  Started predict > Started dot product
+(48769,)
+1479423788.55 : Started predict > Started argsort
+Progress: 4.46%
+1479423806.48 :  Started fit
+1479423808.76 :  Started predict
+1479423808.76 :  Started predict > Started dot product
+(45191,)
+1479423813.52 : Started predict > Started argsort
+Progress: 4.56%
+[0.0041266915468171593, 0.0056085942807732698]
+Result:  result(mean_score=0.004867642913795215, std_dev=0.00074095136697805526, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423831.44 :  Started fit
+1479423833.75 :  Started predict
+1479423833.75 :  Started predict > Started dot product
+(47953,)
+1479423838.5 : Started predict > Started argsort
+Progress: 4.66%
+1479423856.43 :  Started fit
+1479423858.72 :  Started predict
+1479423858.72 :  Started predict > Started dot product
+(45809,)
+1479423863.47 : Started predict > Started argsort
+Progress: 4.76%
+[0.004476151465501543, 0.0048747761101846695]
+Result:  result(mean_score=0.0046754637878431062, std_dev=0.00019931232234156326, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423881.4 :  Started fit
+1479423883.71 :  Started predict
+1479423883.71 :  Started predict > Started dot product
+(48389,)
+1479423888.47 : Started predict > Started argsort
+Progress: 4.86%
+1479423906.39 :  Started fit
+1479423908.69 :  Started predict
+1479423908.69 :  Started predict > Started dot product
+(46410,)
+1479423913.44 : Started predict > Started argsort
+Progress: 4.96%
+[0.0041030250622003748, 0.0054108764128219366]
+Result:  result(mean_score=0.0047569507375111557, std_dev=0.0006539256753107809, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423931.36 :  Started fit
+1479423933.67 :  Started predict
+1479423933.67 :  Started predict > Started dot product
+(47508,)
+1479423938.42 : Started predict > Started argsort
+Progress: 5.06%
+1479423956.35 :  Started fit
+1479423958.64 :  Started predict
+1479423958.64 :  Started predict > Started dot product
+(45491,)
+1479423963.39 : Started predict > Started argsort
+Progress: 5.16%
+[0.0052440985496692728, 0.0057126644432091873]
+Result:  result(mean_score=0.0054783814964392301, std_dev=0.00023428294676995729, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479423981.32 :  Started fit
+1479423983.62 :  Started predict
+1479423983.62 :  Started predict > Started dot product
+(48518,)
+1479423988.38 : Started predict > Started argsort
+Progress: 5.26%
+1479424006.31 :  Started fit
+1479424008.61 :  Started predict
+1479424008.61 :  Started predict > Started dot product
+(44567,)
+1479424013.36 : Started predict > Started argsort
+Progress: 5.36%
+[0.0050669033315128356, 0.0061463158544870595]
+Result:  result(mean_score=0.005606609592999948, std_dev=0.00053970626148711195, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424031.28 :  Started fit
+1479424033.19 :  Started predict
+1479424033.19 :  Started predict > Started dot product
+(0,)
+1479424037.6 : Started predict > Started argsort
+Progress: 5.46%
+1479424055.5 :  Started fit
+1479424057.39 :  Started predict
+1479424057.39 :  Started predict > Started dot product
+(0,)
+1479424061.8 : Started predict > Started argsort
+Progress: 5.56%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424079.69 :  Started fit
+1479424081.61 :  Started predict
+1479424081.61 :  Started predict > Started dot product
+(0,)
+1479424086.02 : Started predict > Started argsort
+Progress: 5.65%
+1479424103.91 :  Started fit
+1479424105.81 :  Started predict
+1479424105.81 :  Started predict > Started dot product
+(0,)
+1479424110.22 : Started predict > Started argsort
+Progress: 5.75%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424128.11 :  Started fit
+1479424130.03 :  Started predict
+1479424130.03 :  Started predict > Started dot product
+(0,)
+1479424134.44 : Started predict > Started argsort
+Progress: 5.85%
+1479424152.33 :  Started fit
+1479424154.23 :  Started predict
+1479424154.23 :  Started predict > Started dot product
+(0,)
+1479424158.64 : Started predict > Started argsort
+Progress: 5.95%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424176.54 :  Started fit
+1479424178.44 :  Started predict
+1479424178.44 :  Started predict > Started dot product
+(0,)
+1479424182.83 : Started predict > Started argsort
+Progress: 6.05%
+1479424200.72 :  Started fit
+1479424202.6 :  Started predict
+1479424202.6 :  Started predict > Started dot product
+(0,)
+1479424207.0 : Started predict > Started argsort
+Progress: 6.15%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424224.89 :  Started fit
+1479424227.01 :  Started predict
+1479424227.01 :  Started predict > Started dot product
+(4651,)
+1479424231.65 : Started predict > Started argsort
+Progress: 6.25%
+1479424249.54 :  Started fit
+1479424251.61 :  Started predict
+1479424251.61 :  Started predict > Started dot product
+(3506,)
+1479424256.25 : Started predict > Started argsort
+Progress: 6.35%
+[0.001923660416287396, 0.0029710178494225187]
+Result:  result(mean_score=0.0024473391328549573, std_dev=0.00052367871656756133, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424274.14 :  Started fit
+1479424276.38 :  Started predict
+1479424276.38 :  Started predict > Started dot product
+(22166,)
+1479424281.11 : Started predict > Started argsort
+Progress: 6.45%
+1479424299.02 :  Started fit
+1479424301.24 :  Started predict
+1479424301.24 :  Started predict > Started dot product
+(20426,)
+1479424305.97 : Started predict > Started argsort
+Progress: 6.55%
+[0.0034733600339826418, 0.0050982799085911943]
+Result:  result(mean_score=0.0042858199712869178, std_dev=0.00081245993730427626, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424323.88 :  Started fit
+1479424326.17 :  Started predict
+1479424326.17 :  Started predict > Started dot product
+(48368,)
+1479424330.91 : Started predict > Started argsort
+Progress: 6.65%
+1479424348.82 :  Started fit
+1479424351.1 :  Started predict
+1479424351.1 :  Started predict > Started dot product
+(45179,)
+1479424355.83 : Started predict > Started argsort
+Progress: 6.75%
+[0.0043974148916803187, 0.0059959236612933094]
+Result:  result(mean_score=0.0051966692764868136, std_dev=0.00079925438480649537, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424373.75 :  Started fit
+1479424376.05 :  Started predict
+1479424376.05 :  Started predict > Started dot product
+(47986,)
+1479424380.78 : Started predict > Started argsort
+Progress: 6.85%
+1479424398.7 :  Started fit
+1479424400.97 :  Started predict
+1479424400.97 :  Started predict > Started dot product
+(44744,)
+1479424405.7 : Started predict > Started argsort
+Progress: 6.94%
+[0.003748407063535407, 0.0061068649249583079]
+Result:  result(mean_score=0.0049276359942468572, std_dev=0.0011792289307114504, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479424423.61 :  Started fit
+1479424425.91 :  Started predict
+1479424425.91 :  Started predict > Started dot product
+(48918,)
+1479424430.64 : Started predict > Started argsort
+Progress: 7.04%
+1479424448.56 :  Started fit
+1479424450.84 :  Started predict
+1479424450.84 :  Started predict > Started dot product
+(45375,)
+1479424455.58 : Started predict > Started argsort
+Progress: 7.14%
+[0.0052129983615510625, 0.0058537150268667751]
+Result:  result(mean_score=0.0055333566942089192, std_dev=0.00032035833265785631, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424473.49 :  Started fit
+1479424475.39 :  Started predict
+1479424475.39 :  Started predict > Started dot product
+(0,)
+1479424479.78 : Started predict > Started argsort
+Progress: 7.24%
+1479424497.67 :  Started fit
+1479424499.55 :  Started predict
+1479424499.55 :  Started predict > Started dot product
+(0,)
+1479424503.94 : Started predict > Started argsort
+Progress: 7.34%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424521.82 :  Started fit
+1479424523.72 :  Started predict
+1479424523.72 :  Started predict > Started dot product
+(0,)
+1479424528.11 : Started predict > Started argsort
+Progress: 7.44%
+1479424546.0 :  Started fit
+1479424547.88 :  Started predict
+1479424547.88 :  Started predict > Started dot product
+(0,)
+1479424552.27 : Started predict > Started argsort
+Progress: 7.54%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424570.16 :  Started fit
+1479424572.06 :  Started predict
+1479424572.06 :  Started predict > Started dot product
+(0,)
+1479424576.45 : Started predict > Started argsort
+Progress: 7.64%
+1479424594.34 :  Started fit
+1479424596.23 :  Started predict
+1479424596.23 :  Started predict > Started dot product
+(0,)
+1479424600.62 : Started predict > Started argsort
+Progress: 7.74%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424618.5 :  Started fit
+1479424620.41 :  Started predict
+1479424620.41 :  Started predict > Started dot product
+(0,)
+1479424624.8 : Started predict > Started argsort
+Progress: 7.84%
+1479424642.69 :  Started fit
+1479424644.57 :  Started predict
+1479424644.57 :  Started predict > Started dot product
+(0,)
+1479424648.97 : Started predict > Started argsort
+Progress: 7.94%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424666.85 :  Started fit
+1479424668.75 :  Started predict
+1479424668.75 :  Started predict > Started dot product
+(0,)
+1479424673.14 : Started predict > Started argsort
+Progress: 8.04%
+1479424691.03 :  Started fit
+1479424692.92 :  Started predict
+1479424692.92 :  Started predict > Started dot product
+(0,)
+1479424697.31 : Started predict > Started argsort
+Progress: 8.13%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424715.2 :  Started fit
+1479424717.17 :  Started predict
+1479424717.17 :  Started predict > Started dot product
+(759,)
+1479424721.76 : Started predict > Started argsort
+Progress: 8.23%
+1479424739.66 :  Started fit
+1479424741.59 :  Started predict
+1479424741.59 :  Started predict > Started dot product
+(652,)
+1479424746.18 : Started predict > Started argsort
+Progress: 8.33%
+[0.0005916621154196251, 0.00061145080600333518]
+Result:  result(mean_score=0.00060155646071148009, std_dev=9.894345291855042e-06, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424764.07 :  Started fit
+1479424766.18 :  Started predict
+1479424766.18 :  Started predict > Started dot product
+(4605,)
+1479424770.79 : Started predict > Started argsort
+Progress: 8.43%
+1479424788.68 :  Started fit
+1479424790.73 :  Started predict
+1479424790.73 :  Started predict > Started dot product
+(3462,)
+1479424795.34 : Started predict > Started argsort
+Progress: 8.53%
+[0.0017441895746101096, 0.0031459607189179162]
+Result:  result(mean_score=0.0024450751467640129, std_dev=0.0007008855721539033, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424813.24 :  Started fit
+1479424815.48 :  Started predict
+1479424815.48 :  Started predict > Started dot product
+(21925,)
+1479424820.2 : Started predict > Started argsort
+Progress: 8.63%
+1479424838.11 :  Started fit
+1479424840.34 :  Started predict
+1479424840.34 :  Started predict > Started dot product
+(20703,)
+1479424845.07 : Started predict > Started argsort
+Progress: 8.73%
+[0.0040046422719825208, 0.0039438576987215097]
+Result:  result(mean_score=0.0039742499853520153, std_dev=3.0392286630505534e-05, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479424862.98 :  Started fit
+1479424865.27 :  Started predict
+1479424865.27 :  Started predict > Started dot product
+(49061,)
+1479424870.03 : Started predict > Started argsort
+Progress: 8.83%
+1479424887.96 :  Started fit
+1479424890.24 :  Started predict
+1479424890.24 :  Started predict > Started dot product
+(45323,)
+1479424894.99 : Started predict > Started argsort
+Progress: 8.93%
+[0.004087930092845438, 0.005569606571552096]
+Result:  result(mean_score=0.0048287683321987674, std_dev=0.000740838239353329, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479424912.92 :  Started fit
+1479424914.82 :  Started predict
+1479424914.82 :  Started predict > Started dot product
+(0,)
+1479424919.24 : Started predict > Started argsort
+Progress: 9.03%
+1479424937.13 :  Started fit
+1479424939.03 :  Started predict
+1479424939.03 :  Started predict > Started dot product
+(0,)
+1479424943.44 : Started predict > Started argsort
+Progress: 9.13%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479424961.33 :  Started fit
+1479424963.25 :  Started predict
+1479424963.25 :  Started predict > Started dot product
+(0,)
+1479424967.66 : Started predict > Started argsort
+Progress: 9.23%
+1479424985.56 :  Started fit
+1479424987.45 :  Started predict
+1479424987.45 :  Started predict > Started dot product
+(0,)
+1479424991.87 : Started predict > Started argsort
+Progress: 9.33%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479425009.76 :  Started fit
+1479425011.68 :  Started predict
+1479425011.68 :  Started predict > Started dot product
+(0,)
+1479425016.09 : Started predict > Started argsort
+Progress: 9.42%
+1479425033.98 :  Started fit
+1479425035.88 :  Started predict
+1479425035.88 :  Started predict > Started dot product
+(0,)
+1479425040.3 : Started predict > Started argsort
+Progress: 9.52%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479425058.19 :  Started fit
+1479425298.0 :  Started predict
+1479425298.0 :  Started predict > Started dot product
+(47354,)
+1479425302.76 : Started predict > Started argsort
+Progress: 9.62%
+1479425320.68 :  Started fit
+1479425555.1 :  Started predict
+1479425555.1 :  Started predict > Started dot product
+(45851,)
+1479425559.85 : Started predict > Started argsort
+Progress: 9.72%
+[0.0046487954366162959, 0.0051429806682724965]
+Result:  result(mean_score=0.0048958880524443962, std_dev=0.00024709261582810029, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479425577.77 :  Started fit
+1479425817.64 :  Started predict
+1479425817.64 :  Started predict > Started dot product
+(47946,)
+1479425822.4 : Started predict > Started argsort
+Progress: 9.82%
+1479425840.32 :  Started fit
+1479426074.76 :  Started predict
+1479426074.76 :  Started predict > Started dot product
+(45067,)
+1479426079.5 : Started predict > Started argsort
+Progress: 9.92%
+[0.0037801899387098705, 0.0059594064603792221]
+Result:  result(mean_score=0.0048697981995445465, std_dev=0.0010896082608346758, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479426097.43 :  Started fit
+1479426337.27 :  Started predict
+1479426337.27 :  Started predict > Started dot product
+(48253,)
+1479426342.02 : Started predict > Started argsort
+Progress: 10.02%
+1479426359.95 :  Started fit
+1479426594.37 :  Started predict
+1479426594.37 :  Started predict > Started dot product
+(45805,)
+1479426599.12 : Started predict > Started argsort
+Progress: 10.12%
+[0.0039983463802415152, 0.0058280835031807796]
+Result:  result(mean_score=0.0049132149417111474, std_dev=0.00091486856146963218, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479426617.05 :  Started fit
+1479426856.9 :  Started predict
+1479426856.9 :  Started predict > Started dot product
+(48062,)
+1479426861.65 : Started predict > Started argsort
+Progress: 10.22%
+1479426879.58 :  Started fit
+1479427115.24 :  Started predict
+1479427115.24 :  Started predict > Started dot product
+(45565,)
+1479427119.98 : Started predict > Started argsort
+Progress: 10.32%
+[0.0052500910249408308, 0.006084630350194551]
+Result:  result(mean_score=0.0056673606875676909, std_dev=0.00041726966262686013, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479427137.91 :  Started fit
+1479427377.73 :  Started predict
+1479427377.73 :  Started predict > Started dot product
+(48278,)
+1479427382.49 : Started predict > Started argsort
+Progress: 10.42%
+1479427400.42 :  Started fit
+1479427634.84 :  Started predict
+1479427634.84 :  Started predict > Started dot product
+(45299,)
+1479427639.59 : Started predict > Started argsort
+Progress: 10.52%
+[0.0048765094969354921, 0.0065364245568525683]
+Result:  result(mean_score=0.0057064670268940302, std_dev=0.00082995752995853808, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1}
+1479427657.52 :  Started fit
+1479427897.33 :  Started predict
+1479427897.33 :  Started predict > Started dot product
+(47721,)
+1479427902.08 : Started predict > Started argsort
+Progress: 10.62%
+1479427920.01 :  Started fit
+1479428154.52 :  Started predict
+1479428154.52 :  Started predict > Started dot product
+(45267,)
+1479428159.27 : Started predict > Started argsort
+Progress: 10.71%
+[0.004154757570240912, 0.0054446914952751505]
+Result:  result(mean_score=0.0047997245327580313, std_dev=0.00064496696251711925, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479428177.2 :  Started fit
+1479428179.11 :  Started predict
+1479428179.11 :  Started predict > Started dot product
+(0,)
+1479428183.52 : Started predict > Started argsort
+Progress: 10.81%
+1479428201.42 :  Started fit
+1479428203.31 :  Started predict
+1479428203.31 :  Started predict > Started dot product
+(0,)
+1479428207.71 : Started predict > Started argsort
+Progress: 10.91%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.001, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479428225.59 :  Started fit
+1479428227.5 :  Started predict
+1479428227.5 :  Started predict > Started dot product
+(0,)
+1479428231.89 : Started predict > Started argsort
+Progress: 11.01%
+1479428249.77 :  Started fit
+1479428251.67 :  Started predict
+1479428251.67 :  Started predict > Started dot product
+(0,)
+1479428256.09 : Started predict > Started argsort
+Progress: 11.11%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479428273.98 :  Started fit
+1479428275.9 :  Started predict
+1479428275.9 :  Started predict > Started dot product
+(0,)
+1479428280.29 : Started predict > Started argsort
+Progress: 11.21%
+1479428298.17 :  Started fit
+1479428300.07 :  Started predict
+1479428300.07 :  Started predict > Started dot product
+(0,)
+1479428304.46 : Started predict > Started argsort
+Progress: 11.31%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479428322.34 :  Started fit
+1479428562.13 :  Started predict
+1479428562.13 :  Started predict > Started dot product
+(48434,)
+1479428566.86 : Started predict > Started argsort
+Progress: 11.41%
+1479428584.78 :  Started fit
+1479428819.19 :  Started predict
+1479428819.19 :  Started predict > Started dot product
+(45342,)
+1479428823.94 : Started predict > Started argsort
+Progress: 11.51%
+[0.0056947478609138862, 0.0061118059415724768]
+Result:  result(mean_score=0.0059032769012431815, std_dev=0.00020852904032929529, parameters={'l2_penalty': 1, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479428841.86 :  Started fit
+1479429081.66 :  Started predict
+1479429081.66 :  Started predict > Started dot product
+(48736,)
+1479429086.41 : Started predict > Started argsort
+Progress: 11.61%
+1479429104.34 :  Started fit
+1479429339.62 :  Started predict
+1479429339.62 :  Started predict > Started dot product
+(45644,)
+1479429344.36 : Started predict > Started argsort
+Progress: 11.71%
+[0.0048387341464894689, 0.0055008955592613148]
+Result:  result(mean_score=0.0051698148528753918, std_dev=0.00033108070638592293, parameters={'l2_penalty': 10, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479429362.29 :  Started fit
+1479429602.11 :  Started predict
+1479429602.11 :  Started predict > Started dot product
+(48494,)
+1479429606.86 : Started predict > Started argsort
+Progress: 11.81%
+1479429624.79 :  Started fit
+1479429859.35 :  Started predict
+1479429859.35 :  Started predict > Started dot product
+(45868,)
+1479429864.1 : Started predict > Started argsort
+Progress: 11.90%
+[0.0041460343467443397, 0.0056183991106170065]
+Result:  result(mean_score=0.0048822167286806731, std_dev=0.00073618238193633341, parameters={'l2_penalty': 50, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479429882.02 :  Started fit
+1479430123.17 :  Started predict
+1479430123.17 :  Started predict > Started dot product
+(48729,)
+1479430127.93 : Started predict > Started argsort
+Progress: 12.00%
+1479430145.85 :  Started fit
+1479430380.25 :  Started predict
+1479430380.25 :  Started predict > Started dot product
+(45649,)
+1479430385.0 : Started predict > Started argsort
+Progress: 12.10%
+[0.0045357728017476756, 0.0052755388796244789]
+Result:  result(mean_score=0.0049056558406860773, std_dev=0.00036988303893840165, parameters={'l2_penalty': 100, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479430402.93 :  Started fit
+1479430642.75 :  Started predict
+1479430642.75 :  Started predict > Started dot product
+(47895,)
+1479430647.5 : Started predict > Started argsort
+Progress: 12.20%
+1479430665.43 :  Started fit
+1479430899.92 :  Started predict
+1479430899.92 :  Started predict > Started dot product
+(44174,)
+1479430904.66 : Started predict > Started argsort
+Progress: 12.30%
+[0.0051257661265853467, 0.0070488234204187485]
+Result:  result(mean_score=0.0060872947735020472, std_dev=0.00096152864691670089, parameters={'l2_penalty': 500, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10}
+1479430922.59 :  Started fit
+1479431162.38 :  Started predict
+1479431162.38 :  Started predict > Started dot product
+(48993,)
+1479431167.14 : Started predict > Started argsort
+Progress: 12.40%
+1479431185.07 :  Started fit
+1479431419.43 :  Started predict
+1479431419.43 :  Started predict > Started dot product
+(45192,)
+1479431424.16 : Started predict > Started argsort
+Progress: 12.50%
+[0.0050521876327447009, 0.0060004786609844955]
+Result:  result(mean_score=0.0055263331468645982, std_dev=0.0004741455141198973, parameters={'l2_penalty': 1000, 'k_top': 100, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431442.08 :  Started fit
+1479431444.56 :  Started predict
+1479431444.56 :  Started predict > Started dot product
+(0,)
+1479431448.97 : Started predict > Started argsort
+Progress: 12.60%
+1479431466.87 :  Started fit
+1479431469.33 :  Started predict
+1479431469.33 :  Started predict > Started dot product
+(0,)
+1479431473.74 : Started predict > Started argsort
+Progress: 12.70%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431491.63 :  Started fit
+1479431494.45 :  Started predict
+1479431494.45 :  Started predict > Started dot product
+(5727,)
+1479431499.07 : Started predict > Started argsort
+Progress: 12.80%
+1479431516.95 :  Started fit
+1479431519.68 :  Started predict
+1479431519.68 :  Started predict > Started dot product
+(4328,)
+1479431524.31 : Started predict > Started argsort
+Progress: 12.90%
+[0.0020348625523393411, 0.0022804335742078927]
+Result:  result(mean_score=0.0021576480632736171, std_dev=0.00012278551093427583, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431542.19 :  Started fit
+1479431545.41 :  Started predict
+1479431545.41 :  Started predict > Started dot product
+(73191,)
+1479431550.15 : Started predict > Started argsort
+Progress: 13.00%
+1479431568.07 :  Started fit
+1479431571.27 :  Started predict
+1479431571.27 :  Started predict > Started dot product
+(71578,)
+1479431576.03 : Started predict > Started argsort
+Progress: 13.10%
+[0.0060168244432307737, 0.0062043727997035357]
+Result:  result(mean_score=0.0061105986214671547, std_dev=9.3774178236380977e-05, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431593.96 :  Started fit
+1479431597.21 :  Started predict
+1479431597.21 :  Started predict > Started dot product
+(73261,)
+1479431601.98 : Started predict > Started argsort
+Progress: 13.19%
+1479431619.91 :  Started fit
+1479431623.09 :  Started predict
+1479431623.09 :  Started predict > Started dot product
+(70566,)
+1479431627.86 : Started predict > Started argsort
+Progress: 13.29%
+[0.0045721069239638311, 0.0060344481502069055]
+Result:  result(mean_score=0.0053032775370853678, std_dev=0.00073117061312153722, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431645.8 :  Started fit
+1479431649.04 :  Started predict
+1479431649.04 :  Started predict > Started dot product
+(73871,)
+1479431653.78 : Started predict > Started argsort
+Progress: 13.39%
+1479431671.71 :  Started fit
+1479431674.88 :  Started predict
+1479431674.88 :  Started predict > Started dot product
+(72303,)
+1479431679.62 : Started predict > Started argsort
+Progress: 13.49%
+[0.0050366375386855962, 0.0053936600580569462]
+Result:  result(mean_score=0.0052151487983712712, std_dev=0.00017851125968567499, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431697.54 :  Started fit
+1479431700.79 :  Started predict
+1479431700.79 :  Started predict > Started dot product
+(74511,)
+1479431705.53 : Started predict > Started argsort
+Progress: 13.59%
+1479431723.46 :  Started fit
+1479431726.64 :  Started predict
+1479431726.64 :  Started predict > Started dot product
+(71291,)
+1479431731.38 : Started predict > Started argsort
+Progress: 13.69%
+[0.0048919078827598756, 0.0057617657958124874]
+Result:  result(mean_score=0.0053268368392861819, std_dev=0.00043492895652630587, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431749.3 :  Started fit
+1479431752.56 :  Started predict
+1479431752.56 :  Started predict > Started dot product
+(72708,)
+1479431757.3 : Started predict > Started argsort
+Progress: 13.79%
+1479431775.22 :  Started fit
+1479431778.41 :  Started predict
+1479431778.41 :  Started predict > Started dot product
+(71811,)
+1479431783.14 : Started predict > Started argsort
+Progress: 13.89%
+[0.0048396443958978064, 0.0065664566734605651]
+Result:  result(mean_score=0.0057030505346791858, std_dev=0.00086340613878137934, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431801.07 :  Started fit
+1479431875.61 :  Started predict
+1479431875.61 :  Started predict > Started dot product
+(74336,)
+1479431880.38 : Started predict > Started argsort
+Progress: 13.99%
+1479431898.31 :  Started fit
+1479431954.98 :  Started predict
+1479431954.98 :  Started predict > Started dot product
+(72022,)
+1479431959.74 : Started predict > Started argsort
+Progress: 14.09%
+[0.0051102918866436052, 0.007481625594466061]
+Result:  result(mean_score=0.0062959587405548335, std_dev=0.0011856668539112279, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479431977.67 :  Started fit
+1479432139.79 :  Started predict
+1479432139.79 :  Started predict > Started dot product
+(74222,)
+1479432144.55 : Started predict > Started argsort
+Progress: 14.19%
+1479432162.49 :  Started fit
+1479432316.62 :  Started predict
+1479432316.62 :  Started predict > Started dot product
+(71263,)
+1479432321.38 : Started predict > Started argsort
+Progress: 14.29%
+[0.0063525547666727312, 0.0064565190537953171]
+Result:  result(mean_score=0.0064045369102340242, std_dev=5.1982143561292958e-05, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432339.31 :  Started fit
+1479432341.78 :  Started predict
+1479432341.78 :  Started predict > Started dot product
+(0,)
+1479432346.2 : Started predict > Started argsort
+Progress: 14.38%
+1479432364.09 :  Started fit
+1479432366.54 :  Started predict
+1479432366.54 :  Started predict > Started dot product
+(0,)
+1479432370.96 : Started predict > Started argsort
+Progress: 14.48%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432388.85 :  Started fit
+1479432391.32 :  Started predict
+1479432391.32 :  Started predict > Started dot product
+(0,)
+1479432395.71 : Started predict > Started argsort
+Progress: 14.58%
+1479432413.6 :  Started fit
+1479432416.06 :  Started predict
+1479432416.06 :  Started predict > Started dot product
+(0,)
+1479432420.45 : Started predict > Started argsort
+Progress: 14.68%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432438.33 :  Started fit
+1479432441.13 :  Started predict
+1479432441.13 :  Started predict > Started dot product
+(5869,)
+1479432445.75 : Started predict > Started argsort
+Progress: 14.78%
+1479432463.64 :  Started fit
+1479432466.36 :  Started predict
+1479432466.36 :  Started predict > Started dot product
+(4237,)
+1479432470.99 : Started predict > Started argsort
+Progress: 14.88%
+[0.0023637660052187631, 0.0035904206040392799]
+Result:  result(mean_score=0.0029770933046290218, std_dev=0.0006133272994102584, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432488.88 :  Started fit
+1479432492.1 :  Started predict
+1479432492.1 :  Started predict > Started dot product
+(74091,)
+1479432496.84 : Started predict > Started argsort
+Progress: 14.98%
+1479432514.76 :  Started fit
+1479432517.95 :  Started predict
+1479432517.95 :  Started predict > Started dot product
+(70266,)
+1479432522.69 : Started predict > Started argsort
+Progress: 15.08%
+[0.0047629558832453407, 0.006669909208819714]
+Result:  result(mean_score=0.0057164325460325269, std_dev=0.00095347666278718666, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432540.61 :  Started fit
+1479432543.84 :  Started predict
+1479432543.84 :  Started predict > Started dot product
+(73621,)
+1479432548.58 : Started predict > Started argsort
+Progress: 15.18%
+1479432566.5 :  Started fit
+1479432569.68 :  Started predict
+1479432569.68 :  Started predict > Started dot product
+(71242,)
+1479432574.42 : Started predict > Started argsort
+Progress: 15.28%
+[0.0058822592390314924, 0.0070897412142548336]
+Result:  result(mean_score=0.006486000226643163, std_dev=0.00060374098761167058, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432592.34 :  Started fit
+1479432595.56 :  Started predict
+1479432595.56 :  Started predict > Started dot product
+(74720,)
+1479432600.3 : Started predict > Started argsort
+Progress: 15.38%
+1479432618.23 :  Started fit
+1479432621.4 :  Started predict
+1479432621.4 :  Started predict > Started dot product
+(69945,)
+1479432626.13 : Started predict > Started argsort
+Progress: 15.48%
+[0.0058810455731537082, 0.0058041504539559016]
+Result:  result(mean_score=0.0058425980135548049, std_dev=3.8447559598903287e-05, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432644.06 :  Started fit
+1479432647.32 :  Started predict
+1479432647.32 :  Started predict > Started dot product
+(74525,)
+1479432652.08 : Started predict > Started argsort
+Progress: 15.58%
+1479432670.01 :  Started fit
+1479432673.2 :  Started predict
+1479432673.2 :  Started predict > Started dot product
+(71340,)
+1479432677.96 : Started predict > Started argsort
+Progress: 15.67%
+[0.0063530098913769017, 0.0076521678710394659]
+Result:  result(mean_score=0.0070025888812081834, std_dev=0.00064957898983128209, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432695.89 :  Started fit
+1479432699.15 :  Started predict
+1479432699.15 :  Started predict > Started dot product
+(72828,)
+1479432703.92 : Started predict > Started argsort
+Progress: 15.77%
+1479432721.85 :  Started fit
+1479432725.04 :  Started predict
+1479432725.04 :  Started predict > Started dot product
+(71455,)
+1479432729.8 : Started predict > Started argsort
+Progress: 15.87%
+[0.0062474968141270704, 0.0067664906429497863]
+Result:  result(mean_score=0.0065069937285384283, std_dev=0.00025949691441135795, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479432747.73 :  Started fit
+1479432751.01 :  Started predict
+1479432751.01 :  Started predict > Started dot product
+(72804,)
+1479432755.78 : Started predict > Started argsort
+Progress: 15.97%
+1479432773.71 :  Started fit
+1479432776.92 :  Started predict
+1479432776.92 :  Started predict > Started dot product
+(71750,)
+1479432781.68 : Started predict > Started argsort
+Progress: 16.07%
+[0.0056421809575823755, 0.0058552590945587036]
+Result:  result(mean_score=0.0057487200260705395, std_dev=0.00010653906848816404, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479432799.61 :  Started fit
+1479432802.1 :  Started predict
+1479432802.1 :  Started predict > Started dot product
+(0,)
+1479432806.51 : Started predict > Started argsort
+Progress: 16.17%
+1479432824.41 :  Started fit
+1479432826.87 :  Started predict
+1479432826.87 :  Started predict > Started dot product
+(0,)
+1479432831.28 : Started predict > Started argsort
+Progress: 16.27%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479432849.17 :  Started fit
+1479432851.65 :  Started predict
+1479432851.65 :  Started predict > Started dot product
+(0,)
+1479432856.07 : Started predict > Started argsort
+Progress: 16.37%
+1479432873.96 :  Started fit
+1479432876.44 :  Started predict
+1479432876.44 :  Started predict > Started dot product
+(0,)
+1479432880.85 : Started predict > Started argsort
+Progress: 16.47%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479432898.74 :  Started fit
+1479432901.22 :  Started predict
+1479432901.22 :  Started predict > Started dot product
+(0,)
+1479432905.61 : Started predict > Started argsort
+Progress: 16.57%
+1479432923.5 :  Started fit
+1479432925.96 :  Started predict
+1479432925.96 :  Started predict > Started dot product
+(0,)
+1479432930.37 : Started predict > Started argsort
+Progress: 16.67%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479432948.27 :  Started fit
+1479432951.08 :  Started predict
+1479432951.08 :  Started predict > Started dot product
+(5816,)
+1479432955.7 : Started predict > Started argsort
+Progress: 16.77%
+1479432973.59 :  Started fit
+1479432976.33 :  Started predict
+1479432976.33 :  Started predict > Started dot product
+(4243,)
+1479432980.95 : Started predict > Started argsort
+Progress: 16.87%
+[0.0026342617877298372, 0.0019457569019825822]
+Result:  result(mean_score=0.0022900093448562095, std_dev=0.0003442524428736275, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479432998.83 :  Started fit
+1479433002.04 :  Started predict
+1479433002.04 :  Started predict > Started dot product
+(73835,)
+1479433006.79 : Started predict > Started argsort
+Progress: 16.96%
+1479433024.71 :  Started fit
+1479433027.89 :  Started predict
+1479433027.89 :  Started predict > Started dot product
+(72147,)
+1479433032.63 : Started predict > Started argsort
+Progress: 17.06%
+[0.0057150009102494067, 0.0062527793218454687]
+Result:  result(mean_score=0.0059838901160474377, std_dev=0.00026888920579803098, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479433050.55 :  Started fit
+1479433053.78 :  Started predict
+1479433053.78 :  Started predict > Started dot product
+(75041,)
+1479433058.53 : Started predict > Started argsort
+Progress: 17.16%
+1479433076.46 :  Started fit
+1479433079.64 :  Started predict
+1479433079.64 :  Started predict > Started dot product
+(71317,)
+1479433084.38 : Started predict > Started argsort
+Progress: 17.26%
+[0.0046332453425571912, 0.0065471558273114691]
+Result:  result(mean_score=0.0055902005849343302, std_dev=0.00095695524237713898, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479433102.3 :  Started fit
+1479433105.53 :  Started predict
+1479433105.53 :  Started predict > Started dot product
+(73189,)
+1479433110.27 : Started predict > Started argsort
+Progress: 17.36%
+1479433128.19 :  Started fit
+1479433131.38 :  Started predict
+1479433131.38 :  Started predict > Started dot product
+(72242,)
+1479433136.12 : Started predict > Started argsort
+Progress: 17.46%
+[0.0051266763759936877, 0.0077279815947131113]
+Result:  result(mean_score=0.0064273289853533991, std_dev=0.0013006526093597118, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479433154.04 :  Started fit
+1479433157.27 :  Started predict
+1479433157.27 :  Started predict > Started dot product
+(74358,)
+1479433162.01 : Started predict > Started argsort
+Progress: 17.56%
+1479433179.94 :  Started fit
+1479433183.14 :  Started predict
+1479433183.14 :  Started predict > Started dot product
+(70948,)
+1479433187.89 : Started predict > Started argsort
+Progress: 17.66%
+[0.0051307724983312049, 0.0063018034710641728]
+Result:  result(mean_score=0.0057162879846976884, std_dev=0.00058551548636648397, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479433205.83 :  Started fit
+1479433209.06 :  Started predict
+1479433209.06 :  Started predict > Started dot product
+(74187,)
+1479433213.82 : Started predict > Started argsort
+Progress: 17.76%
+1479433231.76 :  Started fit
+1479433234.96 :  Started predict
+1479433234.96 :  Started predict > Started dot product
+(71351,)
+1479433239.69 : Started predict > Started argsort
+Progress: 17.86%
+[0.0063704563383700473, 0.0060360694212834281]
+Result:  result(mean_score=0.0062032628798267377, std_dev=0.0001671934585433096, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433257.62 :  Started fit
+1479433260.09 :  Started predict
+1479433260.09 :  Started predict > Started dot product
+(0,)
+1479433264.49 : Started predict > Started argsort
+Progress: 17.96%
+1479433282.37 :  Started fit
+1479433284.81 :  Started predict
+1479433284.81 :  Started predict > Started dot product
+(0,)
+1479433289.21 : Started predict > Started argsort
+Progress: 18.06%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433307.09 :  Started fit
+1479433309.56 :  Started predict
+1479433309.56 :  Started predict > Started dot product
+(0,)
+1479433313.95 : Started predict > Started argsort
+Progress: 18.15%
+1479433331.85 :  Started fit
+1479433334.32 :  Started predict
+1479433334.32 :  Started predict > Started dot product
+(0,)
+1479433338.73 : Started predict > Started argsort
+Progress: 18.25%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433356.62 :  Started fit
+1479433359.1 :  Started predict
+1479433359.1 :  Started predict > Started dot product
+(0,)
+1479433363.51 : Started predict > Started argsort
+Progress: 18.35%
+1479433381.41 :  Started fit
+1479433383.87 :  Started predict
+1479433383.87 :  Started predict > Started dot product
+(0,)
+1479433388.29 : Started predict > Started argsort
+Progress: 18.45%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433406.18 :  Started fit
+1479433408.66 :  Started predict
+1479433408.66 :  Started predict > Started dot product
+(0,)
+1479433413.07 : Started predict > Started argsort
+Progress: 18.55%
+1479433430.96 :  Started fit
+1479433433.41 :  Started predict
+1479433433.41 :  Started predict > Started dot product
+(0,)
+1479433437.81 : Started predict > Started argsort
+Progress: 18.65%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433455.69 :  Started fit
+1479433458.49 :  Started predict
+1479433458.49 :  Started predict > Started dot product
+(5783,)
+1479433463.11 : Started predict > Started argsort
+Progress: 18.75%
+1479433481.0 :  Started fit
+1479433483.73 :  Started predict
+1479433483.73 :  Started predict > Started dot product
+(4379,)
+1479433488.35 : Started predict > Started argsort
+Progress: 18.85%
+[0.0026990412039565492, 0.0021572169723920696]
+Result:  result(mean_score=0.0024281290881743092, std_dev=0.0002709121157822398, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433506.23 :  Started fit
+1479433509.35 :  Started predict
+1479433509.35 :  Started predict > Started dot product
+(32567,)
+1479433514.06 : Started predict > Started argsort
+Progress: 18.95%
+1479433531.97 :  Started fit
+1479433535.08 :  Started predict
+1479433535.08 :  Started predict > Started dot product
+(30880,)
+1479433539.81 : Started predict > Started argsort
+Progress: 19.05%
+[0.0042002700406578034, 0.0057880921499598509]
+Result:  result(mean_score=0.0049941810953088271, std_dev=0.00079391105465102373, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433557.73 :  Started fit
+1479433560.94 :  Started predict
+1479433560.94 :  Started predict > Started dot product
+(72484,)
+1479433565.68 : Started predict > Started argsort
+Progress: 19.15%
+1479433583.6 :  Started fit
+1479433586.79 :  Started predict
+1479433586.79 :  Started predict > Started dot product
+(71344,)
+1479433591.52 : Started predict > Started argsort
+Progress: 19.25%
+[0.0055436464591297977, 0.0072063955283799648]
+Result:  result(mean_score=0.0063750209937548808, std_dev=0.00083137453462508353, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433609.44 :  Started fit
+1479433612.67 :  Started predict
+1479433612.67 :  Started predict > Started dot product
+(72904,)
+1479433617.41 : Started predict > Started argsort
+Progress: 19.35%
+1479433635.33 :  Started fit
+1479433638.52 :  Started predict
+1479433638.52 :  Started predict > Started dot product
+(70961,)
+1479433643.26 : Started predict > Started argsort
+Progress: 19.44%
+[0.0057040779173493494, 0.0062513896609227328]
+Result:  result(mean_score=0.0059777337891360411, std_dev=0.0002736558717866917, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479433661.18 :  Started fit
+1479433664.42 :  Started predict
+1479433664.42 :  Started predict > Started dot product
+(73291,)
+1479433669.16 : Started predict > Started argsort
+Progress: 19.54%
+1479433687.08 :  Started fit
+1479433690.28 :  Started predict
+1479433690.28 :  Started predict > Started dot product
+(70883,)
+1479433695.01 : Started predict > Started argsort
+Progress: 19.64%
+[0.0056571242187025894, 0.0062161077141621862]
+Result:  result(mean_score=0.0059366159664323882, std_dev=0.00027949174772979842, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433712.93 :  Started fit
+1479433715.4 :  Started predict
+1479433715.4 :  Started predict > Started dot product
+(0,)
+1479433719.79 : Started predict > Started argsort
+Progress: 19.74%
+1479433737.67 :  Started fit
+1479433740.13 :  Started predict
+1479433740.13 :  Started predict > Started dot product
+(0,)
+1479433744.52 : Started predict > Started argsort
+Progress: 19.84%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433762.4 :  Started fit
+1479433764.88 :  Started predict
+1479433764.88 :  Started predict > Started dot product
+(0,)
+1479433769.27 : Started predict > Started argsort
+Progress: 19.94%
+1479433787.16 :  Started fit
+1479433789.65 :  Started predict
+1479433789.65 :  Started predict > Started dot product
+(0,)
+1479433794.07 : Started predict > Started argsort
+Progress: 20.04%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433811.96 :  Started fit
+1479433814.44 :  Started predict
+1479433814.44 :  Started predict > Started dot product
+(0,)
+1479433818.85 : Started predict > Started argsort
+Progress: 20.14%
+1479433836.76 :  Started fit
+1479433839.21 :  Started predict
+1479433839.21 :  Started predict > Started dot product
+(0,)
+1479433843.6 : Started predict > Started argsort
+Progress: 20.24%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433861.48 :  Started fit
+1479433863.95 :  Started predict
+1479433863.95 :  Started predict > Started dot product
+(0,)
+1479433868.34 : Started predict > Started argsort
+Progress: 20.34%
+1479433886.23 :  Started fit
+1479433888.7 :  Started predict
+1479433888.7 :  Started predict > Started dot product
+(0,)
+1479433893.09 : Started predict > Started argsort
+Progress: 20.44%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433910.97 :  Started fit
+1479433913.44 :  Started predict
+1479433913.44 :  Started predict > Started dot product
+(0,)
+1479433917.83 : Started predict > Started argsort
+Progress: 20.54%
+1479433935.71 :  Started fit
+1479433938.15 :  Started predict
+1479433938.15 :  Started predict > Started dot product
+(0,)
+1479433942.55 : Started predict > Started argsort
+Progress: 20.63%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479433960.43 :  Started fit
+1479433962.99 :  Started predict
+1479433962.99 :  Started predict > Started dot product
+(911,)
+1479433967.57 : Started predict > Started argsort
+Progress: 20.73%
+1479433985.46 :  Started fit
+1479433987.99 :  Started predict
+1479433987.99 :  Started predict > Started dot product
+(775,)
+1479433992.59 : Started predict > Started argsort
+Progress: 20.83%
+[0.00079510285818314228, 0.00081063553826199756]
+Result:  result(mean_score=0.00080286919822256998, std_dev=7.7663400394276387e-06, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479434010.48 :  Started fit
+1479434013.29 :  Started predict
+1479434013.29 :  Started predict > Started dot product
+(5783,)
+1479434017.93 : Started predict > Started argsort
+Progress: 20.93%
+1479434035.83 :  Started fit
+1479434038.57 :  Started predict
+1479434038.57 :  Started predict > Started dot product
+(4243,)
+1479434043.21 : Started predict > Started argsort
+Progress: 21.03%
+[0.0019150130469081862, 0.0027482860848619594]
+Result:  result(mean_score=0.002331649565885073, std_dev=0.0004166365189768866, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479434061.11 :  Started fit
+1479434064.24 :  Started predict
+1479434064.24 :  Started predict > Started dot product
+(32674,)
+1479434068.97 : Started predict > Started argsort
+Progress: 21.13%
+1479434086.89 :  Started fit
+1479434089.97 :  Started predict
+1479434089.97 :  Started predict > Started dot product
+(30516,)
+1479434094.71 : Started predict > Started argsort
+Progress: 21.23%
+[0.0053060713635536116, 0.0056049657216972366]
+Result:  result(mean_score=0.0054555185426254241, std_dev=0.00014944717907181253, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479434112.62 :  Started fit
+1479434115.84 :  Started predict
+1479434115.84 :  Started predict > Started dot product
+(74368,)
+1479434120.6 : Started predict > Started argsort
+Progress: 21.33%
+1479434138.54 :  Started fit
+1479434141.73 :  Started predict
+1479434141.73 :  Started predict > Started dot product
+(72297,)
+1479434146.49 : Started predict > Started argsort
+Progress: 21.43%
+[0.0052681443048728672, 0.0062171113581619437]
+Result:  result(mean_score=0.0057426278315174054, std_dev=0.00047448352664453824, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479434164.42 :  Started fit
+1479434166.91 :  Started predict
+1479434166.91 :  Started predict > Started dot product
+(0,)
+1479434171.33 : Started predict > Started argsort
+Progress: 21.53%
+1479434189.22 :  Started fit
+1479434191.67 :  Started predict
+1479434191.67 :  Started predict > Started dot product
+(0,)
+1479434196.08 : Started predict > Started argsort
+Progress: 21.63%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479434213.97 :  Started fit
+1479434216.45 :  Started predict
+1479434216.45 :  Started predict > Started dot product
+(0,)
+1479434220.86 : Started predict > Started argsort
+Progress: 21.73%
+1479434238.77 :  Started fit
+1479434241.22 :  Started predict
+1479434241.22 :  Started predict > Started dot product
+(0,)
+1479434245.61 : Started predict > Started argsort
+Progress: 21.83%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479434263.49 :  Started fit
+1479434265.98 :  Started predict
+1479434265.98 :  Started predict > Started dot product
+(0,)
+1479434270.37 : Started predict > Started argsort
+Progress: 21.92%
+1479434288.26 :  Started fit
+1479434290.73 :  Started predict
+1479434290.73 :  Started predict > Started dot product
+(0,)
+1479434295.12 : Started predict > Started argsort
+Progress: 22.02%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479434313.0 :  Started fit
+1479434789.94 :  Started predict
+1479434789.94 :  Started predict > Started dot product
+(72194,)
+1479434794.68 : Started predict > Started argsort
+Progress: 22.12%
+1479434812.61 :  Started fit
+1479435278.14 :  Started predict
+1479435278.14 :  Started predict > Started dot product
+(72700,)
+1479435282.87 : Started predict > Started argsort
+Progress: 22.22%
+[0.0055221038897991332, 0.0067583070841825714]
+Result:  result(mean_score=0.0061402054869908523, std_dev=0.00061810159719171906, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479435300.8 :  Started fit
+1479435776.61 :  Started predict
+1479435776.61 :  Started predict > Started dot product
+(72498,)
+1479435781.35 : Started predict > Started argsort
+Progress: 22.32%
+1479435799.27 :  Started fit
+1479436264.84 :  Started predict
+1479436264.84 :  Started predict > Started dot product
+(72061,)
+1479436269.58 : Started predict > Started argsort
+Progress: 22.42%
+[0.0059914133139146782, 0.0054404453091223522]
+Result:  result(mean_score=0.0057159293115185156, std_dev=0.00027548400239616301, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479436287.5 :  Started fit
+1479436763.27 :  Started predict
+1479436763.27 :  Started predict > Started dot product
+(74280,)
+1479436768.01 : Started predict > Started argsort
+Progress: 22.52%
+1479436785.94 :  Started fit
+1479437251.72 :  Started predict
+1479437251.72 :  Started predict > Started dot product
+(72108,)
+1479437256.48 : Started predict > Started argsort
+Progress: 22.62%
+[0.0048768887675222977, 0.0062151812735470333]
+Result:  result(mean_score=0.0055460350205346655, std_dev=0.0006691462530123678, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479437274.41 :  Started fit
+1479437751.12 :  Started predict
+1479437751.12 :  Started predict > Started dot product
+(72609,)
+1479437755.88 : Started predict > Started argsort
+Progress: 22.72%
+1479437773.81 :  Started fit
+1479438239.33 :  Started predict
+1479438239.33 :  Started predict > Started dot product
+(71481,)
+1479438244.07 : Started predict > Started argsort
+Progress: 22.82%
+[0.0051323654347957973, 0.0064421592242603918]
+Result:  result(mean_score=0.0057872623295280945, std_dev=0.00065489689473229723, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479438261.99 :  Started fit
+1479438737.77 :  Started predict
+1479438737.77 :  Started predict > Started dot product
+(73876,)
+1479438742.51 : Started predict > Started argsort
+Progress: 22.92%
+1479438760.44 :  Started fit
+1479439226.06 :  Started predict
+1479439226.06 :  Started predict > Started dot product
+(71584,)
+1479439230.79 : Started predict > Started argsort
+Progress: 23.02%
+[0.0058825626555009392, 0.0060393119634364759]
+Result:  result(mean_score=0.0059609373094687071, std_dev=7.8374653967768371e-05, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1}
+1479439248.72 :  Started fit
+1479439724.69 :  Started predict
+1479439724.69 :  Started predict > Started dot product
+(71930,)
+1479439729.45 : Started predict > Started argsort
+Progress: 23.12%
+1479439747.39 :  Started fit
+1479440213.47 :  Started predict
+1479440213.47 :  Started predict > Started dot product
+(70554,)
+1479440218.23 : Started predict > Started argsort
+Progress: 23.21%
+[0.0057653680441774359, 0.0060754431474275847]
+Result:  result(mean_score=0.0059204055958025099, std_dev=0.00015503755162507441, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479440236.16 :  Started fit
+1479440238.63 :  Started predict
+1479440238.63 :  Started predict > Started dot product
+(0,)
+1479440243.05 : Started predict > Started argsort
+Progress: 23.31%
+1479440260.94 :  Started fit
+1479440263.4 :  Started predict
+1479440263.4 :  Started predict > Started dot product
+(0,)
+1479440267.79 : Started predict > Started argsort
+Progress: 23.41%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.001, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479440285.67 :  Started fit
+1479440288.15 :  Started predict
+1479440288.15 :  Started predict > Started dot product
+(0,)
+1479440292.54 : Started predict > Started argsort
+Progress: 23.51%
+1479440310.43 :  Started fit
+1479440312.88 :  Started predict
+1479440312.88 :  Started predict > Started dot product
+(0,)
+1479440317.27 : Started predict > Started argsort
+Progress: 23.61%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479440335.16 :  Started fit
+1479440337.64 :  Started predict
+1479440337.64 :  Started predict > Started dot product
+(0,)
+1479440342.04 : Started predict > Started argsort
+Progress: 23.71%
+1479440359.92 :  Started fit
+1479440362.37 :  Started predict
+1479440362.37 :  Started predict > Started dot product
+(0,)
+1479440366.76 : Started predict > Started argsort
+Progress: 23.81%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479440384.64 :  Started fit
+1479440860.51 :  Started predict
+1479440860.51 :  Started predict > Started dot product
+(72687,)
+1479440865.25 : Started predict > Started argsort
+Progress: 23.91%
+1479440883.17 :  Started fit
+1479441348.75 :  Started predict
+1479441348.75 :  Started predict > Started dot product
+(71784,)
+1479441353.49 : Started predict > Started argsort
+Progress: 24.01%
+[0.0060578615207233432, 0.0064613056636402925]
+Result:  result(mean_score=0.0062595835921818183, std_dev=0.00020172207145847465, parameters={'l2_penalty': 1, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479441371.41 :  Started fit
+1479441847.21 :  Started predict
+1479441847.21 :  Started predict > Started dot product
+(74369,)
+1479441851.95 : Started predict > Started argsort
+Progress: 24.11%
+1479441869.87 :  Started fit
+1479442335.48 :  Started predict
+1479442335.48 :  Started predict > Started dot product
+(73114,)
+1479442340.22 : Started predict > Started argsort
+Progress: 24.21%
+[0.0050859427149705658, 0.0051480760916558571]
+Result:  result(mean_score=0.0051170094033132114, std_dev=3.1066688342645636e-05, parameters={'l2_penalty': 10, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479442358.14 :  Started fit
+1479442834.11 :  Started predict
+1479442834.11 :  Started predict > Started dot product
+(74854,)
+1479442838.85 : Started predict > Started argsort
+Progress: 24.31%
+1479442856.77 :  Started fit
+1479443323.61 :  Started predict
+1479443323.61 :  Started predict > Started dot product
+(72035,)
+1479443328.34 : Started predict > Started argsort
+Progress: 24.40%
+[0.0052113295709691086, 0.0057013927490581172]
+Result:  result(mean_score=0.0054563611600136133, std_dev=0.0002450315890445043, parameters={'l2_penalty': 50, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479443346.28 :  Started fit
+1479443822.01 :  Started predict
+1479443822.01 :  Started predict > Started dot product
+(73566,)
+1479443826.75 : Started predict > Started argsort
+Progress: 24.50%
+1479443844.68 :  Started fit
+1479444310.24 :  Started predict
+1479444310.24 :  Started predict > Started dot product
+(71786,)
+1479444314.98 : Started predict > Started argsort
+Progress: 24.60%
+[0.0053067540506098621, 0.0065604348094620464]
+Result:  result(mean_score=0.0059335944300359543, std_dev=0.00062684037942609214, parameters={'l2_penalty': 100, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479444332.9 :  Started fit
+1479444808.79 :  Started predict
+1479444808.79 :  Started predict > Started dot product
+(73777,)
+1479444813.53 : Started predict > Started argsort
+Progress: 24.70%
+1479444831.45 :  Started fit
+1479445299.05 :  Started predict
+1479445299.05 :  Started predict > Started dot product
+(70942,)
+1479445303.78 : Started predict > Started argsort
+Progress: 24.80%
+[0.0059047120577704918, 0.006575412266073743]
+Result:  result(mean_score=0.0062400621619221174, std_dev=0.00033535010415162558, parameters={'l2_penalty': 500, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10}
+1479445321.72 :  Started fit
+1479445797.54 :  Started predict
+1479445797.54 :  Started predict > Started dot product
+(73302,)
+1479445802.28 : Started predict > Started argsort
+Progress: 24.90%
+1479445820.2 :  Started fit
+1479446285.89 :  Started predict
+1479446285.89 :  Started predict > Started dot product
+(72769,)
+1479446290.63 : Started predict > Started argsort
+Progress: 25.00%
+[0.0050227562352084445, 0.0073503798406522143]
+Result:  result(mean_score=0.0061865680379303289, std_dev=0.0011638118027218849, parameters={'l2_penalty': 1000, 'k_top': 200, 'count_top_pop': True, 'l1_penalty': 10})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446308.55 :  Started fit
+1479446312.72 :  Started predict
+1479446312.72 :  Started predict > Started dot product
+(0,)
+1479446317.11 : Started predict > Started argsort
+Progress: 25.10%
+1479446334.99 :  Started fit
+1479446339.17 :  Started predict
+1479446339.17 :  Started predict > Started dot product
+(0,)
+1479446343.58 : Started predict > Started argsort
+Progress: 25.20%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446361.47 :  Started fit
+1479446366.28 :  Started predict
+1479446366.28 :  Started predict > Started dot product
+(7285,)
+1479446370.95 : Started predict > Started argsort
+Progress: 25.30%
+1479446388.84 :  Started fit
+1479446393.56 :  Started predict
+1479446393.56 :  Started predict > Started dot product
+(5887,)
+1479446398.22 : Started predict > Started argsort
+Progress: 25.40%
+[0.0025915559196553182, 0.0030498425050954239]
+Result:  result(mean_score=0.0028206992123753711, std_dev=0.00022914329272005285, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446416.12 :  Started fit
+1479446422.05 :  Started predict
+1479446422.05 :  Started predict > Started dot product
+(130430,)
+1479446426.82 : Started predict > Started argsort
+Progress: 25.50%
+1479446444.77 :  Started fit
+1479446450.63 :  Started predict
+1479446450.63 :  Started predict > Started dot product
+(132202,)
+1479446455.4 : Started predict > Started argsort
+Progress: 25.60%
+[0.0057787183688330582, 0.0064040207522697767]
+Result:  result(mean_score=0.006091369560551417, std_dev=0.00031265119171835923, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446473.34 :  Started fit
+1479446479.32 :  Started predict
+1479446479.32 :  Started predict > Started dot product
+(124867,)
+1479446484.1 : Started predict > Started argsort
+Progress: 25.69%
+1479446502.05 :  Started fit
+1479446507.93 :  Started predict
+1479446507.93 :  Started predict > Started dot product
+(133812,)
+1479446512.7 : Started predict > Started argsort
+Progress: 25.79%
+[0.0053970963043873995, 0.0063807825335062667]
+Result:  result(mean_score=0.0058889394189468331, std_dev=0.00049184311455943361, parameters={'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446530.65 :  Started fit
+1479446536.61 :  Started predict
+1479446536.61 :  Started predict > Started dot product
+(128806,)
+1479446541.39 : Started predict > Started argsort
+Progress: 25.89%
+1479446559.34 :  Started fit
+1479446565.2 :  Started predict
+1479446565.2 :  Started predict > Started dot product
+(131721,)
+1479446569.97 : Started predict > Started argsort
+Progress: 25.99%
+[0.0070979731779841019, 0.0072796615403619286]
+Result:  result(mean_score=0.0071888173591730152, std_dev=9.0844181188913346e-05, parameters={'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446587.92 :  Started fit
+1479446593.9 :  Started predict
+1479446593.9 :  Started predict > Started dot product
+(129149,)
+1479446598.67 : Started predict > Started argsort
+Progress: 26.09%
+1479446616.62 :  Started fit
+1479446622.52 :  Started predict
+1479446622.52 :  Started predict > Started dot product
+(131317,)
+1479446627.27 : Started predict > Started argsort
+Progress: 26.19%
+[0.0054743916499787595, 0.0072570409486751924]
+Result:  result(mean_score=0.006365716299326976, std_dev=0.00089132464934821645, parameters={'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446645.2 :  Started fit
+1479446651.19 :  Started predict
+1479446651.19 :  Started predict > Started dot product
+(129533,)
+1479446655.95 : Started predict > Started argsort
+Progress: 26.29%
+1479446673.88 :  Started fit
+1479446682.04 :  Started predict
+1479446682.04 :  Started predict > Started dot product
+(131947,)
+1479446686.79 : Started predict > Started argsort
+Progress: 26.39%
+[0.0066372352691304063, 0.0063413316039775194]
+Result:  result(mean_score=0.0064892834365539633, std_dev=0.00014795183257644345, parameters={'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446704.72 :  Started fit
+1479446807.94 :  Started predict
+1479446807.94 :  Started predict > Started dot product
+(126698,)
+1479446812.69 : Started predict > Started argsort
+Progress: 26.49%
+1479446830.63 :  Started fit
+1479446924.56 :  Started predict
+1479446924.56 :  Started predict > Started dot product
+(131004,)
+1479446929.31 : Started predict > Started argsort
+Progress: 26.59%
+[0.0073081649371927919, 0.0068557377555432068]
+Result:  result(mean_score=0.0070819513463679998, std_dev=0.00022621359082479258, parameters={'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05}
+1479446947.24 :  Started fit
+1479447234.13 :  Started predict
+1479447234.13 :  Started predict > Started dot product
+(126586,)
+1479447238.88 : Started predict > Started argsort
+Progress: 26.69%
+1479447256.81 :  Started fit
+1479447538.07 :  Started predict
+1479447538.07 :  Started predict > Started dot product
+(132483,)
+1479447542.84 : Started predict > Started argsort
+Progress: 26.79%
+[0.0056659991504338838, 0.0062066889012414297]
+Result:  result(mean_score=0.0059363440258376563, std_dev=0.00027034487540377296, parameters={'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1e-05})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447560.79 :  Started fit
+1479447564.97 :  Started predict
+1479447564.97 :  Started predict > Started dot product
+(0,)
+1479447569.36 : Started predict > Started argsort
+Progress: 26.88%
+1479447587.25 :  Started fit
+1479447591.39 :  Started predict
+1479447591.39 :  Started predict > Started dot product
+(0,)
+1479447595.78 : Started predict > Started argsort
+Progress: 26.98%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447613.66 :  Started fit
+1479447617.83 :  Started predict
+1479447617.83 :  Started predict > Started dot product
+(0,)
+1479447622.22 : Started predict > Started argsort
+Progress: 27.08%
+1479447640.1 :  Started fit
+1479447644.27 :  Started predict
+1479447644.27 :  Started predict > Started dot product
+(0,)
+1479447648.66 : Started predict > Started argsort
+Progress: 27.18%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447666.55 :  Started fit
+1479447671.36 :  Started predict
+1479447671.36 :  Started predict > Started dot product
+(7411,)
+1479447676.02 : Started predict > Started argsort
+Progress: 27.28%
+1479447693.92 :  Started fit
+1479447698.6 :  Started predict
+1479447698.6 :  Started predict > Started dot product
+(5934,)
+1479447703.26 : Started predict > Started argsort
+Progress: 27.38%
+[0.0025250318587292909, 0.0029590513248100784]
+Result:  result(mean_score=0.0027420415917696847, std_dev=0.00021700973304039379, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447721.15 :  Started fit
+1479447727.09 :  Started predict
+1479447727.09 :  Started predict > Started dot product
+(125712,)
+1479447731.86 : Started predict > Started argsort
+Progress: 27.48%
+1479447749.81 :  Started fit
+1479447755.69 :  Started predict
+1479447755.69 :  Started predict > Started dot product
+(130908,)
+1479447760.43 : Started predict > Started argsort
+Progress: 27.58%
+[0.0059546999211117137, 0.0061402167871039441]
+Result:  result(mean_score=0.0060474583541078285, std_dev=9.2758432996115168e-05, parameters={'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447778.37 :  Started fit
+1479447784.32 :  Started predict
+1479447784.32 :  Started predict > Started dot product
+(129839,)
+1479447789.07 : Started predict > Started argsort
+Progress: 27.68%
+1479447807.01 :  Started fit
+1479447812.86 :  Started predict
+1479447812.86 :  Started predict > Started dot product
+(131574,)
+1479447817.6 : Started predict > Started argsort
+Progress: 27.78%
+[0.0059313368529643759, 0.0066565530232845383]
+Result:  result(mean_score=0.0062939449381244576, std_dev=0.00036260808516008118, parameters={'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447835.54 :  Started fit
+1479447841.52 :  Started predict
+1479447841.52 :  Started predict > Started dot product
+(129556,)
+1479447846.29 : Started predict > Started argsort
+Progress: 27.88%
+1479447864.24 :  Started fit
+1479447870.11 :  Started predict
+1479447870.11 :  Started predict > Started dot product
+(133227,)
+1479447874.85 : Started predict > Started argsort
+Progress: 27.98%
+[0.0054974513016566506, 0.0060970600951145686]
+Result:  result(mean_score=0.0057972556983856092, std_dev=0.00029980439672895902, parameters={'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447892.79 :  Started fit
+1479447898.76 :  Started predict
+1479447898.76 :  Started predict > Started dot product
+(126623,)
+1479447903.51 : Started predict > Started argsort
+Progress: 28.08%
+1479447921.46 :  Started fit
+1479447927.3 :  Started predict
+1479447927.3 :  Started predict > Started dot product
+(131014,)
+1479447932.05 : Started predict > Started argsort
+Progress: 28.17%
+[0.0078596243704108244, 0.0069901488481255046]
+Result:  result(mean_score=0.007424886609268164, std_dev=0.00043473776114265989, parameters={'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479447949.98 :  Started fit
+1479447955.96 :  Started predict
+1479447955.96 :  Started predict > Started dot product
+(130082,)
+1479447960.71 : Started predict > Started argsort
+Progress: 28.27%
+1479447978.66 :  Started fit
+1479447984.54 :  Started predict
+1479447984.54 :  Started predict > Started dot product
+(132639,)
+1479447989.31 : Started predict > Started argsort
+Progress: 28.37%
+[0.006408231688816067, 0.0057012383422889237]
+Result:  result(mean_score=0.0060547350155524954, std_dev=0.00035349667326357165, parameters={'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001}
+1479448007.25 :  Started fit
+1479448013.25 :  Started predict
+1479448013.25 :  Started predict > Started dot product
+(127652,)
+1479448018.02 : Started predict > Started argsort
+Progress: 28.47%
+1479448035.97 :  Started fit
+1479448044.19 :  Started predict
+1479448044.19 :  Started predict > Started dot product
+(131193,)
+1479448048.96 : Started predict > Started argsort
+Progress: 28.57%
+[0.0070508677711026129, 0.0064242480390340317]
+Result:  result(mean_score=0.0067375579050683223, std_dev=0.00031330986603429062, parameters={'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.0001})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448066.91 :  Started fit
+1479448071.04 :  Started predict
+1479448071.04 :  Started predict > Started dot product
+(0,)
+1479448075.46 : Started predict > Started argsort
+Progress: 28.67%
+1479448093.36 :  Started fit
+1479448097.54 :  Started predict
+1479448097.54 :  Started predict > Started dot product
+(0,)
+1479448101.96 : Started predict > Started argsort
+Progress: 28.77%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448119.85 :  Started fit
+1479448124.03 :  Started predict
+1479448124.03 :  Started predict > Started dot product
+(0,)
+1479448128.44 : Started predict > Started argsort
+Progress: 28.87%
+1479448146.34 :  Started fit
+1479448150.48 :  Started predict
+1479448150.48 :  Started predict > Started dot product
+(0,)
+1479448154.9 : Started predict > Started argsort
+Progress: 28.97%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448172.79 :  Started fit
+1479448177.02 :  Started predict
+1479448177.02 :  Started predict > Started dot product
+(0,)
+1479448181.43 : Started predict > Started argsort
+Progress: 29.07%
+1479448199.32 :  Started fit
+1479448203.48 :  Started predict
+1479448203.48 :  Started predict > Started dot product
+(0,)
+1479448207.89 : Started predict > Started argsort
+Progress: 29.17%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448225.78 :  Started fit
+1479448230.58 :  Started predict
+1479448230.58 :  Started predict > Started dot product
+(7192,)
+1479448235.24 : Started predict > Started argsort
+Progress: 29.27%
+1479448253.14 :  Started fit
+1479448257.87 :  Started predict
+1479448257.87 :  Started predict > Started dot product
+(6066,)
+1479448262.52 : Started predict > Started argsort
+Progress: 29.37%
+[0.0028829115844408019, 0.0024308257674016424]
+Result:  result(mean_score=0.0026568686759212224, std_dev=0.00022604290851957975, parameters={'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448280.42 :  Started fit
+1479448286.33 :  Started predict
+1479448286.33 :  Started predict > Started dot product
+(128776,)
+1479448291.1 : Started predict > Started argsort
+Progress: 29.46%
+1479448309.06 :  Started fit
+1479448314.91 :  Started predict
+1479448314.91 :  Started predict > Started dot product
+(131915,)
+1479448319.66 : Started predict > Started argsort
+Progress: 29.56%
+[0.0054798531464287856, 0.0058248409610277309]
+Result:  result(mean_score=0.0056523470537282582, std_dev=0.00017249390729947266, parameters={'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448337.6 :  Started fit
+1479448343.59 :  Started predict
+1479448343.59 :  Started predict > Started dot product
+(128425,)
+1479448348.36 : Started predict > Started argsort
+Progress: 29.66%
+1479448366.31 :  Started fit
+1479448372.19 :  Started predict
+1479448372.19 :  Started predict > Started dot product
+(132326,)
+1479448376.94 : Started predict > Started argsort
+Progress: 29.76%
+[0.0066892711936403851, 0.0067894200481749094]
+Result:  result(mean_score=0.0067393456209076472, std_dev=5.0074427267262148e-05, parameters={'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448394.87 :  Started fit
+1479448400.83 :  Started predict
+1479448400.83 :  Started predict > Started dot product
+(127664,)
+1479448405.61 : Started predict > Started argsort
+Progress: 29.86%
+1479448423.56 :  Started fit
+1479448429.45 :  Started predict
+1479448429.45 :  Started predict > Started dot product
+(132779,)
+1479448434.2 : Started predict > Started argsort
+Progress: 29.96%
+[0.0062386977365131348, 0.0065979556543758876]
+Result:  result(mean_score=0.0064183266954445112, std_dev=0.0001796289589313764, parameters={'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448452.13 :  Started fit
+1479448458.08 :  Started predict
+1479448458.08 :  Started predict > Started dot product
+(126891,)
+1479448462.83 : Started predict > Started argsort
+Progress: 30.06%
+1479448480.76 :  Started fit
+1479448486.6 :  Started predict
+1479448486.6 :  Started predict > Started dot product
+(132150,)
+1479448491.35 : Started predict > Started argsort
+Progress: 30.16%
+[0.0070728654651374453, 0.0059943023902167851]
+Result:  result(mean_score=0.0065335839276771147, std_dev=0.00053928153746033011, parameters={'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001}
+1479448509.28 :  Started fit
+1479448515.26 :  Started predict
+1479448515.26 :  Started predict > Started dot product
+(127412,)
+1479448520.01 : Started predict > Started argsort
+Progress: 30.26%
+1479448537.95 :  Started fit
+1479448543.79 :  Started predict
+1479448543.79 :  Started predict > Started dot product
+(130619,)
+1479448548.54 : Started predict > Started argsort
+Progress: 30.36%
+[0.0057376812913404905, 0.0068768914829226112]
+Result:  result(mean_score=0.0063072863871315513, std_dev=0.00056960509579106035, parameters={'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.001})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448566.47 :  Started fit
+1479448570.64 :  Started predict
+1479448570.64 :  Started predict > Started dot product
+(0,)
+1479448575.04 : Started predict > Started argsort
+Progress: 30.46%
+1479448592.92 :  Started fit
+1479448597.07 :  Started predict
+1479448597.07 :  Started predict > Started dot product
+(0,)
+1479448601.46 : Started predict > Started argsort
+Progress: 30.56%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448619.34 :  Started fit
+1479448623.53 :  Started predict
+1479448623.53 :  Started predict > Started dot product
+(0,)
+1479448627.92 : Started predict > Started argsort
+Progress: 30.65%
+1479448645.81 :  Started fit
+1479448649.98 :  Started predict
+1479448649.98 :  Started predict > Started dot product
+(0,)
+1479448654.37 : Started predict > Started argsort
+Progress: 30.75%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448672.25 :  Started fit
+1479448676.42 :  Started predict
+1479448676.42 :  Started predict > Started dot product
+(0,)
+1479448680.81 : Started predict > Started argsort
+Progress: 30.85%
+1479448698.7 :  Started fit
+1479448702.83 :  Started predict
+1479448702.83 :  Started predict > Started dot product
+(0,)
+1479448707.22 : Started predict > Started argsort
+Progress: 30.95%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448725.1 :  Started fit
+1479448729.28 :  Started predict
+1479448729.28 :  Started predict > Started dot product
+(0,)
+1479448733.67 : Started predict > Started argsort
+Progress: 31.05%
+1479448751.56 :  Started fit
+1479448755.7 :  Started predict
+1479448755.7 :  Started predict > Started dot product
+(0,)
+1479448760.12 : Started predict > Started argsort
+Progress: 31.15%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448778.01 :  Started fit
+1479448782.86 :  Started predict
+1479448782.86 :  Started predict > Started dot product
+(7470,)
+1479448787.52 : Started predict > Started argsort
+Progress: 31.25%
+1479448805.42 :  Started fit
+1479448810.13 :  Started predict
+1479448810.13 :  Started predict > Started dot product
+(5939,)
+1479448814.77 : Started predict > Started argsort
+Progress: 31.35%
+[0.0026271315006978573, 0.0032185319004385147]
+Result:  result(mean_score=0.0029228317005681858, std_dev=0.00029570019987032871, parameters={'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448832.66 :  Started fit
+1479448838.39 :  Started predict
+1479448838.39 :  Started predict > Started dot product
+(53916,)
+1479448843.15 : Started predict > Started argsort
+Progress: 31.45%
+1479448861.07 :  Started fit
+1479448866.73 :  Started predict
+1479448866.73 :  Started predict > Started dot product
+(54407,)
+1479448871.47 : Started predict > Started argsort
+Progress: 31.55%
+[0.0054765155652648804, 0.004764606880365633]
+Result:  result(mean_score=0.0051205612228152567, std_dev=0.00035595434244962369, parameters={'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448889.4 :  Started fit
+1479448895.32 :  Started predict
+1479448895.32 :  Started predict > Started dot product
+(126604,)
+1479448900.09 : Started predict > Started argsort
+Progress: 31.65%
+1479448918.03 :  Started fit
+1479448923.9 :  Started predict
+1479448923.9 :  Started predict > Started dot product
+(134437,)
+1479448928.67 : Started predict > Started argsort
+Progress: 31.75%
+[0.0057445840160203843, 0.0063200234698289164]
+Result:  result(mean_score=0.0060323037429246499, std_dev=0.00028771972690426603, parameters={'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479448946.61 :  Started fit
+1479448952.58 :  Started predict
+1479448952.58 :  Started predict > Started dot product
+(127520,)
+1479448957.35 : Started predict > Started argsort
+Progress: 31.85%
+1479448975.29 :  Started fit
+1479448981.14 :  Started predict
+1479448981.14 :  Started predict > Started dot product
+(130457,)
+1479448985.9 : Started predict > Started argsort
+Progress: 31.94%
+[0.0058450148674069986, 0.0066089957383731685]
+Result:  result(mean_score=0.0062270053028900835, std_dev=0.00038199043548308494, parameters={'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01}
+1479449003.85 :  Started fit
+1479449009.8 :  Started predict
+1479449009.8 :  Started predict > Started dot product
+(129648,)
+1479449014.57 : Started predict > Started argsort
+Progress: 32.04%
+1479449032.51 :  Started fit
+1479449038.39 :  Started predict
+1479449038.39 :  Started predict > Started dot product
+(133446,)
+1479449043.13 : Started predict > Started argsort
+Progress: 32.14%
+[0.0076353995994902588, 0.0064844666790192075]
+Result:  result(mean_score=0.0070599331392547336, std_dev=0.00057546646023552564, parameters={'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.01})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449061.07 :  Started fit
+1479449065.24 :  Started predict
+1479449065.24 :  Started predict > Started dot product
+(0,)
+1479449069.63 : Started predict > Started argsort
+Progress: 32.24%
+1479449087.52 :  Started fit
+1479449091.65 :  Started predict
+1479449091.65 :  Started predict > Started dot product
+(0,)
+1479449096.04 : Started predict > Started argsort
+Progress: 32.34%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449113.93 :  Started fit
+1479449118.1 :  Started predict
+1479449118.1 :  Started predict > Started dot product
+(0,)
+1479449122.49 : Started predict > Started argsort
+Progress: 32.44%
+1479449140.38 :  Started fit
+1479449144.49 :  Started predict
+1479449144.49 :  Started predict > Started dot product
+(0,)
+1479449148.88 : Started predict > Started argsort
+Progress: 32.54%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449166.76 :  Started fit
+1479449170.96 :  Started predict
+1479449170.96 :  Started predict > Started dot product
+(0,)
+1479449175.35 : Started predict > Started argsort
+Progress: 32.64%
+1479449193.23 :  Started fit
+1479449197.36 :  Started predict
+1479449197.36 :  Started predict > Started dot product
+(0,)
+1479449201.75 : Started predict > Started argsort
+Progress: 32.74%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449219.63 :  Started fit
+1479449223.84 :  Started predict
+1479449223.84 :  Started predict > Started dot product
+(0,)
+1479449228.24 : Started predict > Started argsort
+Progress: 32.84%
+1479449246.12 :  Started fit
+1479449250.25 :  Started predict
+1479449250.25 :  Started predict > Started dot product
+(0,)
+1479449254.64 : Started predict > Started argsort
+Progress: 32.94%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449272.52 :  Started fit
+1479449276.7 :  Started predict
+1479449276.7 :  Started predict > Started dot product
+(0,)
+1479449281.09 : Started predict > Started argsort
+Progress: 33.04%
+1479449298.97 :  Started fit
+1479449303.16 :  Started predict
+1479449303.16 :  Started predict > Started dot product
+(0,)
+1479449307.57 : Started predict > Started argsort
+Progress: 33.13%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 10, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449325.46 :  Started fit
+1479449329.84 :  Started predict
+1479449329.84 :  Started predict > Started dot product
+(1139,)
+1479449334.45 : Started predict > Started argsort
+Progress: 33.23%
+1479449352.34 :  Started fit
+1479449356.64 :  Started predict
+1479449356.64 :  Started predict > Started dot product
+(1044,)
+1479449361.24 : Started predict > Started argsort
+Progress: 33.33%
+[0.00080329510285818322, 0.00092489654746464092]
+Result:  result(mean_score=0.00086409582516141213, std_dev=6.0800722303228853e-05, parameters={'l2_penalty': 50, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449379.13 :  Started fit
+1479449383.94 :  Started predict
+1479449383.94 :  Started predict > Started dot product
+(7365,)
+1479449388.6 : Started predict > Started argsort
+Progress: 33.43%
+1479449406.5 :  Started fit
+1479449411.21 :  Started predict
+1479449411.21 :  Started predict > Started dot product
+(5928,)
+1479449415.86 : Started predict > Started argsort
+Progress: 33.53%
+[0.0026837186722495293, 0.0029060898029769616]
+Result:  result(mean_score=0.0027949042376132455, std_dev=0.0001111855653637161, parameters={'l2_penalty': 100, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449433.76 :  Started fit
+1479449439.48 :  Started predict
+1479449439.48 :  Started predict > Started dot product
+(52201,)
+1479449444.24 : Started predict > Started argsort
+Progress: 33.63%
+1479449462.16 :  Started fit
+1479449467.78 :  Started predict
+1479449467.78 :  Started predict > Started dot product
+(54171,)
+1479449472.51 : Started predict > Started argsort
+Progress: 33.73%
+[0.0058796801990412019, 0.0052317645605583314]
+Result:  result(mean_score=0.0055557223797997671, std_dev=0.00032395781924143526, parameters={'l2_penalty': 500, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1}
+1479449490.42 :  Started fit
+1479449496.36 :  Started predict
+1479449496.36 :  Started predict > Started dot product
+(128064,)
+1479449501.13 : Started predict > Started argsort
+Progress: 33.83%
+1479449519.08 :  Started fit
+1479449524.93 :  Started predict
+1479449524.93 :  Started predict > Started dot product
+(131464,)
+1479449529.7 : Started predict > Started argsort
+Progress: 33.93%
+[0.0059647126646034327, 0.0068145883515533349]
+Result:  result(mean_score=0.0063896505080783834, std_dev=0.00042493784347495114, parameters={'l2_penalty': 1000, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 0.1})
+{'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1}
+1479449547.64 :  Started fit
+1479449551.77 :  Started predict
+1479449551.77 :  Started predict > Started dot product
+(0,)
+1479449556.19 : Started predict > Started argsort
+Progress: 34.03%
+1479449574.09 :  Started fit
+1479449578.24 :  Started predict
+1479449578.24 :  Started predict > Started dot product
+(0,)
+1479449582.66 : Started predict > Started argsort
+Progress: 34.13%
+[1.0922992900054615e-05, 0.0]
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'l2_penalty': 0.001, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1}
+1479449600.56 :  Started fit
+1479449604.8 :  Started predict
+1479449604.8 :  Started predict > Started dot product
+(0,)
+1479449609.22 : Started predict > Started argsort
+Progress: 34.23%
+1479449627.11 :  Started fit
+1479449631.26 :  Started predict
+1479449631.26 :  Started predict > Started dot product
+(0,)
+1479449635.68 : Started predict > Started argsort
+Progress: 34.33%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.01, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1}
+1479449653.58 :  Started fit
+1479449657.78 :  Started predict
+1479449657.78 :  Started predict > Started dot product
+(0,)
+1479449662.2 : Started predict > Started argsort
+Progress: 34.42%
+1479449680.1 :  Started fit
+1479449684.25 :  Started predict
+1479449684.25 :  Started predict > Started dot product
+(0,)
+1479449688.67 : Started predict > Started argsort
+Progress: 34.52%
+[0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l2_penalty': 0.1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1})
+{'l2_penalty': 1, 'k_top': 500, 'count_top_pop': True, 'l1_penalty': 1}
+1479449706.57 :  Started fit
+1479450888.37 :  Started predict
+1479450888.37 :  Started predict > Started dot product
+(128400,)
+1479450893.15 : Started predict > Started argsort
+Progress: 34.62%
+1479450911.1 :  Started fit

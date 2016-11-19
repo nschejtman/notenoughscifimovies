@@ -51,7 +51,7 @@ def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask):
             assert len(rec_list[u]) > 0
             score += np.sum(p_at_k) / np.min([len(hidden_ratings[u]), len(rec_list[u])])
             i += 1
-    return score / i if i != 0 else 0  # Really??
+    return score / i if i != 0 else 0
 
 
 
@@ -91,8 +91,11 @@ def check_matrix(x, format='csc', dtype=np.float32):
         return x.astype(dtype)
 
 
-def read_top_pops():
-    aux = pd.read_csv('../../inputs/top_pop_idx.csv', sep='\t')['0'].values
+def read_top_pops(count=False):
+    if count:
+        aux = None
+    else:
+        aux = pd.read_csv('../../inputs/top_pop_sum_idx.csv', sep='\t')['0'].values
     return aux
 
 

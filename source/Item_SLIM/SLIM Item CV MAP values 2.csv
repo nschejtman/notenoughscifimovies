@@ -1,0 +1,1331 @@
+{'l1_ratio': 1e-08, 'k_top': 500, 'count_top_pop': True}
+1479463324.45 :  Started fit
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:479: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Fitting data with very small alpha may cause precision problems.
+  ConvergenceWarning)
+1479463724.94 :  Started predict
+1479463724.94 :  Started predict > Started dot product
+(74433,)
+1479463727.22 : Started predict > Started argsort
+Progress: 0.25%
+1479463736.19 :  Started fit
+1479464167.39 :  Started predict
+1479464167.39 :  Started predict > Started dot product
+(69375,)
+1479464169.65 : Started predict > Started argsort
+Progress: 0.50%
+1479464178.67 :  Started fit
+1479464606.82 :  Started predict
+1479464606.82 :  Started predict > Started dot product
+(74078,)
+1479464609.08 : Started predict > Started argsort
+Progress: 0.75%
+1479464618.05 :  Started fit
+1479465098.17 :  Started predict
+1479465098.17 :  Started predict > Started dot product
+(73689,)
+1479465100.44 : Started predict > Started argsort
+Progress: 1.00%
+[0.0070699520118124755, 0.0078264188218390776, 0.0086141889812249885, 0.0075779265043068702]
+Result:  result(mean_score=0.0077721215797958527, std_dev=0.00055740010956880249, parameters={'l1_ratio': 1e-08, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 1e-07, 'k_top': 500, 'count_top_pop': True}
+1479465109.41 :  Started fit
+1479465118.49 :  Started predict
+1479465118.49 :  Started predict > Started dot product
+(75701,)
+1479465120.75 : Started predict > Started argsort
+Progress: 1.25%
+1479465129.73 :  Started fit
+1479465135.8 :  Started predict
+1479465135.8 :  Started predict > Started dot product
+(69528,)
+1479465138.07 : Started predict > Started argsort
+Progress: 1.50%
+1479465147.04 :  Started fit
+1479465156.04 :  Started predict
+1479465156.04 :  Started predict > Started dot product
+(73218,)
+1479465158.3 : Started predict > Started argsort
+Progress: 1.75%
+1479465167.27 :  Started fit
+1479465179.15 :  Started predict
+1479465179.15 :  Started predict > Started dot product
+(72871,)
+1479465181.41 : Started predict > Started argsort
+Progress: 2.00%
+[0.0086129568106312285, 0.0075402598180076569, 0.0086952908587257568, 0.0074680857656317752]
+Result:  result(mean_score=0.0080791483132491033, std_dev=0.00057627714591765267, parameters={'l1_ratio': 1e-07, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 1e-06, 'k_top': 500, 'count_top_pop': True}
+1479465190.38 :  Started fit
+1479465196.53 :  Started predict
+1479465196.53 :  Started predict > Started dot product
+(75478,)
+1479465198.8 : Started predict > Started argsort
+Progress: 2.25%
+1479465207.77 :  Started fit
+1479465213.81 :  Started predict
+1479465213.81 :  Started predict > Started dot product
+(70064,)
+1479465216.08 : Started predict > Started argsort
+Progress: 2.50%
+1479465225.05 :  Started fit
+1479465231.09 :  Started predict
+1479465231.09 :  Started predict > Started dot product
+(75532,)
+1479465233.35 : Started predict > Started argsort
+Progress: 2.75%
+1479465242.32 :  Started fit
+1479465248.39 :  Started predict
+1479465248.39 :  Started predict > Started dot product
+(73207,)
+1479465250.65 : Started predict > Started argsort
+Progress: 3.00%
+[0.0062236987818383117, 0.0086194923371647469, 0.01079747614650662, 0.0085303959843837096]
+Result:  result(mean_score=0.0085427658124733463, std_dev=0.0016177013441310032, parameters={'l1_ratio': 1e-06, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 1e-05, 'k_top': 500, 'count_top_pop': True}
+1479465259.63 :  Started fit
+1479465265.77 :  Started predict
+1479465265.77 :  Started predict > Started dot product
+(74572,)
+1479465268.04 : Started predict > Started argsort
+Progress: 3.25%
+1479465277.01 :  Started fit
+1479465283.07 :  Started predict
+1479465283.07 :  Started predict > Started dot product
+(69310,)
+1479465285.33 : Started predict > Started argsort
+Progress: 3.50%
+1479465294.31 :  Started fit
+1479465300.39 :  Started predict
+1479465300.39 :  Started predict > Started dot product
+(74229,)
+1479465302.66 : Started predict > Started argsort
+Progress: 3.75%
+1479465311.63 :  Started fit
+1479465317.7 :  Started predict
+1479465317.7 :  Started predict > Started dot product
+(74339,)
+1479465319.96 : Started predict > Started argsort
+Progress: 4.00%
+[0.0078645256552233259, 0.0079540828544061287, 0.0084773776546629692, 0.007545237652599613]
+Result:  result(mean_score=0.0079603059542230105, std_dev=0.00033498411568916287, parameters={'l1_ratio': 1e-05, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.0001, 'k_top': 500, 'count_top_pop': True}
+1479465328.94 :  Started fit
+1479465335.0 :  Started predict
+1479465335.0 :  Started predict > Started dot product
+(75421,)
+1479465337.26 : Started predict > Started argsort
+Progress: 4.25%
+1479465346.24 :  Started fit
+1479465352.21 :  Started predict
+1479465352.21 :  Started predict > Started dot product
+(69193,)
+1479465354.47 : Started predict > Started argsort
+Progress: 4.50%
+1479465363.45 :  Started fit
+1479465369.45 :  Started predict
+1479465369.45 :  Started predict > Started dot product
+(75035,)
+1479465371.71 : Started predict > Started argsort
+Progress: 4.75%
+1479465380.68 :  Started fit
+1479465386.68 :  Started predict
+1479465386.68 :  Started predict > Started dot product
+(73266,)
+1479465388.94 : Started predict > Started argsort
+Progress: 5.00%
+[0.0082690414667158808, 0.0078478208812260541, 0.0097894736842105215, 0.0062398525128586468]
+Result:  result(mean_score=0.0080365471362527762, std_dev=0.0012639753028938431, parameters={'l1_ratio': 0.0001, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.001, 'k_top': 500, 'count_top_pop': True}
+1479465397.91 :  Started fit
+1479465402.51 :  Started predict
+1479465402.51 :  Started predict > Started dot product
+(2771,)
+1479465404.71 : Started predict > Started argsort
+Progress: 5.25%
+1479465413.65 :  Started fit
+1479465418.26 :  Started predict
+1479465418.26 :  Started predict > Started dot product
+(2554,)
+1479465420.46 : Started predict > Started argsort
+Progress: 5.50%
+1479465429.41 :  Started fit
+1479465433.96 :  Started predict
+1479465433.96 :  Started predict > Started dot product
+(2492,)
+1479465436.16 : Started predict > Started argsort
+Progress: 5.75%
+1479465445.1 :  Started fit
+1479465449.64 :  Started predict
+1479465449.64 :  Started predict > Started dot product
+(2962,)
+1479465451.84 : Started predict > Started argsort
+Progress: 6.00%
+[0.0021331672203765226, 0.0031974377394636019, 0.0030597106802092945, 0.0032310838445807769]
+Result:  result(mean_score=0.0029053498711575487, std_dev=0.00045041959598578196, parameters={'l1_ratio': 0.001, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.01, 'k_top': 500, 'count_top_pop': True}
+1479465460.79 :  Started fit
+1479465464.7 :  Started predict
+1479465464.7 :  Started predict > Started dot product
+(0,)
+1479465466.78 : Started predict > Started argsort
+Progress: 6.25%
+1479465475.72 :  Started fit
+1479465479.65 :  Started predict
+1479465479.65 :  Started predict > Started dot product
+(0,)
+1479465481.73 : Started predict > Started argsort
+Progress: 6.50%
+1479465490.67 :  Started fit
+1479465494.62 :  Started predict
+1479465494.62 :  Started predict > Started dot product
+(0,)
+1479465496.7 : Started predict > Started argsort
+Progress: 6.75%
+1479465505.64 :  Started fit
+1479465509.52 :  Started predict
+1479465509.52 :  Started predict > Started dot product
+(0,)
+1479465511.6 : Started predict > Started argsort
+Progress: 7.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.01, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.1, 'k_top': 500, 'count_top_pop': True}
+1479465520.54 :  Started fit
+1479465524.46 :  Started predict
+1479465524.46 :  Started predict > Started dot product
+(0,)
+1479465526.54 : Started predict > Started argsort
+Progress: 7.25%
+1479465535.48 :  Started fit
+1479465539.39 :  Started predict
+1479465539.39 :  Started predict > Started dot product
+(0,)
+1479465541.48 : Started predict > Started argsort
+Progress: 7.50%
+1479465550.42 :  Started fit
+1479465554.33 :  Started predict
+1479465554.33 :  Started predict > Started dot product
+(0,)
+1479465556.41 : Started predict > Started argsort
+Progress: 7.75%
+1479465565.35 :  Started fit
+1479465569.24 :  Started predict
+1479465569.24 :  Started predict > Started dot product
+(0,)
+1479465571.32 : Started predict > Started argsort
+Progress: 8.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.1, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.2, 'k_top': 500, 'count_top_pop': True}
+1479465580.26 :  Started fit
+1479465584.19 :  Started predict
+1479465584.19 :  Started predict > Started dot product
+(0,)
+1479465586.27 : Started predict > Started argsort
+Progress: 8.25%
+1479465595.21 :  Started fit
+1479465599.12 :  Started predict
+1479465599.12 :  Started predict > Started dot product
+(0,)
+1479465601.2 : Started predict > Started argsort
+Progress: 8.50%
+1479465610.14 :  Started fit
+1479465614.05 :  Started predict
+1479465614.05 :  Started predict > Started dot product
+(0,)
+1479465616.15 : Started predict > Started argsort
+Progress: 8.75%
+1479465625.08 :  Started fit
+1479465628.97 :  Started predict
+1479465628.97 :  Started predict > Started dot product
+(0,)
+1479465631.05 : Started predict > Started argsort
+Progress: 9.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.2, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 0.5, 'k_top': 500, 'count_top_pop': True}
+1479465639.99 :  Started fit
+1479465643.92 :  Started predict
+1479465643.92 :  Started predict > Started dot product
+(0,)
+1479465646.0 : Started predict > Started argsort
+Progress: 9.25%
+1479465654.94 :  Started fit
+1479465658.86 :  Started predict
+1479465658.86 :  Started predict > Started dot product
+(0,)
+1479465660.94 : Started predict > Started argsort
+Progress: 9.50%
+1479465669.88 :  Started fit
+1479465673.78 :  Started predict
+1479465673.78 :  Started predict > Started dot product
+(0,)
+1479465675.86 : Started predict > Started argsort
+Progress: 9.75%
+1479465684.8 :  Started fit
+1479465688.7 :  Started predict
+1479465688.7 :  Started predict > Started dot product
+(0,)
+1479465690.78 : Started predict > Started argsort
+Progress: 10.00%
+[2.2148394241417498e-05, 0.0, 0.0, 0.0]
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'l1_ratio': 0.5, 'k_top': 500, 'count_top_pop': True})
+{'l1_ratio': 1e-08, 'k_top': 1000, 'count_top_pop': True}
+1479465699.72 :  Started fit
+1479466358.29 :  Started predict
+1479466358.29 :  Started predict > Started dot product
+(112762,)
+1479466360.56 : Started predict > Started argsort
+Progress: 10.25%
+1479466369.54 :  Started fit
+1479467004.7 :  Started predict
+1479467004.7 :  Started predict > Started dot product
+(103363,)
+1479467006.96 : Started predict > Started argsort
+Progress: 10.50%
+1479467015.95 :  Started fit
+1479467688.77 :  Started predict
+1479467688.77 :  Started predict > Started dot product
+(113124,)
+1479467691.04 : Started predict > Started argsort
+Progress: 10.75%
+1479467700.02 :  Started fit
+1479468394.38 :  Started predict
+1479468394.38 :  Started predict > Started dot product
+(113249,)
+1479468396.65 : Started predict > Started argsort
+Progress: 11.00%
+[0.0078971330134120811, 0.0068763469827586186, 0.0094156663588796496, 0.008255871599429877]
+Result:  result(mean_score=0.0081112544886200576, std_dev=0.00090736555342806383, parameters={'l1_ratio': 1e-08, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 1e-07, 'k_top': 1000, 'count_top_pop': True}
+1479468405.63 :  Started fit
+1479468422.95 :  Started predict
+1479468422.95 :  Started predict > Started dot product
+(115979,)
+1479468425.22 : Started predict > Started argsort
+Progress: 11.25%
+1479468434.2 :  Started fit
+1479468445.48 :  Started predict
+1479468445.48 :  Started predict > Started dot product
+(105836,)
+1479468447.75 : Started predict > Started argsort
+Progress: 11.50%
+1479468456.73 :  Started fit
+1479468476.7 :  Started predict
+1479468476.7 :  Started predict > Started dot product
+(112553,)
+1479468478.96 : Started predict > Started argsort
+Progress: 11.75%
+1479468487.94 :  Started fit
+1479468507.92 :  Started predict
+1479468507.92 :  Started predict > Started dot product
+(111354,)
+1479468510.19 : Started predict > Started argsort
+Progress: 12.00%
+[0.0097093023255813912, 0.0081704980842911817, 0.0090535549399815285, 0.0085294664435768691]
+Result:  result(mean_score=0.0088657054483577431, std_dev=0.00057950691759314115, parameters={'l1_ratio': 1e-07, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 1e-06, 'k_top': 1000, 'count_top_pop': True}
+1479468519.17 :  Started fit
+1479468530.61 :  Started predict
+1479468530.61 :  Started predict > Started dot product
+(114329,)
+1479468532.87 : Started predict > Started argsort
+Progress: 12.25%
+1479468541.86 :  Started fit
+1479468553.08 :  Started predict
+1479468553.08 :  Started predict > Started dot product
+(103724,)
+1479468555.35 : Started predict > Started argsort
+Progress: 12.50%
+1479468564.33 :  Started fit
+1479468575.62 :  Started predict
+1479468575.62 :  Started predict > Started dot product
+(111703,)
+1479468577.89 : Started predict > Started argsort
+Progress: 12.75%
+1479468586.86 :  Started fit
+1479468598.14 :  Started predict
+1479468598.14 :  Started predict > Started dot product
+(109954,)
+1479468600.4 : Started predict > Started argsort
+Progress: 13.00%
+[0.0092049649317091121, 0.0098425526819923333, 0.0093127116035703304, 0.0080789489991943929]
+Result:  result(mean_score=0.0091097945541165418, std_dev=0.00064222460280670727, parameters={'l1_ratio': 1e-06, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 1e-05, 'k_top': 1000, 'count_top_pop': True}
+1479468609.39 :  Started fit
+1479468620.77 :  Started predict
+1479468620.77 :  Started predict > Started dot product
+(112399,)
+1479468623.04 : Started predict > Started argsort
+Progress: 13.25%
+1479468632.02 :  Started fit
+1479468643.26 :  Started predict
+1479468643.26 :  Started predict > Started dot product
+(104927,)
+1479468645.54 : Started predict > Started argsort
+Progress: 13.50%
+1479468654.52 :  Started fit
+1479468665.81 :  Started predict
+1479468665.81 :  Started predict > Started dot product
+(115546,)
+1479468668.08 : Started predict > Started argsort
+Progress: 13.75%
+1479468677.05 :  Started fit
+1479468688.38 :  Started predict
+1479468688.38 :  Started predict > Started dot product
+(111207,)
+1479468690.65 : Started predict > Started argsort
+Progress: 14.00%
+[0.0073688015257782676, 0.0086009339080459751, 0.0090366266543551836, 0.0079571791534981673]
+Result:  result(mean_score=0.0082408853104193984, std_dev=0.00063321769361148752, parameters={'l1_ratio': 1e-05, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.0001, 'k_top': 1000, 'count_top_pop': True}
+1479468699.63 :  Started fit
+1479468710.91 :  Started predict
+1479468710.91 :  Started predict > Started dot product
+(114615,)
+1479468713.18 : Started predict > Started argsort
+Progress: 14.25%
+1479468722.16 :  Started fit
+1479468733.22 :  Started predict
+1479468733.22 :  Started predict > Started dot product
+(104371,)
+1479468735.49 : Started predict > Started argsort
+Progress: 14.50%
+1479468744.47 :  Started fit
+1479468755.69 :  Started predict
+1479468755.69 :  Started predict > Started dot product
+(113229,)
+1479468757.96 : Started predict > Started argsort
+Progress: 14.75%
+1479468766.94 :  Started fit
+1479468778.08 :  Started predict
+1479468778.08 :  Started predict > Started dot product
+(111272,)
+1479468780.35 : Started predict > Started argsort
+Progress: 15.00%
+[0.0081535314384151552, 0.0080236769636015323, 0.011371652816251149, 0.0074070459193158519]
+Result:  result(mean_score=0.0087389767843959222, std_dev=0.0015459158292753972, parameters={'l1_ratio': 0.0001, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.001, 'k_top': 1000, 'count_top_pop': True}
+1479468789.33 :  Started fit
+1479468797.68 :  Started predict
+1479468797.68 :  Started predict > Started dot product
+(3460,)
+1479468799.89 : Started predict > Started argsort
+Progress: 15.25%
+1479468808.83 :  Started fit
+1479468817.09 :  Started predict
+1479468817.09 :  Started predict > Started dot product
+(3103,)
+1479468819.29 : Started predict > Started argsort
+Progress: 15.50%
+1479468828.24 :  Started fit
+1479468836.51 :  Started predict
+1479468836.51 :  Started predict > Started dot product
+(3523,)
+1479468838.72 : Started predict > Started argsort
+Progress: 15.75%
+1479468847.67 :  Started fit
+1479468855.9 :  Started predict
+1479468855.9 :  Started predict > Started dot product
+(3559,)
+1479468858.11 : Started predict > Started argsort
+Progress: 16.00%
+[0.0039894795127353262, 0.0025395114942528738, 0.0033582640812557709, 0.0038173142467620986]
+Result:  result(mean_score=0.0034261423337515174, std_dev=0.00056149041520442249, parameters={'l1_ratio': 0.001, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.01, 'k_top': 1000, 'count_top_pop': True}
+1479468867.06 :  Started fit
+1479468874.22 :  Started predict
+1479468874.22 :  Started predict > Started dot product
+(0,)
+1479468876.31 : Started predict > Started argsort
+Progress: 16.25%
+1479468885.26 :  Started fit
+1479468892.39 :  Started predict
+1479468892.39 :  Started predict > Started dot product
+(0,)
+1479468894.48 : Started predict > Started argsort
+Progress: 16.50%
+1479468903.43 :  Started fit
+1479468910.59 :  Started predict
+1479468910.59 :  Started predict > Started dot product
+(0,)
+1479468912.68 : Started predict > Started argsort
+Progress: 16.75%
+1479468921.62 :  Started fit
+1479468928.79 :  Started predict
+1479468928.79 :  Started predict > Started dot product
+(0,)
+1479468930.88 : Started predict > Started argsort
+Progress: 17.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.01, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.1, 'k_top': 1000, 'count_top_pop': True}
+1479468939.82 :  Started fit
+1479468946.99 :  Started predict
+1479468946.99 :  Started predict > Started dot product
+(0,)
+1479468949.08 : Started predict > Started argsort
+Progress: 17.25%
+1479468958.02 :  Started fit
+1479468965.21 :  Started predict
+1479468965.21 :  Started predict > Started dot product
+(0,)
+1479468967.3 : Started predict > Started argsort
+Progress: 17.50%
+1479468976.24 :  Started fit
+1479468983.4 :  Started predict
+1479468983.4 :  Started predict > Started dot product
+(0,)
+1479468985.48 : Started predict > Started argsort
+Progress: 17.75%
+1479468994.43 :  Started fit
+1479469001.6 :  Started predict
+1479469001.6 :  Started predict > Started dot product
+(0,)
+1479469003.69 : Started predict > Started argsort
+Progress: 18.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.1, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.2, 'k_top': 1000, 'count_top_pop': True}
+1479469012.63 :  Started fit
+1479469019.84 :  Started predict
+1479469019.84 :  Started predict > Started dot product
+(0,)
+1479469021.92 : Started predict > Started argsort
+Progress: 18.25%
+1479469030.87 :  Started fit
+1479469038.06 :  Started predict
+1479469038.06 :  Started predict > Started dot product
+(0,)
+1479469040.14 : Started predict > Started argsort
+Progress: 18.50%
+1479469049.09 :  Started fit
+1479469056.25 :  Started predict
+1479469056.25 :  Started predict > Started dot product
+(0,)
+1479469058.34 : Started predict > Started argsort
+Progress: 18.75%
+1479469067.28 :  Started fit
+1479469074.36 :  Started predict
+1479469074.36 :  Started predict > Started dot product
+(0,)
+1479469076.44 : Started predict > Started argsort
+Progress: 19.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.2, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 0.5, 'k_top': 1000, 'count_top_pop': True}
+1479469085.39 :  Started fit
+1479469092.56 :  Started predict
+1479469092.56 :  Started predict > Started dot product
+(0,)
+1479469094.65 : Started predict > Started argsort
+Progress: 19.25%
+1479469103.59 :  Started fit
+1479469110.82 :  Started predict
+1479469110.82 :  Started predict > Started dot product
+(0,)
+1479469112.9 : Started predict > Started argsort
+Progress: 19.50%
+1479469121.85 :  Started fit
+1479469128.99 :  Started predict
+1479469128.99 :  Started predict > Started dot product
+(0,)
+1479469131.08 : Started predict > Started argsort
+Progress: 19.75%
+1479469140.02 :  Started fit
+1479469147.14 :  Started predict
+1479469147.14 :  Started predict > Started dot product
+(0,)
+1479469149.23 : Started predict > Started argsort
+Progress: 20.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.5, 'k_top': 1000, 'count_top_pop': True})
+{'l1_ratio': 1e-08, 'k_top': 2000, 'count_top_pop': True}
+1479469158.17 :  Started fit
+1479470211.56 :  Started predict
+1479470211.56 :  Started predict > Started dot product
+(166872,)
+1479470213.84 : Started predict > Started argsort
+Progress: 20.25%
+1479470222.83 :  Started fit
+1479471207.64 :  Started predict
+1479471207.64 :  Started predict > Started dot product
+(156108,)
+1479471209.92 : Started predict > Started argsort
+Progress: 20.50%
+1479471218.91 :  Started fit
+1479472284.43 :  Started predict
+1479472284.43 :  Started predict > Started dot product
+(168098,)
+1479472286.71 : Started predict > Started argsort
+Progress: 20.75%
+1479472295.7 :  Started fit
+1479473409.13 :  Started predict
+1479473409.13 :  Started predict > Started dot product
+(168652,)
+1479473411.41 : Started predict > Started argsort
+Progress: 21.00%
+[0.0086371047126861059, 0.0081875598659003779, 0.0085960295475530912, 0.0092885914358306933]
+Result:  result(mean_score=0.0086773213904925671, std_dev=0.0003942534604162738, parameters={'l1_ratio': 1e-08, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 1e-07, 'k_top': 2000, 'count_top_pop': True}
+1479473420.41 :  Started fit
+1479473448.11 :  Started predict
+1479473448.11 :  Started predict > Started dot product
+(164646,)
+1479473450.4 : Started predict > Started argsort
+Progress: 21.25%
+1479473459.39 :  Started fit
+1479473480.95 :  Started predict
+1479473480.95 :  Started predict > Started dot product
+(156612,)
+1479473483.24 : Started predict > Started argsort
+Progress: 21.50%
+1479473492.24 :  Started fit
+1479473522.44 :  Started predict
+1479473522.44 :  Started predict > Started dot product
+(165142,)
+1479473524.72 : Started predict > Started argsort
+Progress: 21.75%
+1479473533.72 :  Started fit
+1479473572.59 :  Started predict
+1479473572.59 :  Started predict > Started dot product
+(166140,)
+1479473574.87 : Started predict > Started argsort
+Progress: 22.00%
+[0.010149963086009595, 0.011470456178160919, 0.0087916281932902407, 0.0097939517878168174]
+Result:  result(mean_score=0.010051499811319392, std_dev=0.00095874131883792019, parameters={'l1_ratio': 1e-07, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 1e-06, 'k_top': 2000, 'count_top_pop': True}
+1479473583.86 :  Started fit
+1479473605.63 :  Started predict
+1479473605.63 :  Started predict > Started dot product
+(167615,)
+1479473607.92 : Started predict > Started argsort
+Progress: 22.25%
+1479473616.91 :  Started fit
+1479473638.35 :  Started predict
+1479473638.35 :  Started predict > Started dot product
+(158495,)
+1479473640.63 : Started predict > Started argsort
+Progress: 22.50%
+1479473649.62 :  Started fit
+1479473671.22 :  Started predict
+1479473671.22 :  Started predict > Started dot product
+(165130,)
+1479473673.5 : Started predict > Started argsort
+Progress: 22.75%
+1479473682.49 :  Started fit
+1479473703.98 :  Started predict
+1479473703.98 :  Started predict > Started dot product
+(168970,)
+1479473706.26 : Started predict > Started argsort
+Progress: 23.00%
+[0.0078955949304786496, 0.0059695282567049776, 0.0084181286549707551, 0.0072786143645039315]
+Result:  result(mean_score=0.0073904665516645787, std_dev=0.00091416910737433105, parameters={'l1_ratio': 1e-06, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 1e-05, 'k_top': 2000, 'count_top_pop': True}
+1479473715.25 :  Started fit
+1479473737.12 :  Started predict
+1479473737.12 :  Started predict > Started dot product
+(162131,)
+1479473739.41 : Started predict > Started argsort
+Progress: 23.25%
+1479473748.39 :  Started fit
+1479473769.91 :  Started predict
+1479473769.91 :  Started predict > Started dot product
+(155910,)
+1479473772.19 : Started predict > Started argsort
+Progress: 23.50%
+1479473781.18 :  Started fit
+1479473802.72 :  Started predict
+1479473802.72 :  Started predict > Started dot product
+(165360,)
+1479473804.99 : Started predict > Started argsort
+Progress: 23.75%
+1479473813.98 :  Started fit
+1479473835.55 :  Started predict
+1479473835.55 :  Started predict > Started dot product
+(170175,)
+1479473837.82 : Started predict > Started argsort
+Progress: 24.00%
+[0.0075144579795742546, 0.0102354226532567, 0.0093825792551554335, 0.0066068662080931992]
+Result:  result(mean_score=0.0084348315240198972, std_dev=0.0014429915829714019, parameters={'l1_ratio': 1e-05, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.0001, 'k_top': 2000, 'count_top_pop': True}
+1479473846.81 :  Started fit
+1479473868.51 :  Started predict
+1479473868.51 :  Started predict > Started dot product
+(166067,)
+1479473870.78 : Started predict > Started argsort
+Progress: 24.25%
+1479473879.77 :  Started fit
+1479473901.18 :  Started predict
+1479473901.18 :  Started predict > Started dot product
+(157075,)
+1479473903.46 : Started predict > Started argsort
+Progress: 24.50%
+1479473912.44 :  Started fit
+1479473933.68 :  Started predict
+1479473933.68 :  Started predict > Started dot product
+(165814,)
+1479473935.96 : Started predict > Started argsort
+Progress: 24.75%
+1479473944.95 :  Started fit
+1479473966.35 :  Started predict
+1479473966.35 :  Started predict > Started dot product
+(166085,)
+1479473968.63 : Started predict > Started argsort
+Progress: 25.00%
+[0.0075036913990402312, 0.0069966774425287339, 0.0073579562942443794, 0.0084586664187891129]
+Result:  result(mean_score=0.0075792478886506139, std_dev=0.00054024161926000797, parameters={'l1_ratio': 0.0001, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.001, 'k_top': 2000, 'count_top_pop': True}
+1479473977.61 :  Started fit
+1479473993.24 :  Started predict
+1479473993.24 :  Started predict > Started dot product
+(4509,)
+1479473995.46 : Started predict > Started argsort
+Progress: 25.25%
+1479474004.4 :  Started fit
+1479474019.77 :  Started predict
+1479474019.77 :  Started predict > Started dot product
+(4052,)
+1479474021.98 : Started predict > Started argsort
+Progress: 25.50%
+1479474030.92 :  Started fit
+1479474046.21 :  Started predict
+1479474046.21 :  Started predict > Started dot product
+(4198,)
+1479474048.42 : Started predict > Started argsort
+Progress: 25.75%
+1479474057.36 :  Started fit
+1479474072.47 :  Started predict
+1479474072.47 :  Started predict > Started dot product
+(4748,)
+1479474074.68 : Started predict > Started argsort
+Progress: 26.00%
+[0.0025447582133628645, 0.0029471982758620691, 0.0046001846722068338, 0.0029168990518683774]
+Result:  result(mean_score=0.0032522600533250361, std_dev=0.00079419602761288978, parameters={'l1_ratio': 0.001, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.01, 'k_top': 2000, 'count_top_pop': True}
+1479474083.63 :  Started fit
+1479474097.24 :  Started predict
+1479474097.24 :  Started predict > Started dot product
+(0,)
+1479474099.32 : Started predict > Started argsort
+Progress: 26.25%
+1479474108.26 :  Started fit
+1479474121.84 :  Started predict
+1479474121.84 :  Started predict > Started dot product
+(0,)
+1479474123.92 : Started predict > Started argsort
+Progress: 26.50%
+1479474132.86 :  Started fit
+1479474146.44 :  Started predict
+1479474146.44 :  Started predict > Started dot product
+(0,)
+1479474148.52 : Started predict > Started argsort
+Progress: 26.75%
+1479474157.45 :  Started fit
+1479474171.02 :  Started predict
+1479474171.02 :  Started predict > Started dot product
+(0,)
+1479474173.1 : Started predict > Started argsort
+Progress: 27.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.01, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.1, 'k_top': 2000, 'count_top_pop': True}
+1479474182.04 :  Started fit
+1479474195.85 :  Started predict
+1479474195.85 :  Started predict > Started dot product
+(0,)
+1479474197.93 : Started predict > Started argsort
+Progress: 27.25%
+1479474206.87 :  Started fit
+1479474220.5 :  Started predict
+1479474220.5 :  Started predict > Started dot product
+(0,)
+1479474222.58 : Started predict > Started argsort
+Progress: 27.50%
+1479474231.52 :  Started fit
+1479474245.21 :  Started predict
+1479474245.21 :  Started predict > Started dot product
+(0,)
+1479474247.29 : Started predict > Started argsort
+Progress: 27.75%
+1479474256.22 :  Started fit
+1479474269.76 :  Started predict
+1479474269.76 :  Started predict > Started dot product
+(0,)
+1479474271.84 : Started predict > Started argsort
+Progress: 28.00%
+[2.2148394241417498e-05, 0.0, 0.0, 0.0]
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'l1_ratio': 0.1, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.2, 'k_top': 2000, 'count_top_pop': True}
+1479474280.78 :  Started fit
+1479474294.33 :  Started predict
+1479474294.33 :  Started predict > Started dot product
+(0,)
+1479474296.41 : Started predict > Started argsort
+Progress: 28.25%
+1479474305.35 :  Started fit
+1479474318.9 :  Started predict
+1479474318.9 :  Started predict > Started dot product
+(0,)
+1479474320.98 : Started predict > Started argsort
+Progress: 28.50%
+1479474329.92 :  Started fit
+1479474343.49 :  Started predict
+1479474343.49 :  Started predict > Started dot product
+(0,)
+1479474345.57 : Started predict > Started argsort
+Progress: 28.75%
+1479474354.51 :  Started fit
+1479474368.02 :  Started predict
+1479474368.02 :  Started predict > Started dot product
+(0,)
+1479474370.1 : Started predict > Started argsort
+Progress: 29.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.2, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 0.5, 'k_top': 2000, 'count_top_pop': True}
+1479474379.04 :  Started fit
+1479474392.72 :  Started predict
+1479474392.72 :  Started predict > Started dot product
+(0,)
+1479474394.8 : Started predict > Started argsort
+Progress: 29.25%
+1479474403.74 :  Started fit
+1479474417.45 :  Started predict
+1479474417.45 :  Started predict > Started dot product
+(0,)
+1479474419.54 : Started predict > Started argsort
+Progress: 29.50%
+1479474428.48 :  Started fit
+1479474442.08 :  Started predict
+1479474442.08 :  Started predict > Started dot product
+(0,)
+1479474444.16 : Started predict > Started argsort
+Progress: 29.75%
+1479474453.1 :  Started fit
+1479474466.69 :  Started predict
+1479474466.69 :  Started predict > Started dot product
+(0,)
+1479474468.77 : Started predict > Started argsort
+Progress: 30.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.5, 'k_top': 2000, 'count_top_pop': True})
+{'l1_ratio': 1e-08, 'k_top': 5000, 'count_top_pop': True}
+1479474477.71 :  Started fit
+1479476367.19 :  Started predict
+1479476367.19 :  Started predict > Started dot product
+(268311,)
+1479476369.47 : Started predict > Started argsort
+Progress: 30.25%
+1479476378.47 :  Started fit
+1479478006.32 :  Started predict
+1479478006.32 :  Started predict > Started dot product
+(256724,)
+1479478008.61 : Started predict > Started argsort
+Progress: 30.50%
+1479478017.61 :  Started fit
+1479479795.86 :  Started predict
+1479479795.86 :  Started predict > Started dot product
+(263436,)
+1479479798.15 : Started predict > Started argsort
+Progress: 30.75%
+1479479807.15 :  Started fit
+1479481591.37 :  Started predict
+1479481591.37 :  Started predict > Started dot product
+(268613,)
+1479481593.65 : Started predict > Started argsort
+Progress: 31.00%
+[0.010255783191829699, 0.0086488266283524864, 0.0095255463219452111, 0.0085290016731734489]
+Result:  result(mean_score=0.0092397894538252118, std_dev=0.00070149066165499428, parameters={'l1_ratio': 1e-08, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 1e-07, 'k_top': 5000, 'count_top_pop': True}
+1479481602.65 :  Started fit
+1479481684.28 :  Started predict
+1479481684.28 :  Started predict > Started dot product
+(269097,)
+1479481686.57 : Started predict > Started argsort
+Progress: 31.25%
+1479481695.56 :  Started fit
+1479481750.49 :  Started predict
+1479481750.49 :  Started predict > Started dot product
+(255781,)
+1479481752.78 : Started predict > Started argsort
+Progress: 31.50%
+1479481761.78 :  Started fit
+1479481833.58 :  Started predict
+1479481833.58 :  Started predict > Started dot product
+(264616,)
+1479481835.86 : Started predict > Started argsort
+Progress: 31.75%
+1479481844.86 :  Started fit
+1479481922.77 :  Started predict
+1479481922.77 :  Started predict > Started dot product
+(267237,)
+1479481925.06 : Started predict > Started argsort
+Progress: 32.00%
+[0.0095036606373815665, 0.0075862068965517207, 0.011399969221298866, 0.0094985127347090512]
+Result:  result(mean_score=0.0094970873724853008, std_dev=0.001348375760249822, parameters={'l1_ratio': 1e-07, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 1e-06, 'k_top': 5000, 'count_top_pop': True}
+1479481934.06 :  Started fit
+1479481986.58 :  Started predict
+1479481986.58 :  Started predict > Started dot product
+(268249,)
+1479481988.87 : Started predict > Started argsort
+Progress: 32.25%
+1479481997.86 :  Started fit
+1479482050.05 :  Started predict
+1479482050.05 :  Started predict > Started dot product
+(257348,)
+1479482052.34 : Started predict > Started argsort
+Progress: 32.50%
+1479482061.34 :  Started fit
+1479482112.95 :  Started predict
+1479482112.95 :  Started predict > Started dot product
+(264796,)
+1479482115.24 : Started predict > Started argsort
+Progress: 32.75%
+1479482124.23 :  Started fit
+1479482175.97 :  Started predict
+1479482175.97 :  Started predict > Started dot product
+(263985,)
+1479482178.26 : Started predict > Started argsort
+Progress: 33.00%
+[0.01036083425618309, 0.0073937380268199208, 0.0084681440443213282, 0.0078673235421701636]
+Result:  result(mean_score=0.0085225099673736249, std_dev=0.0011275844968303282, parameters={'l1_ratio': 1e-06, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 1e-05, 'k_top': 5000, 'count_top_pop': True}
+1479482187.25 :  Started fit
+1479482239.5 :  Started predict
+1479482239.5 :  Started predict > Started dot product
+(270320,)
+1479482241.79 : Started predict > Started argsort
+Progress: 33.25%
+1479482250.79 :  Started fit
+1479482302.64 :  Started predict
+1479482302.64 :  Started predict > Started dot product
+(250391,)
+1479482304.93 : Started predict > Started argsort
+Progress: 33.50%
+1479482313.93 :  Started fit
+1479482365.56 :  Started predict
+1479482365.56 :  Started predict > Started dot product
+(261699,)
+1479482367.85 : Started predict > Started argsort
+Progress: 33.75%
+1479482376.84 :  Started fit
+1479482428.79 :  Started predict
+1479482428.79 :  Started predict > Started dot product
+(266370,)
+1479482431.07 : Started predict > Started argsort
+Progress: 34.00%
+[0.0096236311061892437, 0.0092503292624521016, 0.0094198214835333922, 0.0081669455289087155]
+Result:  result(mean_score=0.0091151818452708637, std_dev=0.00056319243961722057, parameters={'l1_ratio': 1e-05, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.0001, 'k_top': 5000, 'count_top_pop': True}
+1479482440.07 :  Started fit
+1479482492.37 :  Started predict
+1479482492.37 :  Started predict > Started dot product
+(272281,)
+1479482494.66 : Started predict > Started argsort
+Progress: 34.25%
+1479482503.66 :  Started fit
+1479482555.17 :  Started predict
+1479482555.17 :  Started predict > Started dot product
+(249282,)
+1479482557.46 : Started predict > Started argsort
+Progress: 34.50%
+1479482566.46 :  Started fit
+1479482617.62 :  Started predict
+1479482617.62 :  Started predict > Started dot product
+(263119,)
+1479482619.9 : Started predict > Started argsort
+Progress: 34.75%
+1479482628.9 :  Started fit
+1479482680.25 :  Started predict
+1479482680.25 :  Started predict > Started dot product
+(269219,)
+1479482682.53 : Started predict > Started argsort
+Progress: 35.00%
+[0.0093720007382798055, 0.0068652717911877395, 0.0074566020313942749, 0.009281464956311573]
+Result:  result(mean_score=0.0082438348792933484, std_dev=0.0011033592033891384, parameters={'l1_ratio': 0.0001, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.001, 'k_top': 5000, 'count_top_pop': True}
+1479482691.53 :  Started fit
+1479482728.11 :  Started predict
+1479482728.11 :  Started predict > Started dot product
+(6812,)
+1479482730.33 : Started predict > Started argsort
+Progress: 35.25%
+1479482739.28 :  Started fit
+1479482775.49 :  Started predict
+1479482775.49 :  Started predict > Started dot product
+(5543,)
+1479482777.71 : Started predict > Started argsort
+Progress: 35.50%
+1479482786.66 :  Started fit
+1479482822.94 :  Started predict
+1479482822.94 :  Started predict > Started dot product
+(6199,)
+1479482825.15 : Started predict > Started argsort
+Progress: 35.75%
+1479482834.1 :  Started fit
+1479482870.09 :  Started predict
+1479482870.09 :  Started predict > Started dot product
+(6389,)
+1479482872.31 : Started predict > Started argsort
+Progress: 36.00%
+[0.0033222591362126238, 0.0027939415708812258, 0.0041740535549399799, 0.0033556423126975279]
+Result:  result(mean_score=0.0034114741436828393, std_dev=0.00049344461387610414, parameters={'l1_ratio': 0.001, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.01, 'k_top': 5000, 'count_top_pop': True}
+1479482881.26 :  Started fit
+1479482914.19 :  Started predict
+1479482914.19 :  Started predict > Started dot product
+(0,)
+1479482916.27 : Started predict > Started argsort
+Progress: 36.25%
+1479482925.21 :  Started fit
+1479482958.24 :  Started predict
+1479482958.24 :  Started predict > Started dot product
+(0,)
+1479482960.32 : Started predict > Started argsort
+Progress: 36.50%
+1479482969.26 :  Started fit
+1479483002.14 :  Started predict
+1479483002.14 :  Started predict > Started dot product
+(0,)
+1479483004.22 : Started predict > Started argsort
+Progress: 36.75%
+1479483013.16 :  Started fit
+1479483045.75 :  Started predict
+1479483045.75 :  Started predict > Started dot product
+(0,)
+1479483047.83 : Started predict > Started argsort
+Progress: 37.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.01, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.1, 'k_top': 5000, 'count_top_pop': True}
+1479483056.77 :  Started fit
+1479483089.88 :  Started predict
+1479483089.88 :  Started predict > Started dot product
+(0,)
+1479483091.96 : Started predict > Started argsort
+Progress: 37.25%
+1479483100.9 :  Started fit
+1479483134.07 :  Started predict
+1479483134.07 :  Started predict > Started dot product
+(0,)
+1479483136.16 : Started predict > Started argsort
+Progress: 37.50%
+1479483145.1 :  Started fit
+1479483178.31 :  Started predict
+1479483178.31 :  Started predict > Started dot product
+(0,)
+1479483180.39 : Started predict > Started argsort
+Progress: 37.75%
+1479483189.33 :  Started fit
+1479483221.98 :  Started predict
+1479483221.98 :  Started predict > Started dot product
+(0,)
+1479483224.06 : Started predict > Started argsort
+Progress: 38.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.1, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.2, 'k_top': 5000, 'count_top_pop': True}
+1479483233.0 :  Started fit
+1479483266.4 :  Started predict
+1479483266.4 :  Started predict > Started dot product
+(0,)
+1479483268.48 : Started predict > Started argsort
+Progress: 38.25%
+1479483277.42 :  Started fit
+1479483310.51 :  Started predict
+1479483310.51 :  Started predict > Started dot product
+(0,)
+1479483312.6 : Started predict > Started argsort
+Progress: 38.50%
+1479483321.54 :  Started fit
+1479483354.52 :  Started predict
+1479483354.52 :  Started predict > Started dot product
+(0,)
+1479483356.6 : Started predict > Started argsort
+Progress: 38.75%
+1479483365.54 :  Started fit
+1479483398.45 :  Started predict
+1479483398.45 :  Started predict > Started dot product
+(0,)
+1479483400.53 : Started predict > Started argsort
+Progress: 39.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.2, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 0.5, 'k_top': 5000, 'count_top_pop': True}
+1479483409.47 :  Started fit
+1479483442.13 :  Started predict
+1479483442.13 :  Started predict > Started dot product
+(0,)
+1479483444.21 : Started predict > Started argsort
+Progress: 39.25%
+1479483453.15 :  Started fit
+1479483486.47 :  Started predict
+1479483486.47 :  Started predict > Started dot product
+(0,)
+1479483488.55 : Started predict > Started argsort
+Progress: 39.50%
+1479483497.49 :  Started fit
+1479483530.71 :  Started predict
+1479483530.71 :  Started predict > Started dot product
+(0,)
+1479483532.8 : Started predict > Started argsort
+Progress: 39.75%
+1479483541.74 :  Started fit
+1479483574.87 :  Started predict
+1479483574.87 :  Started predict > Started dot product
+(0,)
+1479483576.96 : Started predict > Started argsort
+Progress: 40.00%
+[2.2148394241417498e-05, 0.0, 0.0, 0.0]
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'l1_ratio': 0.5, 'k_top': 5000, 'count_top_pop': True})
+{'l1_ratio': 1e-08, 'k_top': 10000, 'count_top_pop': True}
+1479483585.9 :  Started fit
+1479486300.08 :  Started predict
+1479486300.08 :  Started predict > Started dot product
+(367741,)
+1479486302.39 : Started predict > Started argsort
+Progress: 40.25%
+1479486311.4 :  Started fit
+1479488611.69 :  Started predict
+1479488611.69 :  Started predict > Started dot product
+(336717,)
+1479488613.99 : Started predict > Started argsort
+Progress: 40.50%
+1479488623.0 :  Started fit
+1479491129.3 :  Started predict
+1479491129.3 :  Started predict > Started dot product
+(356428,)
+1479491131.6 : Started predict > Started argsort
+Progress: 40.75%
+1479491140.61 :  Started fit
+1479493644.42 :  Started predict
+1479493644.42 :  Started predict > Started dot product
+(362916,)
+1479493646.72 : Started predict > Started argsort
+Progress: 41.00%
+[0.0092772548295804065, 0.0074847341954022966, 0.0095607879347491508, 0.0089070149346222923]
+Result:  result(mean_score=0.0088074479735885357, std_dev=0.00079807971057903359, parameters={'l1_ratio': 1e-08, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 1e-07, 'k_top': 10000, 'count_top_pop': True}
+1479493655.73 :  Started fit
+1479493795.9 :  Started predict
+1479493795.9 :  Started predict > Started dot product
+(365223,)
+1479493798.2 : Started predict > Started argsort
+Progress: 41.25%
+1479493807.21 :  Started fit
+1479493911.36 :  Started predict
+1479493911.36 :  Started predict > Started dot product
+(340483,)
+1479493913.66 : Started predict > Started argsort
+Progress: 41.50%
+1479493922.67 :  Started fit
+1479494052.77 :  Started predict
+1479494052.77 :  Started predict > Started dot product
+(361557,)
+1479494055.06 : Started predict > Started argsort
+Progress: 41.75%
+1479494064.07 :  Started fit
+1479494199.45 :  Started predict
+1479494199.45 :  Started predict > Started dot product
+(364068,)
+1479494201.75 : Started predict > Started argsort
+Progress: 42.00%
+[0.011869847422173001, 0.0083759877873563204, 0.0091943674976915964, 0.0076589514779698796]
+Result:  result(mean_score=0.0092747885462977006, std_dev=0.0015937040463942741, parameters={'l1_ratio': 1e-07, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 1e-06, 'k_top': 10000, 'count_top_pop': True}
+1479494210.76 :  Started fit
+1479494312.98 :  Started predict
+1479494312.98 :  Started predict > Started dot product
+(369457,)
+1479494315.27 : Started predict > Started argsort
+Progress: 42.25%
+1479494324.28 :  Started fit
+1479494425.6 :  Started predict
+1479494425.6 :  Started predict > Started dot product
+(344318,)
+1479494427.9 : Started predict > Started argsort
+Progress: 42.50%
+1479494436.9 :  Started fit
+1479494538.03 :  Started predict
+1479494538.03 :  Started predict > Started dot product
+(361789,)
+1479494540.32 : Started predict > Started argsort
+Progress: 42.75%
+1479494549.33 :  Started fit
+1479494650.46 :  Started predict
+1479494650.46 :  Started predict > Started dot product
+(367753,)
+1479494652.76 : Started predict > Started argsort
+Progress: 43.00%
+[0.010175802879291247, 0.0079093330938697307, 0.009284241305016927, 0.0073692445931709677]
+Result:  result(mean_score=0.0086846554678372181, std_dev=0.0011084284293085135, parameters={'l1_ratio': 1e-06, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 1e-05, 'k_top': 10000, 'count_top_pop': True}
+1479494661.77 :  Started fit
+1479494764.05 :  Started predict
+1479494764.05 :  Started predict > Started dot product
+(369020,)
+1479494766.35 : Started predict > Started argsort
+Progress: 43.25%
+1479494775.36 :  Started fit
+1479494876.6 :  Started predict
+1479494876.6 :  Started predict > Started dot product
+(342013,)
+1479494878.9 : Started predict > Started argsort
+Progress: 43.50%
+1479494887.91 :  Started fit
+1479494988.95 :  Started predict
+1479494988.95 :  Started predict > Started dot product
+(356348,)
+1479494991.25 : Started predict > Started argsort
+Progress: 43.75%
+1479495000.26 :  Started fit
+1479495100.94 :  Started predict
+1479495100.94 :  Started predict > Started dot product
+(370325,)
+1479495103.24 : Started predict > Started argsort
+Progress: 44.00%
+[0.0097946659283868562, 0.0072982519157088104, 0.0084008925823330204, 0.0074615789799838848]
+Result:  result(mean_score=0.008238847351603143, std_dev=0.00099192943249664951, parameters={'l1_ratio': 1e-05, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.0001, 'k_top': 10000, 'count_top_pop': True}
+1479495112.25 :  Started fit
+1479495214.4 :  Started predict
+1479495214.4 :  Started predict > Started dot product
+(366773,)
+1479495216.69 : Started predict > Started argsort
+Progress: 44.25%
+1479495225.7 :  Started fit
+1479495326.13 :  Started predict
+1479495326.13 :  Started predict > Started dot product
+(345615,)
+1479495328.43 : Started predict > Started argsort
+Progress: 44.50%
+1479495337.44 :  Started fit
+1479495437.5 :  Started predict
+1479495437.5 :  Started predict > Started dot product
+(361496,)
+1479495439.8 : Started predict > Started argsort
+Progress: 44.75%
+1479495448.8 :  Started fit
+1479495548.94 :  Started predict
+1479495548.94 :  Started predict > Started dot product
+(369079,)
+1479495551.24 : Started predict > Started argsort
+Progress: 45.00%
+[0.009691460563553583, 0.0084129549808429106, 0.0087605417051400437, 0.0084148230773997586]
+Result:  result(mean_score=0.0088199450817340735, std_dev=0.00052269321231988354, parameters={'l1_ratio': 0.0001, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.001, 'k_top': 10000, 'count_top_pop': True}
+1479495560.25 :  Started fit
+1479495631.21 :  Started predict
+1479495631.21 :  Started predict > Started dot product
+(8813,)
+1479495633.43 : Started predict > Started argsort
+Progress: 45.25%
+1479495642.38 :  Started fit
+1479495712.48 :  Started predict
+1479495712.48 :  Started predict > Started dot product
+(6739,)
+1479495714.7 : Started predict > Started argsort
+Progress: 45.50%
+1479495723.65 :  Started fit
+1479495792.97 :  Started predict
+1479495792.97 :  Started predict > Started dot product
+(8109,)
+1479495795.19 : Started predict > Started argsort
+Progress: 45.75%
+1479495804.14 :  Started fit
+1479495873.51 :  Started predict
+1479495873.51 :  Started predict > Started dot product
+(8367,)
+1479495875.73 : Started predict > Started argsort
+Progress: 46.00%
+[0.0036581764488741232, 0.0033746408045977018, 0.0030897199138196362, 0.0044227551589514783]
+Result:  result(mean_score=0.0036363230815607351, std_dev=0.00049653942921816779, parameters={'l1_ratio': 0.001, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.01, 'k_top': 10000, 'count_top_pop': True}
+1479495884.68 :  Started fit
+1479495950.11 :  Started predict
+1479495950.11 :  Started predict > Started dot product
+(0,)
+1479495952.19 : Started predict > Started argsort
+Progress: 46.25%
+1479495961.13 :  Started fit
+1479496026.69 :  Started predict
+1479496026.69 :  Started predict > Started dot product
+(0,)
+1479496028.78 : Started predict > Started argsort
+Progress: 46.50%
+1479496037.72 :  Started fit
+1479496103.13 :  Started predict
+1479496103.13 :  Started predict > Started dot product
+(0,)
+1479496105.21 : Started predict > Started argsort
+Progress: 46.75%
+1479496114.15 :  Started fit
+1479496179.27 :  Started predict
+1479496179.27 :  Started predict > Started dot product
+(0,)
+1479496181.35 : Started predict > Started argsort
+Progress: 47.00%
+[2.2148394241417498e-05, 0.0, 0.0, 0.0]
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'l1_ratio': 0.01, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.1, 'k_top': 10000, 'count_top_pop': True}
+1479496190.29 :  Started fit
+1479496255.81 :  Started predict
+1479496255.81 :  Started predict > Started dot product
+(0,)
+1479496257.89 : Started predict > Started argsort
+Progress: 47.25%
+1479496266.84 :  Started fit
+1479496332.21 :  Started predict
+1479496332.21 :  Started predict > Started dot product
+(0,)
+1479496334.3 : Started predict > Started argsort
+Progress: 47.50%
+1479496343.25 :  Started fit
+1479496409.13 :  Started predict
+1479496409.13 :  Started predict > Started dot product
+(0,)
+1479496411.22 : Started predict > Started argsort
+Progress: 47.75%
+1479496420.16 :  Started fit
+1479496485.2 :  Started predict
+1479496485.2 :  Started predict > Started dot product
+(0,)
+1479496487.29 : Started predict > Started argsort
+Progress: 48.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.1, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.2, 'k_top': 10000, 'count_top_pop': True}
+1479496496.24 :  Started fit
+1479496561.81 :  Started predict
+1479496561.81 :  Started predict > Started dot product
+(0,)
+1479496563.9 : Started predict > Started argsort
+Progress: 48.25%
+1479496572.84 :  Started fit
+1479496638.57 :  Started predict
+1479496638.57 :  Started predict > Started dot product
+(0,)
+1479496640.66 : Started predict > Started argsort
+Progress: 48.50%
+1479496649.6 :  Started fit
+1479496714.43 :  Started predict
+1479496714.43 :  Started predict > Started dot product
+(0,)
+1479496716.52 : Started predict > Started argsort
+Progress: 48.75%
+1479496725.46 :  Started fit
+1479496790.62 :  Started predict
+1479496790.62 :  Started predict > Started dot product
+(0,)
+1479496792.71 : Started predict > Started argsort
+Progress: 49.00%
+[0.0, 0.0, 0.0, 0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'l1_ratio': 0.2, 'k_top': 10000, 'count_top_pop': True})
+{'l1_ratio': 0.5, 'k_top': 10000, 'count_top_pop': True}
+1479496801.65 :  Started fit
+1479496867.8 :  Started predict
+1479496867.8 :  Started predict > Started dot product
+(0,)
+1479496869.89 : Started predict > Started argsort

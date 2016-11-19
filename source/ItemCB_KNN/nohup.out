@@ -1,0 +1,1475 @@
+{'a_sh': 0.1, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 0.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 2.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 0.1, 'k': 1000})
+{'a_sh': 0.1, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 3.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 3.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 4.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 5.00%
+Result:  result(mean_score=1.3850415512465375e-05, std_dev=2.398962337353016e-05, parameters={'a_sh': 0.1, 'k': 500})
+{'a_sh': 0.1, 'k': 200}
+/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py:730: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  SparseEfficiencyWarning)
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 5.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 6.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 6.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 7.50%
+Result:  result(mean_score=4.1728970606128548e-05, std_dev=4.6214126904335837e-05, parameters={'a_sh': 0.1, 'k': 200})
+{'a_sh': 0.1, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 8.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 8.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 9.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 10.00%
+Result:  result(mean_score=8.0871337647844626e-05, std_dev=0.00011481836331171979, parameters={'a_sh': 0.1, 'k': 100})
+{'a_sh': 0.1, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 10.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 11.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 11.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 12.50%
+Result:  result(mean_score=3.4606866002214838e-05, std_dev=5.994085020656414e-05, parameters={'a_sh': 0.1, 'k': 50})
+{'a_sh': 0.5, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 13.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 13.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 14.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 15.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 0.5, 'k': 1000})
+{'a_sh': 0.5, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 15.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 16.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 16.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 17.50%
+Result:  result(mean_score=8.3102493074792237e-05, std_dev=0.00014393774024118092, parameters={'a_sh': 0.5, 'k': 500})
+{'a_sh': 0.5, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 18.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 18.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 19.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 20.00%
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'a_sh': 0.5, 'k': 200})
+{'a_sh': 0.5, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 20.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 21.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 21.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 22.50%
+Result:  result(mean_score=1.3842746400885937e-05, std_dev=2.3976340082625657e-05, parameters={'a_sh': 0.5, 'k': 100})
+{'a_sh': 0.5, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 23.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 23.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 24.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 25.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 0.5, 'k': 50})
+{'a_sh': 1, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 25.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 26.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 26.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 27.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 1, 'k': 1000})
+{'a_sh': 1, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 28.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 28.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 29.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 30.00%
+Result:  result(mean_score=8.3102493074792237e-05, std_dev=0.00014393774024118092, parameters={'a_sh': 1, 'k': 500})
+{'a_sh': 1, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 30.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 31.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 31.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 32.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 1, 'k': 200})
+{'a_sh': 1, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 33.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 33.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 34.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 35.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 1, 'k': 100})
+{'a_sh': 1, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 35.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 36.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 36.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 37.50%
+Result:  result(mean_score=3.4606866002214838e-05, std_dev=5.994085020656414e-05, parameters={'a_sh': 1, 'k': 50})
+{'a_sh': 2, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 38.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 38.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 39.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 40.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 2, 'k': 1000})
+{'a_sh': 2, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 40.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 41.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 41.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 42.50%
+Result:  result(mean_score=6.9252077562326875e-05, std_dev=0.00011994811686765079, parameters={'a_sh': 2, 'k': 500})
+{'a_sh': 2, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 43.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 43.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 44.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 45.00%
+Result:  result(mean_score=1.614987080103359e-05, std_dev=2.7972396763063263e-05, parameters={'a_sh': 2, 'k': 200})
+{'a_sh': 2, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 45.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 46.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 46.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 47.50%
+Result:  result(mean_score=5.5370985603543746e-06, std_dev=9.5905360330502626e-06, parameters={'a_sh': 2, 'k': 100})
+{'a_sh': 2, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 48.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 48.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 49.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 50.00%
+Result:  result(mean_score=4.8457281514680213e-05, std_dev=5.665481979196307e-05, parameters={'a_sh': 2, 'k': 50})
+{'a_sh': 5, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 50.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 51.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 51.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 52.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 5, 'k': 1000})
+{'a_sh': 5, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 53.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 53.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 54.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 55.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 5, 'k': 500})
+{'a_sh': 5, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 55.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 56.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 56.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 57.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 5, 'k': 200})
+{'a_sh': 5, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 58.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 58.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 59.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 60.00%
+Result:  result(mean_score=6.9252077562326875e-05, std_dev=0.00011994811686765079, parameters={'a_sh': 5, 'k': 100})
+{'a_sh': 5, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 60.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 61.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 61.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 62.50%
+Result:  result(mean_score=3.4606866002214838e-05, std_dev=5.994085020656414e-05, parameters={'a_sh': 5, 'k': 50})
+{'a_sh': 10, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 63.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 63.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 64.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 65.00%
+Result:  result(mean_score=7.8442229605020305e-05, std_dev=0.0001358659271348787, parameters={'a_sh': 10, 'k': 1000})
+{'a_sh': 10, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 65.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 66.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 66.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 67.50%
+Result:  result(mean_score=6.9252077562326875e-05, std_dev=0.00011994811686765079, parameters={'a_sh': 10, 'k': 500})
+{'a_sh': 10, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 68.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 68.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 69.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 70.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 10, 'k': 200})
+{'a_sh': 10, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 70.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 71.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 71.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 72.50%
+Result:  result(mean_score=2.7886224205242612e-05, std_dev=4.8300357154737237e-05, parameters={'a_sh': 10, 'k': 100})
+{'a_sh': 10, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 73.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 73.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 74.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 75.00%
+Result:  result(mean_score=6.931015194184154e-05, std_dev=5.1557359843694069e-05, parameters={'a_sh': 10, 'k': 50})
+{'a_sh': 20, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 75.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 76.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 76.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 77.50%
+Result:  result(mean_score=5.3879310344827591e-06, std_dev=9.3321702994012795e-06, parameters={'a_sh': 20, 'k': 1000})
+{'a_sh': 20, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 78.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 78.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 79.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 80.00%
+Result:  result(mean_score=6.9252077562326875e-06, std_dev=1.199481168676508e-05, parameters={'a_sh': 20, 'k': 500})
+{'a_sh': 20, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 80.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 81.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 81.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 82.50%
+Result:  result(mean_score=9.2336103416435817e-06, std_dev=1.5993082249020102e-05, parameters={'a_sh': 20, 'k': 200})
+{'a_sh': 20, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 83.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 83.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 84.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 85.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 20, 'k': 100})
+{'a_sh': 20, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 85.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 86.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 86.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 87.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 20, 'k': 50})
+{'a_sh': 50, 'k': 1000}
+Computing similarity matrix
+Iteration:  1 / 68
+Iteration:  2 / 68
+Iteration:  3 / 68
+Iteration:  4 / 68
+Iteration:  5 / 68
+Iteration:  6 / 68
+Iteration:  7 / 68
+Iteration:  8 / 68
+Iteration:  9 / 68
+Iteration:  10 / 68
+Iteration:  11 / 68
+Iteration:  12 / 68
+Iteration:  13 / 68
+Iteration:  14 / 68
+Iteration:  15 / 68
+Iteration:  16 / 68
+Iteration:  17 / 68
+Iteration:  18 / 68
+Iteration:  19 / 68
+Iteration:  20 / 68
+Iteration:  21 / 68
+Iteration:  22 / 68
+Iteration:  23 / 68
+Iteration:  24 / 68
+Iteration:  25 / 68
+Iteration:  26 / 68
+Iteration:  27 / 68
+Iteration:  28 / 68
+Iteration:  29 / 68
+Iteration:  30 / 68
+Iteration:  31 / 68
+Iteration:  32 / 68
+Iteration:  33 / 68
+Iteration:  34 / 68
+Iteration:  35 / 68
+Iteration:  36 / 68
+Iteration:  37 / 68
+Iteration:  38 / 68
+Iteration:  39 / 68
+Iteration:  40 / 68
+Iteration:  41 / 68
+Iteration:  42 / 68
+Iteration:  43 / 68
+Iteration:  44 / 68
+Iteration:  45 / 68
+Iteration:  46 / 68
+Iteration:  47 / 68
+Iteration:  48 / 68
+Iteration:  49 / 68
+Iteration:  50 / 68
+Iteration:  51 / 68
+Iteration:  52 / 68
+Iteration:  53 / 68
+Iteration:  54 / 68
+Iteration:  55 / 68
+Iteration:  56 / 68
+Iteration:  57 / 68
+Iteration:  58 / 68
+Iteration:  59 / 68
+Iteration:  60 / 68
+Iteration:  61 / 68
+Iteration:  62 / 68
+Iteration:  63 / 68
+Iteration:  64 / 68
+Iteration:  65 / 68
+Iteration:  66 / 68
+Iteration:  67 / 68
+Iteration:  68 / 68
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 88.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 88.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 89.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 90.00%
+Result:  result(mean_score=1.3469827586206898e-05, std_dev=2.3330425748503199e-05, parameters={'a_sh': 50, 'k': 1000})
+{'a_sh': 50, 'k': 500}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 90.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 91.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 91.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 92.50%
+Result:  result(mean_score=6.734913793103449e-06, std_dev=1.16652128742516e-05, parameters={'a_sh': 50, 'k': 500})
+{'a_sh': 50, 'k': 200}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 93.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 93.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 94.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 95.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 50, 'k': 200})
+{'a_sh': 50, 'k': 100}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 95.62%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 96.25%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 96.88%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 97.50%
+Result:  result(mean_score=1.3943112102621306e-05, std_dev=2.4150178577368619e-05, parameters={'a_sh': 50, 'k': 100})
+{'a_sh': 50, 'k': 50}
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 98.12%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 98.75%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 99.38%
+Started prediction
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 100.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'a_sh': 50, 'k': 50})
+Total scores:           MAP       Std  a_sh     k
+0   0.000000  0.000000   0.1  1000
+1   0.000014  0.000024   0.1   500
+2   0.000042  0.000046   0.1   200
+3   0.000081  0.000115   0.1   100
+4   0.000035  0.000060   0.1    50
+5   0.000000  0.000000   0.5  1000
+6   0.000083  0.000144   0.5   500
+7   0.000006  0.000010   0.5   200
+8   0.000014  0.000024   0.5   100
+9   0.000000  0.000000   0.5    50
+10  0.000000  0.000000   1.0  1000
+11  0.000083  0.000144   1.0   500
+12  0.000000  0.000000   1.0   200
+13  0.000000  0.000000   1.0   100
+14  0.000035  0.000060   1.0    50
+15  0.000000  0.000000   2.0  1000
+16  0.000069  0.000120   2.0   500
+17  0.000016  0.000028   2.0   200
+18  0.000006  0.000010   2.0   100
+19  0.000048  0.000057   2.0    50
+20  0.000000  0.000000   5.0  1000
+21  0.000000  0.000000   5.0   500
+22  0.000000  0.000000   5.0   200
+23  0.000069  0.000120   5.0   100
+24  0.000035  0.000060   5.0    50
+25  0.000078  0.000136  10.0  1000
+26  0.000069  0.000120  10.0   500
+27  0.000000  0.000000  10.0   200
+28  0.000028  0.000048  10.0   100
+29  0.000069  0.000052  10.0    50
+30  0.000005  0.000009  20.0  1000
+31  0.000007  0.000012  20.0   500
+32  0.000009  0.000016  20.0   200
+33  0.000000  0.000000  20.0   100
+34  0.000000  0.000000  20.0    50
+35  0.000013  0.000023  50.0  1000
+36  0.000007  0.000012  50.0   500
+37  0.000000  0.000000  50.0   200
+38  0.000014  0.000024  50.0   100
+39  0.000000  0.000000  50.0    50

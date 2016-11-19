@@ -1,0 +1,6 @@
+1479500397.54 :  Started fit
+1479500587.38 :  FInished fit
+1479500587.51 :  Started predict
+1479500587.51 :  Started predict > Started dot product
+(8399798,)
+1479500598.12 : Started predict > Started argsort
