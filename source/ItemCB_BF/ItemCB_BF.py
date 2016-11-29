@@ -23,7 +23,6 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=icm, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    urm_sample = urm
     params = {'sh': [0.1, 0.5, 1, 2, 5, 10, 20, 50]}
     grid = list(ParameterGrid(params))
     folds = 2
@@ -42,7 +41,7 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
 
         for row_train, row_test in splits:
             urm_train = urm_sample[row_train,]
-            rec.fit(icm_sample, urm_sample)
+            rec.fit(icm_sample)
             urm_test = urm_sample[row_test,]
             hidden_ratings = []
             for u in range(urm_test.shape[0]):
@@ -138,16 +137,15 @@ def holdout_search(rec, urm, icm, actives, sample_size=None):
 
 
 class ItemCB_BF(BaseEstimator):
-    def __init__(self, sh=2, pred_batch_size=1000, normalize=False):
+    def __init__(self, top_pops, sh=2, pred_batch_size=1000, normalize=False):
         self.sh = sh
         self.pred_batch_size = pred_batch_size
         self.icm = None
         self.normalize = normalize
-        self.top_pop = TopPop()
+        self.top_pops = top_pops
 
-    def fit(self, icm, urm):
+    def fit(self, icm):
         self.icm = icm
-        # self.top_pop.fit(urm)
 
     def predict(self, urm, n, non_active_items_mask):
         print "Started prediction"
@@ -184,6 +182,7 @@ class ItemCB_BF(BaseEstimator):
 
             # remove the inactives items
             batch_scores[:, non_active_items_mask] = 0.0
+
             batch_ranking = batch_scores.argsort()[:,::-1]
             batch_ranking = batch_ranking[:,:n]  # leave only the top n
 
@@ -191,7 +190,7 @@ class ItemCB_BF(BaseEstimator):
             zero_scores_mask = sum_of_scores == 0
             n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
             if n_zero_scores != 0:
-                batch_ranking[zero_scores_mask] = [self.top_pop.top_pop[non_active_items_mask[self.top_pop.top_pop] == False][:n] for _ in range(n_zero_scores)]
+                batch_ranking[zero_scores_mask] = [self.top_pops[:n] for _ in range(n_zero_scores)]
 
             if i == 0:
                 ranking = batch_ranking.copy()
@@ -203,17 +202,17 @@ class ItemCB_BF(BaseEstimator):
 
 
 # Read items
-
 items_dataframe = ut.read_items()
 urm = ut.read_interactions()
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
 item_ids = items_dataframe.id.values
 icm = ut.generate_icm(items_dataframe, include_tags=False, include_title=False)
-recommender = ItemCB_BF(sh=0.1, pred_batch_size=200, normalize=False)
-top = TopPop(count=True)
-top.fit(urm)
-recommender.top_pop = top
+
+top_rec = TopPop(count=True)
+top_rec.fit(urm)
+top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
+recommender = ItemCB_BF(top_pops=top_pops,sh=0.1, pred_batch_size=200, normalize=False)
 cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
 
 '''

@@ -152,21 +152,20 @@ def holdout_search(rec, urm, icm, actives, sample_size=None):
 
 
 class ItemCB_KNN(BaseEstimator):
-    def __init__(self, k=5, a_sh=2, normalize=False, sim_partition_size=1000, pred_partition_size=1000):
+    def __init__(self, top_pops, k=5, a_sh=2, normalize=False, sim_partition_size=1000, pred_partition_size=1000):
         self.k = k
         self.sh = a_sh
         self.sim_mat = None
         self.sim_partition_size = sim_partition_size
         self.pred_partition_size = pred_partition_size
         self.normalize = normalize
-        self.top_pop = TopPop()
+        self.top_pops = top_pops
 
     def fit(self, urm, icm, sim):
         if sim is None:
             self.sim_mat, _ = ut.compute_similarity_matrix_knn(icm, self.k, self.sh, row_wise=True, partition_size=self.sim_partition_size)
         else:
             self.sim_mat = sim
-        # self.top_pop.fit(urm)
 
     def predict(self, urm, n, non_active_items_mask):
         print "Started prediction"
@@ -196,6 +195,7 @@ class ItemCB_KNN(BaseEstimator):
 
             # remove the ignored ones
             scores[:, non_active_items_mask] = 0.0
+            scores.eliminate_zeros()
 
             partition_ranking = scores.argsort()[:,::-1]
             partition_ranking = partition_ranking[:,:n]  # leave only the top n
@@ -203,7 +203,7 @@ class ItemCB_KNN(BaseEstimator):
             zero_scores_mask = sum_of_scores == 0
             n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
             if n_zero_scores != 0:
-                partition_ranking[zero_scores_mask] = [self.top_pop.top_pop[non_active_items_mask[self.top_pop.top_pop] == False][:n] for _ in range(n_zero_scores)]
+                partition_ranking[zero_scores_mask] = [self.top_pops[:n] for _ in range(n_zero_scores)]
 
             if i == 0:
                 ranking = partition_ranking.copy()
@@ -223,10 +223,10 @@ non_active_items_mask = actives == 0
 
 item_ids = items_dataframe.id.values
 ICM = ut.generate_icm(items_dataframe, include_title=False, include_tags=False)
-top = TopPop(count=True)
-top.fit(urm)
-recommender = ItemCB_KNN(normalize=False, sim_partition_size=2500, pred_partition_size=1000)
-recommender.top_pop = top
+top_rec = TopPop(count=True)
+top_rec.fit(urm)
+top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
+recommender = ItemCB_KNN(top_pops=top_pops, normalize=False, sim_partition_size=2500, pred_partition_size=1000)
 # recommender.fit(ICM)
 # recs = recommender.predict(URM[:1000], 5, ignore_mask)
 cv_search(recommender, urm, ICM, non_active_items_mask, sample_size=10000, sample_from_urm=True)

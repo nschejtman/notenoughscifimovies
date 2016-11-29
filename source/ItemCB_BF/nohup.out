@@ -1,0 +1,849 @@
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 6.25%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 12.50%
+Result:  result(mean_score=1.7370761534185658e-05, std_dev=1.7370761534185658e-05, parameters={'sh': 0.1})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 18.75%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 25.00%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'sh': 0.5})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 31.25%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 37.50%
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'sh': 1})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 43.75%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 50.00%
+Result:  result(mean_score=1.3896609227348528e-05, std_dev=1.3896609227348528e-05, parameters={'sh': 2})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 56.25%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 62.50%
+Result:  result(mean_score=6.9483046136742642e-06, std_dev=6.9483046136742642e-06, parameters={'sh': 5})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 68.75%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 75.00%
+Result:  result(mean_score=2.730748225013654e-05, std_dev=2.730748225013654e-05, parameters={'sh': 10})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 81.25%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 87.50%
+Result:  result(mean_score=5.4614964500273073e-06, std_dev=5.4614964500273073e-06, parameters={'sh': 20})
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 93.75%
+Started prediction
+Iteration:  1 / 25
+Computing similarity matrix - batch
+Iteration:  2 / 25
+Computing similarity matrix - batch
+Iteration:  3 / 25
+Computing similarity matrix - batch
+Iteration:  4 / 25
+Computing similarity matrix - batch
+Iteration:  5 / 25
+Computing similarity matrix - batch
+Iteration:  6 / 25
+Computing similarity matrix - batch
+Iteration:  7 / 25
+Computing similarity matrix - batch
+Iteration:  8 / 25
+Computing similarity matrix - batch
+Iteration:  9 / 25
+Computing similarity matrix - batch
+Iteration:  10 / 25
+Computing similarity matrix - batch
+Iteration:  11 / 25
+Computing similarity matrix - batch
+Iteration:  12 / 25
+Computing similarity matrix - batch
+Iteration:  13 / 25
+Computing similarity matrix - batch
+Iteration:  14 / 25
+Computing similarity matrix - batch
+Iteration:  15 / 25
+Computing similarity matrix - batch
+Iteration:  16 / 25
+Computing similarity matrix - batch
+Iteration:  17 / 25
+Computing similarity matrix - batch
+Iteration:  18 / 25
+Computing similarity matrix - batch
+Iteration:  19 / 25
+Computing similarity matrix - batch
+Iteration:  20 / 25
+Computing similarity matrix - batch
+Iteration:  21 / 25
+Computing similarity matrix - batch
+Iteration:  22 / 25
+Computing similarity matrix - batch
+Iteration:  23 / 25
+Computing similarity matrix - batch
+Iteration:  24 / 25
+Computing similarity matrix - batch
+Iteration:  25 / 25
+Computing similarity matrix - batch
+Progress: 100.00%
+Result:  result(mean_score=1.365374112506827e-05, std_dev=1.365374112506827e-05, parameters={'sh': 50})
+Total scores:          MAP       Std    sh
+0  0.000017  0.000017   0.1
+1  0.000000  0.000000   0.5
+2  0.000000  0.000000   1.0
+3  0.000014  0.000014   2.0
+4  0.000007  0.000007   5.0
+5  0.000027  0.000027  10.0
+6  0.000005  0.000005  20.0
+7  0.000014  0.000014  50.0
