@@ -1,0 +1,2717 @@
+User and item bias, not global, ones-columns not ignored
+{'k': 10, 'reg_penalty': 10}
+Step  100 , error  2222516.47582 , delta error  26585.2741254
+Step  200 , error  1090458.61745 , delta error  3555.92038792
+Step  300 , error  938417.971705 , delta error  481.041099868
+Step  400 , error  917754.610524 , delta error  66.0462140432
+Step  500 , error  914895.501657 , delta error  9.30078867206
+Step  600 , error  914487.100585 , delta error  1.37294397259
+Step  700 , error  914425.084003 , delta error  0.222433220944
+Step  800 , error  914414.44679 , delta error  0.0430757417344
+Step  900 , error  914412.165795 , delta error  0.0111086932011
+Step  1000 , error  914411.491229 , delta error  0.00400433782488
+Step  1100 , error  914411.214825 , delta error  0.00190931651741
+Step  1200 , error  914411.07017 , delta error  0.00110265042167
+Step  1223 , error  914411.047172 , delta error  0.000995724345557
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 0.60%
+Step  100 , error  2222163.80513 , delta error  26579.7345731
+Step  200 , error  1090375.2475 , delta error  3554.99539326
+Step  300 , error  938372.473983 , delta error  480.939302778
+Step  400 , error  917713.067965 , delta error  66.0343500813
+Step  500 , error  914854.512674 , delta error  9.29917975876
+Step  600 , error  914446.09806 , delta error  1.37404575222
+Step  700 , error  914383.964207 , delta error  0.223485904629
+Step  800 , error  914373.244694 , delta error  0.0436880877241
+Step  900 , error  914370.918345 , delta error  0.0114334509708
+Step  1000 , error  914370.220257 , delta error  0.00416632357519
+Step  1100 , error  914369.933031 , delta error  0.00197203841526
+Step  1200 , error  914369.785647 , delta error  0.0010993310716
+Step  1220 , error  914369.765814 , delta error  0.00099602364935
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 1.19%
+Step  100 , error  2221988.76731 , delta error  26574.120289
+Step  200 , error  1090541.31483 , delta error  3553.24447765
+Step  300 , error  938632.641712 , delta error  480.513491292
+Step  400 , error  917995.141083 , delta error  65.9410433724
+Step  500 , error  915141.164184 , delta error  9.28171897249
+Step  600 , error  914733.480091 , delta error  1.3725595827
+Step  700 , error  914671.316 , delta error  0.224667670787
+Step  800 , error  914660.47042 , delta error  0.0448795390548
+Step  900 , error  914658.042084 , delta error  0.0122839410324
+Step  1000 , error  914657.273567 , delta error  0.00474490760826
+Step  1100 , error  914656.938004 , delta error  0.00237566954456
+Step  1200 , error  914656.756204 , delta error  0.0013933815062
+Step  1275 , error  914656.668975 , delta error  0.000999507145025
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 1.79%
+Step  100 , error  2222414.7649 , delta error  26591.4239931
+Step  200 , error  1090056.67694 , delta error  3557.07548232
+Step  300 , error  937963.899661 , delta error  481.205607345
+Step  400 , error  917295.149782 , delta error  66.0431649762
+Step  500 , error  914437.320588 , delta error  9.28682665271
+Step  600 , error  914029.944001 , delta error  1.3660796606
+Step  700 , error  913968.399315 , delta error  0.219264996122
+Step  800 , error  913957.993263 , delta error  0.0413956482662
+Step  900 , error  913955.841912 , delta error  0.0101110292599
+Step  1000 , error  913955.247141 , delta error  0.00336745695677
+Step  1100 , error  913955.023099 , delta error  0.00147856969852
+Step  1161 , error  913954.950356 , delta error  0.000998522853479
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 2.38%
+[0.0010135062748699111, 0.0019351737398708953, 0.0013318289569657176, 0.0021421338488447012]
+Result:  result(mean_score=0.0016056607051378063, std_dev=0.00045332465451667373, parameters={'k': 10, 'reg_penalty': 10})
+{'k': 10, 'reg_penalty': 20}
+Step  100 , error  2163569.32071 , delta error  14500.6122196
+Step  200 , error  1817674.32756 , delta error  257.814484053
+Step  300 , error  1811490.94473 , delta error  4.71389157977
+Step  400 , error  1811376.52963 , delta error  0.0926873423159
+Step  500 , error  1811374.17054 , delta error  0.00253559020348
+Step  533 , error  1811374.11937 , delta error  0.000990730477497
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 2.98%
+Step  100 , error  2163630.98419 , delta error  14499.1119348
+Step  200 , error  1817761.48519 , delta error  257.831480939
+Step  300 , error  1811577.6078 , delta error  4.71194600966
+Step  400 , error  1811463.39237 , delta error  0.0912839586381
+Step  500 , error  1811461.11877 , delta error  0.00206519756466
+Step  522 , error  1811461.08892 , delta error  0.000970366643742
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 3.57%
+Step  100 , error  2163827.19365 , delta error  14493.3741695
+Step  200 , error  1818127.39988 , delta error  257.611415055
+Step  300 , error  1811949.65523 , delta error  4.70507769519
+Step  400 , error  1811835.61988 , delta error  0.0911159182433
+Step  500 , error  1811833.35106 , delta error  0.00205325568095
+Step  521 , error  1811833.3224 , delta error  0.000995910027996
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 4.17%
+Step  100 , error  2163158.77266 , delta error  14505.3194111
+Step  200 , error  1817150.90298 , delta error  257.864440826
+Step  300 , error  1810967.70727 , delta error  4.7048480364
+Step  400 , error  1810853.78629 , delta error  0.0904755713418
+Step  500 , error  1810851.54473 , delta error  0.00197433959693
+Step  520 , error  1810851.51827 , delta error  0.00098044378683
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 4.76%
+[0.0035704009794918883, 0.0032279219887378116, 0.0036812393629953788, 0.0033845392617140751]
+Result:  result(mean_score=0.0034660253982347886, std_dev=0.00017359762141939578, parameters={'k': 10, 'reg_penalty': 20})
+{'k': 10, 'reg_penalty': 50}
+Step  100 , error  4492007.02004 , delta error  203.440092861
+Step  200 , error  4490120.03877 , delta error  0.00743370968848
+Step  221 , error  4490119.97844 , delta error  0.000972389243543
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 5.36%
+Step  100 , error  4492096.5398 , delta error  203.424640297
+Step  200 , error  4490209.71096 , delta error  0.0074249599129
+Step  221 , error  4490209.65072 , delta error  0.000970022752881
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 5.95%
+Step  100 , error  4492777.81386 , delta error  203.303447509
+Step  200 , error  4490892.22548 , delta error  0.00741512700915
+Step  221 , error  4490892.16532 , delta error  0.000968595966697
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 6.55%
+Step  100 , error  4491162.04843 , delta error  203.43624138
+Step  200 , error  4489275.30366 , delta error  0.00740817934275
+Step  221 , error  4489275.24358 , delta error  0.000966686755419
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 7.14%
+[0.003859886746250383, 0.0032568786338872864, 0.0039787335886214432, 0.0036910844149866512]
+Result:  result(mean_score=0.0036966458459364413, std_dev=0.00027370020844718121, parameters={'k': 10, 'reg_penalty': 50})
+{'k': 10, 'reg_penalty': 100}
+Step  100 , error  8944893.80245 , delta error  0.0200139060616
+Step  116 , error  8944893.7206 , delta error  0.000853581354022
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 7.74%
+Step  100 , error  8944919.16545 , delta error  0.0200107581913
+Step  116 , error  8944919.08362 , delta error  0.000853350386024
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 8.33%
+Step  100 , error  8945987.16833 , delta error  0.019997972995
+Step  116 , error  8945987.08655 , delta error  0.000852739438415
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 8.93%
+Step  100 , error  8943724.72481 , delta error  0.0200004316866
+Step  116 , error  8943724.64303 , delta error  0.000852581113577
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 9.52%
+[0.0038653963881236614, 0.0036635306505516619, 0.0044677318867007041, 0.0036910844149866512]
+Result:  result(mean_score=0.003921935835090669, std_dev=0.00032448253288009174, parameters={'k': 10, 'reg_penalty': 100})
+{'k': 10, 'reg_penalty': 200}
+Step  59 , error  17847018.17 , delta error  0.000983096659184
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 10.12%
+Step  59 , error  17846941.0712 , delta error  0.000982988625765
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 10.71%
+Step  59 , error  17848439.7963 , delta error  0.000982604920864
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 11.31%
+Step  59 , error  17845510.5823 , delta error  0.000982746481895
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 11.90%
+[0.0038653963881236614, 0.0036654000518854236, 0.0044403795891077066, 0.003765112461259934]
+Result:  result(mean_score=0.0039340721225941816, std_dev=0.00030074725929321664, parameters={'k': 10, 'reg_penalty': 200})
+{'k': 10, 'reg_penalty': 500}
+Step  23 , error  44543927.7487 , delta error  0.000331856310368
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 12.50%
+Step  23 , error  44543705.2549 , delta error  0.000331811606884
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 13.10%
+Step  23 , error  44545687.4051 , delta error  0.000331722199917
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 13.69%
+Step  23 , error  44542040.2472 , delta error  0.000331819057465
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 14.29%
+[0.0038653963881236614, 0.0036708938027438221, 0.0044403795891077066, 0.003765112461259934]
+Result:  result(mean_score=0.0039354455603087812, std_dev=0.0002995272345819441, parameters={'k': 10, 'reg_penalty': 500})
+{'k': 10, 'reg_penalty': 1000}
+Step  10 , error  89034365.6 , delta error  0.000119999051094
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 14.88%
+Step  9 , error  89034055.4256 , delta error  0.000302374362946
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 15.48%
+Step  9 , error  89036282.1606 , delta error  7.17490911484e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 16.07%
+Step  8 , error  89032278.5223 , delta error  0.000257894396782
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 16.67%
+[0.0038653963881236614, 0.0036708938027438221, 0.0044149647459275458, 0.003765112461259934]
+Result:  result(mean_score=0.0039290918495137406, std_dev=0.00028882739412975056, parameters={'k': 10, 'reg_penalty': 1000})
+{'k': 20, 'reg_penalty': 10}
+Step  100 , error  3429015.31919 , delta error  51028.1872476
+Step  200 , error  1253242.94897 , delta error  6843.53359204
+Step  300 , error  960548.410682 , delta error  926.41709956
+Step  400 , error  920752.005591 , delta error  127.179681775
+Step  500 , error  915248.87103 , delta error  17.8796762862
+Step  600 , error  914464.711312 , delta error  2.62866778416
+Step  700 , error  914346.276986 , delta error  0.422270353418
+Step  800 , error  914326.199461 , delta error  0.080276347464
+Step  900 , error  914322.002635 , delta error  0.0199462124147
+Step  1000 , error  914320.819321 , delta error  0.00677246251144
+Step  1100 , error  914320.36683 , delta error  0.002992497175
+Step  1200 , error  914320.148485 , delta error  0.00159041001461
+Step  1293 , error  914320.032809 , delta error  0.000996301998384
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 17.26%
+Step  100 , error  3429349.51995 , delta error  51029.6662065
+Step  200 , error  1253460.26906 , delta error  6844.36113839
+Step  300 , error  960711.199709 , delta error  926.741077671
+Step  400 , error  920895.092485 , delta error  127.287347893
+Step  500 , error  915385.66734 , delta error  17.9122775737
+Step  600 , error  914599.670127 , delta error  2.63768778765
+Step  700 , error  914480.746396 , delta error  0.424536826555
+Step  800 , error  914460.549696 , delta error  0.0808127620257
+Step  900 , error  914456.323102 , delta error  0.020108639379
+Step  1000 , error  914455.127564 , delta error  0.00687429797836
+Step  1100 , error  914454.665525 , delta error  0.00308271625545
+Step  1200 , error  914454.438872 , delta error  0.00166505808011
+Step  1300 , error  914454.309026 , delta error  0.00101261341479
+Step  1304 , error  914454.306015 , delta error  0.000998957664706
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 17.86%
+Step  100 , error  3428726.26992 , delta error  51018.9892202
+Step  200 , error  1253443.4012 , delta error  6841.46020459
+Step  300 , error  960847.977507 , delta error  926.05225924
+Step  400 , error  921067.393288 , delta error  127.135334157
+Step  500 , error  915565.380232 , delta error  17.8850504938
+Step  600 , error  914780.390537 , delta error  2.63747725112
+Step  700 , error  914661.194247 , delta error  0.428592807963
+Step  800 , error  914640.603572 , delta error  0.0843734609662
+Step  900 , error  914636.076374 , delta error  0.0225826048991
+Step  1000 , error  914634.679372 , delta error  0.00848938163836
+Step  1100 , error  914634.08689 , delta error  0.00412406679243
+Step  1200 , error  914633.775951 , delta error  0.00234095181804
+Step  1300 , error  914633.591053 , delta error  0.00145757792052
+Step  1392 , error  914633.481273 , delta error  0.000997360097244
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 18.45%
+Step  100 , error  3429537.00797 , delta error  51042.5336499
+Step  200 , error  1253032.24754 , delta error  6846.53865862
+Step  300 , error  960192.977699 , delta error  926.970040181
+Step  400 , error  920370.697936 , delta error  127.27479315
+Step  500 , error  914863.198567 , delta error  17.8948959507
+Step  600 , error  914078.40385 , delta error  2.63017991523
+Step  700 , error  913959.955081 , delta error  0.421760932775
+Step  800 , error  913939.933731 , delta error  0.0797673956258
+Step  900 , error  913935.775699 , delta error  0.0196750113973
+Step  1000 , error  913934.610025 , delta error  0.0066740217153
+Step  1100 , error  913934.162204 , delta error  0.00298517232295
+Step  1200 , error  913933.942378 , delta error  0.00162031059153
+Step  1300 , error  913933.815338 , delta error  0.000998375471681
+Step  1301 , error  913933.815338 , delta error  0.000998375471681
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 19.05%
+[0.0004645316804407714, 0.00087991576248683777, 0.0020603498054947728, 0.00061500813157813977]
+Result:  result(mean_score=0.0010049513450001305, std_dev=0.00062721785107831905, parameters={'k': 20, 'reg_penalty': 10})
+{'k': 20, 'reg_penalty': 20}
+Step  100 , error  2488048.8467 , delta error  27839.8504163
+Step  200 , error  1823537.74124 , delta error  496.196706059
+Step  300 , error  1811631.11821 , delta error  9.08941242355
+Step  400 , error  1811410.49294 , delta error  0.178275672253
+Step  500 , error  1811405.97929 , delta error  0.00466922298074
+Step  555 , error  1811405.85787 , delta error  0.000980267534032
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 19.64%
+Step  100 , error  2488296.18307 , delta error  27841.8116149
+Step  200 , error  1823696.56757 , delta error  496.399582607
+Step  300 , error  1811783.92961 , delta error  9.09439560049
+Step  400 , error  1811563.34728 , delta error  0.176675813971
+Step  500 , error  1811558.94276 , delta error  0.00401805830188
+Step  541 , error  1811558.85883 , delta error  0.000976245617494
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 20.24%
+Step  100 , error  2488256.36419 , delta error  27833.0097184
+Step  200 , error  1823921.62465 , delta error  496.038189177
+Step  300 , error  1812019.18844 , delta error  9.08274760284
+Step  400 , error  1811798.91085 , delta error  0.176386900246
+Step  500 , error  1811794.51561 , delta error  0.00398531369865
+Step  540 , error  1811794.43372 , delta error  0.000987624051049
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 20.83%
+Step  100 , error  2487748.45028 , delta error  27849.3724733
+Step  200 , error  1822978.58518 , delta error  496.433758466
+Step  300 , error  1811067.07555 , delta error  9.08504277049
+Step  400 , error  1810846.87739 , delta error  0.175606535049
+Step  500 , error  1810842.51696 , delta error  0.00387912732549
+Step  539 , error  1810842.43877 , delta error  0.000976711511612
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 21.43%
+[0.0032847030915212731, 0.0034654885623159213, 0.0030132354728908328, 0.0032580011660376185]
+Result:  result(mean_score=0.0032553570731914117, std_dev=0.00016097072099654732, parameters={'k': 20, 'reg_penalty': 20})
+{'k': 20, 'reg_penalty': 50}
+Step  100 , error  4493755.92625 , delta error  390.38300518
+Step  200 , error  4490133.77184 , delta error  0.014304285869
+Step  228 , error  4490133.64682 , delta error  0.000919490121305
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 22.02%
+Step  100 , error  4493958.35783 , delta error  390.487217286
+Step  200 , error  4490335.07367 , delta error  0.0143083175644
+Step  228 , error  4490334.94864 , delta error  0.000918922945857
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 22.62%
+Step  100 , error  4494452.25474 , delta error  390.307890872
+Step  200 , error  4490830.82632 , delta error  0.014294276014
+Step  228 , error  4490830.70142 , delta error  0.000918004661798
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 23.21%
+Step  100 , error  4492910.10846 , delta error  390.523897742
+Step  200 , error  4489286.7205 , delta error  0.0142863169312
+Step  228 , error  4489286.59572 , delta error  0.000916335731745
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 23.81%
+[0.0039981634527089058, 0.0039199438416578922, 0.0034428185023097479, 0.0039203795759305271]
+Result:  result(mean_score=0.0038203263431517685, std_dev=0.00022026830391078721, parameters={'k': 20, 'reg_penalty': 50})
+{'k': 20, 'reg_penalty': 100}
+Step  100 , error  8944895.2337 , delta error  0.0384025461972
+Step  119 , error  8944895.07335 , delta error  0.00087215937674
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 24.40%
+Step  100 , error  8945067.73235 , delta error  0.0384183060378
+Step  119 , error  8945067.57193 , delta error  0.000872604548931
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 25.00%
+Step  100 , error  8945909.73806 , delta error  0.0384013652802
+Step  119 , error  8945909.57771 , delta error  0.000872179865837
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 25.60%
+Step  100 , error  8943747.94242 , delta error  0.0384082850069
+Step  119 , error  8943747.78205 , delta error  0.000872066244483
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 26.19%
+[0.0039955234159779612, 0.0039250942330876408, 0.0042647930342815448, 0.0039811362729755412]
+Result:  result(mean_score=0.004041636739080672, std_dev=0.00013149870033333778, parameters={'k': 20, 'reg_penalty': 100})
+{'k': 20, 'reg_penalty': 200}
+Step  61 , error  17847009.9176 , delta error  0.000772096216679
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 26.79%
+Step  61 , error  17847109.1631 , delta error  0.000772327184677
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 27.38%
+Step  61 , error  17848349.2255 , delta error  0.000772144645452
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 27.98%
+Step  61 , error  17845540.475 , delta error  0.000772252678871
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 28.57%
+[0.0040083792470156105, 0.0039250942330876408, 0.0042647930342815448, 0.0039852787750467925]
+Result:  result(mean_score=0.0040458863223578976, std_dev=0.00012999128129156991, parameters={'k': 20, 'reg_penalty': 200})
+{'k': 20, 'reg_penalty': 500}
+Step  23 , error  44543911.605 , delta error  0.000635206699371
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 29.17%
+Step  23 , error  44543890.396 , delta error  0.000635333359241
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 29.76%
+Step  23 , error  44545584.917 , delta error  0.000635206699371
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 30.36%
+Step  23 , error  44542074.109 , delta error  0.000635340809822
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 30.95%
+[0.0040083792470156105, 0.0035356101878557581, 0.0042647930342815448, 0.0039852787750467925]
+Result:  result(mean_score=0.0039485153110499268, std_dev=0.00026242021744090141, parameters={'k': 20, 'reg_penalty': 500})
+{'k': 20, 'reg_penalty': 1000}
+Step  9 , error  89034346.3618 , delta error  0.000622093677521
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 31.55%
+Step  9 , error  89034247.7062 , delta error  0.00037208199501
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 32.14%
+Step  8 , error  89036174.1788 , delta error  0.00027534365654
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 32.74%
+Step  8 , error  89032313.6742 , delta error  0.000165462493896
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 33.33%
+[0.0040083792470156105, 0.0035356101878557581, 0.0042647930342815448, 0.0039852787750467925]
+Result:  result(mean_score=0.0039485153110499268, std_dev=0.00026242021744090141, parameters={'k': 20, 'reg_penalty': 1000})
+{'k': 50, 'reg_penalty': 10}
+Step  100 , error  7064721.43034 , delta error  124807.098874
+Step  200 , error  1741971.13639 , delta error  16731.6594631
+Step  300 , error  1026907.72141 , delta error  2259.65298622
+Step  400 , error  929943.307172 , delta error  309.146545686
+Step  500 , error  916590.927452 , delta error  43.1967224464
+Step  600 , error  914703.328335 , delta error  6.27365348418
+Step  700 , error  914422.788948 , delta error  0.983404467814
+Step  800 , error  914376.707239 , delta error  0.178912605625
+Step  900 , error  914367.563889 , delta error  0.0418600558769
+Step  1000 , error  914365.140007 , delta error  0.0134454106446
+Step  1100 , error  914364.25733 , delta error  0.00572604336776
+Step  1200 , error  914363.844248 , delta error  0.00297195638996
+Step  1300 , error  914363.615644 , delta error  0.00175902212504
+Step  1400 , error  914363.474072 , delta error  0.00114153395407
+Step  1436 , error  914363.436779 , delta error  0.000998212140985
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 33.93%
+Step  100 , error  7063987.8016 , delta error  124792.391143
+Step  200 , error  1741886.84622 , delta error  16729.6097655
+Step  300 , error  1026900.83093 , delta error  2259.52123783
+Step  400 , error  929936.339251 , delta error  309.194589026
+Step  500 , error  916580.008309 , delta error  43.2236847221
+Step  600 , error  914690.765873 , delta error  6.28221634694
+Step  700 , error  914409.776016 , delta error  0.985230883001
+Step  800 , error  914363.623127 , delta error  0.178964550607
+Step  900 , error  914354.494161 , delta error  0.0416334117763
+Step  1000 , error  914352.091255 , delta error  0.0132677642396
+Step  1100 , error  914351.222658 , delta error  0.00561688980088
+Step  1200 , error  914350.818438 , delta error  0.00289794127457
+Step  1300 , error  914350.596647 , delta error  0.0016934016021
+Step  1400 , error  914350.461834 , delta error  0.00107063399628
+Step  1418 , error  914350.444315 , delta error  0.000996007351205
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 34.52%
+Step  100 , error  7063803.3874 , delta error  124784.029398
+Step  200 , error  1742079.45778 , delta error  16728.3570824
+Step  300 , error  1027147.11277 , delta error  2259.36546515
+Step  400 , error  930187.234129 , delta error  309.205093158
+Step  500 , error  916828.622015 , delta error  43.2503170335
+Step  600 , error  914937.007007 , delta error  6.30221205775
+Step  700 , error  914654.406912 , delta error  0.997851522756
+Step  800 , error  914607.264992 , delta error  0.186567260302
+Step  900 , error  914597.542117 , delta error  0.0462061021244
+Step  1000 , error  914594.779219 , delta error  0.0160714460071
+Step  1100 , error  914593.687039 , delta error  0.0073859046679
+Step  1200 , error  914593.139641 , delta error  0.00405028171372
+Step  1300 , error  914592.823168 , delta error  0.00246829038952
+Step  1400 , error  914592.623762 , delta error  0.00160761433654
+Step  1500 , error  914592.490924 , delta error  0.00109528831672
+Step  1527 , error  914592.463799 , delta error  0.000996946007945
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 35.12%
+Step  100 , error  7065922.14521 , delta error  124837.099165
+Step  200 , error  1741871.59425 , delta error  16735.9315202
+Step  300 , error  1026610.43602 , delta error  2260.41776539
+Step  400 , error  929607.757691 , delta error  309.307398081
+Step  500 , error  916247.365338 , delta error  43.2285238731
+Step  600 , error  914358.370148 , delta error  6.27716740046
+Step  700 , error  914077.821261 , delta error  0.981738459785
+Step  800 , error  914031.930511 , delta error  0.177064849297
+Step  900 , error  914022.942438 , delta error  0.0406119378749
+Step  1000 , error  914020.615955 , delta error  0.0127085981658
+Step  1100 , error  914019.789182 , delta error  0.00531321717426
+Step  1200 , error  914019.407163 , delta error  0.00274333334528
+Step  1300 , error  914019.195919 , delta error  0.00162877421826
+Step  1400 , error  914019.06457 , delta error  0.00106094533112
+Step  1417 , error  914019.048145 , delta error  0.000997040770017
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 35.71%
+[0.00092072237526782963, 0.0010577759465274913, 0.0011142642231947481, 0.00088664886925036025]
+Result:  result(mean_score=0.00099485285356010721, std_dev=9.4103428283655926e-05, parameters={'k': 50, 'reg_penalty': 10})
+{'k': 50, 'reg_penalty': 20}
+Step  100 , error  3464292.96109 , delta error  68003.5298703
+Step  200 , error  1841143.6725 , delta error  1211.87726272
+Step  300 , error  1812065.23346 , delta error  22.1901967819
+Step  400 , error  1811526.80869 , delta error  0.434005873511
+Step  500 , error  1811515.85047 , delta error  0.0111329394858
+Step  592 , error  1811515.50928 , delta error  0.000985097372904
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 36.31%
+Step  100 , error  3463935.60791 , delta error  67991.1642684
+Step  200 , error  1841065.19436 , delta error  1211.74631149
+Step  300 , error  1811989.73111 , delta error  22.1816227718
+Step  400 , error  1811451.93092 , delta error  0.430048383772
+Step  500 , error  1811441.21529 , delta error  0.00977872684598
+Step  568 , error  1811440.96896 , delta error  0.000976677052677
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 36.90%
+Step  100 , error  3464148.45187 , delta error  67987.2586366
+Step  200 , error  1841368.02087 , delta error  1211.70351524
+Step  300 , error  1812292.66236 , delta error  22.186554553
+Step  400 , error  1811754.66174 , delta error  0.430376333883
+Step  500 , error  1811743.94648 , delta error  0.00967488344759
+Step  566 , error  1811743.70774 , delta error  0.000976318959147
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 37.50%
+Step  100 , error  3464007.93006 , delta error  68015.6764408
+Step  200 , error  1840555.91032 , delta error  1212.10268425
+Step  300 , error  1811474.16247 , delta error  22.1747106898
+Step  400 , error  1810936.79715 , delta error  0.428244290641
+Step  500 , error  1810926.16473 , delta error  0.00947046419606
+Step  565 , error  1810925.93345 , delta error  0.000968791777268
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 38.10%
+[0.0038171487603305765, 0.0041296983015153589, 0.0034717283612934594, 0.0038594694528828717]
+Result:  result(mean_score=0.0038195112190055665, std_dev=0.00023386490969142898, parameters={'k': 50, 'reg_penalty': 20})
+{'k': 50, 'reg_penalty': 50}
+Step  100 , error  4499114.95614 , delta error  952.313702028
+Step  200 , error  4490276.96754 , delta error  0.0349858840927
+Step  237 , error  4490276.64905 , delta error  0.000904127955437
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 38.69%
+Step  100 , error  4499027.81689 , delta error  952.247921406
+Step  200 , error  4490190.28145 , delta error  0.0349674755707
+Step  236 , error  4490189.96414 , delta error  0.000998171977699
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 39.29%
+Step  100 , error  4499600.77614 , delta error  952.179030874
+Step  200 , error  4490763.90626 , delta error  0.0349697358906
+Step  236 , error  4490763.58891 , delta error  0.000998504459858
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 39.88%
+Step  100 , error  4498198.61457 , delta error  952.474863668
+Step  200 , error  4489359.33522 , delta error  0.0349409980699
+Step  236 , error  4489359.01822 , delta error  0.000996326096356
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 40.48%
+[0.0041805938169574512, 0.0043329670832761057, 0.0039365274738633587, 0.0046240679370339668]
+Result:  result(mean_score=0.0042685390777827212, std_dev=0.00024925780413613937, parameters={'k': 50, 'reg_penalty': 50})
+{'k': 50, 'reg_penalty': 100}
+Step  100 , error  8945055.8234 , delta error  0.0936386287212
+Step  123 , error  8945055.42719 , delta error  0.000918101519346
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 41.07%
+Step  100 , error  8944900.23738 , delta error  0.0936425272375
+Step  123 , error  8944899.84114 , delta error  0.000918097794056
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 41.67%
+Step  100 , error  8945832.18693 , delta error  0.0936393551528
+Step  123 , error  8945831.7907 , delta error  0.000918133184314
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 42.26%
+Step  100 , error  8943813.7991 , delta error  0.0936393178999
+Step  123 , error  8943813.4029 , delta error  0.00091783888638
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 42.86%
+[0.0042053872053872034, 0.0043880190450029735, 0.0040669067590566495, 0.0046022047316579204]
+Result:  result(mean_score=0.0043156294352761863, std_dev=0.00020086187729966281, parameters={'k': 50, 'reg_penalty': 100})
+{'k': 50, 'reg_penalty': 200}
+Step  63 , error  17847180.1191 , delta error  0.000770576298237
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 43.45%
+Step  63 , error  17846922.0202 , delta error  0.00077062100172
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 44.05%
+Step  63 , error  17848264.8753 , delta error  0.000770632177591
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 44.64%
+Step  63 , error  17845603.3476 , delta error  0.000770654529333
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 45.24%
+[0.0042053872053872034, 0.00439854873414824, 0.0040781895818137607, 0.0045911580594679164]
+Result:  result(mean_score=0.0043183208952042793, std_dev=0.000194482447994283, parameters={'k': 50, 'reg_penalty': 200})
+{'k': 50, 'reg_penalty': 500}
+Step  24 , error  44544086.3277 , delta error  0.000386372208595
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 45.83%
+Step  24 , error  44543686.0287 , delta error  0.000386506319046
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 46.43%
+Step  24 , error  44545497.4859 , delta error  0.000386372208595
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 47.02%
+Step  24 , error  44542136.9155 , delta error  0.000386469066143
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 47.62%
+[0.0042949188858279761, 0.0044095362358650371, 0.0041281455142231933, 0.0045856347233729153]
+Result:  result(mean_score=0.0043545588398222809, std_dev=0.00016676217808276377, parameters={'k': 50, 'reg_penalty': 500})
+{'k': 50, 'reg_penalty': 1000}
+Step  9 , error  89034521.3679 , delta error  0.000142022967339
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 48.21%
+Step  9 , error  89034035.9436 , delta error  0.000839188694954
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 48.81%
+Step  9 , error  89036086.4843 , delta error  5.97983598709e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 49.40%
+Step  8 , error  89032377.0735 , delta error  0.00024501979351
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 50.00%
+[0.0042949188858279761, 0.0043851577164308935, 0.0041281455142231933, 0.0045856347233729153]
+Result:  result(mean_score=0.0043484642099637441, std_dev=0.00016507853833648884, parameters={'k': 50, 'reg_penalty': 1000})
+{'k': 100, 'reg_penalty': 10}
+Step  100 , error  13141028.0719 , delta error  248234.976225
+Step  200 , error  2556325.27547 , delta error  33242.6640298
+Step  300 , error  1136919.2699 , delta error  4476.58191097
+Step  400 , error  945073.39271 , delta error  609.973213229
+Step  500 , error  918780.476009 , delta error  84.6793070429
+Step  600 , error  915093.70245 , delta error  12.1497808
+Step  700 , error  914554.380481 , delta error  1.8589871478
+Step  800 , error  914468.550261 , delta error  0.322925991844
+Step  900 , error  914452.476468 , delta error  0.0701689671259
+Step  1000 , error  914448.556245 , delta error  0.0206335183466
+Step  1100 , error  914447.250253 , delta error  0.00808974867687
+Step  1200 , error  914446.685821 , delta error  0.00390224379953
+Step  1300 , error  914446.394967 , delta error  0.00215767009649
+Step  1400 , error  914446.226539 , delta error  0.00131208694074
+Step  1464 , error  914446.154594 , delta error  0.000996415154077
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 50.60%
+Step  100 , error  13140021.237 , delta error  248217.486688
+Step  200 , error  2556109.12334 , delta error  33240.0594331
+Step  300 , error  1136804.58227 , delta error  4476.3578155
+Step  400 , error  944964.757657 , delta error  609.978643648
+Step  500 , error  918671.013133 , delta error  84.6842734973
+Step  600 , error  914984.177346 , delta error  12.147354932
+Step  700 , error  914445.19657 , delta error  1.85527769767
+Step  800 , error  914359.696098 , delta error  0.320161537151
+Step  900 , error  914343.840485 , delta error  0.0685172191588
+Step  1000 , error  914340.043313 , delta error  0.0197544553084
+Step  1100 , error  914338.800427 , delta error  0.0076569163939
+Step  1200 , error  914338.266264 , delta error  0.00370031199418
+Step  1300 , error  914337.989409 , delta error  0.00206395157147
+Step  1400 , error  914337.827754 , delta error  0.00126262160484
+Step  1454 , error  914337.768296 , delta error  0.000999206444249
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 51.19%
+Step  100 , error  13139227.4699 , delta error  248197.570234
+Step  200 , error  2556146.1121 , delta error  33237.2616769
+Step  300 , error  1136979.6619 , delta error  4475.79632838
+Step  400 , error  945165.63251 , delta error  609.900197441
+Step  500 , error  918873.565755 , delta error  84.7011836114
+Step  600 , error  915184.28385 , delta error  12.1736393825
+Step  700 , error  914642.978826 , delta error  1.87487836578
+Step  800 , error  914555.889056 , delta error  0.332735640928
+Step  900 , error  914539.038339 , delta error  0.0762581094168
+Step  1000 , error  914534.629919 , delta error  0.0245198617922
+Step  1100 , error  914533.007848 , delta error  0.0106457681395
+Step  1200 , error  914532.232954 , delta error  0.00562592723873
+Step  1300 , error  914531.798861 , delta error  0.00334144919179
+Step  1400 , error  914531.531467 , delta error  0.00213450891897
+Step  1500 , error  914531.356415 , delta error  0.00143210252281
+Step  1600 , error  914531.237886 , delta error  0.00099866441451
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 51.79%
+Step  100 , error  13141549.6807 , delta error  248253.881402
+Step  200 , error  2556014.11887 , delta error  33245.5304582
+Step  300 , error  1136473.78317 , delta error  4477.08457819
+Step  400 , error  944605.189516 , delta error  610.045672735
+Step  500 , error  918309.788502 , delta error  84.679242357
+Step  600 , error  914623.586227 , delta error  12.1420836836
+Step  700 , error  914084.951833 , delta error  1.8532647324
+Step  800 , error  913999.571786 , delta error  0.319506798871
+Step  900 , error  913983.756505 , delta error  0.0682769862469
+Step  1000 , error  913979.975941 , delta error  0.019639518694
+Step  1100 , error  913978.741531 , delta error  0.00759689393453
+Step  1200 , error  913978.211383 , delta error  0.00367802486289
+Step  1300 , error  913977.935212 , delta error  0.00207093043718
+Step  1400 , error  913977.771715 , delta error  0.00129098352045
+Step  1463 , error  913977.701382 , delta error  0.000999561394565
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 52.38%
+[0.0010905264768901126, 0.0010568603213844247, 0.00040074914903963046, 0.00057051459081285127]
+Result:  result(mean_score=0.0007796626345317547, std_dev=0.00030033032637477168, parameters={'k': 100, 'reg_penalty': 10})
+{'k': 100, 'reg_penalty': 20}
+Step  100 , error  5093711.22528 , delta error  135116.738736
+Step  200 , error  1870168.5689 , delta error  2402.81049061
+Step  300 , error  1812549.44701 , delta error  43.8591531604
+Step  400 , error  1811486.65488 , delta error  0.851079451852
+Step  500 , error  1811465.27108 , delta error  0.0211598053575
+Step  600 , error  1811464.62036 , delta error  0.0014825691469
+Step  625 , error  1811464.59157 , delta error  0.000985325779766
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 52.98%
+Step  100 , error  5093423.31934 , delta error  135107.248161
+Step  200 , error  1870118.22832 , delta error  2402.62420898
+Step  300 , error  1812505.88963 , delta error  43.8308412572
+Step  400 , error  1811444.74184 , delta error  0.842714750208
+Step  500 , error  1811423.83405 , delta error  0.0186849378515
+Step  587 , error  1811423.3436 , delta error  0.000973388087004
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 53.57%
+Step  100 , error  5093444.78534 , delta error  135097.222676
+Step  200 , error  1870378.22572 , delta error  2402.52678183
+Step  300 , error  1812764.51672 , delta error  43.8530967452
+Step  400 , error  1811702.38324 , delta error  0.845400446095
+Step  500 , error  1811681.38724 , delta error  0.0187735101208
+Step  585 , error  1811680.89976 , delta error  0.000993427354842
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 54.17%
+Step  100 , error  5093375.0346 , delta error  135128.29255
+Step  200 , error  1869577.48783 , delta error  2402.85444121
+Step  300 , error  1811962.94027 , delta error  43.8167685133
+Step  400 , error  1810902.4778 , delta error  0.840258607641
+Step  500 , error  1810881.68424 , delta error  0.0182460614014
+Step  583 , error  1810881.21776 , delta error  0.000984754413366
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 54.76%
+[0.0035625956535047429, 0.0032948007752292858, 0.0034630288110867975, 0.0035454064254809899]
+Result:  result(mean_score=0.0034664579163254544, std_dev=0.00010601092450766968, parameters={'k': 100, 'reg_penalty': 20})
+{'k': 100, 'reg_penalty': 50}
+Step  100 , error  4507764.20835 , delta error  1891.04305346
+Step  200 , error  4490214.30236 , delta error  0.0694867186248
+Step  243 , error  4490213.66207 , delta error  0.000978701747954
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 55.36%
+Step  100 , error  4507718.70391 , delta error  1890.86344279
+Step  200 , error  4490170.82221 , delta error  0.0693848077208
+Step  243 , error  4490170.18326 , delta error  0.000973383896053
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 55.95%
+Step  100 , error  4508262.14083 , delta error  1890.84607638
+Step  200 , error  4490713.85785 , delta error  0.0694587882608
+Step  243 , error  4490713.21801 , delta error  0.000976235605776
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 56.55%
+Step  100 , error  4506863.37988 , delta error  1891.00907473
+Step  200 , error  4489314.70187 , delta error  0.0693427063525
+Step  243 , error  4489314.06341 , delta error  0.000971958972514
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 57.14%
+[0.0038252984389348034, 0.0034244380350684413, 0.0038350200583515673, 0.0040197612691398937]
+Result:  result(mean_score=0.0037761294503736763, std_dev=0.00021732982299886051, parameters={'k': 100, 'reg_penalty': 50})
+{'k': 100, 'reg_penalty': 100}
+Step  100 , error  8944989.63571 , delta error  0.185926167294
+Step  126 , error  8944988.84529 , delta error  0.000970920547843
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 57.74%
+Step  100 , error  8944881.1785 , delta error  0.185886323452
+Step  126 , error  8944880.3883 , delta error  0.000970339402556
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 58.33%
+Step  100 , error  8945800.12477 , delta error  0.185933537781
+Step  126 , error  8945799.33431 , delta error  0.000971000641584
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 58.93%
+Step  100 , error  8943769.59569 , delta error  0.185864597559
+Step  126 , error  8943768.80561 , delta error  0.000970035791397
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 59.52%
+[0.0038294306703397616, 0.0036132857208258924, 0.003964297653780694, 0.0040073337629261399]
+Result:  result(mean_score=0.0038535869519681224, std_dev=0.00015347894725838837, parameters={'k': 100, 'reg_penalty': 100})
+{'k': 100, 'reg_penalty': 200}
+Step  64 , error  17847115.3642 , delta error  0.00097892805934
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 60.12%
+Step  64 , error  17846903.5274 , delta error  0.00097880512476
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 60.71%
+Step  64 , error  17848251.9035 , delta error  0.000979028642178
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 61.31%
+Step  64 , error  17845558.8379 , delta error  0.000978726893663
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 61.90%
+[0.0038363177226813593, 0.0036077919699674939, 0.0039834822513980057, 0.0040252846052348948]
+Result:  result(mean_score=0.0038632191373204382, std_dev=0.00016332112266138332, parameters={'k': 100, 'reg_penalty': 200})
+{'k': 100, 'reg_penalty': 500}
+Step  24 , error  44544027.923 , delta error  0.000766135752201
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 62.50%
+Step  24 , error  44543669.3001 , delta error  0.000766105949879
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 63.10%
+Step  24 , error  44545504.8582 , delta error  0.00076600164175
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 63.69%
+Step  24 , error  44542092.5094 , delta error  0.000766158103943
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 64.29%
+[0.0035918273645546366, 0.0036077919699674939, 0.0039834822513980057, 0.004026857221761943]
+Result:  result(mean_score=0.00380248970192052, std_dev=0.00020333772039286092, parameters={'k': 100, 'reg_penalty': 500})
+{'k': 100, 'reg_penalty': 1000}
+Step  9 , error  89034467.4118 , delta error  0.000168785452843
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 64.88%
+Step  9 , error  89034020.4415 , delta error  0.000383228063583
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 65.48%
+Step  9 , error  89036103.466 , delta error  8.99285078049e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 66.07%
+Step  8 , error  89032332.7984 , delta error  0.000361755490303
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 66.67%
+[0.0035918273645546366, 0.0036077919699674939, 0.0039834822513980057, 0.004026857221761943]
+Result:  result(mean_score=0.00380248970192052, std_dev=0.00020333772039286092, parameters={'k': 100, 'reg_penalty': 1000})
+{'k': 150, 'reg_penalty': 10}
+Step  100 , error  19213925.5736 , delta error  371602.444195
+Step  200 , error  3369315.48498 , delta error  49745.754179
+Step  300 , error  1246304.14605 , delta error  6687.7648549
+Step  400 , error  959935.117025 , delta error  908.898191307
+Step  500 , error  920807.202771 , delta error  125.652529441
+Step  600 , error  915349.306342 , delta error  17.8889995974
+Step  700 , error  914558.931207 , delta error  2.69515832048
+Step  800 , error  914435.65289 , delta error  0.454635487287
+Step  900 , error  914413.387472 , delta error  0.0943901260616
+Step  1000 , error  914408.218913 , delta error  0.0264493958093
+Step  1100 , error  914406.570286 , delta error  0.010043168324
+Step  1200 , error  914405.874802 , delta error  0.0047753957333
+Step  1300 , error  914405.519909 , delta error  0.00262571068015
+Step  1400 , error  914405.315313 , delta error  0.00159030954819
+Step  1500 , error  914405.187069 , delta error  0.00103313685395
+Step  1510 , error  914405.177955 , delta error  0.00099663855508
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 67.26%
+Step  100 , error  19212997.7701 , delta error  371582.309018
+Step  200 , error  3369349.50233 , delta error  49742.1345875
+Step  300 , error  1246479.10365 , delta error  6687.58745187
+Step  400 , error  960100.289321 , delta error  909.080096715
+Step  500 , error  920958.419538 , delta error  125.744400814
+Step  600 , error  915494.914217 , delta error  17.9186684107
+Step  700 , error  914702.935856 , delta error  2.70208547998
+Step  800 , error  914579.361371 , delta error  0.455159970908
+Step  900 , error  914557.126958 , delta error  0.093664457323
+Step  1000 , error  914552.032281 , delta error  0.0257789078169
+Step  1100 , error  914550.437994 , delta error  0.00962361786515
+Step  1200 , error  914549.773991 , delta error  0.00454905023798
+Step  1300 , error  914549.43545 , delta error  0.0025121656945
+Step  1400 , error  914549.239006 , delta error  0.00153305393178
+Step  1500 , error  914549.115099 , delta error  0.000999523676001
+Step  1501 , error  914549.115099 , delta error  0.000999523676001
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 67.86%
+Step  100 , error  19212186.7913 , delta error  371563.533589
+Step  200 , error  3369258.54655 , delta error  49740.1869577
+Step  300 , error  1246488.54617 , delta error  6687.05413688
+Step  400 , error  960142.720912 , delta error  908.901113606
+Step  500 , error  921010.304393 , delta error  125.708405663
+Step  600 , error  915547.753032 , delta error  17.9251801277
+Step  700 , error  914754.65205 , delta error  2.71505039721
+Step  800 , error  914629.888795 , delta error  0.465493388008
+Step  900 , error  914606.80115 , delta error  0.100530679338
+Step  1000 , error  914601.157558 , delta error  0.0300890321378
+Step  1100 , error  914599.221351 , delta error  0.0122984824702
+Step  1200 , error  914598.344526 , delta error  0.0062235686928
+Step  1300 , error  914597.871705 , delta error  0.00357935298234
+Step  1400 , error  914597.588823 , delta error  0.00222810939886
+Step  1500 , error  914597.408015 , delta error  0.00146261916962
+Step  1600 , error  914597.287051 , delta error  0.000997534021735
+Step  1601 , error  914597.287051 , delta error  0.000997534021735
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 68.45%
+Step  100 , error  19214493.2966 , delta error  371621.777421
+Step  200 , error  3369046.05932 , delta error  49748.337117
+Step  300 , error  1245921.90491 , delta error  6688.19405452
+Step  400 , error  959529.403915 , delta error  909.013089117
+Step  500 , error  920395.429944 , delta error  125.677234019
+Step  600 , error  914936.596209 , delta error  17.8891234427
+Step  700 , error  914146.500539 , delta error  2.69104890351
+Step  800 , error  914023.615327 , delta error  0.451156321331
+Step  900 , error  914001.635371 , delta error  0.0921256183647
+Step  1000 , error  913996.643915 , delta error  0.0250996540999
+Step  1100 , error  913995.098923 , delta error  0.00926542282104
+Step  1200 , error  913994.462835 , delta error  0.00433086277917
+Step  1300 , error  913994.141994 , delta error  0.00236919720192
+Step  1400 , error  913993.957256 , delta error  0.00143838638905
+Step  1486 , error  913993.855485 , delta error  0.000997342984192
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 69.05%
+[0.0021166590143862868, 0.00066047093653191725, 0.002441648431801603, 0.0013371076129982495]
+Result:  result(mean_score=0.0016389714989295144, std_dev=0.00069301168410607354, parameters={'k': 150, 'reg_penalty': 10})
+{'k': 150, 'reg_penalty': 20}
+Step  100 , error  6721012.64844 , delta error  202185.042365
+Step  200 , error  1899044.02133 , delta error  3589.50438422
+Step  300 , error  1813012.76854 , delta error  65.3460227353
+Step  400 , error  1811431.03774 , delta error  1.26012416859
+Step  500 , error  1811399.48328 , delta error  0.0307115272153
+Step  600 , error  1811398.54957 , delta error  0.00207019783556
+Step  647 , error  1811398.48406 , delta error  0.00099074980244
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 69.64%
+Step  100 , error  6721146.10571 , delta error  202176.566648
+Step  200 , error  1899326.78291 , delta error  3589.8026481
+Step  300 , error  1813284.04428 , delta error  65.3513396028
+Step  400 , error  1811703.09116 , delta error  1.25144680566
+Step  500 , error  1811672.09345 , delta error  0.0275220545009
+Step  599 , error  1811671.35891 , delta error  0.000981036573648
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 70.24%
+Step  100 , error  6720995.22154 , delta error  202168.085591
+Step  200 , error  1899402.90614 , delta error  3589.45238204
+Step  300 , error  1813370.24705 , delta error  65.3429264149
+Step  400 , error  1811789.42516 , delta error  1.25148137473
+Step  500 , error  1811758.44592 , delta error  0.0272763688117
+Step  596 , error  1811757.73114 , delta error  0.000968005973846
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 70.83%
+Step  100 , error  6720817.82943 , delta error  202199.169412
+Step  200 , error  1898526.47516 , delta error  3589.65466045
+Step  300 , error  1812497.59568 , delta error  65.2952288466
+Step  400 , error  1810918.88085 , delta error  1.24524451792
+Step  500 , error  1810888.14484 , delta error  0.0266542909667
+Step  593 , error  1810887.45601 , delta error  0.000999530311674
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 71.43%
+[0.0034407330884603611, 0.0031879015397762805, 0.0035010940919037179, 0.0035529242996102965]
+Result:  result(mean_score=0.0034206632549376639, std_dev=0.00014012754702007546, parameters={'k': 150, 'reg_penalty': 20})
+{'k': 150, 'reg_penalty': 50}
+Step  100 , error  4516399.22681 , delta error  2828.45505447
+Step  200 , error  4490151.72398 , delta error  0.10383468587
+Step  247 , error  4490150.76273 , delta error  0.00097543746233
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 72.02%
+Step  100 , error  4516709.06526 , delta error  2828.53369471
+Step  200 , error  4490460.48134 , delta error  0.10375866387
+Step  247 , error  4490459.52128 , delta error  0.000970846042037
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 72.62%
+Step  100 , error  4517043.10316 , delta error  2828.35103906
+Step  200 , error  4490796.32655 , delta error  0.103772335686
+Step  247 , error  4490795.36627 , delta error  0.000971601344645
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 73.21%
+Step  100 , error  4515556.97022 , delta error  2828.43060665
+Step  200 , error  4489310.93788 , delta error  0.103614278138
+Step  247 , error  4489309.97949 , delta error  0.000967445783317
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 73.81%
+[0.0037195056626874801, 0.0033947946710616663, 0.0034964214077315824, 0.0038563625763294368]
+Result:  result(mean_score=0.0036167710794525413, std_dev=0.00018146352893462026, parameters={'k': 150, 'reg_penalty': 50})
+{'k': 150, 'reg_penalty': 100}
+Step  100 , error  8944931.18214 , delta error  0.278135331348
+Step  128 , error  8944929.99759 , delta error  0.0009541567415
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 74.40%
+Step  100 , error  8945196.84615 , delta error  0.278136247769
+Step  128 , error  8945195.66163 , delta error  0.000953938812017
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 75.00%
+Step  100 , error  8945879.06326 , delta error  0.278150638565
+Step  128 , error  8945877.87864 , delta error  0.000954210758209
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 75.60%
+Step  100 , error  8943762.86125 , delta error  0.278043989092
+Step  128 , error  8943761.6772 , delta error  0.000953188166022
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 76.19%
+[0.0037397076828894998, 0.0034827328358436713, 0.0035265089350838808, 0.0039052671146705947]
+Result:  result(mean_score=0.0036635541421219118, std_dev=0.0001700751719431933, parameters={'k': 150, 'reg_penalty': 100})
+{'k': 150, 'reg_penalty': 200}
+Step  65 , error  17847058.9549 , delta error  0.000937577337027
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 76.79%
+Step  65 , error  17847239.4563 , delta error  0.000937536358833
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 77.38%
+Step  65 , error  17848322.8912 , delta error  0.000937711447477
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 77.98%
+Step  65 , error  17845551.4298 , delta error  0.000937316566706
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 78.57%
+[0.0037397076828894998, 0.0034827328358436713, 0.0034933442742523715, 0.0039052671146705947]
+Result:  result(mean_score=0.0036552629769140343, std_dev=0.00017721264988149082, parameters={'k': 150, 'reg_penalty': 200})
+{'k': 150, 'reg_penalty': 500}
+Step  25 , error  44543972.2766 , delta error  0.000286385416985
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 79.17%
+Step  25 , error  44544023.3514 , delta error  0.000286631286144
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 79.76%
+Step  25 , error  44545565.5677 , delta error  0.000286564230919
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 80.36%
+Step  25 , error  44542085.9143 , delta error  0.000286400318146
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 80.95%
+[0.0037397076828894998, 0.0034827328358436713, 0.0034933442742523715, 0.0038877765503697571]
+Result:  result(mean_score=0.003650890335838825, std_dev=0.00017110034051539576, parameters={'k': 150, 'reg_penalty': 500})
+{'k': 150, 'reg_penalty': 1000}
+Step  9 , error  89034411.582 , delta error  0.000111281871796
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 81.55%
+Step  9 , error  89034382.169 , delta error  0.000115975737572
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 82.14%
+Step  9 , error  89036158.5915 , delta error  7.9020857811e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 82.74%
+Step  9 , error  89032326.7044 , delta error  0.000163525342941
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 83.33%
+[0.0037397076828894998, 0.0034827328358436713, 0.0034933442742523715, 0.0038877765503697571]
+Result:  result(mean_score=0.003650890335838825, std_dev=0.00017110034051539576, parameters={'k': 150, 'reg_penalty': 1000})
+{'k': 200, 'reg_penalty': 10}
+Step  100 , error  25288351.1659 , delta error  494991.741368
+Step  200 , error  4182250.06555 , delta error  66256.2718781
+Step  300 , error  1355482.45209 , delta error  8897.62624946
+Step  400 , error  974711.956235 , delta error  1207.00303986
+Step  500 , error  922796.529991 , delta error  166.391969501
+Step  600 , error  915580.061041 , delta error  23.5706621191
+Step  700 , error  914541.678994 , delta error  3.517431602
+Step  800 , error  914381.700177 , delta error  0.58278961957
+Step  900 , error  914353.443989 , delta error  0.117567729554
+Step  1000 , error  914347.090321 , delta error  0.0319043266354
+Step  1100 , error  914345.121729 , delta error  0.0118660765002
+Step  1200 , error  914344.302642 , delta error  0.00561690074392
+Step  1300 , error  914343.884131 , delta error  0.0031110860873
+Step  1400 , error  914343.640228 , delta error  0.0019108732231
+Step  1500 , error  914343.484907 , delta error  0.00126293336507
+Step  1565 , error  914343.413135 , delta error  0.000998335890472
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 83.93%
+Step  100 , error  25287134.969 , delta error  494967.918783
+Step  200 , error  4182181.85829 , delta error  66251.8025749
+Step  300 , error  1355593.62554 , delta error  8897.3555026
+Step  400 , error  974814.685346 , delta error  1207.20020502
+Step  500 , error  922884.501338 , delta error  166.48311228
+Step  600 , error  915662.979501 , delta error  23.5924140047
+Step  700 , error  914623.736161 , delta error  3.51801345253
+Step  800 , error  914463.959026 , delta error  0.579570019501
+Step  900 , error  914436.015284 , delta error  0.114776881645
+Step  1000 , error  914429.892386 , delta error  0.0300528286025
+Step  1100 , error  914428.07116 , delta error  0.0107129353564
+Step  1200 , error  914427.343826 , delta error  0.00489289290272
+Step  1300 , error  914426.984034 , delta error  0.00263515184633
+Step  1400 , error  914426.779926 , delta error  0.00157639198005
+Step  1500 , error  914426.653565 , delta error  0.00101014482789
+Step  1504 , error  914426.65056 , delta error  0.000997554627247
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 84.52%
+Step  100 , error  25286507.475 , delta error  494947.053197
+Step  200 , error  4182317.62116 , delta error  66250.1358068
+Step  300 , error  1355811.04459 , delta error  8896.92364329
+Step  400 , error  975056.605687 , delta error  1207.09634089
+Step  500 , error  923129.735182 , delta error  166.494039382
+Step  600 , error  915905.747465 , delta error  23.6225531289
+Step  700 , error  914863.728228 , delta error  3.54203954199
+Step  800 , error  914701.990422 , delta error  0.595111431438
+Step  900 , error  914672.821875 , delta error  0.124239784083
+Step  1000 , error  914665.957804 , delta error  0.0357724955538
+Step  1100 , error  914663.685916 , delta error  0.0142238704721
+Step  1200 , error  914662.678831 , delta error  0.00710282847285
+Step  1300 , error  914662.14061 , delta error  0.00406641722657
+Step  1400 , error  914661.819362 , delta error  0.00253038445953
+Step  1500 , error  914661.6139 , delta error  0.00166353804525
+Step  1600 , error  914661.476183 , delta error  0.00113697804045
+Step  1637 , error  914661.437872 , delta error  0.000998820760287
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 85.12%
+Step  100 , error  25289384.6678 , delta error  495019.86994
+Step  200 , error  4182061.10664 , delta error  66260.2889934
+Step  300 , error  1355106.0061 , delta error  8898.38858679
+Step  400 , error  974295.406023 , delta error  1207.18176653
+Step  500 , error  922371.313069 , delta error  166.421346465
+Step  600 , error  915154.042027 , delta error  23.5667813893
+Step  700 , error  914116.327231 , delta error  3.50997721311
+Step  800 , error  913957.006479 , delta error  0.577274981304
+Step  900 , error  913929.194353 , delta error  0.114079033607
+Step  1000 , error  913923.115564 , delta error  0.0297752926126
+Step  1100 , error  913921.314538 , delta error  0.0105648983736
+Step  1200 , error  913920.598531 , delta error  0.0048091133358
+Step  1300 , error  913920.244663 , delta error  0.0025980907958
+Step  1400 , error  913920.042339 , delta error  0.00157579430379
+Step  1500 , error  913919.914599 , delta error  0.00103651359677
+Step  1511 , error  913919.904451 , delta error  0.000997504685074
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 85.71%
+[0.0010972604836241196, 0.00078965038379953916, 0.00086387673231218081, 0.0011368099665531313]
+Result:  result(mean_score=0.00097189939157224276, std_dev=0.00014815068080228049, parameters={'k': 200, 'reg_penalty': 10})
+{'k': 200, 'reg_penalty': 20}
+Step  100 , error  8348374.65699 , delta error  269271.490555
+Step  200 , error  1927956.54987 , delta error  4774.79592375
+Step  300 , error  1813559.81299 , delta error  86.7555911466
+Step  400 , error  1811461.65596 , delta error  1.66386753041
+Step  500 , error  1811420.17202 , delta error  0.0391560967546
+Step  600 , error  1811419.02782 , delta error  0.00218529393896
+Step  643 , error  1811418.96608 , delta error  0.000992309302092
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 86.31%
+Step  100 , error  8348143.03849 , delta error  269257.046053
+Step  200 , error  1928053.8033 , delta error  4774.77141323
+Step  300 , error  1813657.72313 , delta error  86.7292954158
+Step  400 , error  1811561.60805 , delta error  1.6516527622
+Step  500 , error  1811520.81674 , delta error  0.0356901425403
+Step  600 , error  1811519.87175 , delta error  0.00113468104973
+Step  606 , error  1811519.86657 , delta error  0.000972816720605
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 86.90%
+Step  100 , error  8348341.08316 , delta error  269250.625831
+Step  200 , error  1928361.29244 , delta error  4774.81853527
+Step  300 , error  1813959.08394 , delta error  86.7643641117
+Step  400 , error  1811861.45604 , delta error  1.65570052993
+Step  500 , error  1811820.53237 , delta error  0.0358172073029
+Step  600 , error  1811819.59032 , delta error  0.00107096950524
+Step  604 , error  1811819.58731 , delta error  0.00097170076333
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 87.50%
+Step  100 , error  8348140.5849 , delta error  269288.474462
+Step  200 , error  1927336.25715 , delta error  4774.86297241
+Step  300 , error  1812947.60419 , delta error  86.6824574005
+Step  400 , error  1810853.39391 , delta error  1.64623119519
+Step  500 , error  1810812.83665 , delta error  0.0348747165408
+Step  600 , error  1810811.93087 , delta error  0.00097738741897
+Step  601 , error  1810811.93087 , delta error  0.00097738741897
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 88.10%
+[0.0037887205387205384, 0.0033410016939065127, 0.0025689505835156828, 0.003373646015526712]
+Result:  result(mean_score=0.0032680797079173611, std_dev=0.00044054235569039054, parameters={'k': 200, 'reg_penalty': 20})
+{'k': 200, 'reg_penalty': 50}
+Step  100 , error  4525106.09501 , delta error  3765.47858085
+Step  200 , error  4490165.68151 , delta error  0.138087879866
+Step  250 , error  4490164.40028 , delta error  0.000956322066486
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 88.69%
+Step  100 , error  4525215.52391 , delta error  3765.2742333
+Step  200 , error  4490277.4133 , delta error  0.137921565212
+Step  250 , error  4490276.13432 , delta error  0.000950872898102
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 89.29%
+Step  100 , error  4525796.64112 , delta error  3765.43006998
+Step  200 , error  4490856.11691 , delta error  0.138045999222
+Step  250 , error  4490854.83645 , delta error  0.000953430309892
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 89.88%
+Step  100 , error  4524171.65629 , delta error  3765.35136173
+Step  200 , error  4489234.3099 , delta error  0.137798464857
+Step  250 , error  4489233.03235 , delta error  0.000948580913246
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 90.48%
+[0.003984274563820017, 0.0035413709960475494, 0.0032736901288597129, 0.00387446684464083]
+Result:  result(mean_score=0.0036684506333420274, std_dev=0.00028025547474336087, parameters={'k': 200, 'reg_penalty': 50})
+{'k': 200, 'reg_penalty': 100}
+Step  100 , error  8944939.81508 , delta error  0.370338276029
+Step  130 , error  8944938.23601 , delta error  0.000834507867694
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 91.07%
+Step  100 , error  8944994.89796 , delta error  0.37027361244
+Step  130 , error  8944993.31924 , delta error  0.000834062695503
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 91.67%
+Step  100 , error  8945939.48474 , delta error  0.370372151956
+Step  130 , error  8945937.9055 , delta error  0.000834666192532
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 92.26%
+Step  100 , error  8943681.61591 , delta error  0.370202183723
+Step  130 , error  8943680.03757 , delta error  0.000833602622151
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 92.86%
+[0.004004553106825833, 0.0035931038166308023, 0.0032762734014101626, 0.003889656018902083]
+Result:  result(mean_score=0.00369089658594222, std_dev=0.00028256040777347032, parameters={'k': 200, 'reg_penalty': 100})
+{'k': 200, 'reg_penalty': 200}
+Step  66 , error  17847061.3411 , delta error  0.000799406319857
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 93.45%
+Step  66 , error  17847022.1824 , delta error  0.000799257308245
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 94.05%
+Step  66 , error  17848384.8483 , delta error  0.000799402594566
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 94.64%
+Step  66 , error  17845462.1649 , delta error  0.000799149274826
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 95.24%
+[0.004004553106825833, 0.0036458667155000058, 0.0032762734014101626, 0.0038924176869495845]
+Result:  result(mean_score=0.0037047777276713965, std_dev=0.00027935662567977419, parameters={'k': 200, 'reg_penalty': 200})
+{'k': 200, 'reg_penalty': 500}
+Step  25 , error  44543966.6387 , delta error  0.000381611287594
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 95.83%
+Step  25 , error  44543792.7281 , delta error  0.000381477177143
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 96.43%
+Step  25 , error  44545630.2403 , delta error  0.000381484627724
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 97.02%
+Step  25 , error  44541986.491 , delta error  0.000381618738174
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 97.62%
+[0.0040109810223446568, 0.0036513604663584043, 0.0032764253586190116, 0.0038924176869495845]
+Result:  result(mean_score=0.0037077961335679143, std_dev=0.00028074540279808058, parameters={'k': 200, 'reg_penalty': 500})
+{'k': 200, 'reg_penalty': 1000}
+Step  9 , error  89034400.8559 , delta error  7.18533992767e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 98.21%
+Step  9 , error  89034145.791 , delta error  0.000294998288155
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 98.81%
+Step  9 , error  89036224.7037 , delta error  0.000124782323837
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 99.40%
+Step  8 , error  89032221.8645 , delta error  0.000191196799278
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 100.00%
+[0.0040109810223446568, 0.0036513604663584043, 0.0032709548991004121, 0.0038924176869495845]
+Result:  result(mean_score=0.0037064285186882645, std_dev=0.00028284888277058128, parameters={'k': 200, 'reg_penalty': 1000})
+Total scores:           MAP       Std    k  reg_penalty
+0   0.001606  0.000453   10           10
+1   0.003466  0.000174   10           20
+2   0.003697  0.000274   10           50
+3   0.003922  0.000324   10          100
+4   0.003934  0.000301   10          200
+5   0.003935  0.000300   10          500
+6   0.003929  0.000289   10         1000
+7   0.001005  0.000627   20           10
+8   0.003255  0.000161   20           20
+9   0.003820  0.000220   20           50
+10  0.004042  0.000131   20          100
+11  0.004046  0.000130   20          200
+12  0.003949  0.000262   20          500
+13  0.003949  0.000262   20         1000
+14  0.000995  0.000094   50           10
+15  0.003820  0.000234   50           20
+16  0.004269  0.000249   50           50
+17  0.004316  0.000201   50          100
+18  0.004318  0.000194   50          200
+19  0.004355  0.000167   50          500
+20  0.004348  0.000165   50         1000
+21  0.000780  0.000300  100           10
+22  0.003466  0.000106  100           20
+23  0.003776  0.000217  100           50
+24  0.003854  0.000153  100          100
+25  0.003863  0.000163  100          200
+26  0.003802  0.000203  100          500
+27  0.003802  0.000203  100         1000
+28  0.001639  0.000693  150           10
+29  0.003421  0.000140  150           20
+30  0.003617  0.000181  150           50
+31  0.003664  0.000170  150          100
+32  0.003655  0.000177  150          200
+33  0.003651  0.000171  150          500
+34  0.003651  0.000171  150         1000
+35  0.000972  0.000148  200           10
+36  0.003268  0.000441  200           20
+37  0.003668  0.000280  200           50
+38  0.003691  0.000283  200          100
+39  0.003705  0.000279  200          200
+40  0.003708  0.000281  200          500
+41  0.003706  0.000283  200         1000

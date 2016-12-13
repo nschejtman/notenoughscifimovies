@@ -222,7 +222,7 @@ actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
 
 item_ids = items_dataframe.id.values
-ICM = ut.generate_icm(items_dataframe, include_title=False, include_tags=False)
+ICM = ut.generate_icm(items_dataframe)
 top_rec = TopPop(count=True)
 top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]

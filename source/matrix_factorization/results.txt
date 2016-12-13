@@ -1,0 +1,4 @@
+Conclusions:
+Substracting global bias decreases performance (even if added or not at the end)
+Adaptive gradient descent converges in less iterations but takes too long
+Ignore the ones-columns in the error/gradient calulation does not affect the results

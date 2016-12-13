@@ -1,0 +1,58 @@
+{'l1_ratio': 0.01, 'aa_sh': 100, 'k_nn': 10}
+1480940858.66 :  Started fit
+1480945170.85 :  Finished fit
+1480945171.49 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480945181.92 :  Finished predict
+Progress: 0.06%
+1480945182.02 :  Started fit
+1480949437.47 :  Finished fit
+1480949438.12 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480949448.55 :  Finished predict
+Progress: 0.12%
+1480949448.65 :  Started fit
+1480953708.77 :  Finished fit
+1480953709.41 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480953719.76 :  Finished predict
+Progress: 0.17%
+1480953719.86 :  Started fit
+1480957979.76 :  Finished fit
+1480957980.4 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480957990.76 :  Finished predict
+Progress: 0.23%
+[0.0056106189245724129, 0.0040780651340996165, 0.0051117266851338867, 0.0027777777777777788]
+Result:  result(mean_score=0.0043945471303959236, std_dev=0.001084813476579126, parameters={'l1_ratio': 0.01, 'aa_sh': 100, 'k_nn': 10})
+{'l1_ratio': 0.001, 'aa_sh': 100, 'k_nn': 10}
+1480957990.85 :  Started fit
+1480962248.72 :  Finished fit
+1480962249.36 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480962259.74 :  Finished predict
+Progress: 0.29%
+1480962259.84 :  Started fit
+{'l1_ratio': 0.01, 'aa_sh': 100, 'k_nn': 10}
+1480967525.06 :  Started fit
+1480969335.73 :  Finished fit
+1480969336.42 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1480969346.84 :  Finished predict
+Progress: 0.06%
+[0.0035014457979574256]
+Result:  result(mean_score=0.0035014457979574256, std_dev=0.0, parameters={'l1_ratio': 0.01, 'aa_sh': 100, 'k_nn': 10})
+{'l1_ratio': 0.001, 'aa_sh': 100, 'k_nn': 10}
+1480969346.94 :  Started fit

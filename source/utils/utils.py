@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 
 
-def generate_icm(items_df, include_title, include_tags):
+def generate_icm(items_df):
     """ Generates normalized vectors from the item-content matrix, using
     TF-IDF. Normalization is computed among the values corresponding to the
     same attribute in the original item-content matrix.
@@ -17,16 +17,16 @@ def generate_icm(items_df, include_title, include_tags):
                             axis=1)
 
     attr_mats = {}
-    to_dummies = ['career_level', 'country', 'region', 'employment']
+    to_dummies = ['career_level', 'country_region', 'employment']#'country', 'region']
     to_tfidf = ['discipline_id', 'industry_id', 'title', 'tags']
 
-    if not include_tags:
-        to_tfidf.remove('tags')
-
-    if not include_title:
-        to_tfidf.remove('title')
-
     attr_df['career_level'] = attr_df['career_level'].fillna(0)
+    attr_df['career_level'] = attr_df['career_level'].astype(dtype=int)
+
+    country_dict = {c: i for i, c in enumerate(attr_df['country'].unique())}
+    attr_df['country'] = attr_df['country'].apply(lambda x: country_dict[x])
+    attr_df['country_region'] = attr_df['country'].apply(lambda x: x * 100) + attr_df['region']
+
     trans = CountVectorizer(token_pattern='\w+')
     for attr in to_dummies:
         attr_mats[attr] = trans.fit_transform(attr_df[attr].map(str).values).tocsr()
@@ -56,7 +56,10 @@ def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask):
 
 
 def read_items():
-    return pd.read_csv('../../inputs/item_profile.csv', sep='\t')
+    items_df = pd.read_csv('../../inputs/item_profile.csv', sep='\t')
+    items_df['career_level'] = items_df['career_level'].fillna(0)
+    items_df['career_level'] = items_df['career_level'].astype(dtype=int)
+    return items_df
 
 def read_interactions():
     ints = pd.read_csv('../../inputs/interactions_idx.csv', sep='\t')
@@ -99,8 +102,7 @@ def read_top_pops(count=False):
     return aux
 
 
-def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1000):
-    print "Computing similarity matrix"
+def normalize_matrix(matrix, row_wise=True):
     matrix = check_matrix(matrix, format='csr' if row_wise else 'csc')
     matrix_norms = matrix.copy()
     matrix_norms.data **= 2
@@ -113,6 +115,13 @@ def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1
 
     matrix_norms = np.repeat(matrix_norms, repetitions)
     matrix.data /= matrix_norms
+    return matrix
+
+
+#Matrix assumed to be already normalized
+def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1000):
+    print "Computing similarity matrix"
+    matrix = normalize_matrix(matrix, row_wise)
     sim = None
     if row_wise:
         n_iterations = matrix.shape[0] / partition_size + (matrix.shape[0] % partition_size != 0)
@@ -137,6 +146,7 @@ def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1
             if i == 0:
                 sim = similarity_matrix.copy()
                 top_k_idx = idx_sorted[:,-k:]
+                break
             else:
                 sim = sps.vstack([sim, similarity_matrix])
                 top_k_idx = np.vstack((top_k_idx,idx_sorted[:,-k:]))
@@ -159,24 +169,10 @@ def apply_shrinkage(partitioned_matrix, matrix, dist, sh, row_wise=True):
     return dist * co_counts
 
 
-def compute_similarity_matrix_batch(matrix, sh, batch_mask, row_wise=True): # TODO: column_wise
+def compute_similarity_matrix_mask(matrix, sh, batch_mask, row_wise=True): # TODO: column_wise
     print "Computing similarity matrix - batch"
     # TODO: normalize only once
-    matrix = check_matrix(matrix, format='csr' if row_wise else 'csc')
-    matrix_norms = matrix.copy()
-    matrix_norms.data **= 2
-
-    matrix_norms = matrix_norms.sum(axis=1 if row_wise else 0)
-
-    matrix_norms = np.asarray(np.sqrt(matrix_norms)).ravel()
-    matrix_norms += 1e-6
-    repetitions = np.diff(matrix.indptr)
-
-    matrix_norms = np.repeat(matrix_norms, repetitions)
-    matrix.data /= matrix_norms
-
-    del matrix_norms
-    del repetitions
+    matrix = normalize_matrix(matrix, row_wise)
 
     if row_wise:
         partitioned_matrix = matrix[batch_mask, :]

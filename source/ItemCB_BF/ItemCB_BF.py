@@ -23,7 +23,8 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=icm, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'sh': [0.1, 0.5, 1, 2, 5, 10, 20, 50]}
+    params = {'sh': [0.1, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500][::-1]}
+    params = {'sh': [100, 200, 500, 1000, 2000, 5000, 10000, 20000]}
     grid = list(ParameterGrid(params))
     folds = 2
     kfold = KFold(n_splits=folds)
@@ -60,15 +61,15 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    scores.to_csv('ItemCB_BF CV MAP values 2.csv', sep='\t', index=False)
-    f = scores['MAP'].plot(title="ItemCB_BF CV MAP values").get_figure()
+    scores.to_csv('ItemCB_BF CV MAP values 7.csv', sep='\t', index=False)
+    '''f = scores['MAP'].plot(title="ItemCB_BF CV MAP values").get_figure()
     x_max, y_max = scores['MAP'].argmax(), scores['MAP'].max()
     plt.plot(x_max, y_max, 'o', color='r')
     plt.figtext(0, 0,"Not normalized ratings, No title/tags\nMaximumm at (sh={:.5f},{:.5f}+/-{:.5f})".format(x_max,
                                                                                                           y_max,
                                                                                                           scores['Std'][x_max]))
     f.savefig('ItemCB_BF CV MAP values 2.png', bbox_inches='tight')
-    plt.close(f)
+    plt.close(f)'''
 
 
 def holdout_search(rec, urm, icm, actives, sample_size=None):
@@ -163,7 +164,7 @@ class ItemCB_BF(BaseEstimator):
             rated_items_batch = np.diff(batch_profiles.tocsc().indptr) != 0
             #print "Similarity batch size: ", np.extract(rated_items_batch == True, rated_items_batch).shape[0]
             #break
-            batch_sim_mat = ut.compute_similarity_matrix_batch(self.icm, self.sh, rated_items_batch)
+            batch_sim_mat = ut.compute_similarity_matrix_mask(self.icm, self.sh, rated_items_batch)
             batch_scores = batch_profiles.dot(batch_sim_mat).toarray().astype(np.float32)
 
             # normalization
@@ -207,7 +208,7 @@ urm = ut.read_interactions()
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
 item_ids = items_dataframe.id.values
-icm = ut.generate_icm(items_dataframe, include_tags=False, include_title=False)
+icm = ut.generate_icm(items_dataframe)
 
 top_rec = TopPop(count=True)
 top_rec.fit(urm)

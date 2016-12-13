@@ -1,0 +1,2365 @@
+Global, user and item bias, ones-columns ignored, bias not added on pred; same as if global bias was added
+{'k': 10, 'reg_penalty': 10}
+Step  100 , error  1314854.92515 , delta error  26604.2477249 , grad norm  5118.96979072
+Step  200 , error  182564.32236 , delta error  3549.18415535 , grad norm  1869.76011234
+Step  300 , error  31190.7369715 , delta error  475.915691588 , grad norm  684.689994287
+Step  400 , error  10855.9939039 , delta error  64.1995083009 , grad norm  251.482610094
+Step  500 , error  8103.57319146 , delta error  8.7599283648 , grad norm  92.9005370566
+Step  600 , error  7725.42492968 , delta error  1.22383914369 , grad norm  34.7285325576
+Step  700 , error  7671.75265018 , delta error  0.180811919863 , grad norm  13.352986987
+Step  800 , error  7663.49176368 , delta error  0.0307751307037 , grad norm  5.51332797809
+Step  900 , error  7661.93738515 , delta error  0.00713642577375 , grad norm  2.65895845773
+Step  1000 , error  7661.50820438 , delta error  0.00257131004037 , grad norm  1.59865453954
+Step  1100 , error  7661.32501588 , delta error  0.00132508459501 , grad norm  1.14878939996
+Step  1200 , error  7661.22045789 , delta error  0.000833574535136 , grad norm  0.911637117584
+Step  1300 , error  7661.15087754 , delta error  0.000584995762438 , grad norm  0.76394878717
+Step  1400 , error  7661.10026195 , delta error  0.00044056673687 , grad norm  0.663116663985
+Step  1500 , error  7661.06114033 , delta error  0.000349197661308 , grad norm  0.59046153562
+Step  1600 , error  7661.02951533 , delta error  0.000287676652079 , grad norm  0.535997735694
+Step  1700 , error  7661.0030657 , delta error  0.000244076364652 , grad norm  0.493759228372
+Step  1800 , error  7660.98036393 , delta error  0.000211784506973 , grad norm  0.459971829599
+Step  1900 , error  7660.96049094 , delta error  0.000186933396435 , grad norm  0.432167193003
+Step  2000 , error  7660.94283113 , delta error  0.000167162883372 , grad norm  0.408692580114
+Step  2100 , error  7660.92695729 , delta error  0.000150980335093 , grad norm  0.388419633931
+Step  2200 , error  7660.91256315 , delta error  0.00013741165003 , grad norm  0.370564370094
+Step  2300 , error  7660.89942243 , delta error  0.000125802951516 , grad norm  0.354573052539
+Step  2400 , error  7660.88736323 , delta error  0.000115703855045 , grad norm  0.340048445552
+Step  2500 , error  7660.87625153 , delta error  0.000106796712316 , grad norm  0.326701370325
+Step  2586 , error  7660.86747101 , delta error  9.99898857117e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 0.60%
+Step  100 , error  1314377.37962 , delta error  26599.2008312 , grad norm  5118.48197405
+Step  200 , error  182328.47909 , delta error  3548.35843274 , grad norm  1869.5425806
+Step  300 , error  30989.9212332 , delta error  475.805141499 , grad norm  684.610389841
+Step  400 , error  10660.6447052 , delta error  64.1716844206 , grad norm  251.427656028
+Step  500 , error  7910.09195144 , delta error  8.74827397791 , grad norm  92.8382582993
+Step  600 , error  7532.64313089 , delta error  1.22026775179 , grad norm  34.6775916609
+Step  700 , error  7479.16200879 , delta error  0.179951476814 , grad norm  13.3210828617
+Step  800 , error  7470.94605532 , delta error  0.030571133334 , grad norm  5.49498516247
+Step  900 , error  7469.40330443 , delta error  0.00706998319947 , grad norm  2.64650641416
+Step  1000 , error  7468.97944964 , delta error  0.00252215424553 , grad norm  1.58319538503
+Step  1100 , error  7468.80172635 , delta error  0.00126270420878 , grad norm  1.12124715583
+Step  1200 , error  7468.70442275 , delta error  0.000750774871449 , grad norm  0.864943398144
+Step  1300 , error  7468.64412949 , delta error  0.000482781400024 , grad norm  0.693737419327
+Step  1400 , error  7468.60454325 , delta error  0.000323173494508 , grad norm  0.567658123076
+Step  1500 , error  7468.5777128 , delta error  0.000221709313337 , grad norm  0.470212174449
+Step  1600 , error  7468.55914422 , delta error  0.000154811764332 , grad norm  0.392942882237
+Step  1700 , error  7468.5460863 , delta error  0.000109681231152 , grad norm  0.330762153439
+Step  1729 , error  7468.54316048 , delta error  9.98300120045e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 1.19%
+Step  100 , error  1314223.59643 , delta error  26592.962827 , grad norm  5117.87784675
+Step  200 , error  182524.887329 , delta error  3546.75839459 , grad norm  1869.11954475
+Step  300 , error  31265.0727076 , delta error  475.501982529 , grad norm  684.391879499
+Step  400 , error  10949.427832 , delta error  64.1286465599 , grad norm  251.343475114
+Step  500 , error  8200.36113017 , delta error  8.74796216781 , grad norm  92.8370918314
+Step  600 , error  7822.62891766 , delta error  1.22414952124 , grad norm  34.7334859457
+Step  700 , error  7768.80831841 , delta error  0.182708269349 , grad norm  13.4237776418
+Step  800 , error  7760.37911799 , delta error  0.0321688260974 , grad norm  5.63788088356
+Step  900 , error  7758.71522592 , delta error  0.0079695737877 , grad norm  2.81065135041
+Step  1000 , error  7758.22263364 , delta error  0.0030401625927 , grad norm  1.7385201089
+Step  1100 , error  7758.00456443 , delta error  0.00157447719266 , grad norm  1.25213607156
+Step  1200 , error  7757.88236446 , delta error  0.000948996364059 , grad norm  0.972481107377
+Step  1300 , error  7757.80580716 , delta error  0.000616276998699 , grad norm  0.78383666188
+Step  1400 , error  7757.75498078 , delta error  0.000417992095208 , grad norm  0.645622418859
+Step  1500 , error  7757.71998969 , delta error  0.000292087954222 , grad norm  0.539750617575
+Step  1600 , error  7757.69526008 , delta error  0.0002088322708 , grad norm  0.456424211813
+Step  1700 , error  7757.67741337 , delta error  0.000152180446094 , grad norm  0.38965322285
+Step  1800 , error  7757.66430025 , delta error  0.000112795200039 , grad norm  0.335483167119
+Step  1843 , error  7757.6598457 , delta error  9.99404937829e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 1.79%
+Step  100 , error  1314892.86757 , delta error  26611.3709623 , grad norm  5119.65851298
+Step  200 , error  182227.11422 , delta error  3550.77047096 , grad norm  1870.17903949
+Step  300 , error  30778.9909434 , delta error  476.172364844 , grad norm  684.874537362
+Step  400 , error  10434.4962796 , delta error  64.2122223848 , grad norm  251.506740072
+Step  500 , error  7682.7099584 , delta error  8.74735671274 , grad norm  92.8329251551
+Step  600 , error  7305.56174575 , delta error  1.216836153 , grad norm  34.6281679666
+Step  700 , error  7252.36588373 , delta error  0.177702995795 , grad norm  13.2367434134
+Step  800 , error  7244.32469718 , delta error  0.0292379502616 , grad norm  5.37279024108
+Step  900 , error  7242.8859497 , delta error  0.00626881456265 , grad norm  2.49114734899
+Step  1000 , error  7242.52518383 , delta error  0.00203194420374 , grad norm  1.42059393967
+Step  1100 , error  7242.38613576 , delta error  0.00096268417019 , grad norm  0.978925283172
+Step  1200 , error  7242.31229863 , delta error  0.000571395046791 , grad norm  0.754630130058
+Step  1300 , error  7242.26572685 , delta error  0.000381342815672 , grad norm  0.616684178336
+Step  1400 , error  7242.23355311 , delta error  0.000272179173407 , grad norm  0.521096865588
+Step  1500 , error  7242.21007032 , delta error  0.000202977117624 , grad norm  0.450063743431
+Step  1600 , error  7242.19227644 , delta error  0.000156214432536 , grad norm  0.394871148271
+Step  1700 , error  7242.17841438 , delta error  0.000123160898511 , grad norm  0.350643771841
+Step  1797 , error  7242.16777571 , delta error  9.98365267151e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 2.38%
+[0.00014554637281910009, 0.0001888476857574509, 7.2939460247994163e-05, 8.9293933535855647e-05]
+Result:  result(mean_score=0.0001241568630901002, std_dev=4.6046335019250947e-05, parameters={'k': 10, 'reg_penalty': 10})
+{'k': 10, 'reg_penalty': 20}
+Step  100 , error  359325.382283 , delta error  14485.223365 , grad norm  3748.55423208
+Step  200 , error  14427.2910935 , delta error  254.59079688 , grad norm  496.975572858
+Step  300 , error  8353.67843121 , delta error  4.52069759605 , grad norm  66.2280652294
+Step  400 , error  8245.28194508 , delta error  0.0832394964036 , grad norm  8.98944442088
+Step  500 , error  8243.22004409 , delta error  0.00201629164621 , grad norm  1.40255746366
+Step  600 , error  8243.15430002 , delta error  0.00018331053252 , grad norm  0.425654797191
+Step  646 , error  8243.14824583 , delta error  9.97304032353e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 2.98%
+Step  100 , error  359140.198659 , delta error  14483.994006 , grad norm  3748.39630647
+Step  200 , error  14264.5579809 , delta error  254.584403934 , grad norm  496.969231486
+Step  300 , error  8191.49328451 , delta error  4.51627187169 , grad norm  66.1948627985
+Step  400 , error  8083.36771384 , delta error  0.0818207828079 , grad norm  8.91092718677
+Step  500 , error  8081.38681737 , delta error  0.00159530637029 , grad norm  1.24491870197
+Step  576 , error  8081.34790719 , delta error  9.91905399133e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 3.57%
+Step  100 , error  359316.01248 , delta error  14478.6784082 , grad norm  3747.70542785
+Step  200 , error  14581.8814629 , delta error  254.456173226 , grad norm  496.843999
+Step  300 , error  8511.80272948 , delta error  4.51496723771 , grad norm  66.1854473309
+Step  400 , error  8403.68753023 , delta error  0.08188926197 , grad norm  8.91470374163
+Step  500 , error  8401.70469686 , delta error  0.00159205656018 , grad norm  1.24357922478
+Step  575 , error  8401.6662139 , delta error  9.87874645944e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 4.17%
+Step  100 , error  359084.055366 , delta error  14491.3095061 , grad norm  3749.34513398
+Step  200 , error  14025.2817978 , delta error  254.717971384 , grad norm  497.099258761
+Step  300 , error  7949.47941077 , delta error  4.51589023383 , grad norm  66.1917319351
+Step  400 , error  7841.41524259 , delta error  0.0815119256577 , grad norm  8.8938216555
+Step  500 , error  7839.44787459 , delta error  0.00155142251151 , grad norm  1.22742615878
+Step  573 , error  7839.41096759 , delta error  9.90604667095e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 4.76%
+[6.1983471074380153e-05, 0.0001888476857574509, 9.1174325309992707e-05, 7.9858234373561622e-05]
+Result:  result(mean_score=0.00010546592912884634, std_dev=4.9252526502010936e-05, parameters={'k': 10, 'reg_penalty': 20})
+{'k': 10, 'reg_penalty': 50}
+Step  100 , error  10764.4172344 , delta error  202.08502434 , grad norm  432.500438355
+Step  200 , error  8893.89694916 , delta error  0.00712693882815 , grad norm  2.56861954407
+Step  243 , error  8893.83174447 , delta error  9.68793810898e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 5.36%
+Step  100 , error  10557.14098 , delta error  202.069704054 , grad norm  432.48384126
+Step  200 , error  8686.80006799 , delta error  0.00711817569209 , grad norm  2.56700221911
+Step  243 , error  8686.73497581 , delta error  9.6445568488e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 5.95%
+Step  100 , error  10938.9469871 , delta error  201.98502977 , grad norm  432.393011732
+Step  200 , error  9069.41016278 , delta error  0.00711539708573 , grad norm  2.56650377138
+Step  243 , error  9069.34509395 , delta error  9.64248902164e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 6.55%
+Step  100 , error  10301.7855943 , delta error  202.144870602 , grad norm  432.564126796
+Step  200 , error  8430.77741363 , delta error  0.00711688054434 , grad norm  2.5667556
+Step  243 , error  8430.71234334 , delta error  9.63447346294e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 7.14%
+[8.1267217630854005e-05, 0.00019800393718811518, 9.1174325309992707e-05, 5.0630580870845992e-05]
+Result:  result(mean_score=0.00010526901524995197, std_dev=5.5587477977798239e-05, parameters={'k': 10, 'reg_penalty': 50})
+{'k': 10, 'reg_penalty': 100}
+Step  100 , error  9249.05979641 , delta error  0.0197490174432 , grad norm  4.10352415168
+Step  127 , error  9248.97594245 , delta error  8.25367733341e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 7.74%
+Step  100 , error  9005.00423523 , delta error  0.0197461661355 , grad norm  4.10322062641
+Step  127 , error  9004.92039574 , delta error  8.25085971883e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 8.33%
+Step  100 , error  9454.65825086 , delta error  0.0197386195305 , grad norm  4.10243543496
+Step  127 , error  9454.57444364 , delta error  8.24766975711e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 8.93%
+Step  100 , error  8740.97316977 , delta error  0.019750272153 , grad norm  4.10364161566
+Step  127 , error  8740.8893146 , delta error  8.25146926218e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 9.52%
+[9.0564738292011032e-05, 0.00019800393718811518, 0.00010211524434719183, 6.7200589155850117e-05]
+Result:  result(mean_score=0.00011447112724579205, std_dev=4.984078997966002e-05, parameters={'k': 10, 'reg_penalty': 100})
+{'k': 10, 'reg_penalty': 200}
+Step  65 , error  9496.57921659 , delta error  6.70958652336e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 10.12%
+Step  65 , error  9219.65447188 , delta error  6.70906083542e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 10.71%
+Step  65 , error  9746.49162136 , delta error  6.7070734076e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 11.31%
+Step  65 , error  8949.15941841 , delta error  6.7102482717e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 11.90%
+[7.782369146005511e-05, 0.00019800393718811518, 0.00010211524434719183, 7.9167817361686468e-05]
+Result:  result(mean_score=0.00011427767258926215, std_dev=4.9294032901281694e-05, parameters={'k': 10, 'reg_penalty': 200})
+{'k': 10, 'reg_penalty': 500}
+Step  24 , error  9691.75525247 , delta error  8.27381845738e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 12.50%
+Step  24 , error  9383.29049138 , delta error  8.27365056466e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 13.10%
+Step  24 , error  10004.5675779 , delta error  8.2717213445e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 13.69%
+Step  24 , error  9106.79855884 , delta error  8.2751539594e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 14.29%
+[5.7162534435261704e-05, 0.00019800393718811518, 9.1174325309992707e-05, 9.3206296603148307e-05]
+Result:  result(mean_score=0.00010988677338412948, std_dev=5.2850908100438234e-05, parameters={'k': 10, 'reg_penalty': 500})
+{'k': 10, 'reg_penalty': 1000}
+Step  10 , error  9770.55624833 , delta error  5.20649591635e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 14.88%
+Step  10 , error  9447.31488963 , delta error  1.56287223945e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 15.48%
+Step  9 , error  10120.4150098 , delta error  5.21386373293e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 16.07%
+Step  9 , error  9168.11657914 , delta error  7.35629873816e-06
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 16.67%
+[5.7162534435261704e-05, 0.00019800393718811518, 9.1174325309992707e-05, 9.3206296603148307e-05]
+Result:  result(mean_score=0.00010988677338412948, std_dev=5.2850908100438234e-05, parameters={'k': 10, 'reg_penalty': 1000})
+{'k': 20, 'reg_penalty': 10}
+Step  100 , error  2521530.92613 , delta error  51068.2868644 , grad norm  7092.40367288
+Step  200 , error  344712.481288 , delta error  6835.85841494 , grad norm  2594.90392084
+Step  300 , error  52991.7518493 , delta error  918.014569784 , grad norm  950.945605293
+Step  400 , error  13753.9508203 , delta error  123.930639514 , grad norm  349.407139189
+Step  500 , error  8441.09741809 , delta error  16.8998007555 , grad norm  129.034618184
+Step  600 , error  7712.11137235 , delta error  2.35467968842 , grad norm  48.1707427987
+Step  700 , error  7609.0499907 , delta error  0.345394135747 , grad norm  18.4545399471
+Step  800 , error  7593.36463307 , delta error  0.0575254216246 , grad norm  7.53676865316
+Step  900 , error  7590.51233925 , delta error  0.0125901648153 , grad norm  3.53064576398
+Step  1000 , error  7589.78376856 , delta error  0.00411436293234 , grad norm  2.02140951773
+Step  1100 , error  7589.50420052 , delta error  0.00190939151162 , grad norm  1.37849127964
+Step  1200 , error  7589.36001317 , delta error  0.00109511994015 , grad norm  1.04457965548
+Step  1300 , error  7589.2720375 , delta error  0.0007102589243 , grad norm  0.841546532582
+Step  1400 , error  7589.21256734 , delta error  0.00050051872222 , grad norm  0.706636199514
+Step  1500 , error  7589.16932126 , delta error  0.000375639755475 , grad norm  0.612297073482
+Step  1600 , error  7589.13604337 , delta error  0.00029630615154 , grad norm  0.543899728291
+Step  1700 , error  7589.10926272 , delta error  0.000243158488047 , grad norm  0.49277698723
+Step  1800 , error  7589.08693227 , delta error  0.00020588971347 , grad norm  0.453490490843
+Step  1900 , error  7589.06778384 , delta error  0.000178691007022 , grad norm  0.422510783961
+Step  2000 , error  7589.05099792 , delta error  0.000158134988851 , grad norm  0.397492142334
+Step  2100 , error  7589.03602462 , delta error  0.000142118688018 , grad norm  0.376844776992
+Step  2200 , error  7589.02248228 , delta error  0.000129306459712 , grad norm  0.359471891997
+Step  2300 , error  7589.01009765 , delta error  0.000118823174489 , grad norm  0.344603712081
+Step  2400 , error  7588.99866949 , delta error  0.000110078834041 , grad norm  0.331690666239
+Step  2500 , error  7588.98804574 , delta error  0.00010266496156 , grad norm  0.32033356106
+Step  2542 , error  7588.98389428 , delta error  9.99394860628e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 17.26%
+Step  100 , error  2521677.05158 , delta error  51070.5302692 , grad norm  7092.56040926
+Step  200 , error  344728.238624 , delta error  6836.5696489 , grad norm  2595.0398835
+Step  300 , error  52964.0015094 , delta error  918.253975819 , grad norm  951.070382809
+Step  400 , error  13712.3818677 , delta error  124.00023394 , grad norm  349.505746587
+Step  500 , error  8395.71425824 , delta error  16.9176411677 , grad norm  129.102994249
+Step  600 , error  7665.80216705 , delta error  2.35859618199 , grad norm  48.2108838213
+Step  700 , error  7562.55637129 , delta error  0.346014112889 , grad norm  18.4710582649
+Step  800 , error  7546.84943459 , delta error  0.0575305307311 , grad norm  7.53701900371
+Step  900 , error  7544.00053132 , delta error  0.0125494072754 , grad norm  3.52489172918
+Step  1000 , error  7543.27467295 , delta error  0.0041002666685 , grad norm  2.01795948913
+Step  1100 , error  7542.99581879 , delta error  0.00190537377875 , grad norm  1.37703141515
+Step  1200 , error  7542.85232875 , delta error  0.00108312026441 , grad norm  1.03877100863
+Step  1300 , error  7542.76633224 , delta error  0.000682204743498 , grad norm  0.824630724435
+Step  1400 , error  7542.71054159 , delta error  0.000455346085801 , grad norm  0.673824809873
+Step  1500 , error  7542.6725883 , delta error  0.000315621625305 , grad norm  0.561061899631
+Step  1600 , error  7542.64592151 , delta error  0.000224794497626 , grad norm  0.47354201315
+Step  1700 , error  7542.62673064 , delta error  0.000163478250215 , grad norm  0.403855356799
+Step  1800 , error  7542.61265786 , delta error  0.000120897751913 , grad norm  0.347319950036
+Step  1867 , error  7542.60540959 , delta error  9.98421110125e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 17.86%
+Step  100 , error  2521174.58868 , delta error  51059.6016129 , grad norm  7091.79746038
+Step  200 , error  344798.424938 , delta error  6834.15059486 , grad norm  2594.5793249
+Step  300 , error  53152.2098979 , delta error  917.797796514 , grad norm  950.833661179
+Step  400 , error  13921.3088841 , delta error  123.933893391 , grad norm  349.412403185
+Step  500 , error  8606.86543538 , delta error  16.9186390093 , grad norm  129.107467585
+Step  600 , error  7876.32522909 , delta error  2.36667812571 , grad norm  48.2945939677
+Step  700 , error  7772.35941761 , delta error  0.352024545748 , grad norm  18.6325201661
+Step  800 , error  7756.17426966 , delta error  0.0612318512012 , grad norm  7.77777093251
+Step  900 , error  7753.0374958 , delta error  0.0147469454669 , grad norm  3.82280095785
+Step  1000 , error  7752.14061449 , delta error  0.00541210853498 , grad norm  2.31927112485
+Step  1100 , error  7751.75881542 , delta error  0.00270371299212 , grad norm  1.64062625473
+Step  1200 , error  7751.55200178 , delta error  0.00158044385626 , grad norm  1.25485101043
+Step  1300 , error  7751.42611658 , delta error  0.000999452384349 , grad norm  0.998109710719
+Step  1400 , error  7751.34460654 , delta error  0.0006623429299 , grad norm  0.812644758483
+Step  1500 , error  7751.28970403 , delta error  0.000453526633464 , grad norm  0.672522228442
+Step  1600 , error  7751.25164176 , delta error  0.000318436121233 , grad norm  0.563576521065
+Step  1700 , error  7751.22464754 , delta error  0.000228191867791 , grad norm  0.477114000417
+Step  1800 , error  7751.20513875 , delta error  0.000166375717527 , grad norm  0.407420898344
+Step  1900 , error  7751.1908086 , delta error  0.000123166612866 , grad norm  0.350564847681
+Step  1974 , error  7751.18271804 , delta error  9.9767015854e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 18.45%
+Step  100 , error  2522011.24537 , delta error  51082.2543726 , grad norm  7093.37716144
+Step  200 , error  344508.034693 , delta error  6838.462274 , grad norm  2595.39892909
+Step  300 , error  52668.7113324 , delta error  918.42103164 , grad norm  951.156223375
+Step  400 , error  13413.3280238 , delta error  123.9852596 , grad norm  349.484067717
+Step  500 , error  8098.29478149 , delta error  16.9049499796 , grad norm  129.054138549
+Step  600 , error  7369.20123157 , delta error  2.35387689638 , grad norm  48.1623106127
+Step  700 , error  7266.24053062 , delta error  0.344443825396 , grad norm  18.4288537526
+Step  800 , error  7250.62828952 , delta error  0.0570084742876 , grad norm  7.50259545542
+Step  900 , error  7247.8102031 , delta error  0.0123919452599 , grad norm  3.5027146819
+Step  1000 , error  7247.09187793 , delta error  0.00408504157531 , grad norm  2.01434965353
+Step  1100 , error  7246.81106015 , delta error  0.0019509966105 , grad norm  1.39360373502
+Step  1200 , error  7246.66148852 , delta error  0.00115509102761 , grad norm  1.07291090144
+Step  1300 , error  7246.56769554 , delta error  0.00076420014193 , grad norm  0.8729540199
+Step  1400 , error  7246.50356509 , delta error  0.000539178777217 , grad norm  0.733394235356
+Step  1500 , error  7246.45732247 , delta error  0.000397117637476 , grad norm  0.629491253128
+Step  1600 , error  7246.42271732 , delta error  0.000301879321341 , grad norm  0.548898185358
+Step  1700 , error  7246.39608334 , delta error  0.000235217201407 , grad norm  0.484557829822
+Step  1800 , error  7246.37512115 , delta error  0.00018698914937 , grad norm  0.432064885892
+Step  1900 , error  7246.35831657 , delta error  0.000151161458234 , grad norm  0.388495856037
+Step  2000 , error  7246.34463436 , delta error  0.000123955929666 , grad norm  0.351820434735
+Step  2100 , error  7246.33334506 , delta error  0.000102909628367 , grad norm  0.320578332812
+Step  2117 , error  7246.33172343 , delta error  9.99946805678e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 19.05%
+[5.7392102846648294e-05, 5.4365242869569201e-05, 0.0, 9.7809076682316108e-05]
+Result:  result(mean_score=5.2391605599633396e-05, std_dev=3.4772572645853159e-05, parameters={'k': 20, 'reg_penalty': 10})
+{'k': 20, 'reg_penalty': 20}
+Step  100 , error  683079.816146 , delta error  27819.4742921 , grad norm  5194.95353275
+Step  200 , error  20195.0635257 , delta error  490.314936155 , grad norm  689.69180111
+Step  300 , error  8491.89796432 , delta error  8.7232409907 , grad norm  91.9984205034
+Step  400 , error  8282.70984032 , delta error  0.160340806378 , grad norm  12.4760195213
+Step  500 , error  8278.75626019 , delta error  0.0037221236089 , grad norm  1.90488242214
+Step  600 , error  8278.63996222 , delta error  0.000292152190013 , grad norm  0.537121921234
+Step  683 , error  8278.6259699 , delta error  9.91112010524e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 19.64%
+Step  100 , error  683008.736084 , delta error  27820.8410681 , grad norm  5195.08316751
+Step  200 , error  20073.5087814 , delta error  490.392117526 , grad norm  689.746191764
+Step  300 , error  8368.8116416 , delta error  8.71938218356 , grad norm  91.9773148384
+Step  400 , error  8159.94752849 , delta error  0.158340767241 , grad norm  12.3962954733
+Step  500 , error  8156.11105152 , delta error  0.00310220450592 , grad norm  1.73607909075
+Step  596 , error  8156.03236172 , delta error  9.95870923362e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 20.24%
+Step  100 , error  683033.591963 , delta error  27813.2401653 , grad norm  5194.3704111
+Step  200 , error  20301.6906969 , delta error  490.205678955 , grad norm  689.615038762
+Step  300 , error  8601.22929721 , delta error  8.71827602485 , grad norm  91.9717055822
+Step  400 , error  8392.34821785 , delta error  0.158501452346 , grad norm  12.4026406167
+Step  500 , error  8388.50801189 , delta error  0.00308901370772 , grad norm  1.73223658167
+Step  594 , error  8388.4307315 , delta error  9.73262831394e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 20.83%
+Step  100 , error  682836.18528 , delta error  27827.0922222 , grad norm  5195.66648237
+Step  200 , error  19763.4767511 , delta error  490.425293141 , grad norm  689.768715719
+Step  300 , error  8059.09523243 , delta error  8.71488253505 , grad norm  91.9532245668
+Step  400 , error  7850.41120403 , delta error  0.157855081809 , grad norm  12.3770073472
+Step  500 , error  7846.59504979 , delta error  0.00303501192775 , grad norm  1.71688106091
+Step  592 , error  7846.51981478 , delta error  9.95792124741e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 21.43%
+[0.00020661157024793388, 4.9214851439820538e-05, 0.0, 9.090490656356438e-05]
+Result:  result(mean_score=8.6682832062829696e-05, std_dev=7.6351966415672532e-05, parameters={'k': 20, 'reg_penalty': 20})
+{'k': 20, 'reg_penalty': 50}
+Step  100 , error  12504.7417774 , delta error  387.856463334 , grad norm  599.184081247
+Step  200 , error  8913.5699302 , delta error  0.0137125369038 , grad norm  3.56294902426
+Step  250 , error  8913.44357426 , delta error  9.116032561e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 22.02%
+Step  100 , error  12355.1096462 , delta error  387.894128999 , grad norm  599.213242231
+Step  200 , error  8763.59614665 , delta error  0.0137043357645 , grad norm  3.56184760069
+Step  250 , error  8763.46991209 , delta error  9.08242454898e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 22.62%
+Step  100 , error  12639.2681703 , delta error  387.779475467 , grad norm  599.124475228
+Step  200 , error  9048.83898809 , delta error  0.0137021090741 , grad norm  3.5615648432
+Step  250 , error  9048.71276668 , delta error  9.08436959435e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 23.21%
+Step  100 , error  12032.9029984 , delta error  387.921045765 , grad norm  599.233404166
+Step  200 , error  8441.25827737 , delta error  0.0136970800886 , grad norm  3.56088929362
+Step  250 , error  8441.13212614 , delta error  9.06987970666e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 23.81%
+[0.00032920110192837475, 4.5552350867554825e-05, 0.0, 0.00012197367209794714]
+Result:  result(mean_score=0.00012418178122346917, std_dev=0.00012613633468804724, parameters={'k': 20, 'reg_penalty': 50})
+{'k': 20, 'reg_penalty': 100}
+Step  100 , error  9258.5503103 , delta error  0.0378969579251 , grad norm  5.68448982896
+Step  130 , error  9258.38905913 , delta error  8.42566842039e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 24.40%
+Step  100 , error  9084.38713629 , delta error  0.0379004487731 , grad norm  5.68474899265
+Step  130 , error  9084.22587172 , delta error  8.42564168124e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 25.00%
+Step  100 , error  9430.03094237 , delta error  0.0378905526832 , grad norm  5.68400733999
+Step  130 , error  9429.86971948 , delta error  8.42373101477e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 25.60%
+Step  100 , error  8752.58971456 , delta error  0.0378967943379 , grad norm  5.68446364852
+Step  130 , error  8752.4284702 , delta error  8.42322970129e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 26.19%
+[0.00032920110192837475, 1.7167971432495537e-05, 0.0, 8.4767866458007295e-05]
+Result:  result(mean_score=0.0001077842349547194, std_dev=0.00013170414830094486, parameters={'k': 20, 'reg_penalty': 100})
+{'k': 20, 'reg_penalty': 200}
+Step  66 , error  9498.72876504 , delta error  8.23199698061e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 26.79%
+Step  66 , error  9301.77062519 , delta error  8.23283444333e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 27.38%
+Step  66 , error  9718.75332565 , delta error  8.23109312478e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 27.98%
+Step  66 , error  8960.73334159 , delta error  8.23225564091e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 28.57%
+[0.00030119375573921036, 2.266172229089411e-05, 0.0, 8.4767866458007295e-05]
+Result:  result(mean_score=0.00010215583612202795, std_dev=0.00011903105048910638, parameters={'k': 20, 'reg_penalty': 200})
+{'k': 20, 'reg_penalty': 500}
+Step  25 , error  9688.44540035 , delta error  3.96028026444e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 29.17%
+Step  25 , error  9468.3832277 , delta error  3.96060895582e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 29.76%
+Step  25 , error  9973.9702352 , delta error  3.95989845856e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 30.36%
+Step  25 , error  9117.75206509 , delta error  3.96066170651e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 30.95%
+[0.00031347566574839306, 1.7167971432495537e-05, 0.0, 8.4767866458007295e-05]
+Result:  result(mean_score=0.00010385287590972398, std_dev=0.00012510559949944857, parameters={'k': 20, 'reg_penalty': 500})
+{'k': 20, 'reg_penalty': 1000}
+Step  11 , error  9765.21442471 , delta error  1.76600751729e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 31.55%
+Step  10 , error  9533.80879284 , delta error  2.04245316127e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 32.14%
+Step  9 , error  10088.3963164 , delta error  1.11619210656e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 32.74%
+Step  9 , error  9178.62957528 , delta error  1.05710660137e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 33.33%
+[0.00031347566574839306, 3.914297486608983e-05, 0.0, 8.4767866458007295e-05]
+Result:  result(mean_score=0.00010934662676812254, std_dev=0.00012161210624290223, parameters={'k': 20, 'reg_penalty': 1000})
+{'k': 50, 'reg_penalty': 10}
+Step  100 , error  6159047.98209 , delta error  124886.588709 , grad norm  11091.2600167
+Step  200 , error  832701.068951 , delta error  16732.2241832 , grad norm  4059.77095773
+Step  300 , error  118694.061129 , delta error  2246.47208021 , grad norm  1487.58133093
+Step  400 , error  22693.4105002 , delta error  303.064312498 , grad norm  546.396731397
+Step  500 , error  9707.62877121 , delta error  41.2526517607 , grad norm  201.598242034
+Step  600 , error  7930.51899068 , delta error  5.72044470181 , grad norm  75.0792938498
+Step  700 , error  7681.01299208 , delta error  0.828791780965 , grad norm  28.5849460923
+Step  800 , error  7643.7098689 , delta error  0.13395365044 , grad norm  11.4990478086
+Step  900 , error  7637.19693183 , delta error  0.0276877228898 , grad norm  5.23444736031
+Step  1000 , error  7635.63930036 , delta error  0.00845797410875 , grad norm  2.89759098592
+Step  1100 , error  7635.07803696 , delta error  0.00373403006233 , grad norm  1.92743590617
+Step  1200 , error  7634.80075416 , delta error  0.00206734367202 , grad norm  1.4350397062
+Step  1300 , error  7634.63719501 , delta error  0.00129731599463 , grad norm  1.13720032983
+Step  1400 , error  7634.5303807 , delta error  0.000881774886693 , grad norm  0.937783124043
+Step  1500 , error  7634.45561687 , delta error  0.000635871300801 , grad norm  0.796514059835
+Step  1600 , error  7634.40042194 , delta error  0.000480727998365 , grad norm  0.69267248835
+Step  1700 , error  7634.3578781 , delta error  0.000377806485631 , grad norm  0.614144059262
+Step  1800 , error  7634.3238994 , delta error  0.000306612535496 , grad norm  0.553322198686
+Step  1900 , error  7634.29595004 , delta error  0.000255567220847 , grad norm  0.50521391185
+Step  2000 , error  7634.27239031 , delta error  0.000217806649744 , grad norm  0.466435143004
+Step  2100 , error  7634.25212194 , delta error  0.000189095025235 , grad norm  0.434633553236
+Step  2200 , error  7634.23438639 , delta error  0.000166726544194 , grad norm  0.40813943794
+Step  2300 , error  7634.21864527 , delta error  0.000148919914864 , grad norm  0.385746385326
+Step  2400 , error  7634.20450701 , delta error  0.000134470867124 , grad norm  0.366569080449
+Step  2500 , error  7634.19168042 , delta error  0.000122545596241 , grad norm  0.349948675139
+Step  2600 , error  7634.17994456 , delta error  0.000112554184852 , grad norm  0.335388422216
+Step  2700 , error  7634.16912867 , delta error  0.000104070895759 , grad norm  0.322509098272
+Step  2756 , error  7634.16352224 , delta error  9.99310077532e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 33.93%
+Step  100 , error  6158191.22935 , delta error  124872.419158 , grad norm  11090.6305003
+Step  200 , error  832452.224868 , delta error  16730.3610024 , grad norm  4059.54513382
+Step  300 , error  118517.856839 , delta error  2246.31473135 , grad norm  1487.52965304
+Step  400 , error  22520.6897203 , delta error  303.078065869 , grad norm  546.409447791
+Step  500 , error  9533.55965337 , delta error  41.2615033654 , grad norm  201.619982605
+Step  600 , error  7756.02091401 , delta error  5.721522346 , grad norm  75.0862652302
+Step  700 , error  7506.534944 , delta error  0.827933723561 , grad norm  28.5698724002
+Step  800 , error  7469.32110065 , delta error  0.133152891066 , grad norm  11.4642840767
+Step  900 , error  7462.87073569 , delta error  0.0272275326442 , grad norm  5.19052127664
+Step  1000 , error  7461.34625819 , delta error  0.00822931030871 , grad norm  2.85807466823
+Step  1100 , error  7460.80149154 , delta error  0.00361547531884 , grad norm  1.89656214073
+Step  1200 , error  7460.53373799 , delta error  0.00198667438326 , grad norm  1.4066946654
+Step  1300 , error  7460.37787111 , delta error  0.00122068136079 , grad norm  1.1029755428
+Step  1400 , error  7460.27909712 , delta error  0.000796703614469 , grad norm  0.89122722127
+Step  1500 , error  7460.2133885 , delta error  0.000540021490451 , grad norm  0.733830956295
+Step  1600 , error  7460.16825681 , delta error  0.000375851364879 , grad norm  0.61225938388
+Step  1700 , error  7460.13653285 , delta error  0.000266857133283 , grad norm  0.515935546105
+Step  1800 , error  7460.11383124 , delta error  0.000192502420759 , grad norm  0.438225401493
+Step  1900 , error  7460.097348 , delta error  0.000140716830174 , grad norm  0.374690282981
+Step  2000 , error  7460.0852309 , delta error  0.000104052416646 , grad norm  0.322213070207
+Step  2015 , error  7460.08380606 , delta error  9.98312616503e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 34.52%
+Step  100 , error  6157966.50677 , delta error  124863.605118 , grad norm  11090.2378144
+Step  200 , error  832645.082859 , delta error  16728.8613828 , grad norm  4059.36296835
+Step  300 , error  118777.330021 , delta error  2246.10733289 , grad norm  1487.46112918
+Step  400 , error  22786.6250659 , delta error  303.08919977 , grad norm  546.420103303
+Step  500 , error  9796.74283936 , delta error  41.2935159605 , grad norm  201.699262524
+Step  600 , error  8016.46380214 , delta error  5.74348903013 , grad norm  75.2318397569
+Step  700 , error  7765.29123279 , delta error  0.840450760214 , grad norm  28.787134548
+Step  800 , error  7727.13766288 , delta error  0.140041420132 , grad norm  11.7595791622
+Step  900 , error  7720.16770824 , delta error  0.0310783587156 , grad norm  5.5476139848
+Step  1000 , error  7718.34844895 , delta error  0.0104563266768 , grad norm  3.22285546519
+Step  1100 , error  7717.630167 , delta error  0.00495383180078 , grad norm  2.2204488899
+Step  1200 , error  7717.25629831 , delta error  0.0028214672393 , grad norm  1.67652712706
+Step  1300 , error  7717.03315453 , delta error  0.00175958853652 , grad norm  1.32429670081
+Step  1400 , error  7716.89029011 , delta error  0.00115577500583 , grad norm  1.07345518582
+Step  1500 , error  7716.794788 , delta error  0.00078642074368 , grad norm  0.885572346019
+Step  1600 , error  7716.7289368 , delta error  0.000549716315618 , grad norm  0.740466143134
+Step  1700 , error  7716.68240348 , delta error  0.000392871061194 , grad norm  0.626028723154
+Step  1800 , error  7716.64883329 , delta error  0.000286236203465 , grad norm  0.534393525155
+Step  1900 , error  7716.6241664 , delta error  0.000212219164496 , grad norm  0.460170337404
+Step  2000 , error  7716.60573212 , delta error  0.000159942108439 , grad norm  0.399515674508
+Step  2100 , error  7716.59173231 , delta error  0.000122458222904 , grad norm  0.349600243715
+Step  2182 , error  7716.58278268 , delta error  9.97601891868e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 35.12%
+Step  100 , error  6160205.914 , delta error  124916.807496 , grad norm  11092.6027221
+Step  200 , error  832552.614995 , delta error  16736.3358771 , grad norm  4060.26970098
+Step  300 , error  118370.019004 , delta error  2247.03362526 , grad norm  1487.76731604
+Step  400 , error  22344.8588386 , delta error  303.144291292 , grad norm  546.468827393
+Step  500 , error  9355.79114053 , delta error  41.260314831 , grad norm  201.616790392
+Step  600 , error  7578.62332861 , delta error  5.71755479898 , grad norm  75.0599174367
+Step  700 , error  7329.447604 , delta error  0.825636488396 , grad norm  28.5298247554
+Step  800 , error  7292.40512842 , delta error  0.131901677968 , grad norm  11.4098280774
+Step  900 , error  7286.04897267 , delta error  0.0265334851592 , grad norm  5.12352688801
+Step  1000 , error  7284.57654977 , delta error  0.00785110598827 , grad norm  2.79144808003
+Step  1100 , error  7284.05931973 , delta error  0.00342525926953 , grad norm  1.84602642358
+Step  1200 , error  7283.80438538 , delta error  0.00190982343702 , grad norm  1.37934393085
+Step  1300 , error  7283.65248878 , delta error  0.00121153784949 , grad norm  1.09899755402
+Step  1400 , error  7283.5524581 , delta error  0.000826904568385 , grad norm  0.908132652809
+Step  1500 , error  7283.48252013 , delta error  0.000591898341554 , grad norm  0.768439544709
+Step  1600 , error  7283.43158942 , delta error  0.000438429076894 , grad norm  0.661430182947
+Step  1700 , error  7283.39336516 , delta error  0.000333379613949 , grad norm  0.576821913773
+Step  1800 , error  7283.36399243 , delta error  0.000258888740973 , grad norm  0.508346484461
+Step  1900 , error  7283.34098298 , delta error  0.000204588833185 , grad norm  0.451929201426
+Step  2000 , error  7283.32266359 , delta error  0.000164115201187 , grad norm  0.404786988617
+Step  2100 , error  7283.30787226 , delta error  0.000133383477078 , grad norm  0.364941467326
+Step  2200 , error  7283.29578084 , delta error  0.000109677241198 , grad norm  0.330939362186
+Step  2251 , error  7283.29055245 , delta error  9.98530977085e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 35.71%
+[0.00020661157024793388, 3.2046880007325004e-05, 5.6869985412107951e-05, 0.00014613826751357824]
+Result:  result(mean_score=0.00011041667579523627, std_dev=6.9890204564879965e-05, parameters={'k': 50, 'reg_penalty': 10})
+{'k': 50, 'reg_penalty': 20}
+Step  100 , error  1658018.96494 , delta error  67989.2047917 , grad norm  8121.37787716
+Step  200 , error  37483.489873 , delta error  1199.66908437 , grad norm  1078.82241052
+Step  300 , error  8842.10009794 , delta error  21.3633721765 , grad norm  143.971801939
+Step  400 , error  8329.75736449 , delta error  0.392384864024 , grad norm  19.5165688516
+Step  500 , error  8320.10385826 , delta error  0.00891126068564 , grad norm  2.94679100817
+Step  600 , error  8319.83220045 , delta error  0.000635422549749 , grad norm  0.791842739928
+Step  700 , error  8319.7993289 , delta error  0.00016547096493 , grad norm  0.405092223904
+Step  749 , error  8319.79316723 , delta error  9.90305015875e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 36.31%
+Step  100 , error  1657476.91265 , delta error  67977.2149458 , grad norm  8120.66192588
+Step  200 , error  37225.5770368 , delta error  1199.43883107 , grad norm  1078.71849143
+Step  300 , error  8591.24982511 , delta error  21.345562705 , grad norm  143.910727376
+Step  400 , error  8079.81285357 , delta error  0.388183158843 , grad norm  19.4096750779
+Step  500 , error  8070.39764045 , delta error  0.00767110071502 , grad norm  2.73021354085
+Step  600 , error  8070.20030907 , delta error  0.00022070684463 , grad norm  0.464276402117
+Step  628 , error  8070.19631515 , delta error  9.80275444817e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 36.90%
+Step  100 , error  1657652.22321 , delta error  67972.5266683 , grad norm  8120.38170758
+Step  200 , error  37508.3699473 , delta error  1199.41697372 , grad norm  1078.70928015
+Step  300 , error  8872.98449915 , delta error  21.353363231 , grad norm  143.937389251
+Step  400 , error  8361.26999709 , delta error  0.388544303094 , grad norm  19.4186520487
+Step  500 , error  8351.85448203 , delta error  0.00757930995678 , grad norm  2.71340408624
+Step  600 , error  8351.66330364 , delta error  0.000187658797586 , grad norm  0.427592411535
+Step  620 , error  8351.66072884 , delta error  9.81708126346e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 37.50%
+Step  100 , error  1657831.67795 , delta error  68000.3446931 , grad norm  8122.04288668
+Step  200 , error  37043.0908247 , delta error  1199.76168188 , grad norm  1078.86307398
+Step  300 , error  8402.45135574 , delta error  21.3437302989 , grad norm  143.904138358
+Step  400 , error  7891.2090076 , delta error  0.387172686565 , grad norm  19.3839422631
+Step  500 , error  7881.84284163 , delta error  0.00747808035612 , grad norm  2.69507237289
+Step  600 , error  7881.65494115 , delta error  0.000182755283276 , grad norm  0.421968865024
+Step  619 , error  7881.65252853 , delta error  9.89630043478e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 38.10%
+[6.1983471074380153e-05, 2.7468754291992861e-05, 6.051695842450766e-05, 0.00014613826751357824]
+Result:  result(mean_score=7.4026862826114727e-05, std_dev=4.3861352458914545e-05, parameters={'k': 50, 'reg_penalty': 20})
+{'k': 50, 'reg_penalty': 50}
+Step  100 , error  17730.9914143 , delta error  946.399269201 , grad norm  935.977425539
+Step  200 , error  8966.4160823 , delta error  0.0335269681491 , grad norm  5.57123236605
+Step  258 , error  8966.10591991 , delta error  9.85609840427e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 38.69%
+Step  100 , error  17436.601125 , delta error  946.242427853 , grad norm  935.8995734
+Step  200 , error  8673.59727844 , delta error  0.0334953318597 , grad norm  5.56854825025
+Step  258 , error  8673.28752074 , delta error  9.80791755865e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 39.29%
+Step  100 , error  17770.1571429 , delta error  946.197246484 , grad norm  935.877398654
+Step  200 , error  9007.50972772 , delta error  0.033500041136 , grad norm  5.56894688726
+Step  258 , error  9007.19991579 , delta error  9.81067678367e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 39.88%
+Step  100 , error  17237.7248198 , delta error  946.495488088 , grad norm  936.024288864
+Step  200 , error  8472.50762132 , delta error  0.0334927628046 , grad norm  5.56831804385
+Step  258 , error  8472.197918 , delta error  9.79841242952e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 40.48%
+[9.1023875114784212e-05, 9.1562514306642865e-06, 0.00011351203501094092, 0.00020578262603946116]
+Result:  result(mean_score=0.00010486869689896265, std_dev=7.0019425333348005e-05, parameters={'k': 50, 'reg_penalty': 50})
+{'k': 50, 'reg_penalty': 100}
+Step  100 , error  9318.29631463 , delta error  0.0923826067465 , grad norm  8.87540575274
+Step  134 , error  9317.90268187 , delta error  8.8518472694e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 41.07%
+Step  100 , error  8991.46916742 , delta error  0.0923670832435 , grad norm  8.87465065233
+Step  134 , error  8991.0756077 , delta error  8.84875480551e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 41.67%
+Step  100 , error  9385.1482264 , delta error  0.0923635979452 , grad norm  8.87448682686
+Step  134 , error  9384.754679 , delta error  8.84892233444e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 42.26%
+Step  100 , error  8782.06191074 , delta error  0.0923828988962 , grad norm  8.87540261234
+Step  134 , error  8781.6682888 , delta error  8.84933106136e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 42.86%
+[0.00020431588613406795, 6.8671885729982153e-06, 0.00010895331874544128, 0.00019600171837122956]
+Result:  result(mean_score=0.00012903452795593425, std_dev=7.9812281724876054e-05, parameters={'k': 50, 'reg_penalty': 100})
+{'k': 50, 'reg_penalty': 200}
+Step  68 , error  9562.78498425 , delta error  8.2105929323e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 43.45%
+Step  68 , error  9206.31619194 , delta error  8.2097354607e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 44.05%
+Step  68 , error  9671.11919964 , delta error  8.20931581984e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 44.64%
+Step  68 , error  8989.65985843 , delta error  8.2109359937e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 45.24%
+[0.00023760330578512397, 6.8671885729982153e-06, 0.00010428063457330415, 0.00022783761391880701]
+Result:  result(mean_score=0.00014414718571255836, std_dev=9.5096363845758412e-05, parameters={'k': 50, 'reg_penalty': 200})
+{'k': 50, 'reg_penalty': 500}
+Step  25 , error  9755.39936276 , delta error  9.63229667832e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 45.83%
+Step  25 , error  9371.02637664 , delta error  9.63160655374e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 46.43%
+Step  25 , error  9924.73596894 , delta error  9.631012108e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 47.02%
+Step  25 , error  9147.34047808 , delta error  9.63327529462e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 47.62%
+[0.00023760330578512397, 6.8671885729982153e-06, 0.00011168854850474106, 0.00022783761391880701]
+Result:  result(mean_score=0.00014599916419541758, std_dev=9.4371308668452704e-05, parameters={'k': 50, 'reg_penalty': 500})
+{'k': 50, 'reg_penalty': 1000}
+Step  10 , error  9832.95554578 , delta error  4.53223910881e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 48.21%
+Step  10 , error  9435.6901175 , delta error  5.73811230424e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 48.81%
+Step  9 , error  10038.7212962 , delta error  7.49559294491e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 49.40%
+Step  9 , error  9208.75532569 , delta error  1.05928538687e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 50.00%
+[0.00023760330578512397, 6.8671885729982153e-06, 0.00017733406272793582, 0.00022783761391880701]
+Result:  result(mean_score=0.00016241054275121624, std_dev=9.2670248369890144e-05, parameters={'k': 50, 'reg_penalty': 1000})
+{'k': 100, 'reg_penalty': 10}
+Step  100 , error  12238123.2319 , delta error  248337.237897 , grad norm  15640.2675958
+Step  200 , error  1647025.50818 , delta error  33262.4714142 , grad norm  5724.01577831
+Step  300 , error  228053.960915 , delta error  4461.47752031 , grad norm  2096.36836204
+Step  400 , error  37485.9759961 , delta error  600.996811803 , grad norm  769.43821025
+Step  500 , error  11754.2548655 , delta error  81.5926387105 , grad norm  283.517745689
+Step  600 , error  8245.14379383 , delta error  11.248980877 , grad norm  105.28042543
+Step  700 , error  7756.48070525 , delta error  1.60654959687 , grad norm  39.7947221931
+Step  800 , error  7684.92801647 , delta error  0.250417023727 , grad norm  15.7191047046
+Step  900 , error  7673.05728052 , delta error  0.0478827963307 , grad norm  6.88101513213
+Step  1000 , error  7670.47871842 , delta error  0.0130934657336 , grad norm  3.60371544841
+Step  1100 , error  7669.64779517 , delta error  0.00524365812907 , grad norm  2.28335894445
+Step  1200 , error  7669.27129924 , delta error  0.00270582527082 , grad norm  1.6413756584
+Step  1300 , error  7669.06286483 , delta error  0.0016056343029 , grad norm  1.26488984079
+Step  1400 , error  7668.93375753 , delta error  0.00103873955868 , grad norm  1.01765443111
+Step  1500 , error  7668.84757245 , delta error  0.000716314009878 , grad norm  0.845262494482
+Step  1600 , error  7668.78659896 , delta error  0.000520381063325 , grad norm  0.720573330166
+Step  1700 , error  7668.74133308 , delta error  0.000394988597691 , grad norm  0.627878049184
+Step  1800 , error  7668.70633511 , delta error  0.000311124713335 , grad norm  0.557321159599
+Step  1900 , error  7668.67833474 , delta error  0.000252807911238 , grad norm  0.502434912426
+Step  2000 , error  7668.65528347 , delta error  0.000210814211641 , grad norm  0.458852157408
+Step  2100 , error  7668.63585111 , delta error  0.000179608894541 , grad norm  0.423563424648
+Step  2200 , error  7668.61914543 , delta error  0.000155756884851 , grad norm  0.394461205386
+Step  2300 , error  7668.60454994 , delta error  0.000137061040732 , grad norm  0.370049037238
+Step  2400 , error  7668.59162684 , delta error  0.000122077027299 , grad norm  0.349250593566
+Step  2500 , error  7668.5800572 , delta error  0.000109831053123 , grad norm  0.331281905495
+Step  2598 , error  7668.56990242 , delta error  9.99311205305e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 50.60%
+Step  100 , error  12237132.6707 , delta error  248321.021186 , grad norm  15639.7570651
+Step  200 , error  1646720.39946 , delta error  33260.3437529 , grad norm  5723.83273575
+Step  300 , error  227837.816065 , delta error  4461.22169449 , grad norm  2096.30837755
+Step  400 , error  37279.3193259 , delta error  600.978133179 , grad norm  769.426347569
+Step  500 , error  11548.2097491 , delta error  81.58998811 , grad norm  283.51305141
+Step  600 , error  8039.47418049 , delta error  11.2443524554 , grad norm  105.258413285
+Step  700 , error  7551.26861273 , delta error  1.60237316603 , grad norm  39.7423346673
+Step  800 , error  7480.06120394 , delta error  0.247689584477 , grad norm  15.6324468902
+Step  900 , error  7468.39910049 , delta error  0.0463471511466 , grad norm  6.76903532612
+Step  1000 , error  7465.93381811 , delta error  0.0122861577693 , grad norm  3.49047723942
+Step  1100 , error  7465.16190173 , delta error  0.00482304821526 , grad norm  2.18977488354
+Step  1200 , error  7464.81682848 , delta error  0.00247232931088 , grad norm  1.56892949686
+Step  1300 , error  7464.62695104 , delta error  0.00145538116612 , grad norm  1.20419348574
+Step  1400 , error  7464.51091092 , delta error  0.00092192282591 , grad norm  0.958617882399
+Step  1500 , error  7464.43571583 , delta error  0.00061098491733 , grad norm  0.780501576685
+Step  1600 , error  7464.3850871 , delta error  0.000418021715632 , grad norm  0.645658477853
+Step  1700 , error  7464.35002527 , delta error  0.000293126522593 , grad norm  0.540713177847
+Step  1800 , error  7464.3251939 , delta error  0.000209746914152 , grad norm  0.457422453699
+Step  1900 , error  7464.30727435 , delta error  0.000152710611474 , grad norm  0.390328904708
+Step  2000 , error  7464.2941297 , delta error  0.000112898264888 , grad norm  0.335631935264
+Step  2043 , error  7464.28967472 , delta error  9.98625673674e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 51.19%
+Step  100 , error  12236295.5304 , delta error  248299.613626 , grad norm  15639.0825758
+Step  200 , error  1646820.46607 , delta error  33257.2251213 , grad norm  5723.5641939
+Step  300 , error  228074.196087 , delta error  4460.79160416 , grad norm  2096.207421
+Step  400 , error  37531.5810165 , delta error  600.963703182 , grad norm  769.417640207
+Step  500 , error  11798.1525023 , delta error  81.6291733706 , grad norm  283.582224087
+Step  600 , error  8285.7152772 , delta error  11.2763457982 , grad norm  105.409817864
+Step  700 , error  7794.95219324 , delta error  1.62209492021 , grad norm  39.9886968983
+Step  800 , error  7722.23107196 , delta error  0.259028504013 , grad norm  15.9895157069
+Step  900 , error  7709.70314501 , delta error  0.0528399157993 , grad norm  7.23090027738
+Step  1000 , error  7706.73767852 , delta error  0.0160870409181 , grad norm  3.9961868365
+Step  1100 , error  7705.66875251 , delta error  0.00711971883266 , grad norm  2.66146808248
+Step  1200 , error  7705.14139615 , delta error  0.00390722087195 , grad norm  1.97270178182
+Step  1300 , error  7704.83592184 , delta error  0.00238043402169 , grad norm  1.54019308198
+Step  1400 , error  7704.6443569 , delta error  0.00153503313868 , grad norm  1.23702353355
+Step  1500 , error  7704.51853035 , delta error  0.00102698458613 , grad norm  1.01193186758
+Step  1600 , error  7704.43322098 , delta error  0.00070578044506 , grad norm  0.838962031666
+Step  1700 , error  7704.37398403 , delta error  0.000495313738611 , grad norm  0.70287531038
+Step  1800 , error  7704.3320601 , delta error  0.00035362039398 , grad norm  0.593925959791
+Step  1900 , error  7704.30191484 , delta error  0.000256169643762 , grad norm  0.505533164085
+Step  2000 , error  7704.27993948 , delta error  0.000187979765542 , grad norm  0.433073208408
+Step  2100 , error  7704.26372112 , delta error  0.000139577807204 , grad norm  0.373192187724
+Step  2200 , error  7704.25161348 , delta error  0.000104802528767 , grad norm  0.323391143522
+Step  2218 , error  7704.24987608 , delta error  9.99281473923e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 51.79%
+Step  100 , error  12238737.5734 , delta error  248356.340596 , grad norm  15640.8698386
+Step  200 , error  1646779.66054 , delta error  33265.449189 , grad norm  5724.27223604
+Step  300 , error  227677.836304 , delta error  4461.88139812 , grad norm  2096.46314094
+Step  400 , error  37094.2330784 , delta error  601.029448919 , grad norm  769.458904927
+Step  500 , error  11362.0463882 , delta error  81.5850250676 , grad norm  283.504219487
+Step  600 , error  7853.80397071 , delta error  11.2407673709 , grad norm  105.241500061
+Step  700 , error  7365.8227725 , delta error  1.60110174996 , grad norm  39.7264613586
+Step  800 , error  7294.69571283 , delta error  0.247192536038 , grad norm  15.6166360445
+Step  900 , error  7283.06882767 , delta error  0.0460983525309 , grad norm  6.7507190132
+Step  1000 , error  7280.62187116 , delta error  0.0121575849025 , grad norm  3.47211423988
+Step  1100 , error  7279.85847509 , delta error  0.00477588021658 , grad norm  2.17909599904
+Step  1200 , error  7279.51504186 , delta error  0.00248249258038 , grad norm  1.57227639017
+Step  1300 , error  7279.3221082 , delta error  0.00150298916378 , grad norm  1.22388974388
+Step  1400 , error  7279.2000946 , delta error  0.000991334455648 , grad norm  0.994221124347
+Step  1500 , error  7279.11734954 , delta error  0.000690926103744 , grad norm  0.83016281178
+Step  1600 , error  7279.05852598 , delta error  0.000500955835378 , grad norm  0.706972929299
+Step  1700 , error  7279.015227 , delta error  0.000374360908609 , grad norm  0.611212074152
+Step  1800 , error  7278.98247765 , delta error  0.000286598415187 , grad norm  0.534834126919
+Step  1900 , error  7278.9571549 , delta error  0.000223841036131 , grad norm  0.472696021592
+Step  2000 , error  7278.93720898 , delta error  0.000177826756044 , grad norm  0.421343599059
+Step  2100 , error  7278.92124606 , delta error  0.000143381526868 , grad norm  0.378361646039
+Step  2200 , error  7278.9082908 , delta error  0.000117138341921 , grad norm  0.342003293213
+Step  2284 , error  7278.89931528 , delta error  9.99418216452e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 52.38%
+[5.2800734618916435e-05, 9.3851577164308933e-05, 0.00024161196207148072, 0.00011564484948909141]
+Result:  result(mean_score=0.00012597728083594937, std_dev=7.0471636838220393e-05, parameters={'k': 100, 'reg_penalty': 10})
+{'k': 100, 'reg_penalty': 20}
+Step  100 , error  3286910.53422 , delta error  135135.317277 , grad norm  11449.6877842
+Step  200 , error  66227.5738867 , delta error  2383.48237299 , grad norm  1520.63319091
+Step  300 , error  9330.44556706 , delta error  42.4132054995 , grad norm  202.857470582
+Step  400 , error  8313.71993774 , delta error  0.776519630712 , grad norm  27.4544052892
+Step  500 , error  8294.66990179 , delta error  0.017259106733 , grad norm  4.10029625756
+Step  600 , error  8294.15177884 , delta error  0.00117591987328 , grad norm  1.0771634297
+Step  700 , error  8294.09052019 , delta error  0.000315644896546 , grad norm  0.559599834525
+Step  800 , error  8294.07073178 , delta error  0.000117747635159 , grad norm  0.341931801614
+Step  819 , error  8294.06879114 , delta error  9.94371039269e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 52.98%
+Step  100 , error  3286498.48229 , delta error  135128.394089 , grad norm  11449.3938707
+Step  200 , error  65995.890271 , delta error  2383.25909331 , grad norm  1520.56125487
+Step  300 , error  9107.63128836 , delta error  42.3805734093 , grad norm  202.77792133
+Step  400 , error  8092.62042583 , delta error  0.768577246682 , grad norm  27.3108308486
+Step  500 , error  8074.01401707 , delta error  0.0149856423222 , grad norm  3.81557874631
+Step  600 , error  8073.63239996 , delta error  0.000406205925174 , grad norm  0.629627622751
+Step  648 , error  8073.62251393 , delta error  9.90595990515e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 53.57%
+Step  100 , error  3286519.3197 , delta error  135117.131956 , grad norm  11448.9169364
+Step  200 , error  66266.620112 , delta error  2383.23708132 , grad norm  1520.55539405
+Step  300 , error  9374.64793757 , delta error  42.4033356098 , grad norm  202.833186514
+Step  400 , error  8358.75529567 , delta error  0.77042640447 , grad norm  27.3439129779
+Step  500 , error  8340.09816657 , delta error  0.0149733282378 , grad norm  3.8137288799
+Step  600 , error  8339.72108274 , delta error  0.000368006238205 , grad norm  0.598769480112
+Step  640 , error  8339.71327225 , delta error  9.95912978397e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 54.17%
+Step  100 , error  3286759.80497 , delta error  135147.769402 , grad norm  11450.2148943
+Step  200 , error  65801.0086566 , delta error  2383.5209107 , grad norm  1520.6442426
+Step  300 , error  8908.38973576 , delta error  42.3745278721 , grad norm  202.763032457
+Step  400 , error  7893.74754315 , delta error  0.766977803039 , grad norm  27.2818944186
+Step  500 , error  7875.21877276 , delta error  0.014676623342 , grad norm  3.77536349356
+Step  600 , error  7874.85232753 , delta error  0.000345009846569 , grad norm  0.579632554026
+Step  638 , error  7874.84525735 , delta error  9.75247221504e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 54.76%
+[0.00032790021426385064, 0.00010529689145263928, 0.0002411560904449307, 0.00016953573291601462]
+Result:  result(mean_score=0.0002109722322693588, std_dev=8.2866578611429293e-05, parameters={'k': 100, 'reg_penalty': 20})
+{'k': 100, 'reg_penalty': 50}
+Step  100 , error  26351.7047934 , delta error  1880.27379215 , grad norm  1319.28789906
+Step  200 , error  8937.61049364 , delta error  0.066651626119 , grad norm  7.85526918115
+Step  265 , error  8936.99288752 , delta error  9.60255038081e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 55.36%
+Step  100 , error  26089.2888138 , delta error  1880.08066701 , grad norm  1319.21921587
+Step  200 , error  8677.44353494 , delta error  0.0665701401449 , grad norm  7.85036191214
+Step  265 , error  8676.82698412 , delta error  9.52791906457e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 55.95%
+Step  100 , error  26412.4591006 , delta error  1880.03244516 , grad norm  1319.20316142
+Step  200 , error  9000.66869428 , delta error  0.0666042485009 , grad norm  7.85240610877
+Step  265 , error  9000.0517466 , delta error  9.54341739998e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 56.55%
+Step  100 , error  25876.2984954 , delta error  1880.30302864 , grad norm  1319.29688312
+Step  200 , error  8462.55371787 , delta error  0.0665616176084 , grad norm  7.84984174382
+Step  265 , error  8461.93729287 , delta error  9.5185070677e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 57.14%
+[0.00026262626262626266, 0.00014375314746142929, 0.00023614150255288111, 0.00024601859523151986]
+Result:  result(mean_score=0.00022213487696802324, std_dev=4.6232741080682247e-05, parameters={'k': 100, 'reg_penalty': 50})
+{'k': 100, 'reg_penalty': 100}
+Step  100 , error  9289.1238475 , delta error  0.183439358085 , grad norm  12.5066416055
+Step  137 , error  9288.34184673 , delta error  9.34758700168e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 57.74%
+Step  100 , error  8995.63262931 , delta error  0.183401786227 , grad norm  12.50533478
+Step  137 , error  8994.85081453 , delta error  9.34233994485e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 58.33%
+Step  100 , error  9383.86325554 , delta error  0.183413883991 , grad norm  12.5057665542
+Step  137 , error  9383.08137078 , delta error  9.34500512813e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 58.93%
+Step  100 , error  8770.03091504 , delta error  0.183416343893 , grad norm  12.5058242675
+Step  137 , error  8769.2490447 , delta error  9.34235467867e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 59.52%
+[0.00024288337924701563, 0.0001568008057501259, 0.00022520058351568195, 0.00025430359937402193]
+Result:  result(mean_score=0.00021979709197171137, std_dev=3.7819986488103314e-05, parameters={'k': 100, 'reg_penalty': 100})
+{'k': 100, 'reg_penalty': 200}
+Step  70 , error  9534.07442444 , delta error  6.67360800435e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 60.12%
+Step  70 , error  9210.19357776 , delta error  6.67255753797e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 60.71%
+Step  70 , error  9674.89136088 , delta error  6.67286603857e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 61.31%
+Step  70 , error  8975.69216773 , delta error  6.67308686388e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 61.90%
+[0.00024288337924701563, 0.00014764455431946161, 0.00019784828592268416, 0.00035019485102335147]
+Result:  result(mean_score=0.00023464276762812824, std_dev=7.4737398034221264e-05, parameters={'k': 100, 'reg_penalty': 200})
+{'k': 100, 'reg_penalty': 500}
+Step  26 , error  9728.52002419 , delta error  4.77510311612e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 62.50%
+Step  26 , error  9374.92704934 , delta error  4.77475405205e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 63.10%
+Step  26 , error  9934.00109776 , delta error  4.77461708215e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 63.69%
+Step  26 , error  9132.1578012 , delta error  4.77523226436e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 64.29%
+[0.00024288337924701563, 0.00014764455431946161, 0.00020400255288110866, 0.00033638651078584801]
+Result:  result(mean_score=0.00023272924930835848, std_dev=6.8761476534467961e-05, parameters={'k': 100, 'reg_penalty': 500})
+{'k': 100, 'reg_penalty': 1000}
+Step  10 , error  9807.26975666 , delta error  1.76333778654e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 64.88%
+Step  10 , error  9439.58325351 , delta error  2.34669223573e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 65.48%
+Step  10 , error  10050.5721471 , delta error  5.20302455698e-06
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 66.07%
+Step  9 , error  9193.0871119 , delta error  2.12667382584e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 66.67%
+[0.00024288337924701563, 0.00014764455431946161, 0.00023272246535375638, 0.00033638651078584801]
+Result:  result(mean_score=0.00023990922742652042, std_dev=6.6860173564107429e-05, parameters={'k': 100, 'reg_penalty': 1000})
+{'k': 150, 'reg_penalty': 10}
+Step  100 , error  18313233.374 , delta error  371709.000036 , grad norm  19134.8414868
+Step  200 , error  2460570.10871 , delta error  49783.4902622 , grad norm  7002.70411309
+Step  300 , error  337133.036431 , delta error  6673.77298739 , grad norm  2563.96842317
+Step  400 , error  52158.4653649 , delta error  898.101986909 , grad norm  940.585752287
+Step  500 , error  13726.5883052 , delta error  121.711692967 , grad norm  346.27161407
+Step  600 , error  8497.69015436 , delta error  16.7173745321 , grad norm  128.341189183
+Step  700 , error  7773.3007095 , delta error  2.36648237374 , grad norm  48.2956605508
+Step  800 , error  7668.55803611 , delta error  0.361039490766 , grad norm  18.8721518435
+Step  900 , error  7651.69022645 , delta error  0.0659901255012 , grad norm  8.07620432596
+Step  1000 , error  7648.22313343 , delta error  0.016940405415 , grad norm  4.09812215236
+Step  1100 , error  7647.17296107 , delta error  0.00645313077621 , grad norm  2.53268631215
+Step  1200 , error  7646.71602439 , delta error  0.00323822094015 , grad norm  1.79546576955
+Step  1300 , error  7646.46875839 , delta error  0.00188665220412 , grad norm  1.37103193312
+Step  1400 , error  7646.31826944 , delta error  0.00119950339922 , grad norm  1.09349831349
+Step  1500 , error  7646.2196336 , delta error  0.00081130658873 , grad norm  0.89949498407
+Step  1600 , error  7646.15127813 , delta error  0.000576634067329 , grad norm  0.758455314759
+Step  1700 , error  7646.10168896 , delta error  0.000427266418228 , grad norm  0.652967584644
+Step  1800 , error  7646.06429595 , delta error  0.000327989067955 , grad norm  0.572169825007
+Step  1900 , error  7646.035159 , delta error  0.000259451260717 , grad norm  0.508941724051
+Step  2000 , error  7646.01181606 , delta error  0.000210506251278 , grad norm  0.458469554651
+Step  2100 , error  7645.99267239 , delta error  0.000174477454493 , grad norm  0.417425948333
+Step  2200 , error  7645.97666117 , delta error  0.000147227481648 , grad norm  0.383469544686
+Step  2300 , error  7645.96304752 , delta error  0.00012611323109 , grad norm  0.354927080286
+Step  2400 , error  7645.95131138 , delta error  0.000109398848508 , grad norm  0.330585661901
+Step  2469 , error  7645.94420643 , delta error  9.99331632556e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 67.26%
+Step  100 , error  18312196.5286 , delta error  371690.502011 , grad norm  19134.3650557
+Step  200 , error  2460374.60579 , delta error  49780.3450162 , grad norm  7002.4824348
+Step  300 , error  337076.147314 , delta error  6673.42223662 , grad norm  2563.90161881
+Step  400 , error  52106.6058537 , delta error  898.178994587 , grad norm  940.626882986
+Step  500 , error  13667.6678028 , delta error  121.76161918 , grad norm  346.343166311
+Step  600 , error  8435.82984827 , delta error  16.7313698297 , grad norm  128.39506437
+Step  700 , error  7710.80523633 , delta error  2.3679877572 , grad norm  48.3108014842
+Step  800 , error  7606.08645628 , delta error  0.35990255293 , grad norm  18.8418723077
+Step  900 , error  7589.34022593 , delta error  0.0648640080954 , grad norm  8.00636019462
+Step  1000 , error  7585.9645292 , delta error  0.0162356074679 , grad norm  4.01158171142
+Step  1100 , error  7584.96718441 , delta error  0.0060729379129 , grad norm  2.45686233546
+Step  1200 , error  7584.53792808 , delta error  0.00304292948113 , grad norm  1.74050918803
+Step  1300 , error  7584.30505687 , delta error  0.00178132756628 , grad norm  1.33223018513
+Step  1400 , error  7584.16290713 , delta error  0.0011316031696 , grad norm  1.06207223981
+Step  1500 , error  7584.07033009 , delta error  0.000755150767873 , grad norm  0.867738068144
+Step  1600 , error  7584.00749854 , delta error  0.000521249758094 , grad norm  0.721010540406
+Step  1700 , error  7583.96358044 , delta error  0.000369013180716 , grad norm  0.606702713424
+Step  1800 , error  7583.93217868 , delta error  0.000266543444013 , grad norm  0.51566612104
+Step  1900 , error  7583.9093094 , delta error  0.000195770668142 , grad norm  0.441960511647
+Step  2000 , error  7583.89239355 , delta error  0.00014586679481 , grad norm  0.381513308061
+Step  2100 , error  7583.87971144 , delta error  0.000110063119791 , grad norm  0.331414675771
+Step  2137 , error  7583.8759438 , delta error  9.97315455606e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 67.86%
+Step  100 , error  18311346.2135 , delta error  371670.228209 , grad norm  19133.8433558
+Step  200 , error  2460375.01279 , delta error  49777.7489324 , grad norm  7002.29985308
+Step  300 , error  337190.429912 , delta error  6673.01120224 , grad norm  2563.82245023
+Step  400 , error  52240.6749793 , delta error  898.10900827 , grad norm  940.590292185
+Step  500 , error  13803.6139835 , delta error  121.773375057 , grad norm  346.360484549
+Step  600 , error  8569.77054633 , delta error  16.7540052124 , grad norm  128.483114233
+Step  700 , error  7842.7420067 , delta error  2.38471511101 , grad norm  48.483053496
+Step  800 , error  7736.69481769 , delta error  0.370127300408 , grad norm  19.1102124046
+Step  900 , error  7719.16141855 , delta error  0.0707867940555 , grad norm  8.36660384299
+Step  1000 , error  7715.33184479 , delta error  0.0196507523742 , grad norm  4.41520135365
+Step  1100 , error  7714.07120316 , delta error  0.00807248509864 , grad norm  2.83334914111
+Step  1200 , error  7713.48621945 , delta error  0.00424043419389 , grad norm  2.05484548392
+Step  1300 , error  7713.15902532 , delta error  0.00251623875192 , grad norm  1.58339160287
+Step  1400 , error  7712.95833463 , delta error  0.00159356796212 , grad norm  1.26031603822
+Step  1500 , error  7712.82856132 , delta error  0.00105222003913 , grad norm  1.02424641682
+Step  1600 , error  7712.74156691 , delta error  0.00071640654096 , grad norm  0.845230111887
+Step  1700 , error  7712.68162215 , delta error  0.000499837636198 , grad norm  0.706066872904
+Step  1800 , error  7712.63937674 , delta error  0.000355975240382 , grad norm  0.595898559259
+Step  1900 , error  7712.60902565 , delta error  0.000258119363025 , grad norm  0.507458408595
+Step  2000 , error  7712.58684294 , delta error  0.000190239908079 , grad norm  0.435678890032
+Step  2100 , error  7712.5703726 , delta error  0.000142363207488 , grad norm  0.376910967667
+Step  2200 , error  7712.5579599 , delta error  0.000108100910438 , grad norm  0.328456585813
+Step  2231 , error  7712.55484738 , delta error  9.98087989501e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 68.45%
+Step  100 , error  18313901.9542 , delta error  371728.0649 , grad norm  19135.3326504
+Step  200 , error  2460385.59573 , delta error  49786.4496415 , grad norm  7002.91253741
+Step  300 , error  336811.049064 , delta error  6674.30231097 , grad norm  2564.07040417
+Step  400 , error  51810.1654493 , delta error  898.209731913 , grad norm  940.642323559
+Step  500 , error  13373.2725963 , delta error  121.727383323 , grad norm  346.293848243
+Step  600 , error  8144.02139327 , delta error  16.7142258688 , grad norm  128.328739277
+Step  700 , error  7420.09583774 , delta error  2.36149562177 , grad norm  48.2440621439
+Step  800 , error  7315.79001175 , delta error  0.357406089421 , grad norm  18.7759546767
+Step  900 , error  7299.21117395 , delta error  0.0637640393579 , grad norm  7.93775076839
+Step  1000 , error  7295.91477487 , delta error  0.0156672770308 , grad norm  3.94042930986
+Step  1100 , error  7294.96073897 , delta error  0.0057452292067 , grad norm  2.3895053364
+Step  1200 , error  7294.557092 , delta error  0.00284558807016 , grad norm  1.68308559618
+Step  1300 , error  7294.33961589 , delta error  0.00166405876826 , grad norm  1.28765183121
+Step  1400 , error  7294.2063665 , delta error  0.00106681181296 , grad norm  1.0312737355
+Step  1500 , error  7294.11837402 , delta error  0.000725583012354 , grad norm  0.850656579375
+Step  1600 , error  7294.05722623 , delta error  0.000515315252414 , grad norm  0.716983279677
+Step  1700 , error  7294.01305833 , delta error  0.0003786759371 , grad norm  0.614690324335
+Step  1800 , error  7293.98014766 , delta error  0.000286181805677 , grad norm  0.534423193039
+Step  1900 , error  7293.95498175 , delta error  0.000221464666538 , grad norm  0.470167015388
+Step  2000 , error  7293.93530885 , delta error  0.000174910469468 , grad norm  0.417867621556
+Step  2100 , error  7293.9196337 , delta error  0.000140615878081 , grad norm  0.374692526399
+Step  2200 , error  7293.90693374 , delta error  0.000114821626084 , grad norm  0.338605127028
+Step  2274 , error  7293.89912082 , delta error  9.99064495772e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 69.05%
+[0.00029935720844811753, 9.9116421736940893e-05, 5.5388402625820574e-05, 9.6658381662524171e-05]
+Result:  result(mean_score=0.00013763010361835079, std_dev=9.4975443551018903e-05, parameters={'k': 150, 'reg_penalty': 10})
+{'k': 150, 'reg_penalty': 20}
+Step  100 , error  4914612.69074 , delta error  202244.592711 , grad norm  14007.0665852
+Step  200 , error  94931.848517 , delta error  3565.57670999 , grad norm  1859.86965799
+Step  300 , error  9828.77105915 , delta error  63.3975008819 , grad norm  248.013010093
+Step  400 , error  8309.6286208 , delta error  1.15746870274 , grad norm  33.5182292984
+Step  500 , error  8281.29587885 , delta error  0.0252990855224 , grad norm  4.96363996991
+Step  600 , error  8280.54636928 , delta error  0.00164503443739 , grad norm  1.2738748023
+Step  700 , error  8280.46124605 , delta error  0.000437398717622 , grad norm  0.65875079506
+Step  800 , error  8280.43378545 , delta error  0.000163721566423 , grad norm  0.403200649248
+Step  855 , error  8280.42687245 , delta error  9.91207289189e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 69.64%
+Step  100 , error  4914346.6289 , delta error  202237.168333 , grad norm  14006.8084386
+Step  200 , error  94850.5719759 , delta error  3565.50118291 , grad norm  1859.85019734
+Step  300 , error  9750.13450196 , delta error  63.3754293449 , grad norm  247.968614695
+Step  400 , error  8232.5693009 , delta error  1.14809509408 , grad norm  33.379288315
+Step  500 , error  8204.79215423 , delta error  0.0222937045219 , grad norm  4.65372636319
+Step  600 , error  8204.22602089 , delta error  0.000594713876126 , grad norm  0.7617716461
+Step  662 , error  8204.20996841 , delta error  9.82471792668e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 70.24%
+Step  100 , error  4914252.44089 , delta error  202226.902488 , grad norm  14006.4532103
+Step  200 , error  94994.7611852 , delta error  3565.36986598 , grad norm  1859.81629702
+Step  300 , error  9895.54100436 , delta error  63.3850819059 , grad norm  247.987862841
+Step  400 , error  8377.58176981 , delta error  1.148683452 , grad norm  33.3877851945
+Step  500 , error  8349.80766552 , delta error  0.022097670806 , grad norm  4.6326839567
+Step  600 , error  8349.25473416 , delta error  0.000523104017702 , grad norm  0.71371882277
+Step  650 , error  8349.24259065 , delta error  9.94671154331e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 70.83%
+Step  100 , error  4914542.89689 , delta error  202259.093447 , grad norm  14007.5686214
+Step  200 , error  94529.5134208 , delta error  3565.67885942 , grad norm  1859.89524147
+Step  300 , error  9430.41128984 , delta error  63.3486390543 , grad norm  247.915302544
+Step  400 , error  7914.01369815 , delta error  1.14447562762 , grad norm  33.3258415924
+Step  500 , error  7886.39417405 , delta error  0.0217515801423 , grad norm  4.59589788831
+Step  600 , error  7885.85341962 , delta error  0.000498087531014 , grad norm  0.696333049989
+Step  648 , error  7885.84213235 , delta error  9.92245086309e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 71.43%
+[0.00019207223752678296, 9.8200796593874483e-05, 4.9917943107221004e-05, 0.00010126116174169197]
+Result:  result(mean_score=0.00011036303474239261, std_dev=5.1382796370349165e-05, parameters={'k': 150, 'reg_penalty': 20})
+{'k': 150, 'reg_penalty': 50}
+Step  100 , error  34988.0456764 , delta error  2813.8548496 , grad norm  1613.91218786
+Step  200 , error  8927.59525048 , delta error  0.0997453524797 , grad norm  9.60952908015
+Step  269 , error  8926.67053492 , delta error  9.55941886787e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 72.02%
+Step  100 , error  34876.3936074 , delta error  2813.72617442 , grad norm  1613.87499481
+Step  200 , error  8817.38619219 , delta error  0.0996588417875 , grad norm  9.60525215682
+Step  269 , error  8816.46267872 , delta error  9.48354427237e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 72.62%
+Step  100 , error  35070.4616644 , delta error  2813.61964852 , grad norm  1613.84470099
+Step  200 , error  9012.28715387 , delta error  0.0996713046261 , grad norm  9.60586454507
+Step  269 , error  9011.36349295 , delta error  9.48624274315e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 73.21%
+Step  100 , error  34528.7792744 , delta error  2813.886823 , grad norm  1613.91998125
+Step  200 , error  8468.88408552 , delta error  0.0996095416322 , grad norm  9.60283156309
+Step  269 , error  8467.96116988 , delta error  9.4619792435e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 73.81%
+[0.00019628099173553724, 0.00010369454745227302, 4.9917943107221004e-05, 0.00011737089201877933]
+Result:  result(mean_score=0.00011681609357845265, std_dev=5.2351015629207768e-05, parameters={'k': 150, 'reg_penalty': 50})
+{'k': 150, 'reg_penalty': 100}
+Step  100 , error  9280.3217454 , delta error  0.274499976809 , grad norm  15.2991008761
+Step  139 , error  9279.1513371 , delta error  9.18082041608e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 74.40%
+Step  100 , error  9140.13063893 , delta error  0.274470848057 , grad norm  15.298270874
+Step  139 , error  9138.9603783 , delta error  9.17734505492e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 75.00%
+Step  100 , error  9396.43188244 , delta error  0.274472484532 , grad norm  15.2983259489
+Step  139 , error  9395.26160362 , delta error  9.17831366678e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 75.60%
+Step  100 , error  8773.85309583 , delta error  0.274465579252 , grad norm  15.2981028044
+Step  139 , error  8772.68288227 , delta error  9.17526413104e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 76.19%
+[0.00019628099173553724, 9.2707045735475904e-05, 4.9917943107221004e-05, 0.00011138727791586118]
+Result:  result(mean_score=0.00011257331462352384, std_dev=5.3218291286782141e-05, parameters={'k': 150, 'reg_penalty': 100})
+{'k': 150, 'reg_penalty': 200}
+Step  70 , error  9524.83926085 , delta error  9.98347932182e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 76.79%
+Step  70 , error  9357.69799939 , delta error  9.9825037978e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 77.38%
+Step  70 , error  9687.34493338 , delta error  9.98272935249e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 77.98%
+Step  70 , error  8977.5959765 , delta error  9.98269952106e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 78.57%
+[0.00019628099173553724, 9.8200796593874483e-05, 4.9917943107221004e-05, 0.00011691061401086256]
+Result:  result(mean_score=0.00011532758636187383, std_dev=5.2743976377848912e-05, parameters={'k': 150, 'reg_penalty': 200})
+{'k': 150, 'reg_penalty': 500}
+Step  26 , error  9718.50191985 , delta error  7.14130801498e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 79.17%
+Step  26 , error  9525.60472153 , delta error  7.14089910616e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 79.76%
+Step  26 , error  9946.26959032 , delta error  7.140771595e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 80.36%
+Step  26 , error  9133.0894522 , delta error  7.14150228305e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 80.95%
+[0.00019628099173553724, 9.8200796593874483e-05, 4.9917943107221004e-05, 0.00011691061401086256]
+Result:  result(mean_score=0.00011532758636187383, std_dev=5.2743976377848912e-05, parameters={'k': 150, 'reg_penalty': 500})
+{'k': 150, 'reg_penalty': 1000}
+Step  9 , error  9796.70748706 , delta error  3.3418642488e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+Progress: 81.55%
+Step  10 , error  9591.74203607 , delta error  1.03684869828e-05
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10

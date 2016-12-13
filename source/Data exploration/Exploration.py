@@ -4,6 +4,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import itertools as itls
 from openpyxl import load_workbook
+from sklearn.tree import DecisionTreeClassifier
+import sys
+sys.path.append('./../')
+import utils.utils as ut
 
 
 def read_items():
@@ -35,6 +39,19 @@ def plot_dist_num(X, name, note=None):
         plt.figtext(0, 0, note)
     ax.get_figure().savefig('./'+name+'.png', bbox_inches='tight')
     plt.close()
+
+
+
+
+def feature_scorer(df, URM, criterion, filename):
+    URM = ut.check_matrix(URM, format='csc')
+    reps = np.diff(URM.indptr)
+    X = np.repeat(df_copy.values, reps, axis=0)
+    Y = URM.data
+    clf = DecisionTreeClassifier(criterion=criterion)
+    clf.fit(X, Y)
+    pd.DataFrame(clf.feature_importances_, index=df_copy.columns, columns=['score']).sort_values('score', ascending=False).to_csv(filename + '.csv', sep='\t', header=False)
+
 
 
 # Items dataframe description
@@ -75,3 +92,12 @@ def plot_dist_num(X, name, note=None):
 # write_description(grp, ex_wrtr)
 # print grp[grp['count'] <= 2].shape[0]
 
+urm = ut.read_interactions()
+items_df = ut.read_items()
+df_copy = pd.DataFrame(items_df, copy=True).drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test', 'title', 'tags'],axis=1)
+country_dict = {c:i for i,c in enumerate(df_copy['country'].unique())}
+df_copy['country'] = df_copy['country'].apply(lambda x: country_dict[x])
+df_copy['country_reg'] = df_copy['country'].apply(lambda x: x*100) + df_copy['region']
+df_copy = df_copy.drop(['country', 'region'], axis=1)
+feature_scorer(items_df, urm, criterion='entropy', filename='Entropy feature importance 3')
+feature_scorer(items_df, urm, criterion='gini', filename='Gini feature importance 3')

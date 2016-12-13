@@ -1,0 +1,2 @@
+Conslusions:
+Using title/tags improves performance. It is even better if thay are separated. Merging country/region (and dropping them) further improves it
