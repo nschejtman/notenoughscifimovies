@@ -6,7 +6,8 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.linear_model import ElasticNet, Ridge, Lasso
+from sklearn.linear_model import RidgeClassifier, LogisticRegression
+from sklearn.svm import LinearSVC
 from sklearn.base import BaseEstimator
 import time
 import pandas as pd
@@ -20,19 +21,9 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=None, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'l1_penalty': [0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10],
-              'l2_penalty': [0.001, 0.01, 0.1, 1, 10, 50, 100, 500, 1000],
-              'k_top': [100, 200, 500, 1000],
-              'count_top_pop':[True, False]}
-    params = {'l1_ratio':[0.00001, 0.0001, 0.001, 0.01, 0.1, 0.2, 0.5, 1],
-              'k_top': [100, 200, 500, 1000],
-              'count_top_pop': [True, False]}
-    params = {'l1_ratio': [0.00000001,0.0000001, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 0.2, 0.5],
-              'k_top': [500, 1000, 2000, 5000, 10000],
-              'count_top_pop': [True, False]}
-    params = {'alpha_ridge':[9500, 9750, 10000, 25000, 50000, 75000, 100000]}
-    params = {'alpha_ridge':[100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000]}
-    params = {'alpha_ridge':[100000]}
+    params = {'C_logreg':[1e-6, 1e-4, 1e-2, 1, 10, 100]}
+    params = {'C_logreg': [2.5, 5, 7.5, 25, 50, 75]}
+    params = {'C_SVM':[1e-6, 1e-4, 1e-2, 1, 10, 100]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -47,8 +38,6 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     for pars in grid:
         print pars
         rec = rec.set_params(**pars)
-        #rec.l1_ratio = rec.l1_penalty / (rec.l1_penalty + rec.l2_penalty)
-        #rec.top_pop.count = pars['count_top_pop']
         maps = []
 
         for row_train, row_test in splits:
@@ -67,13 +56,14 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
             maps.append(ut.map_scorer(rec, urm_test, hidden_ratings, n, non_active_items_mask_sample))  # Assume rec to predict indices of items, NOT ids
             print "Progress: {:.2f}%".format((prog * 100) / total)
             prog += 1
+            break
         print maps
         results.append(result(np.mean(maps), np.std(maps), pars))
         print "Result: ", result(np.mean(maps), np.std(maps), pars)
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    # scores.to_csv('SLIM_Item CV MAP values 3 (Ridge).csv', sep='\t', index=False)
+    scores.to_csv('Item_SCM CV MAP values 3.csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -93,84 +83,63 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
 
 
 
-class SLIM_recommender(BaseEstimator):
-    """
-    Train a Sparse Linear Methods (SLIM) item similarity model.
-    See:
-        Efficient Top-N Recommendation by Linear Regression,
-        M. Levy and K. Jack, LSRS workshop at RecSys 2013.
-        SLIM: Sparse linear methods for top-n recommender systems,
-        X. Ning and G. Karypis, ICDM 2011.
-        http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
-    """
-
-    def __init__(self, top_pops, l1_penalty=0.1, l2_penalty=0.1, l1_ratio=None, positive_only=True, k_top=None, alpha_ridge=None, alpha_lasso=None, pred_batch_size=2500):
-        super(SLIM_recommender, self).__init__()
-        self.l1_penalty = l1_penalty
-        self.l2_penalty = l2_penalty
-        self.positive_only = positive_only
-        if l1_ratio is not None:
-            self.l1_ratio = l1_ratio
-        else:
-            self.l1_ratio = self.l1_penalty / (self.l1_penalty + self.l2_penalty)
+class Item_SCM(BaseEstimator):
+    def __init__(self, top_pops, alpha_ridge=None, C_logreg=None, C_SVM=None, pred_batch_size=2500):
         self.alpha_ridge = alpha_ridge
-        self.alpha_lasso = alpha_lasso
+        self.C_logreg = C_logreg
+        self.C_SVM = C_SVM
         self.top_pops = top_pops
-        self.k_top = k_top
         self.pred_batch_size = pred_batch_size
-
-
-    def __str__(self):
-        return "SLIM (l1_penalty={},l2_penalty={},positive_only={})".format(
-            self.l1_penalty, self.l2_penalty, self.positive_only
-        )
 
     def fit(self, URM):
         print time.time(), ": ", "Started fit"
         URM = ut.check_matrix(URM, 'csc', dtype=np.float32)
         n_items = URM.shape[1]
 
-        # initialize the ElasticNet model
         if self.alpha_ridge is not None:
-            self.model = Ridge(self.alpha_ridge, copy_X=False, fit_intercept=False)
-        elif self.alpha_lasso is not None:
-            self.model = Lasso(alpha=self.alpha_lasso, copy_X=False, fit_intercept=False)
+            self.model = RidgeClassifier(self.alpha_ridge, copy_X=False, fit_intercept=False)
+        elif self.C_logreg is not None:
+            self.model = LogisticRegression(C=self.C_logreg, solver='newton-cg', fit_intercept=False)
+            #TODO: try different values for solver and muti_class
         else:
-            self.model = ElasticNet(alpha=1.0, l1_ratio=self.l1_ratio, positive=self.positive_only, fit_intercept=False, copy_X=False)
+            self.model = LinearSVC(C=self.C_SVM, fit_intercept=False)
 
-        # we'll store the W matrix into a sparse csr_matrix
-        # let's initialize the vectors used by the sparse.csc_matrix constructor
+        #values, rows, cols = [[],[],[],[]], [[],[],[],[]], [[],[],[],[]]
         values, rows, cols = [], [], []
+        k = 0
 
-        # fit each item's factors sequentially (not in parallel)
-        for j in self.top_pops[:self.k_top]:#, because only the active ones are to be recommended(range(n_items) if self.k_top is None else top_pops):
-            # print time.time(), ": ", "Started fit > Iteration ", j, "/", n_items
-            # get the target column
-            y = URM[:, j].toarray()
-            # set the j-th column of X to zero
+        for j in self.top_pops:
+            y = URM[:, j].toarray().ravel()
+            y[y > 0.0] = 1.0
             startptr = URM.indptr[j]
             endptr = URM.indptr[j + 1]
             bak = URM.data[startptr: endptr].copy()
             URM.data[startptr: endptr] = 0.0
-            # fit one ElasticNet model per column
-            #print time.time(), ": ", "Started fit > Iteration ", j, "/", n_items, " > Fitting ElasticNet model"
-            if self.alpha_ridge is None and self.alpha_lasso is None:
+            try:
                 self.model.fit(URM, y)
-            else:
-                self.model.fit(URM, y.ravel())
+                coefs = self.model.coef_.ravel()
+                nnz_mask = coefs > 0.0
 
-            # self.model.coef_ contains the coefficient of the ElasticNet model
-            # let's keep only the non-zero values
-            nnz_mask = self.model.coef_ > 0.0
-            values.extend(self.model.coef_[nnz_mask])
-            rows.extend(np.arange(n_items)[nnz_mask])
-            cols.extend(np.ones(nnz_mask.sum()) * j)
-            # print nnz_mask.sum(), (self.model.coef_ > 1e-4).sum()
+                #for i in range(4):
+                #    values[i].extend(self.model.coef_[nnz_mask[i]])
+                #    rows[i].extend(np.arange(n_items)[nnz_mask[i]])
+                #    cols[i].extend(np.ones(nnz_mask[i].sum()) * j)
+                #print nnz_mask.sum(), (self.model.coef_ > 1e-4).sum()
 
-            # finally, replace the original values of the j-th column
+                values.extend(coefs[nnz_mask])
+                rows.extend(np.arange(n_items)[nnz_mask])
+                cols.extend(np.ones(nnz_mask.sum()) * j)
+            except ValueError:
+                pass
             URM.data[startptr:endptr] = bak
 
-        # generate the sparse weight matrix
+            if k % 1000 == 0:
+                print time.time(), k
+
+            k += 1
+
+        #for i in range(4):
+        #    self.W_sparse[i] = sps.csc_matrix((values[i], (rows[i], cols[i])), shape=(n_items, n_items), dtype=np.float32)
         self.W_sparse = sps.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
         print time.time(), ": ", "Finished fit"
 
@@ -188,7 +157,14 @@ class SLIM_recommender(BaseEstimator):
             end = start + self.pred_batch_size if i < n_iterations - 1 else user_profile.shape[0]
 
             batch_profiles = URM[start:end,:]
-            batch_scores = batch_profiles.dot(self.W_sparse).toarray().astype(np.float32)
+
+            if self.C_SVM is not None:
+                batch_scores = batch_profiles.dot(self.W_sparse).toarray().astype(np.float32)
+            else:
+                batch_scores = -batch_profiles.dot(self.W_sparse).toarray().astype(np.float32)
+                np.exp(batch_scores, batch_scores)
+                batch_scores += 1
+                np.reciprocal(batch_scores, batch_scores)
 
             nonzero_indices = batch_profiles.nonzero()
             batch_scores[nonzero_indices[0], nonzero_indices[1]] = 0.0
@@ -215,7 +191,6 @@ class SLIM_recommender(BaseEstimator):
 
 
 urm = ut.read_interactions()
-# urm, global_bias, item_bias, user_bias = ut.global_effects(urm)
 items_dataframe = ut.read_items()
 item_ids = items_dataframe.id.values
 actives = np.array(items_dataframe.active_during_test.values)
@@ -228,6 +203,12 @@ top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
 # TODO: Use all top_pops or only active ones in fitting??
-recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000)
-# recommender.fit(urm)
-cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+recommender = Item_SCM(top_pops=top_pops, pred_batch_size=1000, C_SVM=0.02)
+recommender.fit(urm)
+predictions = recommender.predict(urm_pred, 5, non_active_items_mask)
+ut.write_recommendations("Item SCM CSVM 20minus2", predictions, test_users_idx, item_ids)
+
+recommender = Item_SCM(top_pops=top_pops, pred_batch_size=1000, C_SVM=0.05)
+recommender.fit(urm)
+predictions = recommender.predict(urm_pred, 5, non_active_items_mask)
+ut.write_recommendations("Item SCM CSVM 50minus2", predictions, test_users_idx, item_ids)

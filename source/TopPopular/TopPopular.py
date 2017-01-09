@@ -16,7 +16,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     urm_sample, _, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=None, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'count': [True, False]}
+    params = {'count': [True]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -53,7 +53,51 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    scores.to_csv('TopPop CV MAP values.csv', sep='\t', index=False)
+    #scores.to_csv('TopPop CV MAP values.csv', sep='\t', index=False)
+
+
+def holdout_search(rec, urm, non_active_items_mask, sample_size, test_size):
+    non_active_items_mask_sample = non_active_items_mask
+    interactions_to_remove = np.random.permutation(urm.data.shape[0])[:-int(sample_size * urm.data.shape[0])]
+    urm_sample = urm.copy()
+    urm_sample.data[interactions_to_remove] = 0.0
+    urm_sample.eliminate_zeros()
+    retained_users = np.diff(urm_sample.indptr) != 0
+    urm_sample = urm_sample[retained_users, :]
+    params = {'count': [True, False]}
+    grid = list(ParameterGrid(params))
+    n = 5
+    result = namedtuple('result', ['mean_score', 'std_dev', 'parameters'])
+    results = []
+    total = float(reduce(lambda acc, x: acc * len(x), params.itervalues(), 1))
+    prog = 1.0
+    hidden_ratings_perc = 1 - test_size
+    hidden_ratings = []
+    for u in range(urm_sample.shape[0]):
+        relevant_u = urm_sample[u,].nonzero()[1]  # Indices of rated items for test user u
+        if len(relevant_u) > 1:  # 1 or 2
+            np.random.shuffle(relevant_u)
+            urm_sample[u, relevant_u[int(len(relevant_u) * hidden_ratings_perc):]] = 0.0
+            hidden_ratings.append(relevant_u[int(len(relevant_u) * hidden_ratings_perc):])
+        else:
+            hidden_ratings.append([])
+    urm_sample.eliminate_zeros()
+    for pars in grid:
+        print pars
+        rec = rec.set_params(**pars)
+        maps = []
+        rec.fit(urm_sample)
+        maps.append(ut.map_scorer(rec, urm_sample, hidden_ratings, n,
+                                  non_active_items_mask_sample))  # Assume rec to predict indices of items, NOT ids
+        print "Progress: {:.2f}%".format((prog * 100) / total)
+        prog += 1
+        print maps
+        results.append(result(np.mean(maps), np.std(maps), pars))
+        print "Result: ", result(np.mean(maps), np.std(maps), pars)
+    scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
+                          columns=["MAP", "Std"] + _.parameters.keys())
+    print "Total scores: ", scores
+    #scores.to_csv('TopPopular Holdout MAP values 1.csv', sep='\t', index=False)
 
 
 class TopPop(BaseEstimator):
@@ -82,12 +126,17 @@ class TopPop(BaseEstimator):
         return ranking
 
 
-'''urm = ut.read_interactions()
-items_dataframe = ut.read_items()
-actives = np.array(items_dataframe.active_during_test.values)
-non_active_items_mask = actives == 0
-recommender = TopPop()
-recommender.fit(urm)
-cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
-top_pops = recommender.top_pop[non_active_items_mask[recommender.top_pop] == False]
-pd.DataFrame(top_pops).to_csv('../../inputs/top_pop_sum_idx.csv', sep='\t', index=False)'''
+def main():
+    urm = ut.read_interactions()
+    urm, _, _, _ = ut.global_effects(urm)
+    items_dataframe = ut.read_items()
+    actives = np.array(items_dataframe.active_during_test.values)
+    non_active_items_mask = actives == 0
+    recommender = TopPop()
+    recommender.fit(urm)
+    cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+    #holdout_search(recommender, urm, non_active_items_mask, sample_size=0.25, test_size=0.2)
+    #top_pops = recommender.top_pop[non_active_items_mask[recommender.top_pop] == False]
+    #pd.DataFrame(top_pops).to_csv('../../inputs/top_pop_sum_idx.csv', sep='\t', index=False)
+
+#main()

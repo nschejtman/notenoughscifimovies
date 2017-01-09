@@ -29,7 +29,7 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     folds = 2
     kfold = KFold(n_splits=folds)
     splits = [(train, test) for train,test in kfold.split(urm_sample)]
-    retained_ratings_perc = 0.75
+    hidden_ratings_perc = 0.75
     n = 5
     result = namedtuple('result', ['mean_score', 'std_dev', 'parameters'])
     results = []
@@ -49,8 +49,8 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
                 relevant_u = urm_test[u,].nonzero()[1]  # Indices of rated items for test user u
                 if len(relevant_u) > 1:#1 or 2
                     np.random.shuffle(relevant_u)
-                    urm_test[u, relevant_u[int(len(relevant_u) * retained_ratings_perc):]] = 0
-                    hidden_ratings.append(relevant_u[int(len(relevant_u) * retained_ratings_perc):])
+                    urm_test[u, relevant_u[int(len(relevant_u) * hidden_ratings_perc):]] = 0
+                    hidden_ratings.append(relevant_u[int(len(relevant_u) * hidden_ratings_perc):])
                 else:
                     hidden_ratings.append([])
             maps.append(ut.map_scorer(rec, urm_test, hidden_ratings, n, non_active_items_mask_sample))  # Assume rec to predict indices of items, NOT ids
@@ -72,69 +72,6 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     plt.close(f)'''
 
 
-def holdout_search(rec, urm, icm, actives, sample_size=None):
-    np.random.seed(1)
-    nnz = urm.nonzero()
-    perm = np.random.permutation(len(nnz[0]))[:sample_size]
-    unique_rows = np.unique(nnz[0][perm])
-    nnz_to_sample_row = {unique_rows[i]: i for i in range(len(unique_rows))}
-    URM_sample = sps.lil_matrix((unique_rows.size, urm.shape[1]))
-    for i in perm:
-        URM_sample[nnz_to_sample_row[nnz[0][i]], nnz[1][i]] = urm[nnz[0][i], nnz[1][i]]
-    train_size = 0.75
-    params = {'k': [5], 'sh': [2]}
-    grid = list(ParameterGrid(params))
-    repetitions = 4
-    Result = namedtuple('Result', ['mean_score', 'std_dev', 'parameters'])
-    results = []
-    n = 5
-    total = reduce(lambda acc, x: acc * len(x), params.itervalues(), 1) * repetitions
-    prog = 1
-
-    print "Progress: 0%"
-
-    for pars in grid:
-        rec = rec.set_params(**pars)
-        maps = []
-        for rep in range(repetitions):
-            np.random.shuffle(perm)
-            URM_train, URM_test = URM_sample.copy(), URM_sample.copy()
-            pivot = int(len(perm) * train_size)
-            for i in range(len(perm)):
-                if i < pivot:
-                    URM_test[nnz_to_sample_row[nnz[0][perm[i]]], nnz[1][perm[i]]] = 0
-                else:
-                    URM_train[nnz_to_sample_row[nnz[0][perm[i]]], nnz[1][perm[i]]] = 0
-            rec.fit(URM_train, icm, actives)
-            hidden_ratings, test_rows = [], []
-            for u in range(URM_test.shape[0]):
-                relevant_u = URM_test[u,].nonzero()[1]  # Indices of rated items for test user u
-                if len(relevant_u) > 0:
-                    hidden_ratings.append(relevant_u)
-                    test_rows.append(u)
-            maps.append(ut.map_scorer(rec, URM_train[test_rows,], hidden_ratings,
-                                   n))  # Assume rec to predict indices of items, NOT ids
-            print "Progress: ", (prog * 100) / total, "%"
-            prog += 1
-        results.append(Result(np.mean(maps), np.std(maps), pars))
-    scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
-                          columns=["MAP", "Std"] + _.parameters.keys())
-    scores.to_csv('ItmCB_BF CV MAP values 1.csv', sep='\t', index=False)
-    cols, col_feat, x_feat = 3, 'sh', 'k'
-    f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
-    f.map(plt.plot, x_feat, 'MAP')
-    f.fig.suptitle("ItemCB Holdout MAP values")
-    i_max, y_max = scores['MAP'].argmax(), scores['MAP5'].max()
-    i_feat_max = params[col_feat].index(scores[col_feat][i_max])
-    f_max = f.axes[i_feat_max]
-    f_max.plot(scores[x_feat][i_max], y_max, 'o', color='r')
-    plt.figtext(0, 0, "Not normalized ratings, no title/tags\nmaximum at (sh={:.5f},k={:.5f}, {:.5f}+/-{:.5f})".format(scores[col_feat][i_max],
-                                                                                         scores[x_feat][i_max],
-                                                                                         y_max,
-                                                                                         scores['Std'][i_max]))
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.9, bottom=0.15)
-    f.savefig('ItemCB Holdout MAP values.png', bbox_inches='tight')
 
 
 class ItemCB_BF(BaseEstimator):
@@ -201,31 +138,33 @@ class ItemCB_BF(BaseEstimator):
         return ranking
 
 
+def main():
+    # Read items
+    items_dataframe = ut.read_items()
+    urm = ut.read_interactions()
+    actives = np.array(items_dataframe.active_during_test.values)
+    non_active_items_mask = actives == 0
+    item_ids = items_dataframe.id.values
+    icm = ut.generate_icm(items_dataframe)
 
-# Read items
-items_dataframe = ut.read_items()
-urm = ut.read_interactions()
-actives = np.array(items_dataframe.active_during_test.values)
-non_active_items_mask = actives == 0
-item_ids = items_dataframe.id.values
-icm = ut.generate_icm(items_dataframe)
+    top_rec = TopPop(count=True)
+    top_rec.fit(urm)
+    top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
+    recommender = ItemCB_BF(top_pops=top_pops,sh=0.1, pred_batch_size=200, normalize=False)
+    #cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
 
-top_rec = TopPop(count=True)
-top_rec.fit(urm)
-top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
-recommender = ItemCB_BF(top_pops=top_pops,sh=0.1, pred_batch_size=200, normalize=False)
-cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+    '''
+    test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
+    urm = urm[test_users_idx, :]
+    recommender.fit(icm)
+    recs = recommender.predict(urm, 5, non_active_items_mask)
+    ut.write_recommendations("Item CB_BF", recs, test_users_idx, item_ids)
+    '''
+    '''
+    urm = sps.csr_matrix([[3,0,2,3,0,0,0,0,0],[0,0,0,0,0,0,2,0,3],[0,0,0,0,1,0,0,0,0],[0,0,0,3,2,1,0,0,0],[0,0,0,0,0,0,0,0,0]])
+    icm = sps.csr_matrix([[0,4],[1,4],[2,4],[3,4],[4,4],[4,3],[4,2],[4,1],[4,0]])
+    non_active_items_mask = np.array([False, False, False, False, False, False, False, False, False])
+    recommender = ItemCB_BF(sh=0, pred_batch_size=2, normalize=False)
+    '''
 
-'''
-test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
-urm = urm[test_users_idx, :]
-recommender.fit(icm)
-recs = recommender.predict(urm, 5, non_active_items_mask)
-ut.write_recommendations("Item CB_BF", recs, test_users_idx, item_ids)
-'''
-'''
-urm = sps.csr_matrix([[3,0,2,3,0,0,0,0,0],[0,0,0,0,0,0,2,0,3],[0,0,0,0,1,0,0,0,0],[0,0,0,3,2,1,0,0,0],[0,0,0,0,0,0,0,0,0]])
-icm = sps.csr_matrix([[0,4],[1,4],[2,4],[3,4],[4,4],[4,3],[4,2],[4,1],[4,0]])
-non_active_items_mask = np.array([False, False, False, False, False, False, False, False, False])
-recommender = ItemCB_BF(sh=0, pred_batch_size=2, normalize=False)
-'''
+main()

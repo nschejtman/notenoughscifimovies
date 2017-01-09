@@ -40,9 +40,15 @@ def generate_icm(items_df):
 
 
 
-def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask):
+def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask, global_bias=None, item_bias=None, user_bias=None):
     score = 0
-    rec_list = recommender.predict(urm_test, n, non_active_items_mask)
+    if global_bias is not None:
+        if item_bias is None and user_bias is None:
+            rec_list = recommender.predict(urm_test, n, non_active_items_mask, global_bias, item_bias, user_bias)
+        else:
+            rec_list = recommender.predict(urm_test, n, non_active_items_mask, global_bias)
+    else:
+        rec_list = recommender.predict(urm_test, n, non_active_items_mask)
     i = 0
     for u in range(urm_test.shape[0]):
         if len(hidden_ratings[u]) > 0:
@@ -205,10 +211,15 @@ def apply_shrinkage_batch(matrix, partial_similarity_matrix, batch_mask, sh, row
 
 
 
-def produce_sample(urm, icm, ucm, non_active_items_mask, sample_size, sample_from_urm): # TODO: Add sample on users
+def produce_sample(urm, icm, ucm, non_active_items_mask, sample_size, sample_from_urm, item_bias=None, user_bias=None): # TODO: Add sample on users
     if sample_from_urm:
-        urm_sample = urm[np.random.permutation(urm.shape[0])[:sample_size],]
-        return urm_sample, icm, None, non_active_items_mask
+        perm = np.random.permutation(urm.shape[0])[:sample_size]
+        urm_sample = urm[perm,]
+        if item_bias is None and user_bias is None:
+            return urm_sample, icm, None, non_active_items_mask
+        else:
+            user_bias_sample = user_bias[perm]
+            return urm_sample, icm, None, non_active_items_mask, item_bias, user_bias_sample
     else:
         interactions_to_remove = np.random.permutation(urm.data.shape[0])[:-sample_size]
         urm_sample = urm.copy()
@@ -221,3 +232,27 @@ def produce_sample(urm, icm, ucm, non_active_items_mask, sample_size, sample_fro
         icm_sample = icm[retained_items, :]
         non_active_items_mask_sample = non_active_items_mask[retained_items]
         return urm_sample, icm_sample, None, non_active_items_mask_sample
+
+
+def global_effects(urm):
+    urm = sps.csc_matrix(urm, dtype=np.float32, copy=False)
+    global_bias = np.mean(urm.data)
+    urm.data -= global_bias
+
+    urm = urm.tocsc(copy=False)
+    item_bias = np.asarray(urm.sum(axis=0)).ravel()
+    dens = np.diff(urm.indptr)
+    dens[dens == 0] = 1
+    item_bias /= dens
+    for i in range(len(urm.indptr) - 1):
+        urm.data[urm.indptr[i]:urm.indptr[i + 1]] -= item_bias[i]
+
+    urm = urm.tocsr(copy=False)
+    user_bias = np.asarray(urm.sum(axis=1)).ravel()
+    dens = np.diff(urm.tocsr().indptr)
+    dens[dens == 0] = 1
+    user_bias /= dens
+    for i in range(len(urm.indptr) - 1):
+        urm.data[urm.indptr[i]:urm.indptr[i + 1]] -= user_bias[i]
+
+    return urm, global_bias, item_bias, user_bias

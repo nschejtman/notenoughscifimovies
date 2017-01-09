@@ -8,6 +8,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.base import BaseEstimator
+from sklearn.decomposition import NMF, TruncatedSVD
 import time
 import pandas as pd
 import sys
@@ -26,6 +27,8 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
                                                                                 sample_from_urm=sample_from_urm)
     params = {'k':[10, 20, 50, 100, 150, 200],'reg_penalty':[0.0001, 0.001, 0.01, 0.1, 1, 10]}
     params = {'k': [10, 20, 50, 100, 150, 200, 500], 'reg_penalty': [10, 20, 50, 100, 200, 500, 1000]}
+    params = {'k':[50, 100, 200], 'reg_penalty':[100, 10000, 1000000, 1e8]}
+    params = {'k':[50], 'reg_penalty': [10]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -63,6 +66,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
             print "Progress: {:.2f}%".format((prog * 100) / total)
             print maps
             prog += 1
+            break
         results.append(result(np.mean(maps), np.std(maps), pars))
         print "Result: ", result(np.mean(maps), np.std(maps), pars)
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
@@ -89,7 +93,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
 
 class LatentFactor(BaseEstimator):
     def __init__(self, k, fit_user_bias=False, fit_item_bias=False, max_steps=5000, min_error=0.001, min_grad_norm = 0.001,
-                 min_delta_err=0.0001,learn_rate=0.001, reg_penalty=10, seed=1, pred_batch_size=2500):
+                 min_delta_err=0.0001,learn_rate=0.001, reg_penalty=10, l1_ratio=0, seed=1, pred_batch_size=2500):
         self.k = k
         self.fit_user_bias = fit_user_bias
         self.fit_item_bias = fit_item_bias
@@ -99,6 +103,7 @@ class LatentFactor(BaseEstimator):
         self.min_delta_err = min_delta_err
         self.learn_rate = learn_rate
         self.reg_penalty = reg_penalty
+        self.l1_ratio = l1_ratio
         self.seed = seed
         self.P = None
         self.Q = None
@@ -107,6 +112,12 @@ class LatentFactor(BaseEstimator):
 
 
     def fit(self, R):
+        '''nmf = NMF(n_components=self.k, alpha=self.reg_penalty, l1_ratio=self.l1_ratio, verbose=1)
+        self.P = nmf.fit_transform(R)
+        self.Q = nmf.components_.T
+        self.R = R
+        return'''
+
         np.random.seed(self.seed)
         self.P = np.random.randn(R.shape[0], self.k+self.fit_user_bias + self.fit_item_bias)
         self.Q = np.random.randn(R.shape[1], self.k+self.fit_user_bias + self.fit_item_bias)
@@ -125,24 +136,13 @@ class LatentFactor(BaseEstimator):
         while step <= self.max_steps and grad_norm > self.min_grad_norm and error > self.min_error and delta_err > self.min_delta_err:
             st = time.time()
             E = MF_utils.calculate_error_matrix(R, self.P, self.Q)
-            '''# E = sps.csr_matrix(R, copy=True, dtype=np.float64)
-            err_data = np.zeros(R.data.shape[0], dtype=np.float64)
-            tup = R.nonzero()
-            rows, cols = tup[0], tup[1]
-            for i in range(err_data.shape[0]):#range(E.data.shape[0]):
-                # E[rows[i], cols[i]] -= self.P[rows[i], :].dot(self.Q[cols[i], :])
-                err_data[i] = R.data[i] - self.P[rows[i], :].dot(self.Q[cols[i], :])
-            E = sps.csr_matrix((err_data, (rows, cols)), shape=R.shape, dtype=np.float64, copy=True)
-            et = time.time()
-            print et - st'''
-
             e_error, p_error, q_error = np.sum(E.data ** 2) / 2, self.reg_penalty * np.sum(self.P** 2) / 2, self.reg_penalty * np.sum(self.Q ** 2) / 2
             if self.fit_user_bias:
                 q_error -= self.reg_penalty*np.sum(self.Q[:, -2 + (not self.fit_item_bias)]**2) / 2
             if self.fit_item_bias:
                 p_error -= self.reg_penalty*np.sum(self.P[:, -1]**2) / 2
             error = e_error + p_error + q_error
-            error /= self.reg_penalty
+            # error /= self.reg_penalty
 
             e_dot_q = E.dot(self.Q)
             e_dot_p = E.T.dot(self.P)
@@ -153,8 +153,8 @@ class LatentFactor(BaseEstimator):
                 grad_Q[:,-2 + (not self.fit_item_bias)] = 0.0
             if self.fit_item_bias:
                 grad_P[:,-1] = 0.0
-            grad_P /= self.reg_penalty
-            grad_Q /= self.reg_penalty
+            # grad_P /= self.reg_penalty
+            # grad_Q /= self.reg_penalty
             grad_norm = np.sqrt(np.sum(grad_P** 2) + np.sum(grad_Q**2))
 
             '''ints = R.nonzero()
@@ -168,14 +168,16 @@ class LatentFactor(BaseEstimator):
                     self.Q[ints[1][i], -2 + (not self.fit_item_bias)] = 1
                 if self.fit_item_bias:
                     self.P[ints[0][i],-1] = 1'''
-            P_prime = (1 - self.learn_rate * 1) * self.P + self.learn_rate * e_dot_q / self.reg_penalty
-            Q_prime = (1 - self.learn_rate * 1) * self.Q + self.learn_rate * e_dot_p / self.reg_penalty
+            P_prime = (1 - self.learn_rate * self.reg_penalty) * self.P + self.learn_rate * e_dot_q
+            Q_prime = (1 - self.learn_rate * self.reg_penalty) * self.Q + self.learn_rate * e_dot_p
             if self.fit_user_bias:
                 Q_prime[:, -2 + (not self.fit_item_bias)] = np.ones(self.Q.shape[0])
             if self.fit_item_bias:
                 P_prime[:, -1] = np.ones(self.P.shape[0])
             #print np.mean(np.mean(self.P, axis=1)), np.std(np.mean(self.P, axis=1)), np.mean(np.mean(self.Q, axis=1)), np.std(np.mean(self.Q, axis=1))
             #print np.mean(self.P), np.std(self.P), np.mean(self.Q), np.std(self.Q)
+            #print np.mean(self.P[1, :]), np.std(self.P[1, :]), np.mean(self.Q[1, :]), np.std(self.Q[1, :])
+            #print np.mean(self.P[2, :]), np.std(self.P[2, :]), np.mean(self.Q[2, :]), np.std(self.Q[2, :])
             self.P, self.Q = P_prime.copy(), Q_prime.copy()
             del P_prime, Q_prime
 
@@ -204,7 +206,7 @@ class LatentFactor(BaseEstimator):
             start = i * self.pred_batch_size
             end = start + self.pred_batch_size if i < n_iterations - 1 else user_rows.shape[0]
             batch_rows = user_rows[start:end]
-            batch_scores = self.P[batch_rows,:].dot(self.Q.T)
+            batch_scores = self.P[batch_rows,:].dot(self.Q.T)# + global_bias
             nonzero_indices = self.R[batch_rows,:].nonzero()
             batch_scores[nonzero_indices[0], nonzero_indices[1]] = 0.0
 
@@ -222,13 +224,24 @@ class LatentFactor(BaseEstimator):
 
 
 R = sps.csr_matrix(ut.read_interactions(), copy=False, dtype=np.float64)
+R, global_bias, item_bias, user_bias = ut.global_effects(R)
+#R.data -= global_bias
 items_dataframe = ut.read_items()
 item_ids = items_dataframe.id.values
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
-rec = LatentFactor(k=50, fit_item_bias=False, fit_user_bias=False, learn_rate=0.001, min_delta_err=0.001, min_grad_norm=0.001, max_steps=5000, pred_batch_size=1000, reg_penalty=500)
+rec = LatentFactor(k=200, fit_item_bias=False, fit_user_bias=False, learn_rate=0.001, min_delta_err=0.001,
+                   min_grad_norm=0.001, max_steps=5000, pred_batch_size=1000, reg_penalty=1, l1_ratio=0)
 #rec.fit(R)
 cv_search(rec, R, non_active_items_mask, sample_size=10000,sample_from_urm=True)
+'''svd = TruncatedSVD(n_components=500)
+svd.fit_transform(R)
+exp_var=0
+exp_rat=0
+for i in range(svd.n_components):
+    exp_rat += svd.explained_variance_ratio_[i]
+    exp_var += svd.explained_variance_[i]
+    print i, svd.explained_variance_ratio_[i], exp_rat, svd.explained_variance_[i], exp_var'''
 
 '''test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
 rec.fit(R)

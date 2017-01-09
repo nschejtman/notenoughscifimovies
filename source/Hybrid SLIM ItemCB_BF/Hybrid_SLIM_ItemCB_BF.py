@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import ElasticNet, Ridge, Lasso
 from sklearn.base import BaseEstimator
+from sklearn.preprocessing import MaxAbsScaler
 import time
 import pandas as pd
 import sys
@@ -32,7 +33,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
               'count_top_pop': [True, False]}
     params = {'alpha_ridge':[9500, 9750, 10000, 25000, 50000, 75000, 100000]}
     params = {'alpha_ridge':[100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000]}
-    params = {'alpha_ridge':[100000]}
+    params = {'alpha_lasso':[]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -73,7 +74,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    # scores.to_csv('SLIM_Item CV MAP values 3 (Ridge).csv', sep='\t', index=False)
+    scores.to_csv('SLIM_Item CV MAP values 3 (Ridge).csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -93,30 +94,18 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
 
 
 
-class SLIM_recommender(BaseEstimator):
-    """
-    Train a Sparse Linear Methods (SLIM) item similarity model.
-    See:
-        Efficient Top-N Recommendation by Linear Regression,
-        M. Levy and K. Jack, LSRS workshop at RecSys 2013.
-        SLIM: Sparse linear methods for top-n recommender systems,
-        X. Ning and G. Karypis, ICDM 2011.
-        http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
-    """
+class Hybrid_SLIM_ItemCB_BF(BaseEstimator):
 
-    def __init__(self, top_pops, l1_penalty=0.1, l2_penalty=0.1, l1_ratio=None, positive_only=True, k_top=None, alpha_ridge=None, alpha_lasso=None, pred_batch_size=2500):
-        super(SLIM_recommender, self).__init__()
-        self.l1_penalty = l1_penalty
-        self.l2_penalty = l2_penalty
+    def __init__(self, top_pops, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None,
+                 sh=2000, slim_weight=0.5,pred_batch_size=2500):
+        super(Hybrid_SLIM_ItemCB_BF, self).__init__()
         self.positive_only = positive_only
-        if l1_ratio is not None:
-            self.l1_ratio = l1_ratio
-        else:
-            self.l1_ratio = self.l1_penalty / (self.l1_penalty + self.l2_penalty)
+        self.l1_ratio = l1_ratio
         self.alpha_ridge = alpha_ridge
         self.alpha_lasso = alpha_lasso
         self.top_pops = top_pops
-        self.k_top = k_top
+        self.sh = sh
+        self.slim_weight = slim_weight
         self.pred_batch_size = pred_batch_size
 
 
@@ -125,8 +114,10 @@ class SLIM_recommender(BaseEstimator):
             self.l1_penalty, self.l2_penalty, self.positive_only
         )
 
-    def fit(self, URM):
+    def fit(self, URM, icm):
+        self.icm = icm
         print time.time(), ": ", "Started fit"
+        self.dataset = URM
         URM = ut.check_matrix(URM, 'csc', dtype=np.float32)
         n_items = URM.shape[1]
 
@@ -143,7 +134,7 @@ class SLIM_recommender(BaseEstimator):
         values, rows, cols = [], [], []
 
         # fit each item's factors sequentially (not in parallel)
-        for j in self.top_pops[:self.k_top]:#, because only the active ones are to be recommended(range(n_items) if self.k_top is None else top_pops):
+        for j in self.top_pops:#, because only the active ones are to be recommended(range(n_items) if self.k_top is None else top_pops):
             # print time.time(), ": ", "Started fit > Iteration ", j, "/", n_items
             # get the target column
             y = URM[:, j].toarray()
@@ -174,49 +165,58 @@ class SLIM_recommender(BaseEstimator):
         self.W_sparse = sps.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
         print time.time(), ": ", "Finished fit"
 
-    def predict(self, URM, n_of_recommendations=5, non_active_items_mask=None):
-        print time.time(), ": ", "Started predict"
-        # compute the scores using the dot product
-        user_profile = URM
-
+    def predict(self, urm, n, non_active_items_mask):
+        print "Started prediction"
+        user_profile = urm
         n_iterations = user_profile.shape[0] / self.pred_batch_size + (user_profile.shape[0] % self.pred_batch_size != 0)
         ranking = None
 
         for i in range(n_iterations):
             print "Iteration: ", i + 1, "/", n_iterations
+
             start = i * self.pred_batch_size
             end = start + self.pred_batch_size if i < n_iterations - 1 else user_profile.shape[0]
 
-            batch_profiles = URM[start:end,:]
-            batch_scores = batch_profiles.dot(self.W_sparse).toarray().astype(np.float32)
+            batch_profiles = user_profile[start:end, :]
+            rated_items_batch = np.diff(batch_profiles.tocsc().indptr) != 0
+            # print "Similarity batch size: ", np.extract(rated_items_batch == True, rated_items_batch).shape[0]
+            # break
+            batch_sim_mat = ut.compute_similarity_matrix_mask(self.icm, self.sh, rated_items_batch)
+            mm_scaler = MaxAbsScaler(copy=False)
+            batch_sim_mat = mm_scaler.fit_transform(batch_sim_mat)
+            self.W_sparse = mm_scaler.fit_transform(self.W_sparse)
+            avg_sim_mat = self.slim_weight*self.W_sparse + (1-self.slim_weight)*batch_sim_mat
+            batch_scores = batch_profiles.dot(avg_sim_mat).toarray().astype(np.float32)
 
+            del avg_sim_mat
+
+            # remove the ones that are already rated
             nonzero_indices = batch_profiles.nonzero()
             batch_scores[nonzero_indices[0], nonzero_indices[1]] = 0.0
 
             # remove the inactives items
             batch_scores[:, non_active_items_mask] = 0.0
+
             batch_ranking = batch_scores.argsort()[:, ::-1]
-            batch_ranking = batch_ranking[:, :n_of_recommendations]  # leave only the top n
+            batch_ranking = batch_ranking[:, :n]  # leave only the top n
 
             sum_of_scores = batch_scores[np.arange(batch_scores.shape[0]), batch_ranking.T].T.sum(axis=1).ravel()
             zero_scores_mask = sum_of_scores == 0
             n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
             if n_zero_scores != 0:
-                batch_ranking[zero_scores_mask] = [self.top_pops[:n_of_recommendations] for _ in range(n_zero_scores)]
+                batch_ranking[zero_scores_mask] = [self.top_pops[:n] for _ in range(n_zero_scores)]
 
             if i == 0:
                 ranking = batch_ranking.copy()
             else:
                 ranking = np.vstack((ranking, batch_ranking))
 
-        print time.time(), ": ", "Finished predict"
-
         return ranking
 
 
 urm = ut.read_interactions()
-# urm, global_bias, item_bias, user_bias = ut.global_effects(urm)
 items_dataframe = ut.read_items()
+icm = ut.generate_icm(items_dataframe)
 item_ids = items_dataframe.id.values
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
@@ -227,7 +227,26 @@ top_rec = TopPop(count=True)
 top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
-# TODO: Use all top_pops or only active ones in fitting??
-recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000)
-# recommender.fit(urm)
-cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+recommender = Hybrid_SLIM_ItemCB_BF(top_pops=top_pops, alpha_ridge=100000, sh=500, slim_weight=0.7, pred_batch_size=200) #Also 50000 and 1000000, and Lasso
+recommender.fit(urm, icm)
+# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+ranking = recommender.predict(urm_pred, n=5, non_active_items_mask=non_active_items_mask)
+ut.write_recommendations("Hybrid SLIM ItemCB AlphaR 100000 sh 500 weight 0.7", ranking, test_users_idx, item_ids)
+
+recommender = Hybrid_SLIM_ItemCB_BF(top_pops=top_pops, alpha_ridge=100000, sh=5000, slim_weight=0.7, pred_batch_size=200) #Also 50000 and 1000000, and Lasso
+recommender.fit(urm, icm)
+# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+ranking = recommender.predict(urm_pred, n=5, non_active_items_mask=non_active_items_mask)
+ut.write_recommendations("Hybrid SLIM ItemCB AlphaR 100000 sh 5000  weight 0.7", ranking, test_users_idx, item_ids)
+
+recommender = Hybrid_SLIM_ItemCB_BF(top_pops=top_pops, alpha_ridge=100000, sh=500, slim_weight=0.9, pred_batch_size=200) #Also 50000 and 1000000, and Lasso
+recommender.fit(urm, icm)
+# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+ranking = recommender.predict(urm_pred, n=5, non_active_items_mask=non_active_items_mask)
+ut.write_recommendations("Hybrid SLIM ItemCB AlphaR 100000 sh 500 weight 0.9", ranking, test_users_idx, item_ids)
+
+recommender = Hybrid_SLIM_ItemCB_BF(top_pops=top_pops, alpha_ridge=100000, sh=5000, slim_weight=0.9, pred_batch_size=200) #Also 50000 and 1000000, and Lasso
+recommender.fit(urm, icm)
+# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+ranking = recommender.predict(urm_pred, n=5, non_active_items_mask=non_active_items_mask)
+ut.write_recommendations("Hybrid SLIM ItemCB AlphaR 100000 sh 5000  weight 0.9", ranking, test_users_idx, item_ids)
