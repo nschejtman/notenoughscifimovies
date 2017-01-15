@@ -256,3 +256,12 @@ def global_effects(urm):
         urm.data[urm.indptr[i]:urm.indptr[i + 1]] -= user_bias[i]
 
     return urm, global_bias, item_bias, user_bias
+
+
+def write_recommendations(name, recommendations, test_users_ids):
+    user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
+    out_file = open('../../output/'+name+'.csv', 'wb')
+    out_file.write('user_id,recommended_items\n')
+    for i in range(len(recommendations)):
+        out_file.write(str(test_users_ids[i]) + ',' + reduce((lambda acc, x: acc + str(x) + ' '), recommendations[i], '') + '\n')
+    out_file.close()
