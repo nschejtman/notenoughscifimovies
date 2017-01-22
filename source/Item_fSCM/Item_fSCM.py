@@ -16,12 +16,12 @@ sys.path.append('./../')
 import utils.utils as ut
 from TopPopular.TopPopular import TopPop
 
-def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True):
+def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm=True):
     np.random.seed(1)
-    urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=None, ucm=None,
+    urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=icm, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'C_SVM':[1e-3, 5e-3, 1e-2, 5e-2, 1e-1, 5e-1]}
+    params = {'C_SVM': [1e-3, 5e-3, 1e-2, 5e-2, 1e-1, 5e-1], 'k_nn':[20000], 'sh':[2000]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -40,7 +40,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
 
         for row_train, row_test in splits:
             urm_train = urm_sample[row_train,:]
-            rec.fit(urm_train)
+            rec.fit(urm_train, icm_sample)
             urm_test = urm_sample[row_test,:]
             hidden_ratings = []
             for u in range(urm_test.shape[0]):
@@ -61,7 +61,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    scores.to_csv('Item_SCM CV MAP values 5.csv', sep='\t', index=False)
+    scores.to_csv('Item_SCM CV MAP values 3.csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -81,15 +81,17 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
 
 
 
-class Item_SCM(BaseEstimator):
-    def __init__(self, top_pops, alpha_ridge=None, C_logreg=None, C_SVM=None, pred_batch_size=2500):
+class Item_fSCM(BaseEstimator):
+    def __init__(self, top_pops, alpha_ridge=None, C_logreg=None, C_SVM=None, k_nn=2000, sh=2000,pred_batch_size=2500):
         self.alpha_ridge = alpha_ridge
         self.C_logreg = C_logreg
         self.C_SVM = C_SVM
         self.top_pops = top_pops
+        self.k_nn = k_nn
+        self.sh = sh
         self.pred_batch_size = pred_batch_size
 
-    def fit(self, URM):
+    def fit(self, URM, ICM):
         print time.time(), ": ", "Started fit"
         URM = ut.check_matrix(URM, 'csc', dtype=np.float32)
         n_items = URM.shape[1]
@@ -104,9 +106,9 @@ class Item_SCM(BaseEstimator):
 
         #values, rows, cols = [[],[],[],[]], [[],[],[],[]], [[],[],[],[]]
         values, rows, cols = [], [], []
-        k = 0
 
-        for j in self.top_pops:
+        for j in np.sort(self.top_pops):
+            top_k_idx = get_knn_CB(ICM, j, self.k_nn, self.sh)
             y = URM[:, j].toarray().ravel()
             y[y > 0.0] = 1.0
             startptr = URM.indptr[j]
@@ -114,7 +116,7 @@ class Item_SCM(BaseEstimator):
             bak = URM.data[startptr: endptr].copy()
             URM.data[startptr: endptr] = 0.0
             try:
-                self.model.fit(URM, y)
+                self.model.fit(URM[:,top_k_idx], y)
                 coefs = self.model.coef_.ravel()
                 nnz_mask = coefs > 0.0
 
@@ -130,11 +132,6 @@ class Item_SCM(BaseEstimator):
             except ValueError:
                 pass
             URM.data[startptr:endptr] = bak
-
-            if k % 1000 == 0 and False:
-                print time.time(), k
-
-            k += 1
 
         #for i in range(4):
         #    self.W_sparse[i] = sps.csc_matrix((values[i], (rows[i], cols[i])), shape=(n_items, n_items), dtype=np.float32)
@@ -187,10 +184,24 @@ class Item_SCM(BaseEstimator):
 
         return ranking
 
+def get_knn_CB(icm, i, k, sh):
+    #icm = ut.normalize_matrix(icm, row_wise=True)
+    sims = icm[i,:].dot(icm.T).toarray().ravel()
+    sims[i] = 0.0
+    icm_ind = icm.copy()
+    icm_ind.data = np.ones_like(icm_ind.data)
+    counts = icm_ind[i,:].dot(icm_ind.T).toarray().ravel()
+    counts /= (counts + sh)
+    sims *= counts
+    top_k = np.argsort(sims).ravel()
+    return top_k[-k:]
+
 
 urm = ut.read_interactions()
 items_dataframe = ut.read_items()
 item_ids = items_dataframe.id.values
+icm = ut.generate_icm(items_dataframe)
+icm = ut.normalize_matrix(icm, row_wise=True)
 actives = np.array(items_dataframe.active_during_test.values)
 non_active_items_mask = actives == 0
 test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
@@ -200,11 +211,11 @@ top_rec = TopPop(count=True)
 top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
-urm[urm > 0] = 1
 # TODO: Use all top_pops or only active ones in fitting??
-recommender = Item_SCM(top_pops=top_pops, pred_batch_size=1000, C_SVM=1e-2)
-recommender.fit(urm)
-#cv_search(rec=recommender, urm=urm, non_active_items_mask=non_active_items_mask, sample_size=10000, sample_from_urm=True)
+recommender = Item_fSCM(top_pops=top_pops, pred_batch_size=1000)
+#recommender.fit(urm)
+cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
 
-predictions = recommender.predict(urm_pred, 5, non_active_items_mask)
-ut.write_recommendations("Item SCM CSVM ratings1 10minus2", predictions, test_users_idx, item_ids)
+'''urm[urm > 0] = 1
+recommender = Item_fSCM(top_pops=top_pops, pred_batch_size=1000)
+cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)'''

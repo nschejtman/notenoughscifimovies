@@ -1,7 +1,14 @@
-1483392850.01 :  Started fit
-1483392850.11 0
-1483392938.66 1000
-1483393015.73 2000
-1483393091.75 3000
-1483393168.23 4000
-1483393244.27 5000
+1484940746.15 :  Started fit
+1484944994.61 :  Finished fit
+1484944995.05 :  Started predict
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+1484945040.92 :  Finished predict

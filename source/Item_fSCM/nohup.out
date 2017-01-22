@@ -1,0 +1,79 @@
+{'C_SVM': 0.001}
+1484826552.31 :  Started fit
+Item_fSCM.py:130: VisibleDeprecationWarning: boolean index did not match indexed array along dimension 0; dimension is 167956 but corresponding boolean dimension is 2000
+  rows.extend(np.arange(n_items)[nnz_mask])
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.001}
+1484826721.24 :  Started fit
+Item_fSCM.py:130: VisibleDeprecationWarning: boolean index did not match indexed array along dimension 0; dimension is 167956 but corresponding boolean dimension is 20000
+  rows.extend(np.arange(n_items)[nnz_mask])
+1484831177.44 :  Finished fit
+1484831178.09 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484831188.69 :  Finished predict
+Progress: 4.17%
+[0.0030746277839301095]
+Result:  result(mean_score=0.0030746277839301095, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.001})
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.005}
+1484831188.79 :  Started fit
+1484835720.28 :  Finished fit
+1484835720.95 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484835732.15 :  Finished predict
+Progress: 8.33%
+[0.0030407899593946105]
+Result:  result(mean_score=0.0030407899593946105, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.005})
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.01}
+1484835732.25 :  Started fit
+1484840152.26 :  Finished fit
+1484840152.91 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484840163.59 :  Finished predict
+Progress: 12.50%
+[0.0033499446290143967]
+Result:  result(mean_score=0.0033499446290143967, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.01})
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.05}
+1484840163.69 :  Started fit
+1484844633.32 :  Finished fit
+1484844633.97 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484844644.65 :  Finished predict
+Progress: 16.67%
+[0.0023686477174849267]
+Result:  result(mean_score=0.0023686477174849267, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.05})
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.1}
+1484844644.75 :  Started fit
+1484849321.37 :  Finished fit
+1484849322.02 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484849332.73 :  Finished predict
+Progress: 20.83%
+[0.0027205610926541168]
+Result:  result(mean_score=0.0027205610926541168, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.1})
+{'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.5}
+1484849332.83 :  Started fit
+1484854301.65 :  Finished fit
+1484854302.31 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1484854313.0 :  Finished predict
+Progress: 25.00%
+[0.0022871293220130423]
+Result:  result(mean_score=0.0022871293220130423, std_dev=0.0, parameters={'sh': 2000, 'k_nn': 20000, 'C_SVM': 0.5})
+Total scores:          MAP  Std    sh   k_nn  C_SVM
+0  0.003075  0.0  2000  20000  0.001
+1  0.003041  0.0  2000  20000  0.005
+2  0.003350  0.0  2000  20000  0.010
+3  0.002369  0.0  2000  20000  0.050
+4  0.002721  0.0  2000  20000  0.100
+5  0.002287  0.0  2000  20000  0.500

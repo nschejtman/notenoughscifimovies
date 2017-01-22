@@ -27,8 +27,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
                                                                                 sample_from_urm=sample_from_urm)
     params = {'k':[10, 20, 50, 100, 150, 200],'reg_penalty':[0.0001, 0.001, 0.01, 0.1, 1, 10]}
     params = {'k': [10, 20, 50, 100, 150, 200, 500], 'reg_penalty': [10, 20, 50, 100, 200, 500, 1000]}
-    params = {'k':[50, 100, 200], 'reg_penalty':[100, 10000, 1000000, 1e8]}
-    params = {'k':[50], 'reg_penalty': [10]}
+    params = {'k':[10, 20, 50, 100, 150, 200], 'reg_penalty':[0.0001, 0.001, 0.01, 0.1, 1, 10]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -72,7 +71,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    #scores.to_csv('LatentFactor CV MAP values 5.csv', sep='\t', index=False)
+    scores.to_csv('LatentFactor CV MAP values 9 (NMF).csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -112,11 +111,11 @@ class LatentFactor(BaseEstimator):
 
 
     def fit(self, R):
-        '''nmf = NMF(n_components=self.k, alpha=self.reg_penalty, l1_ratio=self.l1_ratio, verbose=1)
+        nmf = NMF(n_components=self.k, alpha=self.reg_penalty, l1_ratio=self.l1_ratio, verbose=1)
         self.P = nmf.fit_transform(R)
         self.Q = nmf.components_.T
         self.R = R
-        return'''
+        return
 
         np.random.seed(self.seed)
         self.P = np.random.randn(R.shape[0], self.k+self.fit_user_bias + self.fit_item_bias)
@@ -224,7 +223,8 @@ class LatentFactor(BaseEstimator):
 
 
 R = sps.csr_matrix(ut.read_interactions(), copy=False, dtype=np.float64)
-R, global_bias, item_bias, user_bias = ut.global_effects(R)
+R[R > 0] = 1
+#R, global_bias, item_bias, user_bias = ut.global_effects(R)
 #R.data -= global_bias
 items_dataframe = ut.read_items()
 item_ids = items_dataframe.id.values

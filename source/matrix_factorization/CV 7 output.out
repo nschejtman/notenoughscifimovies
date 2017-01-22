@@ -1,0 +1,267 @@
+{'k': 50, 'reg_penalty': 10}
+Step  100 , error  5816791.96458 , delta error  117944.941586 , grad norm  10778.5946673
+Step  200 , error  787380.970998 , delta error  15793.3805204 , grad norm  3944.22250079
+Step  300 , error  113504.503214 , delta error  2120.32936714 , grad norm  1445.21626121
+Step  400 , error  22859.3940698 , delta error  286.518202833 , grad norm  531.278002192
+Step  500 , error  10563.533531 , delta error  39.2330587095 , grad norm  196.609022484
+Step  600 , error  8864.90001853 , delta error  5.54469464394 , grad norm  73.9258344624
+Step  700 , error  8619.20128717 , delta error  0.851216209883 , grad norm  28.9793076895
+Step  800 , error  8579.10019974 , delta error  0.160228967959 , grad norm  12.5867757496
+Step  900 , error  8570.49308866 , delta error  0.0437205728886 , grad norm  6.58536130822
+Step  1000 , error  8567.70279168 , delta error  0.0177809016677 , grad norm  4.20499850709
+Step  1100 , error  8566.41490763 , delta error  0.00934918153143 , grad norm  3.05120575109
+Step  1200 , error  8565.6901544 , delta error  0.00561504895268 , grad norm  2.36547270133
+Step  1300 , error  8565.23784319 , delta error  0.0036394482031 , grad norm  1.90484122219
+Step  1400 , error  8564.93691611 , delta error  0.00248662753074 , grad norm  1.57478412565
+Step  1500 , error  8564.72709319 , delta error  0.00177051574974 , grad norm  1.32900418863
+Step  1600 , error  8564.57514829 , delta error  0.0013047590619 , grad norm  1.1410203961
+Step  1698 , error  8564.46450422 , delta error  0.000998364919724 , grad norm  0.998198602045
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 1.19%
+[0.0012181616832779624]
+Result:  result(mean_score=0.0012181616832779624, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 10})
+{'k': 50, 'reg_penalty': 20}
+Step  100 , error  1566370.08284 , delta error  64192.5485996 , grad norm  7891.36408861
+Step  200 , error  36170.941971 , delta error  1133.929744 , grad norm  1048.85661162
+Step  300 , error  9079.68781468 , delta error  20.2810908028 , grad norm  140.281472882
+Step  400 , error  8592.17433414 , delta error  0.377866455483 , grad norm  19.1538532152
+Step  500 , error  8582.81053443 , delta error  0.00887565750963 , grad norm  2.94119939168
+Step  577 , error  8582.55908503 , delta error  0.000988542073173 , grad norm  0.985809954048
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 2.38%
+[0.00088778146917681798]
+Result:  result(mean_score=0.00088778146917681798, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 20})
+{'k': 50, 'reg_penalty': 50}
+Step  100 , error  16863.2736824 , delta error  893.939374821 , grad norm  909.673268786
+Step  200 , error  8582.79470458 , delta error  0.0317499476587 , grad norm  5.42164897726
+Step  235 , error  8582.50911416 , delta error  0.000980226643151 , grad norm  0.952677589522
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 3.57%
+[0.00011074197120708749]
+Result:  result(mean_score=0.00011074197120708749, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 50})
+{'k': 50, 'reg_penalty': 100}
+Step  100 , error  8582.87208058 , delta error  0.0872326289846 , grad norm  8.62453202364
+Step  123 , error  8582.50361767 , delta error  0.000847983857966 , grad norm  0.850345782763
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 4.76%
+[3.6913990402362495e-05]
+Result:  result(mean_score=3.6913990402362495e-05, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 100})
+{'k': 50, 'reg_penalty': 200}
+Step  63 , error  8582.50128191 , delta error  0.000720922382243 , grad norm  0.716019931407
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 5.95%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 200})
+{'k': 50, 'reg_penalty': 500}
+Step  24 , error  8582.50012104 , delta error  0.000363090737665 , grad norm  0.347903321704
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 7.14%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 500})
+{'k': 50, 'reg_penalty': 1000}
+Step  6 , error  8582.50000003 , delta error  0.000157566348207 , grad norm  0.00723718855074
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 8.33%
+[0.0012772240679217424]
+Result:  result(mean_score=0.0012772240679217424, std_dev=0.0, parameters={'k': 50, 'reg_penalty': 1000})
+{'k': 100, 'reg_penalty': 10}
+Step  100 , error  11640231.8831 , delta error  236218.914505 , grad norm  15253.877476
+Step  200 , error  1567087.22218 , delta error  31626.4793893 , grad norm  5581.46381286
+Step  300 , error  218132.410833 , delta error  4240.43134901 , grad norm  2043.77536138
+Step  400 , error  36989.9146695 , delta error  571.564144822 , grad norm  750.365153283
+Step  500 , error  12497.6323009 , delta error  77.8625520176 , grad norm  276.967733486
+Step  600 , error  9138.39538762 , delta error  10.8653377935 , grad norm  103.477665112
+Step  700 , error  8661.45456511 , delta error  1.6131988445 , grad norm  39.8866613573
+Step  800 , error  8587.28504519 , delta error  0.280770375608 , grad norm  16.6550204958
+Step  900 , error  8572.89191493 , delta error  0.067703117018 , grad norm  8.1909335733
+Step  1000 , error  8568.78002461 , delta error  0.0247308161779 , grad norm  4.95763571734
+Step  1100 , error  8567.04196955 , delta error  0.0122517283944 , grad norm  3.49233662096
+Step  1200 , error  8566.10712736 , delta error  0.00713255999472 , grad norm  2.66578577492
+Step  1300 , error  8565.53821321 , delta error  0.00453202709105 , grad norm  2.12549225481
+Step  1400 , error  8565.16629307 , delta error  0.00304909313127 , grad norm  1.74372477028
+Step  1500 , error  8564.91067304 , delta error  0.00214214819789 , grad norm  1.46177475116
+Step  1600 , error  8564.72792834 , delta error  0.0015593003136 , grad norm  1.2473077829
+Step  1700 , error  8564.59290824 , delta error  0.00116997800069 , grad norm  1.08054699732
+Step  1761 , error  8564.52815391 , delta error  0.000997610370177 , grad norm  0.997838712662
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 9.52%
+[0.0009449981543004799]
+Result:  result(mean_score=0.0009449981543004799, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 10})
+{'k': 100, 'reg_penalty': 20}
+Step  100 , error  3126723.41025 , delta error  128520.246616 , grad norm  11165.9189958
+Step  200 , error  63736.3126427 , delta error  2267.80957252 , grad norm  1483.28346589
+Step  300 , error  9574.10478412 , delta error  40.4864633086 , grad norm  198.200709341
+Step  400 , error  8601.66872934 , delta error  0.750813650024 , grad norm  26.998552292
+Step  500 , error  8583.10791557 , delta error  0.0174077322681 , grad norm  4.11876241578
+Step  600 , error  8582.58089454 , delta error  0.00116665022142 , grad norm  1.07242282952
+Step  610 , error  8582.57131986 , delta error  0.000987680559774 , grad norm  0.987168532846
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 10.71%
+[0.00076042820228866743]
+Result:  result(mean_score=0.00076042820228866743, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 20})
+{'k': 100, 'reg_penalty': 50}
+Step  100 , error  25154.8416007 , delta error  1789.09026336 , grad norm  1286.90674365
+Step  200 , error  8583.08979098 , delta error  0.0635373681071 , grad norm  7.66964098963
+Step  242 , error  8582.50892921 , delta error  0.000959599681664 , grad norm  0.942621173086
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 11.90%
+[0.00034145441122185311]
+Result:  result(mean_score=0.00034145441122185311, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 50})
+{'k': 100, 'reg_penalty': 100}
+Step  100 , error  8583.24458514 , delta error  0.174564441428 , grad norm  12.2003969593
+Step  126 , error  8582.50384903 , delta error  0.000902181633137 , grad norm  0.877101505551
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 13.10%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 100})
+{'k': 100, 'reg_penalty': 200}
+Step  64 , error  8582.50164167 , delta error  0.00092324412617 , grad norm  0.810287940613
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 14.29%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 200})
+{'k': 100, 'reg_penalty': 500}
+Step  24 , error  8582.50024217 , delta error  0.000726435720935 , grad norm  0.492095653083
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 15.48%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 500})
+{'k': 100, 'reg_penalty': 1000}
+Step  6 , error  8582.50000007 , delta error  0.000432559774708 , grad norm  0.0116917653195
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 16.67%
+[0.00060908084163898118]
+Result:  result(mean_score=0.00060908084163898118, std_dev=0.0, parameters={'k': 100, 'reg_penalty': 1000})
+{'k': 200, 'reg_penalty': 10}
+Step  100 , error  23282906.8005 , delta error  472653.1579 , grad norm  21577.1746277
+Step  200 , error  3125900.82591 , delta error  63289.5076921 , grad norm  7895.65406921
+Step  300 , error  427030.268749 , delta error  8477.74118119 , grad norm  2889.78552102
+Step  400 , error  65120.6016309 , delta error  1140.17826927 , grad norm  1059.79464294
+Step  500 , error  16323.9336209 , delta error  154.653729075 , grad norm  390.332606646
+Step  600 , error  9670.66522794 , delta error  21.3627936143 , grad norm  145.086933238
+Step  700 , error  8739.8978254 , delta error  3.08831208651 , grad norm  55.1792960547
+Step  800 , error  8600.70269819 , delta error  0.502831600081 , grad norm  22.2804348347
+Step  900 , error  8576.02414977 , delta error  0.107173357079 , grad norm  10.3001226463
+Step  1000 , error  8569.87609845 , delta error  0.0343543529762 , grad norm  5.8407559012
+Step  1100 , error  8567.55748127 , delta error  0.0156869590082 , grad norm  3.95087604253
+Step  1200 , error  8566.3861022 , delta error  0.00875349911985 , grad norm  2.95285914762
+Step  1300 , error  8565.69660179 , delta error  0.00542460644283 , grad norm  2.3252207719
+Step  1400 , error  8565.25530061 , delta error  0.00358578411942 , grad norm  1.89086082917
+Step  1500 , error  8564.95673251 , delta error  0.00248451014704 , grad norm  1.57418470328
+Step  1600 , error  8564.74597696 , delta error  0.00178784977106 , grad norm  1.33554054517
+Step  1700 , error  8564.5919116 , delta error  0.00132841660525 , grad norm  1.15134962304
+Step  1800 , error  8564.47585154 , delta error  0.00101504789927 , grad norm  1.00652878767
+Step  1807 , error  8564.46981543 , delta error  0.000999611927909 , grad norm  0.998851828781
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 17.86%
+[0.0010572782084409991]
+Result:  result(mean_score=0.0010572782084409991, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 10})
+{'k': 200, 'reg_penalty': 20}
+Step  100 , error  6245806.13427 , delta error  257133.115445 , grad norm  15793.8114021
+Step  200 , error  118754.188686 , delta error  4532.21450378 , grad norm  2096.87991484
+Step  300 , error  10556.6156848 , delta error  80.7243741976 , grad norm  279.863712143
+Step  400 , error  8620.03501326 , delta error  1.48466231596 , grad norm  37.9629830918
+Step  500 , error  8583.57549032 , delta error  0.0327543930725 , grad norm  5.64750836943
+Step  600 , error  8582.62340118 , delta error  0.00187525983165 , grad norm  1.35890423749
+Step  636 , error  8582.57592458 , delta error  0.00099097369457 , grad norm  0.989449064643
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 19.05%
+[0.00072351421188630491]
+Result:  result(mean_score=0.00072351421188630491, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 20})
+{'k': 200, 'reg_penalty': 50}
+Step  100 , error  41726.1804763 , delta error  3578.23730835 , grad norm  1819.97228541
+Step  200 , error  8583.679009 , delta error  0.127018821095 , grad norm  10.8441046646
+Step  249 , error  8582.5087369 , delta error  0.000938331637371 , grad norm  0.932133695709
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 20.24%
+[0.00050295311923218889]
+Result:  result(mean_score=0.00050295311923218889, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 50})
+{'k': 200, 'reg_penalty': 100}
+Step  100 , error  8583.98930186 , delta error  0.349160683774 , grad norm  17.2547482813
+Step  129 , error  8582.50409323 , delta error  0.000959386197792 , grad norm  0.904483452412
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 21.43%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 100})
+{'k': 200, 'reg_penalty': 200}
+Step  66 , error  8582.50134515 , delta error  0.000756480429118 , grad norm  0.733466805773
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 22.62%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 200})
+{'k': 200, 'reg_penalty': 500}
+Step  25 , error  8582.50012109 , delta error  0.000363238295904 , grad norm  0.347974405347
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 23.81%
+[0.0]
+Result:  result(mean_score=0.0, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 500})
+{'k': 200, 'reg_penalty': 1000}
+Step  7 , error  8582.5 , delta error  2.1161577024e-07 , grad norm  0.00028225728609
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+Progress: 25.00%
+[2.2148394241417498e-05]
+Result:  result(mean_score=2.2148394241417498e-05, std_dev=0.0, parameters={'k': 200, 'reg_penalty': 1000})
+Total scores:           MAP  Std    k  reg_penalty
+0   0.001218  0.0   50           10
+1   0.000888  0.0   50           20
+2   0.000111  0.0   50           50
+3   0.000037  0.0   50          100
+4   0.000000  0.0   50          200
+5   0.000000  0.0   50          500
+6   0.001277  0.0   50         1000
+7   0.000945  0.0  100           10
+8   0.000760  0.0  100           20
+9   0.000341  0.0  100           50
+10  0.000000  0.0  100          100
+11  0.000000  0.0  100          200
+12  0.000000  0.0  100          500
+13  0.000609  0.0  100         1000
+14  0.001057  0.0  200           10
+15  0.000724  0.0  200           20
+16  0.000503  0.0  200           50
+17  0.000000  0.0  200          100
+18  0.000000  0.0  200          200
+19  0.000000  0.0  200          500
+20  0.000022  0.0  200         1000

@@ -23,8 +23,8 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=icm, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'l1_ratio':[1e-5, 1e-6, 1e-7], 'k_nn':[5000, 10000, 15000, 20000, 30000],
-              'aa_sh':[2000]}
+    params = {'alpha_ridge':[9500, 9750, 10000, 25000, 50000, 75000, 100000], 'k_nn':[20000],
+              'similarity':['CF'], 'aa_sh':[500, 1000, 2000]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -64,7 +64,7 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    scores.to_csv('fSLIM_Item CV MAP values 1.csv', sep='\t', index=False)
+    scores.to_csv('fSLIM_Item CV MAP values 3.csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -84,7 +84,7 @@ def cv_search(rec, urm, icm, non_active_items_mask, sample_size, sample_from_urm
 
 
 
-class SLIM_recommender(BaseEstimator):
+class fSLIM_recommender(BaseEstimator):
     """
     Train a Sparse Linear Methods (SLIM) item similarity model.
     See:
@@ -95,14 +95,15 @@ class SLIM_recommender(BaseEstimator):
         http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
     """
 
-    def __init__(self, top_pops, l1_ratio=1e-4, positive_only=True, alpha_ridge=None, alpha_lasso=None,
-                 k_nn=10, aa_sh=2000, sim_partition_size=2500, pred_batch_size=2500):
-        super(SLIM_recommender, self).__init__()
+    def __init__(self, top_pops, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None,
+                 similarity = 'CF', k_nn=10, aa_sh=2000, sim_partition_size=2500, pred_batch_size=2500):
+        super(fSLIM_recommender, self).__init__()
         self.l1_ratio = l1_ratio
         self.positive_only = positive_only
         self.alpha_ridge = alpha_ridge
         self.alpha_lasso = alpha_lasso
         self.k_nn = k_nn
+        self.similarity = similarity
         self.sh = aa_sh
         self.sim_partition_size = sim_partition_size
         self.top_pops = top_pops
@@ -125,7 +126,10 @@ class SLIM_recommender(BaseEstimator):
         k = 1
 
         for j in np.sort(self.top_pops):#, because only the active ones are to be recommended(range(n_items) if self.k_top is None else top_pops):
-            top_k_idx = get_knn(ICM, j, self.k_nn, self.sh)
+            if self.similarity == 'CB':
+                top_k_idx = get_knn_CB(ICM, j, self.k_nn, self.sh)
+            else:
+                top_k_idx = get_knn_CF(URM, j, self.k_nn, self.sh)
             y = URM[:, j].toarray()
 
             if self.alpha_ridge is None and self.alpha_lasso is None:
@@ -139,7 +143,8 @@ class SLIM_recommender(BaseEstimator):
             cols.extend(np.ones(nnz_mask.sum()) * j)
 
             if k % 1000 == 0:
-                print time.time(), k
+                # print time.time(), k
+                pass
 
             k += 1
 
@@ -185,13 +190,26 @@ class SLIM_recommender(BaseEstimator):
         return ranking
 
 
-def get_knn(icm, i, k, sh):
+def get_knn_CB(icm, i, k, sh):
     #icm = ut.normalize_matrix(icm, row_wise=True)
     sims = icm[i,:].dot(icm.T).toarray().ravel()
     sims[i] = 0.0
     icm_ind = icm.copy()
     icm_ind.data = np.ones_like(icm_ind.data)
     counts = icm_ind[i,:].dot(icm_ind.T).toarray().ravel()
+    counts /= (counts + sh)
+    sims *= counts
+    top_k = np.argsort(sims).ravel()
+    return top_k[-k:]
+
+def get_knn_CF(urm, i, k, sh):
+    urm_copy = urm.copy()
+    urm_copy = ut.normalize_matrix(urm_copy, row_wise=False)
+    sims = urm_copy[:,i].T.dot(urm_copy).toarray().ravel()
+    sims[i] = 0.0
+    urm_ind = urm_copy.copy()
+    urm_ind.data = np.ones_like(urm_ind.data)
+    counts = urm_ind[:,i].T.dot(urm_ind).toarray().ravel()
     counts /= (counts + sh)
     sims *= counts
     top_k = np.argsort(sims).ravel()
@@ -235,18 +253,38 @@ def main():
     top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
     # TODO: Use all top_pops or only active ones in fitting??
-    recommender = SLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, l1_ratio=1e-6,
-                                   k_nn=20000, aa_sh=2000)
+    urm[urm > 0] = 1
+    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=50000,
+                                    similarity='CB', aa_sh=2000, alpha_ridge=120000)
+    recommender.fit(urm, icm)
+    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
+    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 50000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
+
+    '''recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
+                                    similarity='CB', aa_sh=2000, alpha_ridge=100000)
+    recommender.fit(urm, icm)
+    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
+    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 30000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
+
+    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
+                                    similarity='CB', aa_sh=2000, alpha_ridge=100000)
     recommender.fit(urm, icm)
     # cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
     ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM 2000sh 20000k 10minus6l1_ratio ", ranking, test_users_idx, item_ids)
+    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 20000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
 
-    recommender = SLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, alpha_ridge=1e5,
-                                   k_nn=20000, aa_sh=2000)
+    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
+                                    similarity='CF', aa_sh=1000, alpha_ridge=100000)
     recommender.fit(urm, icm)
     ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 20000k 100000alpha", ranking, test_users_idx, item_ids)
+    ut.write_recommendations("Item fSLIM (Ridge) 1000sh 20000k 100000alpha CFsim ratings1", ranking, test_users_idx, item_ids)
+
+    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
+                                    similarity='CF', aa_sh=1000, alpha_ridge=50000)
+    recommender.fit(urm, icm)
+    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
+    ut.write_recommendations("Item fSLIM (Ridge) 1000sh 20000k 50000alpha CFsim ratings1", ranking, test_users_idx,
+                             item_ids)'''
 
 
 main()

@@ -20,19 +20,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     urm_sample, icm_sample, _, non_active_items_mask_sample = ut.produce_sample(urm, icm=None, ucm=None,
                                                                                  non_active_items_mask=non_active_items_mask,
                                                                                  sample_size=sample_size, sample_from_urm=sample_from_urm)
-    params = {'l1_penalty': [0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10],
-              'l2_penalty': [0.001, 0.01, 0.1, 1, 10, 50, 100, 500, 1000],
-              'k_top': [100, 200, 500, 1000],
-              'count_top_pop':[True, False]}
-    params = {'l1_ratio':[0.00001, 0.0001, 0.001, 0.01, 0.1, 0.2, 0.5, 1],
-              'k_top': [100, 200, 500, 1000],
-              'count_top_pop': [True, False]}
-    params = {'l1_ratio': [0.00000001,0.0000001, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 0.2, 0.5],
-              'k_top': [500, 1000, 2000, 5000, 10000],
-              'count_top_pop': [True, False]}
     params = {'alpha_ridge':[9500, 9750, 10000, 25000, 50000, 75000, 100000]}
-    params = {'alpha_ridge':[100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000]}
-    params = {'alpha_ridge':[100000]}
     grid = list(ParameterGrid(params))
     folds = 4
     kfold = KFold(n_splits=folds)
@@ -73,7 +61,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    # scores.to_csv('SLIM_Item CV MAP values 3 (Ridge).csv', sep='\t', index=False)
+    scores.to_csv('SLIM_Item CV MAP values 9 (Ridge).csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -215,6 +203,7 @@ class SLIM_recommender(BaseEstimator):
 
 
 urm = ut.read_interactions()
+urm[urm > 0] = 1
 # urm, global_bias, item_bias, user_bias = ut.global_effects(urm)
 items_dataframe = ut.read_items()
 item_ids = items_dataframe.id.values
@@ -228,6 +217,8 @@ top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
 # TODO: Use all top_pops or only active ones in fitting??
-recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000)
-# recommender.fit(urm)
-cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000, alpha_ridge=50000)
+recommender.fit(urm)
+# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
+ut.write_recommendations("Item SLIM (Ridge) 50000alpha ratings1", ranking, test_users_idx, item_ids)
