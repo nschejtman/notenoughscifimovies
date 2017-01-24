@@ -17,7 +17,7 @@ def main():
     recs_SCM_SVM = pd.read_csv('../../output/Item SCM CSVM 10minus2.csv', sep=',')
     final_recs = []
     final_recs_labels = []
-    scores = np.array([1199, 1058, 842])
+    scores = np.array([1199.0, 1058.0, 842.0])
     p_fSLIM = scores[0] / scores.sum()
     p_SLIM = scores[1] / scores.sum()
     p_SCM_SVM = scores[2] / scores.sum()
@@ -42,7 +42,7 @@ def main():
             # probs = probs / np.sum(probs)
 
             p = np.random.rand()
-            idx = bisect.bisect(probs.cumsum(), p) - 1
+            idx = bisect.bisect(probs.cumsum(), p)
 
             item = queues[idx].popleft()
 
