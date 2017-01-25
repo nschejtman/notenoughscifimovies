@@ -141,7 +141,7 @@ class Item_SCM(BaseEstimator):
         self.W_sparse = sps.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
         print time.time(), ": ", "Finished fit"
 
-    def predict(self, URM, n_of_recommendations=5, non_active_items_mask=None):
+    def predict(self, URM, n_of_recommendations, non_active_items_mask):
         print time.time(), ": ", "Started predict"
         # compute the scores using the dot product
         user_profile = URM
@@ -176,6 +176,7 @@ class Item_SCM(BaseEstimator):
             zero_scores_mask = sum_of_scores == 0
             n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
             if n_zero_scores != 0:
+                print n_zero_scores
                 batch_ranking[zero_scores_mask] = [self.top_pops[:n_of_recommendations] for _ in range(n_zero_scores)]
 
             if i == 0:
@@ -187,24 +188,24 @@ class Item_SCM(BaseEstimator):
 
         return ranking
 
+def main():
+    urm = ut.read_interactions()
+    items_dataframe = ut.read_items()
+    item_ids = items_dataframe.id.values
+    actives = np.array(items_dataframe.active_during_test.values)
+    non_active_items_mask = actives == 0
+    test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
+    urm_pred = urm[test_users_idx, :]
 
-urm = ut.read_interactions()
-items_dataframe = ut.read_items()
-item_ids = items_dataframe.id.values
-actives = np.array(items_dataframe.active_during_test.values)
-non_active_items_mask = actives == 0
-test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
-urm_pred = urm[test_users_idx, :]
+    top_rec = TopPop(count=True)
+    top_rec.fit(urm)
+    top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
-top_rec = TopPop(count=True)
-top_rec.fit(urm)
-top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
+    urm[urm > 0] = 1
+    # TODO: Use all top_pops or only active ones in fitting??
+    recommender = Item_SCM(top_pops=top_pops, pred_batch_size=1000, C_SVM=1e-2)
+    recommender.fit(urm)
+    #cv_search(rec=recommender, urm=urm, non_active_items_mask=non_active_items_mask, sample_size=10000, sample_from_urm=True)
 
-urm[urm > 0] = 1
-# TODO: Use all top_pops or only active ones in fitting??
-recommender = Item_SCM(top_pops=top_pops, pred_batch_size=1000, C_SVM=1e-2)
-recommender.fit(urm)
-#cv_search(rec=recommender, urm=urm, non_active_items_mask=non_active_items_mask, sample_size=10000, sample_from_urm=True)
-
-predictions = recommender.predict(urm_pred, 5, non_active_items_mask)
-ut.write_recommendations("Item SCM CSVM ratings1 10minus2", predictions, test_users_idx, item_ids)
+    predictions = recommender.predict(urm_pred, 5, non_active_items_mask)
+    ut.write_recommendations("Item SCM CSVM ratings1 10minus2", predictions, test_users_idx, item_ids)

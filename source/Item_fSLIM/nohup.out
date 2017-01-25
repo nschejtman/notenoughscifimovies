@@ -1,6 +1,6 @@
-1485103106.9 :  Started fit
-1485108324.43 :  Finished fit
-1485108324.48 :  Started predict
+1485297755.17 :  Started fit
+1485303769.46 :  Finished fit
+1485303769.54 :  Started predict
 Iteration:  1 / 10
 Iteration:  2 / 10
 Iteration:  3 / 10
@@ -11,4 +11,4 @@ Iteration:  7 / 10
 Iteration:  8 / 10
 Iteration:  9 / 10
 Iteration:  10 / 10
-1485108368.26 :  Finished predict
+1485303813.85 :  Finished predict

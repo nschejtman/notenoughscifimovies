@@ -141,6 +141,7 @@ class fSLIM_recommender(BaseEstimator):
             values.extend(self.model.coef_[nnz_mask])
             rows.extend(top_k_idx[nnz_mask])
             cols.extend(np.ones(nnz_mask.sum()) * j)
+            # print j, nnz_mask.sum(), (self.model.coef_ > 1e-4).sum()
 
             if k % 1000 == 0:
                 # print time.time(), k
@@ -221,7 +222,7 @@ def calculate_and_save_similarities(max_k, shs, partition_size):
     icm = ut.generate_icm(items_dataframe)
     for sh in shs:
         sim, top_k_idx = ut.compute_similarity_matrix_knn(icm, max_k, sh, row_wise=True, partition_size=partition_size)
-        np.save('Similarity'+str(max_k) + '_' + str(sh)+'data', sim.data)
+        np.save('Similarity' + str(max_k) + '_' + str(sh)+'data', sim.data)
         np.save('Similarity' + str(max_k) + '_' + str(sh)+'indptr', sim.indptr)
         np.save('Similarity' + str(max_k) + '_' + str(sh)+'indices', sim.indices)
         np.save('Similarity' + str(max_k) + '_' + str(sh)+'shape', sim.shape)
@@ -239,8 +240,10 @@ def load_similarities(max_k, sh):
 
 def main():
     urm = ut.read_interactions()
+
     items_dataframe = ut.read_items()
-    icm = ut.generate_icm(items_dataframe)
+    # icm = ut.generate_icm(items_dataframe)
+    icm = ut.generate_icm_unified_attrs(items_dataframe)
     icm = ut.normalize_matrix(icm, row_wise=True)
     item_ids = items_dataframe.id.values
     actives = np.array(items_dataframe.active_during_test.values)
@@ -252,39 +255,16 @@ def main():
     top_rec.fit(urm)
     top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
-    # TODO: Use all top_pops or only active ones in fitting??
     urm[urm > 0] = 1
-    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=50000,
-                                    similarity='CB', aa_sh=2000, alpha_ridge=120000)
-    recommender.fit(urm, icm)
-    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 50000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
-
-    '''recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
+    print urm.data[:10]
+    urm_aux = ut.urm_to_tfidf(urm)
+    print urm_aux.data[:10]
+    # TODO: Use all top_pops or only active ones in fitting??
+    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
                                     similarity='CB', aa_sh=2000, alpha_ridge=100000)
     recommender.fit(urm, icm)
     ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 30000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
-
-    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
-                                    similarity='CB', aa_sh=2000, alpha_ridge=100000)
-    recommender.fit(urm, icm)
-    # cv_search(recommender, urm, icm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
-    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 20000k 100000alpha ratings1", ranking, test_users_idx, item_ids)
-
-    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
-                                    similarity='CF', aa_sh=1000, alpha_ridge=100000)
-    recommender.fit(urm, icm)
-    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 1000sh 20000k 100000alpha CFsim ratings1", ranking, test_users_idx, item_ids)
-
-    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=20000,
-                                    similarity='CF', aa_sh=1000, alpha_ridge=50000)
-    recommender.fit(urm, icm)
-    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 1000sh 20000k 50000alpha CFsim ratings1", ranking, test_users_idx,
-                             item_ids)'''
+    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 30000k 100000alpha ratings1 implicitpred", ranking, test_users_idx, item_ids)
 
 
-main()
+# main()

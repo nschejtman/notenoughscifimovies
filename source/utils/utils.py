@@ -1,8 +1,39 @@
 import numpy as np
 import pandas as pd
 import scipy.sparse as sps
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer, TfidfTransformer
 
+
+def generate_icm_unified_attrs(items_df):
+    attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test'],
+                            axis=1)
+
+    attr_mats = {}
+    attrs = ['career_level', 'country_region', 'employment', 'discipline_id', 'industry_id', 'title', 'tags']
+
+    attr_df['career_level'] = attr_df['career_level'].fillna(0)
+    attr_df['career_level'] = attr_df['career_level'].astype(dtype=int)
+
+    country_dict = {c: i for i, c in enumerate(attr_df['country'].unique())}
+    attr_df['country'] = attr_df['country'].apply(lambda x: country_dict[x])
+    attr_df['country_region'] = attr_df['country'].apply(lambda x: x * 100) + attr_df['region']
+
+    trans = CountVectorizer(token_pattern='\w+')
+    for attr in attrs:
+        attr_mats[attr] = trans.fit_transform(attr_df[attr].map(str).values).tocsr()
+
+    icm = reduce(lambda acc, x: x if acc.shape == (1, 1) else sps.hstack([acc, x]), attr_mats.itervalues(),
+                  sps.lil_matrix((1, 1))).tocsr()
+
+    trans = TfidfTransformer()
+    icm = trans.fit_transform(icm).tocsr()
+    return icm
+
+
+def urm_to_tfidf(urm):
+    trans = TfidfTransformer()
+    urm_tfidf = trans.fit_transform(urm).tocsr()
+    return urm_tfidf
 
 
 def generate_icm(items_df):
@@ -72,13 +103,21 @@ def read_interactions():
     return sps.csr_matrix((ints['interaction_type'].values, (ints['user_idx'].values, ints['item_idx'].values)))
 
 def write_recommendations(name, recommendations, test_users_idx, item_ids):
-    user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
-    out_file = open('../../output/'+name+'.csv', 'wb')
-    out_file.write('user_id,recommended_items\n')
-    for i in range(len(recommendations)):
-        out_file.write(str(user_df.loc[test_users_idx[i]]['user_id']) + ',' + reduce(lambda acc, x: acc + str(item_ids[x]) + ' ',
-                                                                                 recommendations[i], '') + '\n')
-    out_file.close()
+    if item_ids is None:
+        user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
+        out_file = open('../../output/'+name+'.csv', 'wb')
+        out_file.write('user_id,recommended_items\n')
+        for i in range(len(recommendations)):
+            out_file.write(str(test_users_idx[i]) + ',' + reduce((lambda acc, x: acc + str(x) + ' '), recommendations[i], '') + '\n')
+        out_file.close()
+    else:
+        user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
+        out_file = open('../../output/'+name+'.csv', 'wb')
+        out_file.write('user_id,recommended_items\n')
+        for i in range(len(recommendations)):
+            out_file.write(str(user_df.loc[test_users_idx[i]]['user_id']) + ',' + reduce(lambda acc, x: acc + str(item_ids[x]) + ' ',
+                                                                                     recommendations[i], '') + '\n')
+        out_file.close()
 
 
 def check_matrix(x, format='csc', dtype=np.float32):
@@ -258,10 +297,3 @@ def global_effects(urm):
     return urm, global_bias, item_bias, user_bias
 
 
-def write_recommendations(name, recommendations, test_users_ids):
-    user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
-    out_file = open('../../output/'+name+'.csv', 'wb')
-    out_file.write('user_id,recommended_items\n')
-    for i in range(len(recommendations)):
-        out_file.write(str(test_users_ids[i]) + ',' + reduce((lambda acc, x: acc + str(x) + ' '), recommendations[i], '') + '\n')
-    out_file.close()

@@ -56,8 +56,8 @@ def main():
         final_recs_labels.append(labels)
 
 
-    ut.write_recommendations('Hybrid_SM3', final_recs, recs_SLIM['user_id'].values)
-    ut.write_recommendations("Hybrid SM3 LABELS", final_recs_labels, recs_SLIM['user_id'].values)
+    ut.write_recommendations('Hybrid_SM3', final_recs, recs_SLIM['user_id'].values, None)
+    ut.write_recommendations("Hybrid SM3 LABELS", final_recs_labels, recs_SLIM['user_id'].values, None)
 
 
 
