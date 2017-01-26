@@ -176,7 +176,6 @@ class Item_SCM(BaseEstimator):
             zero_scores_mask = sum_of_scores == 0
             n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
             if n_zero_scores != 0:
-                print n_zero_scores
                 batch_ranking[zero_scores_mask] = [self.top_pops[:n_of_recommendations] for _ in range(n_zero_scores)]
 
             if i == 0:

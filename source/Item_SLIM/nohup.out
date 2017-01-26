@@ -1,14 +1,253 @@
-1484730974.28 :  Started fit
-1484731648.14 :  Finished fit
-1484731648.35 :  Started predict
-Iteration:  1 / 10
-Iteration:  2 / 10
-Iteration:  3 / 10
-Iteration:  4 / 10
-Iteration:  5 / 10
-Iteration:  6 / 10
-Iteration:  7 / 10
-Iteration:  8 / 10
-Iteration:  9 / 10
-Iteration:  10 / 10
-1484731694.51 :  Finished predict
+{'alpha_ridge': 9500}
+1485351613.26 :  Started fit
+1485351848.66 :  Finished fit
+1485351849.35 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485351860.27 :  Finished predict
+Progress: 3.57%
+1485351860.36 :  Started fit
+1485352095.17 :  Finished fit
+1485352095.86 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485352106.65 :  Finished predict
+Progress: 7.14%
+1485352106.75 :  Started fit
+1485352338.03 :  Finished fit
+1485352338.7 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485352349.5 :  Finished predict
+Progress: 10.71%
+1485352349.6 :  Started fit
+1485352580.03 :  Finished fit
+1485352580.71 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485352591.52 :  Finished predict
+Progress: 14.29%
+[0.0088764304171280884, 0.0061854944923371629, 0.0067209910741766691, 0.0075023238520170992]
+Result:  result(mean_score=0.0073213099589147547, std_dev=0.0010126234747599632, parameters={'alpha_ridge': 9500})
+{'alpha_ridge': 9750}
+1485352591.62 :  Started fit
+1485352826.24 :  Finished fit
+1485352826.92 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485352837.74 :  Finished predict
+Progress: 17.86%
+1485352837.83 :  Started fit
+1485353073.17 :  Finished fit
+1485353073.85 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485353084.65 :  Finished predict
+Progress: 21.43%
+1485353084.75 :  Started fit
+1485353316.02 :  Finished fit
+1485353316.7 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485353327.49 :  Finished predict
+Progress: 25.00%
+1485353327.59 :  Started fit
+1485353559.61 :  Finished fit
+1485353560.29 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485353571.1 :  Finished predict
+Progress: 28.57%
+[0.010055986218776911, 0.0069212464080459762, 0.0083945829485995681, 0.0081760860135093229]
+Result:  result(mean_score=0.0083869753972329441, std_dev=0.0011156265951449706, parameters={'alpha_ridge': 9750})
+{'alpha_ridge': 10000}
+1485353571.19 :  Started fit
+1485353804.9 :  Finished fit
+1485353805.58 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485353816.4 :  Finished predict
+Progress: 32.14%
+1485353816.49 :  Started fit
+1485354049.24 :  Finished fit
+1485354049.92 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485354060.72 :  Finished predict
+Progress: 35.71%
+1485354060.82 :  Started fit
+1485354292.88 :  Finished fit
+1485354293.55 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485354304.35 :  Finished predict
+Progress: 39.29%
+1485354304.45 :  Started fit
+1485354534.94 :  Finished fit
+1485354535.61 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485354546.42 :  Finished predict
+Progress: 42.86%
+[0.0076628829826504196, 0.0073570701628352447, 0.0079796860572483811, 0.009093542789861804]
+Result:  result(mean_score=0.0080232954981489628, std_dev=0.00065595053691116763, parameters={'alpha_ridge': 10000})
+{'alpha_ridge': 25000}
+1485354546.52 :  Started fit
+1485354779.72 :  Finished fit
+1485354780.4 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485354791.21 :  Finished predict
+Progress: 46.43%
+1485354791.3 :  Started fit
+1485355022.4 :  Finished fit
+1485355023.08 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485355033.88 :  Finished predict
+Progress: 50.00%
+1485355033.98 :  Started fit
+1485355265.66 :  Finished fit
+1485355266.34 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485355277.23 :  Finished predict
+Progress: 53.57%
+1485355277.32 :  Started fit
+1485355508.11 :  Finished fit
+1485355508.79 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485355519.65 :  Finished predict
+Progress: 57.14%
+[0.0094442906361510981, 0.0061859434865900358, 0.0066869806094182801, 0.0088021317469170191]
+Result:  result(mean_score=0.0077798366197691076, std_dev=0.0013738926521926515, parameters={'alpha_ridge': 25000})
+{'alpha_ridge': 50000}
+1485355519.75 :  Started fit
+1485355753.57 :  Finished fit
+1485355754.25 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485355765.14 :  Finished predict
+Progress: 60.71%
+1485355765.24 :  Started fit
+1485355997.32 :  Finished fit
+1485355998.0 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485356008.87 :  Finished predict
+Progress: 64.29%
+1485356008.97 :  Started fit
+1485356240.49 :  Finished fit
+1485356241.18 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485356252.06 :  Finished predict
+Progress: 67.86%
+1485356252.16 :  Started fit
+1485356482.87 :  Finished fit
+1485356483.55 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485356494.44 :  Finished predict
+Progress: 71.43%
+[0.0080144887412329259, 0.0058857159961685805, 0.0068761157279162797, 0.0089056206234120281]
+Result:  result(mean_score=0.0074204852721824529, std_dev=0.0011413064952102588, parameters={'alpha_ridge': 50000})
+{'alpha_ridge': 75000}
+1485356494.54 :  Started fit
+1485356728.52 :  Finished fit
+1485356729.2 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485356740.1 :  Finished predict
+Progress: 75.00%
+1485356740.2 :  Started fit
+1485356971.56 :  Finished fit
+1485356972.25 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485356983.12 :  Finished predict
+Progress: 78.57%
+1485356983.22 :  Started fit
+1485357215.02 :  Finished fit
+1485357215.7 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485357226.57 :  Finished predict
+Progress: 82.14%
+1485357226.66 :  Started fit
+1485357457.08 :  Finished fit
+1485357457.76 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485357468.65 :  Finished predict
+Progress: 85.71%
+[0.0098534206964439458, 0.0068350395114942491, 0.0073017851646660498, 0.0083214042263121957]
+Result:  result(mean_score=0.0080779123997291105, std_dev=0.0011574567467762976, parameters={'alpha_ridge': 75000})
+{'alpha_ridge': 100000}
+1485357468.74 :  Started fit
+1485357702.76 :  Finished fit
+1485357703.46 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485357714.33 :  Finished predict
+Progress: 89.29%
+1485357714.43 :  Started fit
+1485357946.52 :  Finished fit
+1485357947.21 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485357958.07 :  Finished predict
+Progress: 92.86%
+1485357958.17 :  Started fit
+1485358189.56 :  Finished fit
+1485358190.24 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485358201.1 :  Finished predict
+Progress: 96.43%
+1485358201.19 :  Started fit
+1485358431.59 :  Finished fit
+1485358432.27 :  Started predict
+Iteration:  1 / 3
+Iteration:  2 / 3
+Iteration:  3 / 3
+1485358443.14 :  Finished predict
+Progress: 100.00%
+[0.01045481112341577, 0.0050335249042145593, 0.0065960295475530921, 0.0079880089235917443]
+Result:  result(mean_score=0.0075180936246937915, std_dev=0.0019917588925730547, parameters={'alpha_ridge': 100000})
+Total scores:          MAP       Std  alpha_ridge
+0  0.007321  0.001013         9500
+1  0.008387  0.001116         9750
+2  0.008023  0.000656        10000
+3  0.007780  0.001374        25000
+4  0.007420  0.001141        50000
+5  0.008078  0.001157        75000
+6  0.007518  0.001992       100000

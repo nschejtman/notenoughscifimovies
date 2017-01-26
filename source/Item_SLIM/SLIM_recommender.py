@@ -61,7 +61,7 @@ def cv_search(rec, urm, non_active_items_mask, sample_size, sample_from_urm=True
     scores = pd.DataFrame(data=[[_.mean_score, _.std_dev] + _.parameters.values() for _ in results],
                           columns=["MAP", "Std"] + _.parameters.keys())
     print "Total scores: ", scores
-    scores.to_csv('SLIM_Item CV MAP values 9 (Ridge).csv', sep='\t', index=False)
+    scores.to_csv('SLIM_Item CV MAP values 8 (Ridge).csv', sep='\t', index=False)
     '''cols, col_feat, x_feat = 3, 'l2_penalty', 'l1_penalty'
     f = sns.FacetGrid(data=scores, col=col_feat, col_wrap=cols, sharex=False, sharey=False)
     f.map(plt.plot, x_feat, 'MAP')
@@ -217,8 +217,8 @@ top_rec.fit(urm)
 top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
 # TODO: Use all top_pops or only active ones in fitting??
-recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000, alpha_ridge=50000)
-recommender.fit(urm)
-# cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
-ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-ut.write_recommendations("Item SLIM (Ridge) 50000alpha ratings1", ranking, test_users_idx, item_ids)
+recommender = SLIM_recommender(top_pops=top_pops, k_top=None, pred_batch_size=1000)
+# recommender.fit(urm)
+cv_search(recommender, urm, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+#ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
+#ut.write_recommendations("Item SLIM (Ridge) 50000alpha ratings1", ranking, test_users_idx, item_ids)

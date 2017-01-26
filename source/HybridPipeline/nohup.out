@@ -1,6 +1,48 @@
-4 639
-166 5925105
-1485342128.32 :  Started predict
+1485380578.27 :  Started predict
+Iteration:  1 / 40
+Iteration:  2 / 40
+Iteration:  3 / 40
+Iteration:  4 / 40
+Iteration:  5 / 40
+Iteration:  6 / 40
+Iteration:  7 / 40
+Iteration:  8 / 40
+Iteration:  9 / 40
+Iteration:  10 / 40
+Iteration:  11 / 40
+Iteration:  12 / 40
+Iteration:  13 / 40
+Iteration:  14 / 40
+Iteration:  15 / 40
+Iteration:  16 / 40
+Iteration:  17 / 40
+Iteration:  18 / 40
+Iteration:  19 / 40
+Iteration:  20 / 40
+Iteration:  21 / 40
+Iteration:  22 / 40
+Iteration:  23 / 40
+Iteration:  24 / 40
+Iteration:  25 / 40
+Iteration:  26 / 40
+Iteration:  27 / 40
+Iteration:  28 / 40
+Iteration:  29 / 40
+Iteration:  30 / 40
+Iteration:  31 / 40
+Iteration:  32 / 40
+Iteration:  33 / 40
+Iteration:  34 / 40
+Iteration:  35 / 40
+Iteration:  36 / 40
+Iteration:  37 / 40
+Iteration:  38 / 40
+Iteration:  39 / 40
+Iteration:  40 / 40
+1485380753.35 :  Finished predict
+/usr/local/lib/python2.7/dist-packages/scipy/sparse/compressed.py:730: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  SparseEfficiencyWarning)
+1485380754.12 :  Started predict
 Iteration:  1 / 10
 125
 Iteration:  2 / 10
@@ -21,4 +63,18 @@ Iteration:  9 / 10
 112
 Iteration:  10 / 10
 131
-1485342175.1 :  Finished predict
+1485380800.92 :  Finished predict
+1485380802.98 :  Started fit
+1485386171.41 :  Finished fit
+1485386172.17 :  Started predict
+Iteration:  1 / 10
+Iteration:  2 / 10
+Iteration:  3 / 10
+Iteration:  4 / 10
+Iteration:  5 / 10
+Iteration:  6 / 10
+Iteration:  7 / 10
+Iteration:  8 / 10
+Iteration:  9 / 10
+Iteration:  10 / 10
+1485386220.71 :  Finished predict
