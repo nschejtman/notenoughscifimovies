@@ -297,3 +297,24 @@ def global_effects(urm):
     return urm, global_bias, item_bias, user_bias
 
 
+def save_sparse_matrix(mat, name):
+    np.save(name + ' data', mat.data)
+    np.save(name + ' indptr', mat.indptr)
+    np.save(name + ' indices', mat.indices)
+    np.save(name + ' shape', mat.shape)
+
+
+def load_sparse_matrix(name, format, type):
+    if format == 'csr':
+        mat = sps.csr_matrix((np.load(name + ' data.npy'),
+                              np.load(name + ' indices.npy'),
+                              np.load(name + ' indptr.npy')),
+                             np.load(name + ' shape.npy'),
+                             dtype=type)
+    elif format == 'csc':
+        mat = sps.csc_matrix((np.load(name + ' data.npy'),
+                              np.load(name + ' indices.npy'),
+                              np.load(name + ' indptr.npy')),
+                             np.load(name + ' shape.npy'),
+                             dtype=type)
+    return mat
