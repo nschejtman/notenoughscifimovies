@@ -23,7 +23,7 @@ def generate_icm_unified_attrs(items_df):
         attr_mats[attr] = trans.fit_transform(attr_df[attr].map(str).values).tocsr()
 
     icm = reduce(lambda acc, x: x if acc.shape == (1, 1) else sps.hstack([acc, x]), attr_mats.itervalues(),
-                  sps.lil_matrix((1, 1))).tocsr()
+                 sps.lil_matrix((1, 1))).tocsr()
 
     trans = TfidfTransformer()
     icm = trans.fit_transform(icm).tocsr()
@@ -44,11 +44,12 @@ def generate_icm(items_df):
     Arguments:
     items_df -- item-content matrix
     """
+
     attr_df = items_df.drop(['id', 'latitude', 'longitude', 'created_at', 'active_during_test'],
                             axis=1)
 
     attr_mats = {}
-    to_dummies = ['career_level', 'country_region', 'employment']#'country', 'region']
+    to_dummies = ['career_level', 'country_region', 'employment']  # 'country', 'region']
     to_tfidf = ['discipline_id', 'industry_id', 'title', 'tags']
 
     attr_df['career_level'] = attr_df['career_level'].fillna(0)
@@ -70,8 +71,8 @@ def generate_icm(items_df):
                   sps.lil_matrix((1, 1))).tocsr()
 
 
-
-def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask, global_bias=None, item_bias=None, user_bias=None):
+def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask, global_bias=None, item_bias=None,
+               user_bias=None):
     score = 0
     if global_bias is not None:
         if item_bias is None and user_bias is None:
@@ -91,32 +92,76 @@ def map_scorer(recommender, urm_test, hidden_ratings, n, non_active_items_mask, 
     return score / i if i != 0 else 0
 
 
-
 def read_items():
     items_df = pd.read_csv('../../inputs/item_profile.csv', sep='\t')
     items_df['career_level'] = items_df['career_level'].fillna(0)
     items_df['career_level'] = items_df['career_level'].astype(dtype=int)
     return items_df
 
+
 def read_interactions():
     ints = pd.read_csv('../../inputs/interactions_idx.csv', sep='\t')
     return sps.csr_matrix((ints['interaction_type'].values, (ints['user_idx'].values, ints['item_idx'].values)))
 
+
+def generate_ucm():
+    users_content_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
+    attr_df = users_content_df.drop(['user_id'], axis=1)
+
+    attr_mats = {}
+    to_dummies = ['career_level',
+                  'country_region',
+                  'experience_n_entries_class',
+                  'experience_years_experience',
+                  'experience_years_in_current',
+                  'edu_degree']
+    to_tfidf = ['discipline_id',
+                'industry_id',
+                'jobroles',
+                'edu_fieldofstudies']
+
+    attr_df['career_level'] = attr_df['career_level'].fillna(0)
+    attr_df['experience_n_entries_class'] = attr_df['experience_n_entries_class'].fillna(0).astype(dtype=int)
+    attr_df['experience_years_experience'] = attr_df['experience_years_experience'].fillna(0).astype(dtype=int)
+    attr_df['experience_years_in_current'] = attr_df['experience_years_in_current'].fillna(0).astype(dtype=int)
+    attr_df['edu_degree'] = attr_df['edu_degree'].fillna(0).astype(dtype=int)
+    attr_df['career_level'] = attr_df['career_level'].astype(dtype=int)
+
+    # Merge country and region
+    country_dict = {c: i for i, c in enumerate(attr_df['country'].unique())}
+    attr_df['country'] = attr_df['country'].apply(lambda x: country_dict[x])
+    attr_df['country_region'] = attr_df['country'].apply(lambda x: x * 100) + attr_df['region']
+
+    trans = CountVectorizer(token_pattern='\w+')
+    for attr in to_dummies:
+        attr_mats[attr] = trans.fit_transform(attr_df[attr].map(str).values).tocsr()
+
+    trans = TfidfVectorizer(token_pattern='\w+')
+    for attr in to_tfidf:
+        attr_mats[attr] = trans.fit_transform(attr_df[attr].map(str).values).tocsr()
+
+    return reduce(lambda acc, x: x if acc.shape == (1, 1) else sps.hstack([acc, x]), attr_mats.itervalues(),
+                  sps.lil_matrix((1, 1))).tocsr()
+
+
 def write_recommendations(name, recommendations, test_users_idx, item_ids):
     if item_ids is None:
         user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
-        out_file = open('../../output/'+name+'.csv', 'wb')
+        out_file = open('../../output/' + name + '.csv', 'wb')
         out_file.write('user_id,recommended_items\n')
         for i in range(len(recommendations)):
-            out_file.write(str(test_users_idx[i]) + ',' + reduce((lambda acc, x: acc + str(x) + ' '), recommendations[i], '') + '\n')
+            out_file.write(
+                str(test_users_idx[i]) + ',' + reduce((lambda acc, x: acc + str(x) + ' '), recommendations[i],
+                                                      '') + '\n')
         out_file.close()
     else:
         user_df = pd.read_csv('../../inputs/user_profile.csv', sep='\t')
-        out_file = open('../../output/'+name+'.csv', 'wb')
+        out_file = open('../../output/' + name + '.csv', 'wb')
         out_file.write('user_id,recommended_items\n')
         for i in range(len(recommendations)):
-            out_file.write(str(user_df.loc[test_users_idx[i]]['user_id']) + ',' + reduce(lambda acc, x: acc + str(item_ids[x]) + ' ',
-                                                                                     recommendations[i], '') + '\n')
+            out_file.write(str(user_df.loc[test_users_idx[i]]['user_id']) + ',' + reduce(
+                lambda acc, x: acc + str(item_ids[x]) + ' ',
+                recommendations[i], '') + '\n')
         out_file.close()
 
 
@@ -163,7 +208,7 @@ def normalize_matrix(matrix, row_wise=True):
     return matrix
 
 
-#Matrix assumed to be already normalized
+# Matrix assumed to be already normalized
 def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1000):
     print "Computing similarity matrix"
     matrix = normalize_matrix(matrix, row_wise)
@@ -176,10 +221,10 @@ def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1
             end = start + partition_size if i < n_iterations - 1 else matrix.shape[0]
             partitioned_matrix = matrix[start:end, ]
             similarity_matrix = partitioned_matrix.dot(matrix.T).toarray().astype(np.float32)
-            similarity_matrix[np.arange(similarity_matrix.shape[0]), np.arange(start,end)] = 0.0
+            similarity_matrix[np.arange(similarity_matrix.shape[0]), np.arange(start, end)] = 0.0
 
             if sh > 0:
-                similarity_matrix = apply_shrinkage(partitioned_matrix, matrix, similarity_matrix,sh)
+                similarity_matrix = apply_shrinkage(partitioned_matrix, matrix, similarity_matrix, sh)
 
             idx_sorted = np.argsort(similarity_matrix, axis=1)
             not_top_k = idx_sorted[:, :-k]
@@ -190,11 +235,11 @@ def compute_similarity_matrix_knn(matrix, k, sh, row_wise=True, partition_size=1
 
             if i == 0:
                 sim = similarity_matrix.copy()
-                top_k_idx = idx_sorted[:,-k:]
+                top_k_idx = idx_sorted[:, -k:]
                 break
             else:
                 sim = sps.vstack([sim, similarity_matrix])
-                top_k_idx = np.vstack((top_k_idx,idx_sorted[:,-k:]))
+                top_k_idx = np.vstack((top_k_idx, idx_sorted[:, -k:]))
 
     return sim, top_k_idx
 
@@ -214,7 +259,7 @@ def apply_shrinkage(partitioned_matrix, matrix, dist, sh, row_wise=True):
     return dist * co_counts
 
 
-def compute_similarity_matrix_mask(matrix, sh, batch_mask, row_wise=True): # TODO: column_wise
+def compute_similarity_matrix_mask(matrix, sh, batch_mask, row_wise=True):  # TODO: column_wise
     print "Computing similarity matrix - batch"
     # TODO: normalize only once
     matrix = normalize_matrix(matrix, row_wise)
@@ -249,8 +294,8 @@ def apply_shrinkage_batch(matrix, partial_similarity_matrix, batch_mask, sh, row
     return partial_similarity_matrix * co_counts
 
 
-
-def produce_sample(urm, icm, ucm, non_active_items_mask, sample_size, sample_from_urm, item_bias=None, user_bias=None): # TODO: Add sample on users
+def produce_sample(urm, icm, ucm, non_active_items_mask, sample_size, sample_from_urm, item_bias=None,
+                   user_bias=None):  # TODO: Add sample on users
     if sample_from_urm:
         perm = np.random.permutation(urm.shape[0])[:sample_size]
         urm_sample = urm[perm,]

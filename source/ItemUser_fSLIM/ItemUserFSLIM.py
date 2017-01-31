@@ -102,7 +102,7 @@ class fSLIM_recommender(BaseEstimator):
         http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
     """
 
-    def __init__(self, top_pops, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None,
+    def __init__(self, train_items, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None,
                  similarity='CF', k_nn=10, aa_sh=2000, sim_partition_size=2500, pred_batch_size=2500):
         super(fSLIM_recommender, self).__init__()
         self.l1_ratio = l1_ratio
@@ -113,7 +113,7 @@ class fSLIM_recommender(BaseEstimator):
         self.similarity = similarity
         self.sh = aa_sh
         self.sim_partition_size = sim_partition_size
-        self.top_pops = top_pops
+        self.train_items = train_items
         self.pred_batch_size = pred_batch_size
 
     def fit(self, URM, ICM):
@@ -146,8 +146,7 @@ class fSLIM_recommender(BaseEstimator):
                                     fit_intercept=False,
                                     copy_X=False)
 
-        # TODO: We only train on the top-pops?
-        for j in np.sort(self.top_pops):
+        for j in np.sort(self.train_items):
 
             # Get nearest KNN
             if self.similarity == 'CB':
@@ -172,11 +171,11 @@ class fSLIM_recommender(BaseEstimator):
         self.W_sparse = sps.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
         print time.time(), ": ", "Finished fit"
 
-    def predict(self, URM, n_of_recommendations=5, non_active_items_mask=None):
+    def predict(self, URM, test_users_idx, UCM, n_of_recommendations=5, non_active_items_mask=None):
 
         print time.time(), ": ", "Started predict"
 
-        user_profile = URM
+        user_profile = URM[test_users_idx]
 
         n_iterations = user_profile.shape[0] / \
                        self.pred_batch_size + (user_profile.shape[0] % self.pred_batch_size != 0)
@@ -191,7 +190,7 @@ class fSLIM_recommender(BaseEstimator):
             start = i * self.pred_batch_size
             end = start + self.pred_batch_size if i < n_iterations - 1 else user_profile.shape[0]
 
-            batch_profiles = URM[start:end, :]
+            batch_profiles = user_profile[start:end, :]
             batch_scores = batch_profiles.dot(self.W_sparse).toarray().astype(np.float32)
 
             nonzero_indices = batch_profiles.nonzero()
@@ -202,29 +201,42 @@ class fSLIM_recommender(BaseEstimator):
             batch_ranking = batch_scores.argsort()[:, ::-1]
             batch_ranking = batch_ranking[:, :n_of_recommendations]  # Leave only the top n
 
-            sum_of_scores = batch_scores[np.arange(batch_scores.shape[0]), batch_ranking.T].T.sum(axis=1).ravel()
-            zero_scores_mask = sum_of_scores == 0
-            # TODO: check if this inspection is actually an error
-            n_zero_scores = np.extract(zero_scores_mask, sum_of_scores).shape[0]
-
-            """
-            TODO check somewhere around here when assigning the top pops to those users without ratings. We should
-            accumulate their indices and after recommending to all those who provided ratings, get the KNN of those
-            didn't and copy the recommendations of the closest KNN to them (plus one top pop maybe?).
-            """
-
-            if n_zero_scores != 0:
-                batch_ranking[zero_scores_mask] = [self.top_pops[:n_of_recommendations] for _ in range(n_zero_scores)]
-
             if i == 0:
                 ranking = batch_ranking.copy()
             else:
                 ranking = np.vstack((ranking, batch_ranking))
 
+        """
+            Set ranking for empty profile users
+
+        """
+        # Get mask for URM of users with no profile
+        sum_of_users_ratings = np.array(URM.sum(axis=1)).flatten()
+        empty_profile_users_mask = sum_of_users_ratings == 0
+
+        # Get mask for URM of users in test set
+        test_users_mask = np.zeros(URM.shape[0], dtype=bool)
+        test_users_mask[test_users_idx] = True
+
+        # Get mask for users in test set AND with empty profile
+        empty_profile_test_users_mask = np.logical_and(test_users_mask, empty_profile_users_mask)
+
+        # Get KNNs for users in test set and with empty profile
+        knn_empty_profile_users = get_user_knn_CB(UCM, empty_profile_test_users_mask, empty_profile_users_mask, 1, self.sh).ravel()
+
+        # Predict for KNNs
+        knn_profiles = URM[knn_empty_profile_users,:]
+        knn_scores = knn_profiles.dot(self.W_sparse).toarray().astype(np.float32)
+
+        # Remove inactive items for predictions
+        knn_scores[:, non_active_items_mask] = 0.0
+        knn_ranking = knn_scores.argsort()[:, ::-1]
+        knn_ranking = knn_ranking[:, :n_of_recommendations]  # Leave only the top n rec
+
+        # Add predictions to ranking (N.B. apply mask for ranking rather than URM for test users with empty profile)
+        ranking[empty_profile_test_users_mask[test_users_idx]] = knn_ranking
+
         print time.time(), ": ", "Finished predict"
-
-        # TODO: iterate over those that did not receive any recommendations
-
         return ranking
 
 
@@ -255,32 +267,38 @@ def get_item_knn_CF(urm, i, k, sh):
     return top_k[-k:]
 
 
-def get_user_knn_CB(ucm, u, k, sh):
+def get_user_knn_CB(ucm, test_users_mask, empty_profile_users_mask, k, sh):
     """
     Takes as input the UCM (user content matrix) and returns an array of k user indices corresponding to the KNN of a
     particular user taking into consideration it's user features rather than it's ratings.
 
     :param ucm: user content matrix
-    :param u: user's index in ucm
+    :param test_users_mask: users to calculate similarity
+    :param empty_profile_users_mask: users with empty profile
     :param k: desired number of nearest neighbours
     :param sh: shrink
 
-    :return: indices in ucm KNN for user u
+    :return: indices in ucm KNN for all users in users mask
     """
     ucm_copy = ucm.copy()
-    sims = ucm_copy[:, u].T.dot(ucm_copy).toarray().ravel()
-    sims[u] = 0.0
+    sims = ucm_copy[test_users_mask, :].dot(ucm.T).toarray()
+
+    # Set similarity of each user in the mask with itself and all the other users in the mask to 0
+    # sims[np.arange(sims.shape[0]), users_mask.T] = 0.0
+    for u in range(sims.shape[0]):
+        sims[u, empty_profile_users_mask] = 0.0
 
     # Apply shrink
     ucm_ind = ucm_copy.copy()
     ucm_ind.data = np.ones_like(ucm_ind.data)
-    counts = ucm_ind[:, u].T.dot(ucm_ind).toarray().ravel()
+
+    counts = ucm_ind[test_users_mask, :].dot(ucm_ind.T).toarray()
     counts /= (counts + sh)
     sims *= counts
 
-    top_k = np.argsort(sims).ravel()
+    top_k = np.argsort(sims)
 
-    return top_k[-k:]
+    return top_k[:,-k:]
 
 
 def calculate_and_save_similarities(max_k, shs, partition_size):
@@ -309,26 +327,33 @@ def main():
 
     items_dataframe = ut.read_items()
     # icm = ut.generate_icm(items_dataframe)
-    icm = ut.generate_icm_unified_attrs(items_dataframe)
-    icm = ut.normalize_matrix(icm, row_wise=True)
+    # icm = ut.generate_icm_unified_attrs(items_dataframe)
+    ucm = ut.generate_ucm()
+    # icm = ut.normalize_matrix(icm, row_wise=True)
+    ucm = ut.normalize_matrix(ucm, row_wise=True)
     item_ids = items_dataframe.id.values
     actives = np.array(items_dataframe.active_during_test.values)
     non_active_items_mask = actives == 0
     test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
     urm_pred = urm[test_users_idx, :]
 
-    top_rec = TopPop(count=True)
-    top_rec.fit(urm)
-    top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
+    tp_recommender = TopPop(count=True)
+    tp_recommender.fit(urm)
+    train_items = tp_recommender.top_pop[non_active_items_mask[tp_recommender.top_pop] == False]
 
     urm[urm > 0] = 1
-    print urm.data[:10]
-    urm_aux = ut.urm_to_tfidf(urm)
-    print urm_aux.data[:10]
-    # TODO: Use all top_pops or only active ones in fitting??
-    recommender = fSLIM_recommender(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
+    # print urm.data[:10]
+    # urm_aux = ut.urm_to_tfidf(urm)
+    # print urm_aux.data[:10]
+
+    recommender = fSLIM_recommender(train_items=train_items, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
                                     similarity='CB', aa_sh=2000, alpha_ridge=100000)
-    recommender.fit(urm, icm)
-    ranking = recommender.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Item fSLIM (Ridge) 2000sh 30000k 100000alpha ratings1 implicitpred", ranking,
+    # recommender.fit(urm, icm)
+    recommender.W_sparse = ut.load_sparse_matrix(
+        '../Hybrid_SLIM_Sim_fSLIM_pred/fSLIM 30000knn 100000alpha 2000sh CBsim ratings1 phase 2', 'csc', np.float32)
+    ranking = recommender.predict(urm, test_users_idx, ucm, 5, non_active_items_mask)
+    ut.write_recommendations("asd", ranking,
                              test_users_idx, item_ids)
+
+
+main()
