@@ -94,21 +94,20 @@ class HybridSsfSp(BaseEstimator):
         http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
     """
 
-    def __init__(self, top_pops, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None,
-                 similarity_mat = None, k_nn=10, sim_partition_size=2500, pred_batch_size=2500):
+    def __init__(self, top_pops, l1_ratio=None, positive_only=True, alpha_ridge=None, alpha_lasso=None, k_nn=10,
+                 sim_partition_size=2500, pred_batch_size=2500):
         super(HybridSsfSp, self).__init__()
         self.l1_ratio = l1_ratio
         self.positive_only = positive_only
         self.alpha_ridge = alpha_ridge
         self.alpha_lasso = alpha_lasso
         self.k_nn = k_nn
-        self.similarity_mat = similarity_mat
         self.sim_partition_size = sim_partition_size
         self.top_pops = top_pops
         self.pred_batch_size = pred_batch_size
 
 
-    def fit(self, URM, ICM):
+    def fit(self, URM, sim_mat):
         print time.time(), ": ", "Started fit"
         URM = ut.check_matrix(URM, 'csc', dtype=np.float32)
         n_items = URM.shape[1]
@@ -124,7 +123,7 @@ class HybridSsfSp(BaseEstimator):
         k = 1
 
         for j in np.sort(self.top_pops):#, because only the active ones are to be recommended(range(n_items) if self.k_top is None else top_pops):
-            top_k_idx = get_knn(self.similarity_mat, j, self.k_nn)
+            top_k_idx = get_knn(sim_mat, j, self.k_nn)
             y = URM[:, j].toarray()
 
             if self.alpha_ridge is None and self.alpha_lasso is None:
@@ -148,7 +147,7 @@ class HybridSsfSp(BaseEstimator):
         print time.time(), ": ", "Finished fit"
 
 
-    def predict(self, URM, n_of_recommendations=5, non_active_items_mask=None):
+    def predict(self, URM, n_of_recommendations, non_active_items_mask):
         print time.time(), ": ", "Started predict"
         user_profile = URM
         n_iterations = user_profile.shape[0] / self.pred_batch_size + (user_profile.shape[0] % self.pred_batch_size != 0)
@@ -226,15 +225,29 @@ def main():
     top_rec.fit(urm)
     top_pops = top_rec.top_pop[non_active_items_mask[top_rec.top_pop] == False]
 
+    # Phase 1
     fslim_sim_mat = ut.load_sparse_matrix("../HybridPipeline/fSLIM 30000knn 100000alpha 2000sh CBsim ratings1", 'csc', np.float32)
 
+    # Phase 2
     urm[urm > 0] = 1
-    fslim = HybridSsfSp(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000, similarity_mat=fslim_sim_mat,
-                        alpha_ridge=100000)
+    fslim = HybridSsfSp(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000, alpha_ridge=100000)
     fslim.fit(urm, fslim_sim_mat)
-    # cv_search(fslim, urm, fslim_sim_mat, non_active_items_mask, sample_size=10000, sample_from_urm=True)
+    fslim_sim_mat = fslim.W_sparse.copy()
+    del fslim
+
+    # Phase 3
+    fslim = HybridSsfSp(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000, alpha_ridge=100000)
+    fslim.fit(urm, fslim_sim_mat)
     ranking = fslim.predict(urm_pred, 5, non_active_items_mask)
-    ut.write_recommendations("Hybrid SsfSp 2000sh 30000k 100000alpha ratings1 explicitpred", ranking, test_users_idx, item_ids)
+    ut.write_recommendations("Hybrid SsfSp 2000sh 30000k 100000alpha ratings1 explicitpred x3 test 2", ranking, test_users_idx, item_ids)
+    fslim_sim_mat = fslim.W_sparse.copy()
+    del fslim
+
+    # Phase 4
+    fslim = HybridSsfSp(top_pops=top_pops, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,alpha_ridge=100000)
+    fslim.fit(urm, fslim_sim_mat)
+    ranking = fslim.predict(urm_pred, 5, non_active_items_mask)
+    ut.write_recommendations("Hybrid SsfSp 2000sh 30000k 100000alpha ratings1 explicitpred x4 test 2", ranking, test_users_idx, item_ids)
 
 
 main()
