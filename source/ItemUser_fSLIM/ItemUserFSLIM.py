@@ -181,7 +181,7 @@ class fSLIM_recommender(BaseEstimator):
                        self.pred_batch_size + (user_profile.shape[0] % self.pred_batch_size != 0)
 
         ranking = None
-
+        old_mask = None
         # Predict by batches
         for i in range(n_iterations):
             print "Iteration: ", i + 1, "/", n_iterations
@@ -201,10 +201,21 @@ class fSLIM_recommender(BaseEstimator):
             batch_ranking = batch_scores.argsort()[:, ::-1]
             batch_ranking = batch_ranking[:, :n_of_recommendations]  # Leave only the top n
 
+            #####
+            sum_of_scores = batch_scores[np.arange(batch_scores.shape[0]), batch_ranking.T].T.sum(axis=1).ravel()
+            zero_scores_mask = sum_of_scores == 0
+
+
+            #####
+
             if i == 0:
                 ranking = batch_ranking.copy()
+                old_mask = zero_scores_mask.copy()
             else:
                 ranking = np.vstack((ranking, batch_ranking))
+                old_mask = np.vstack((old_mask, zero_scores_mask))
+
+        old_mask = old_mask.ravel()
 
         """
             Set ranking for empty profile users
@@ -235,6 +246,11 @@ class fSLIM_recommender(BaseEstimator):
 
         # Add predictions to ranking (N.B. apply mask for ranking rather than URM for test users with empty profile)
         ranking[empty_profile_test_users_mask[test_users_idx]] = knn_ranking
+
+
+        weird_users_mask = np.logical_xor(empty_profile_test_users_mask[test_users_idx], old_mask)
+        #[self.top_pops[:n_of_recommendations] for _ in range(n_zero_scores)]
+        ranking[weird_users_mask] = [self.train_items[:n_of_recommendations] for _ in range(weird_users_mask.sum())]
 
         print time.time(), ": ", "Finished predict"
         return ranking
@@ -323,7 +339,10 @@ def load_similarities(max_k, sh):
 
 
 def main():
-    urm = ut.read_interactions()
+    urm_explicit = ut.read_interactions()
+    urm_implicit = urm_explicit.copy()
+    urm_implicit[urm_implicit > 0]  = 1
+
 
     items_dataframe = ut.read_items()
     # icm = ut.generate_icm(items_dataframe)
@@ -335,23 +354,23 @@ def main():
     actives = np.array(items_dataframe.active_during_test.values)
     non_active_items_mask = actives == 0
     test_users_idx = pd.read_csv('../../inputs/target_users_idx.csv')['user_idx'].values
-    urm_pred = urm[test_users_idx, :]
+    urm_pred = urm_explicit[test_users_idx, :]
 
     tp_recommender = TopPop(count=True)
-    tp_recommender.fit(urm)
+    tp_recommender.fit(urm_explicit)
     train_items = tp_recommender.top_pop[non_active_items_mask[tp_recommender.top_pop] == False]
 
-    urm[urm > 0] = 1
-    # print urm.data[:10]
-    # urm_aux = ut.urm_to_tfidf(urm)
+
+    # print urm_explicit.data[:10]
+    # urm_aux = ut.urm_to_tfidf(urm_explicit)
     # print urm_aux.data[:10]
 
     recommender = fSLIM_recommender(train_items=train_items, pred_batch_size=1000, sim_partition_size=1000, k_nn=30000,
                                     similarity='CB', aa_sh=2000, alpha_ridge=100000)
-    # recommender.fit(urm, icm)
+    # recommender.fit(urm_implicit, icm)
     recommender.W_sparse = ut.load_sparse_matrix(
         '../Hybrid_SLIM_Sim_fSLIM_pred/fSLIM 30000knn 100000alpha 2000sh CBsim ratings1 phase 2', 'csc', np.float32)
-    ranking = recommender.predict(urm, test_users_idx, ucm, 5, non_active_items_mask)
+    ranking = recommender.predict(urm_explicit, test_users_idx, ucm, 5, non_active_items_mask)
     ut.write_recommendations("asd", ranking,
                              test_users_idx, item_ids)
 
